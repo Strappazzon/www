@@ -1,0 +1,38 @@
+url: "https://www.strappazzon.xyz"
+baseurl: "/"
+
+# Ruby gems
+plugins:
+  - jekyll-autoprefixer
+  - jekyll-sitemap
+
+# Markdown
+markdown: kramdown
+kramdown:
+  html_to_native: true
+
+# CSS
+sass:
+  sass_dir: "static/css"
+  style: compressed
+
+# CSS Autoprefixer
+autoprefixer:
+  browsers:
+    - last 2 versions
+  only_production: false
+
+# Sitemap
+sitemap:
+  file: "/sitemap.xml"
+
+# Excluded files
+exclude:
+  - Gemfile
+  - LICENSE.txt
+  - netlify.toml
+  - README.md
+
+# Included files
+include:
+  - .well-known

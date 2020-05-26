@@ -1,0 +1,7 @@
+# Development configuration
+
+# CSS Autoprefixer
+autoprefixer:
+  browsers:
+    - last 2 versions
+  only_production: true

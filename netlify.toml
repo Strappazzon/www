@@ -1,0 +1,38 @@
+# Build
+[build]
+  command = "jekyll build"
+  # Relative path to the repository root
+  publish = "_site/"
+
+# Headers
+[[headers]]
+  for = "/*"
+    [headers.values]
+      X-Frame-Options = "DENY"
+      X-XSS-Protection = "1; mode=block"
+      X-Content-Type-Options = "nosniff"
+      Content-Security-Policy = "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; frame-ancestors 'none';"
+      Access-Control-Allow-Origin = "*"
+      Referrer-Policy = "no-referrer"
+      Feature-Policy = "autoplay 'self';camera 'none';fullscreen 'self';geolocation 'none';microphone 'none';payment 'none'"
+      Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+      Cache-Control = '''
+      max-age=0,
+      no-cache,
+      no-store,
+      must-revalidate'''
+
+# Redirects
+[[redirects]]
+  # Redirect from old Keys page
+  from = "/keys/*"
+  to = "/accounts/"
+  status = 301
+
+[[redirects]]
+# 404
+# Keep this redirect at the end!
+  from = "/*"
+  to = "/404.html"
+  status = 404
+  force = false
