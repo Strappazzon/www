@@ -22,16 +22,46 @@
       no-store,
       must-revalidate'''
 
-# Redirects
+# Redirect old Keys page
 [[redirects]]
-  # Redirect from old Keys page
   from = "/keys/*"
   to = "/accounts/"
   status = 301
 
+# Redirect projects homepages back to GitHub Pages
 [[redirects]]
+  from = "/GRW-GHOST-Buster/"
+  to = "https://strappazzon.github.io/GRW-GHOST-Buster/"
+  status = 301
+
+[[redirects]]
+  from = "/Screendere-Beat/"
+  to = "https://strappazzon.github.io/Screendere-Beat/"
+  status = 301
+
+[[redirects]]
+  from = "/PD2-SuperBLT-Hasher/"
+  to = "https://strappazzon.github.io/PD2-SuperBLT-Hasher/"
+  status = 301
+
+[[redirects]]
+  from = "/teleme7ry/"
+  to = "https://strappazzon.github.io/teleme7ry/"
+  status = 301
+
+[[redirects]]
+  from = "/tor-exit-page/"
+  to = "https://strappazzon.github.io/tor-exit-page/"
+  status = 301
+
+[[redirects]]
+  from = "/tor-exit-page/demo/"
+  to = "https://strappazzon.github.io/tor-exit-page/demo/"
+  status = 301
+
 # 404
 # Keep this redirect at the end!
+[[redirects]]
   from = "/*"
   to = "/404.html"
   status = 404
