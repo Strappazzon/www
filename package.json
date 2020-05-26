@@ -1,0 +1,18 @@
+{
+	"private": true,
+	"author": "Alberto Strappazzon",
+	"homepage": "https://www.strappazzon.xyz",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/Strappazzon/www.git"
+	},
+	"bugs": {
+		"url": "https://github.com/Strappazzon/www/issues"
+	},
+	"scripts": {
+		"netlify": "netlify dev",
+		"build": "jekyll build",
+		"serve": "jekyll serve"
+	}
+}
