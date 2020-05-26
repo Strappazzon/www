@@ -30,33 +30,33 @@
 
 # Redirect projects homepages back to GitHub Pages
 [[redirects]]
-  from = "/GRW-GHOST-Buster/"
-  to = "https://strappazzon.github.io/GRW-GHOST-Buster/"
+  from = "/GRW-GHOST-Buster/*"
+  to = "https://strappazzon.github.io/GRW-GHOST-Buster/:splat"
   status = 301
 
 [[redirects]]
-  from = "/Screendere-Beat/"
-  to = "https://strappazzon.github.io/Screendere-Beat/"
+  from = "/newtab/*"
+  to = "https://strappazzon.github.io/newtab/:splat"
   status = 301
 
 [[redirects]]
-  from = "/PD2-SuperBLT-Hasher/"
-  to = "https://strappazzon.github.io/PD2-SuperBLT-Hasher/"
+  from = "/PD2-SuperBLT-Hasher/*"
+  to = "https://strappazzon.github.io/PD2-SuperBLT-Hasher/:splat"
   status = 301
 
 [[redirects]]
-  from = "/teleme7ry/"
-  to = "https://strappazzon.github.io/teleme7ry/"
+  from = "/Screendere-Beat/*"
+  to = "https://strappazzon.github.io/Screendere-Beat/:splat"
   status = 301
 
 [[redirects]]
-  from = "/tor-exit-page/"
-  to = "https://strappazzon.github.io/tor-exit-page/"
+  from = "/teleme7ry/*"
+  to = "https://strappazzon.github.io/teleme7ry/:splat"
   status = 301
 
 [[redirects]]
-  from = "/tor-exit-page/demo/"
-  to = "https://strappazzon.github.io/tor-exit-page/demo/"
+  from = "/tor-exit-page/*"
+  to = "https://strappazzon.github.io/tor-exit-page/:splat"
   status = 301
 
 # 404
