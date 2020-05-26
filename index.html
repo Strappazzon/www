@@ -1,0 +1,54 @@
+---
+layout: home
+title: "Alberto Strappazzon | Home"
+description: "I'm a hobbyist developer and server administrator. This website is mainly supposed to act as a portfolio for my projects and list all my contact information."
+---
+
+<div class="box-samaritan">
+	<div class="subtitle">
+		<div class="deviant-icon"></div>
+		<span> /// About</span>
+	</div>
+	<div class="title">Alberto Strappazzon</div>
+	<div class="content">
+		<div class="row">
+			<div class="desc">I'm a <span id="age"></span>hobbyist developer and server administrator. This page is mainly supposed to act as a portfolio for my projects and list all my contact information.</div>
+		</div>
+		<div class="row">
+			<div class="text">Location:</div>
+			<div class="label bg-darkgray"><a title="Location" href="https://en.wikipedia.org/wiki/Veneto">Veneto, Italy</a></div>
+		</div>
+		{% for account in site.data.accounts %}
+		<div class="row">
+			<div class="text">{{ account.name }}:</div>
+			<div class="label bg-lightgray"><a title="{{ account.name }} Account" href="{{ account.url }}" rel="me">{{ account.username }}</a></div>
+		</div>
+		{% endfor %}
+		<div class="row">
+			<div class="text">Email:</div>
+			<div id="ep" class="label bg-darkgray"></div>
+		</div>
+	</div>
+</div>
+
+<div class="box-samaritan-alt">
+	<div class="title">Links</div>
+	<div class="content">
+		<div class="row">
+			<div class="text">Projects and Contributions:</div>
+			<div class="label"><a title="My Projects and Contributions" href="/projects/">/projects/</a></div>
+		</div>
+		<div class="row">
+			<div class="text">Accounts and Public Keys:</div>
+			<div class="label"><a title="My Accounts and Public Keys" href="/accounts/">/accounts/</a></div>
+		</div>
+		<div class="row">
+			<div class="text">Privacy Statement:</div>
+			<div class="label"><a title="Privacy Statement" href="/privacy/">/privacy/</a></div>
+		</div>
+		<div class="row">
+			<div class="text">Who/What is behid this website:</div>
+			<div class="label"><a title="humanstxt" href="/humans.txt">humans.txt</a></div>
+		</div>
+	</div>
+</div>

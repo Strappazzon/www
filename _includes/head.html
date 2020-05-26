@@ -1,0 +1,76 @@
+<head>
+	<!-- Meta Data -->
+	<meta charset="utf-8">
+	<title>{{ page.title }}</title>
+	<meta name="description" content="{{ page.description }}">
+	<meta name="keywords" content="alberto strappazzon,strappazzon alberto,strappazzon">
+	<meta name="author" content="Alberto Strappazzon">
+	<meta name="generator" content="Jekyll v{{ jekyll.version }}">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="theme-color" content="#ba0000">
+	<meta name="msapplication-TileColor" content="#ba0000">
+	<!-- Open Graph Data -->
+	<meta property="og:title" content="{{ page.title }}">
+	<meta property="og:description" content="{{ page.description }}">
+	<meta property="og:site_name" content="Alberto Strappazzon">
+	<meta property="og:url" content="{{ page.permalink | prepend: site.url }}">
+	<meta property="og:type" content="website">
+	<meta property="og:image" content="{{ site.url }}/static/img/ogimage.png">
+	<!-- Twitter Cards Data -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="{{ page.title }}">
+	<meta name="twitter:description" content="{{ page.description }}">
+	<meta name="twitter:image" content="{{ site.url }}/static/img/ogimage.png">
+	<meta name="twitter:creator" content="@0xStrappazzon">
+	<meta name="twitter:site" content="@0xStrappazzon">
+	<meta name="twitter:domain" content="strappazzon.xyz">
+	<!-- Link Relationships -->
+	<link rel="canonical" href="{{ site.url }}{{ page.url | replace: 'index.html',''}}">
+	<link rel="me" href="https://twitter.com/0xStrappazzon">
+	<link rel="author" type="text/plain" href="/humans.txt">
+	<!-- Favicons -->
+	<link rel="apple-touch-icon" sizes="180x180" href="/static/img/favicons/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicons/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicons/favicon-16x16.png">
+	<link rel="manifest" href="/static/img/favicons/site.webmanifest">
+	<link rel="mask-icon" href="/static/img/favicons/safari-pinned-tab.svg" color="#cb0000">
+	<link rel="shortcut icon" href="/static/img/favicons/favicon.ico">
+	<meta name="msapplication-config" content="/static/img/favicons/browserconfig.xml">
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="/static/css/common.css">
+	<link rel="stylesheet" href="/static/css/{{ page.layout }}.css">
+	{% if page.layout == "pages" %}
+	<link rel="stylesheet" href="/static/css/highlight.css">
+	{% endif %}
+	<!-- Scripts -->
+	{% if page.url == "/" %}
+	<script type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "WebSite",
+		"author": {
+			"@type": "Person",
+			"name": "Alberto Strappazzon",
+			"image": {
+				"@type": "ImageObject",
+				"url": "{{ site.url }}/static/img/avatar.png"
+			}
+		},
+		"url": "{{ site.url }}",
+		"logo": "{{ site.url }}/static/img/avatar.png",
+		"image": {
+			"@type": "ImageObject",
+			"url": "{{ site.url }}/static/img/avatar.png"
+		},
+		"keywords": "alberto strappazzon, strappazzon alberto, strappazzon",
+		"description": "{{ page.description }}",
+		"sameAs": [
+			"https://github.com/Strappazzon",
+			"https://twitter.com/0xStrappazzon",
+			"https://keybase.io/strappazzon"
+		]
+	}
+	</script>
+	{% endif %}
+	{% include scripts.html %}
+</head>

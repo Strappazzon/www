@@ -1,0 +1,13 @@
+---
+---
+/* TEAM */
+	Everything: Alberto Strappazzon
+	Site: {{ site.url }}
+	From: Italy
+
+/* SITE */
+	Last update: {{ site.time | date:"%Y/%m/%d" }}
+	Language: English
+	Standards: HTML5, SCSS, JAVASCRIPT
+	Software: Visual Studio Code, Jekyll
+	Hosting: GitHub, Netlify

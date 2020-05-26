@@ -1,0 +1,11 @@
+---
+---
+<?xml version="1.0" encoding="utf-8"?>
+<browserconfig>
+    <msapplication>
+        <tile>
+            <square150x150logo src="{{ site.url }}/static/img/favicons/mstile-150x150.png"/>
+            <TileColor>#ba0000</TileColor>
+        </tile>
+    </msapplication>
+</browserconfig>

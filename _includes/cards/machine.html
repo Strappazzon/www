@@ -1,0 +1,49 @@
+<div class="col">
+	<div class="card-machine">
+		{% if include.type and include.type != "" %}
+			{% if include.active == true %}
+				<h2><span class="dot-active"></span><span class="title-active">{{ include.title }}</span></h2>
+				<span>
+					<span class="type-text">Type:</span> <span class="type-other">{{ include.type }}</span>
+				</span>
+				<span>
+					<span class="status-text">Status:</span> <span class="status-active">Active</span>
+				</span>
+			{% else %}
+				<h2><span class="dot-inactive"></span><span class="title-inactive">{{ include.title }}</span></h2>
+				<span>
+					<span class="type-text">Type:</span> <span class="type-other">{{ include.type }}</span>
+				</span>
+				<span>
+					<span class="status-text">Status:</span> <span class="status-inactive">Discontinued</span>
+				</span>
+			{% endif %}
+		{% else %}
+			{% if include.active == true %}
+				<h2><span class="dot-active"></span><span class="title-active">{{ include.title }}</span></h2>
+				<span>
+					<span class="status-text">Status:</span> <span class="status-active">Active</span>
+				</span>
+			{% else %}
+				<h2><span class="dot-inactive"></span><span class="title-inactive">{{ include.title }}</span></h2>
+				<span>
+					<span class="status-text">Status:</span> <span class="status-inactive">Discontinued</span>
+				</span>
+			{% endif %}
+		{% endif %}
+		<hr>
+		<p>
+			<span>Description:</span> {{ include.description }}
+			<br>
+			<span>Language:</span> {{ include.language }}
+		</p>
+		<hr>
+		<p>
+			<a title="Website" href="{{ include.website }}">Website</a> &middot;
+			{% if include.download and include.download != "" %}
+			<a title="Download Page" href="{{ include.download }}">Download</a> &middot;
+			{% endif %}
+			<a title="Source Code" href="{{ include.source }}">Source Code</a>
+		</p>
+	</div>
+</div>

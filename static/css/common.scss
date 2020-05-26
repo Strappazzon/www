@@ -1,0 +1,332 @@
+---
+---
+
+/*! Alberto Strappazzon's Stylesheet
+ * Copyright 2020 Alberto Strappazzon
+ * Licensed under MIT https://github.com/Strappazzon/www/blob/master/LICENSE.txt
+ *! A portion of this stylesheet uses code from Bootstrap
+ * Copyright 2011 - 2020 The Bootstrap Authors
+ * Copyright 2011 - 2020 Twitter, Inc.
+ * Licensed under MIT https://github.com/twbs/bootstrap/blob/master/LICENSE
+ *! A portion of this stylesheet uses code from Person of Interest Web UI
+ * Copyright (c) 2018, Krisztián Kis - Phresh-IT
+ * Licensed under MIT https://github.com/Phreshhh/poi-web-ui/blob/master/LICENSE.md
+*/
+
+/*! Acens
+ * https://www.dafont.com/acens.font
+*/
+@font-face {
+	font-family: "Acens";
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("/static/webfonts/Acens.woff2") format("woff2");
+}
+
+/*! DejaVu Sans Mono
+ * Copyright (c) 2003 Bitstream, Inc. All Rights Reserved.
+ * https://www.fontsquirrel.com/fonts/dejavu-sans-mono
+*/
+@font-face {
+	font-family: "DejaVu Sans Mono";
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("/static/webfonts/DejaVuSansMono.woff2") format("woff2");
+}
+
+/*! Magda Clean Mono
+ * https://www.myfonts.com/fonts/fontfont/ff-magda-clean-mono
+*/
+@font-face {
+	font-family: "Magda Clean Mono";
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("/static/webfonts/magdacleanmono-regular.woff2") format("woff2");
+}
+
+/*! Ubuntu Monospace
+ * https://design.ubuntu.com/font/
+*/
+@font-face {
+	font-family: "Ubuntu Mono";
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("/static/webfonts/Ubuntu-Mono.woff2") format("woff2");
+}
+
+@keyframes anim-blink {
+	0% { opacity: 1; }
+	50% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+::-webkit-scrollbar { width: 12px; }
+::-webkit-scrollbar-track { background-color: #737373; }
+::-webkit-scrollbar-track:active { background-color: #ccc; }
+::-webkit-scrollbar-thumb { background-color: #3b3a3b; }
+::-webkit-scrollbar-thumb:active { background-color: #464646; }
+::-webkit-scrollbar-corner { background-color: #737373; }
+
+::selection {
+	color: #232323;
+	background-color: #eee;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: "DejaVu Sans Mono", monospace;
+	font-size: 14px;
+	color: #fff;
+	cursor: url("/static/img/cursor.png"), auto;
+	background-color: #000;
+	scrollbar-width: thin;
+	scrollbar-color: #3b3a3b #737373;
+}
+
+body {
+	margin: 0;
+}
+
+p {
+	margin: 0 0 1rem 0;
+}
+
+strong {
+	font-weight: bold;
+}
+
+a:link {
+	outline: none;
+	cursor: url("/static/img/cursor_hand.png"), auto;
+}
+
+header {
+	& {
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 2;
+		display: flex;
+		font-family: "Acens", sans-serif;
+		font-size: 16px;
+		margin-bottom: 3rem;
+		color: inherit;
+		background-color: rgba(0, 0, 0, 0.6);
+		padding: 5px 10px 5px 10px;
+		border-bottom: 1px solid #fff;
+	}
+	.logo {
+		& {
+			letter-spacing: 1px;
+		}
+		img {
+			margin-top: -2px;
+			vertical-align: middle;
+		}
+		.fs {
+			text-shadow: 1px 1px 2px #ff0000;
+		}
+	}
+	.links {
+		& {
+			position: absolute;
+			right: 10px;
+			font-family: "DejaVu Sans Mono", monospace;
+			font-size: 14px;
+			line-height: 1.75;
+		}
+		a:link,
+		a:visited {
+			color: #fff;
+			text-decoration: none;
+		}
+		a:hover,
+		a:active {
+			color: #ccc;
+			text-decoration: none;
+		}
+	}
+}
+
+.bg-layer-main {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/static/img/bg_poi.jpg");
+	background-size: cover;
+	background-position: center;
+	z-index: -1;
+}
+
+.bg-layer-1 {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-image: url("/static/img/bg_machine.png");
+	background-size: cover;
+	background-position: center;
+	opacity: 0.9;
+	transform: rotateX(180deg);
+	z-index: -1;
+}
+
+.bg-layer-2 {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-image: url("/static/img/lensgrid.png");
+	background-size: 100% auto;
+	z-index: -1;
+}
+
+#top {
+	margin-bottom: 2rem;
+	padding-bottom: 1rem;
+	padding-top: 1rem;
+}
+
+.container {
+	display: block;
+	max-width: 1140px;
+	width: 100%;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.bg-lightgray {
+	& {
+		color: #000;
+		background-color: #d3d3d3;
+	}
+	a:link,
+	a:visited {
+		color: #000 !important;
+		text-decoration: none;
+	}
+	a:hover,
+	a:active {
+		color: #2a2a2a !important;
+		text-decoration: none !important;
+	}
+}
+
+.bg-darkgray {
+	& {
+		color: #fff;
+		background-color: rgba(35, 35, 35, 0.8);
+	}
+	a:hover,
+	a:active {
+		text-decoration: none !important;
+	}
+}
+
+.fg-green {
+	color: rgba(71, 255, 86, 0.8) !important;
+}
+
+.fg-blue {
+	color: rgba(51, 160, 255, 0.8) !important;
+}
+
+.td-underline {
+	text-decoration: underline;
+}
+
+#ep {
+	& {
+		text-transform: lowercase;
+		user-select: none;
+		-webkit-touch-callout: none;
+	}
+	&:before {
+		content: "\0073\0074\0072\0061\0070\0070\0061\007A\007A\006F\006E\0040";
+	}
+	&:after {
+		content: "\0070\0072\006F\0074\006F\006E\006D\0061\0069\006C\002E\0063\006F\006D";
+	}
+}
+
+#scroll-up {
+	& {
+		display: none;
+		position: fixed;
+		bottom: 10px;
+		right: 10px;
+		height: 100px;
+		width: 100px;
+		color: #fff;
+		text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+		background: transparent;
+		background-size: 100% 100%;
+		border: 0;
+		margin: 10px;
+		font-size: 12px;
+		cursor: url("/static/img/cursor_hand.png"), auto;
+		outline: none;
+		transition: transform 0.1s ease-in-out;
+		z-index: 2;
+	}
+	&:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100px;
+		width: 100px;
+		background-image: url("/static/img/btn_samaritan_indicator.png");
+		background-size: 100% 100%;
+		opacity: 0.6;
+		transition: transform 1.2s;
+	}
+	&:hover::before {
+		transform: rotate(180deg);
+	}
+}
+
+// ---------- MEDIA QUERIES ---------- //
+
+@media (max-width: 375px) {
+	header {
+		.logo {
+			span {
+				&:nth-last-of-type(1) {
+					letter-spacing: initial;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 420px) {
+	header {
+		.links {
+			font-size: 12px;
+			line-height: 2.1;
+		}
+	}
+}
+
+@media (max-width: 1400px) {
+	#scroll-up {
+		display: none !important;
+	}
+}

@@ -1,0 +1,31 @@
+---
+layout: none
+title: "Not Found | Alberto Strappazzon"
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Meta Data -->
+	<meta charset="utf-8">
+	<title>{{ page.title }}</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="robots" content="noindex">
+	<!-- Link Relationships -->
+	<link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}">
+	<!-- Favicons -->
+	<link rel="icon" type="image/png" sizes="24x24" href="/static/img/favicons/404.png">
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="/static/css/404.css">
+	<link rel="stylesheet" href="/static/css/404_dark.css" media="(prefers-color-scheme: dark)">
+	<!-- Scripts -->
+	<script src="/static/js/typewriter.js" async="true"></script>
+</head>
+<body>
+	<a title="Go to the Homepage" id="typewriter" class="nojs" href="{{ site.url }}" data-text="CONTENT NOT FOUND"></a>
+	<!-- No JS fallback -->
+	<noscript><a title="Go to the Homepage" href="{{ site.url }}">CONTENT NOT FOUND</a></noscript>
+	<br>
+	<img src="/static/img/triangle.png" alt="" draggable="false">
+</body>
+</html>
