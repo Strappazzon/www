@@ -1,0 +1,56 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Install Dependencies",
+			"type": "shell",
+			"command": "bundle install --gemfile \"./Gemfile\"",
+			"presentation": {
+				"reveal": "silent",
+				"revealProblems": "onProblem",
+				"focus": false,
+				"panel": "shared",
+				"showReuseMessage": false
+			}
+		},
+		{
+			"label": "Build Website",
+			"type": "shell",
+			"command": "bundle exec jekyll build -s \"./\" -d \"./_site/\" --config \"_config.prod.yml\"",
+			"dependsOrder": "sequence",
+			"dependsOn": "Install Dependencies",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"presentation": {
+				"reveal": "always",
+				"panel": "dedicated"
+			}
+		},
+		{
+			"label": "Serve Website (Development)",
+			"type": "shell",
+			"command": "bundle exec jekyll serve -s \"./\" -d \"./_site_dev/\" --config \"_config.prod.yml,_config.dev.yml\"",
+			"group": "test",
+			"dependsOrder": "sequence",
+			"dependsOn": "Install Dependencies",
+			"presentation": {
+				"reveal": "always",
+				"panel": "dedicated"
+			}
+		},
+		{
+			"label": "Serve Website (Production)",
+			"type": "shell",
+			"command": "bundle exec jekyll serve -s \"./\" -d \"./_site_prod/\" --config \"_config.prod.yml\"",
+			"group": "test",
+			"dependsOrder": "sequence",
+			"dependsOn": "Install Dependencies",
+			"presentation": {
+				"reveal": "always",
+				"panel": "dedicated"
+			}
+		}
+	]
+}
