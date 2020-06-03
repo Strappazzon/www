@@ -16,7 +16,7 @@
 		{
 			"label": "Build Website",
 			"type": "shell",
-			"command": "bundle exec jekyll build -s \"./\" -d \"./_site/\" --config \"_config.prod.yml\"",
+			"command": "bundle exec jekyll build -s \"./\" -d \"./_site/\" --config \"_config.yml\"",
 			"dependsOrder": "sequence",
 			"dependsOn": "Install Dependencies",
 			"group": {
@@ -31,7 +31,7 @@
 		{
 			"label": "Serve Website (Development)",
 			"type": "shell",
-			"command": "bundle exec jekyll serve -s \"./\" -d \"./_site_dev/\" --config \"_config.prod.yml,_config.dev.yml\"",
+			"command": "bundle exec jekyll serve -s \"./\" -d \"./_site_dev/\" --config \"_config.yml,_config.dev.yml\"",
 			"group": "test",
 			"dependsOrder": "sequence",
 			"dependsOn": "Install Dependencies",
@@ -43,7 +43,7 @@
 		{
 			"label": "Serve Website (Production)",
 			"type": "shell",
-			"command": "bundle exec jekyll serve -s \"./\" -d \"./_site_prod/\" --config \"_config.prod.yml\"",
+			"command": "bundle exec jekyll serve -s \"./\" -d \"./_site/\" --config \"_config.yml\"",
 			"group": "test",
 			"dependsOrder": "sequence",
 			"dependsOn": "Install Dependencies",
