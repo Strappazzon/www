@@ -1,5 +1,8 @@
 source "https://rubygems.org"
 
+# ExecJS
+gem "mini_racer"
+
 # Jekyll
 gem "jekyll", "~> 4.0", ">= 4.0.0"
 
