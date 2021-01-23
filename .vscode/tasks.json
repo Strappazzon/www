@@ -4,7 +4,13 @@
 		{
 			"label": "Install Dependencies",
 			"type": "shell",
-			"command": "bundle install --gemfile \"./Gemfile\"",
+			"command": "$HOME/gems/bin/bundle install --path vendor/bundle --gemfile \"./Gemfile\"",
+			"options": {
+				"shell": {
+					"executable": "bash.exe",
+					"args": [ "-c" ]
+				}
+			},
 			"presentation": {
 				"reveal": "silent",
 				"revealProblems": "onProblem",
@@ -16,7 +22,13 @@
 		{
 			"label": "Build Website",
 			"type": "shell",
-			"command": "bundle exec jekyll build -s \"./\" -d \"./_site/\" --config \"_config.yml\"",
+			"command": "$HOME/gems/bin/bundle exec jekyll build -s \"./\" -d \"./_site/\" --config \"_config.yml\"",
+			"options": {
+				"shell": {
+					"executable": "bash.exe",
+					"args": [ "-c" ]
+				}
+			},
 			"dependsOrder": "sequence",
 			"dependsOn": "Install Dependencies",
 			"group": {
@@ -31,10 +43,16 @@
 		{
 			"label": "Serve Website (Development)",
 			"type": "shell",
-			"command": "bundle exec jekyll serve -s \"./\" -d \"./_site_dev/\" --config \"_config.yml,_config.dev.yml\"",
-			"group": "test",
+			"command": "$HOME/gems/bin/bundle exec jekyll serve -s \"./\" -d \"./_site_dev/\" --config \"_config.yml,_config.dev.yml\" --force_polling --livereload",
+			"options": {
+				"shell": {
+					"executable": "bash.exe",
+					"args": [ "-c" ]
+				}
+			},
 			"dependsOrder": "sequence",
 			"dependsOn": "Install Dependencies",
+			"group": "test",
 			"presentation": {
 				"reveal": "always",
 				"panel": "dedicated"
@@ -43,10 +61,16 @@
 		{
 			"label": "Serve Website (Production)",
 			"type": "shell",
-			"command": "bundle exec jekyll serve -s \"./\" -d \"./_site/\" --config \"_config.yml\"",
-			"group": "test",
+			"command": "$HOME/gems/bin/bundle exec jekyll serve -s \"./\" -d \"./_site/\" --config \"_config.yml\" --force_polling --livereload",
+			"options": {
+				"shell": {
+					"executable": "bash.exe",
+					"args": [ "-c" ]
+				}
+			},
 			"dependsOrder": "sequence",
 			"dependsOn": "Install Dependencies",
+			"group": "test",
 			"presentation": {
 				"reveal": "always",
 				"panel": "dedicated"
