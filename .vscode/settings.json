@@ -1,0 +1,8 @@
+{
+	"files.exclude": {
+		".bundle": true,
+		".jekyll-cache": true,
+		"**/vendor": true
+	},
+	"terminal.integrated.shell.windows": "C:\\Windows\\System32\\wsl.exe"
+}

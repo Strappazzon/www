@@ -22,7 +22,7 @@
 		{
 			"label": "Build Website",
 			"type": "shell",
-			"command": "$HOME/gems/bin/bundle exec jekyll build -s \"./\" -d \"./_site/\" --config \"_config.yml\"",
+			"command": "JEKYLL_ENV=production $HOME/gems/bin/bundle exec jekyll build -s \"./\" -d \"./_site/\" --config \"_config.yml\"",
 			"options": {
 				"shell": {
 					"executable": "bash.exe",
@@ -61,7 +61,7 @@
 		{
 			"label": "Serve Website (Production)",
 			"type": "shell",
-			"command": "$HOME/gems/bin/bundle exec jekyll serve -s \"./\" -d \"./_site/\" --config \"_config.yml\" --force_polling --livereload",
+			"command": "JEKYLL_ENV=production $HOME/gems/bin/bundle exec jekyll serve -s \"./\" -d \"./_site/\" --config \"_config.yml\" --force_polling --livereload",
 			"options": {
 				"shell": {
 					"executable": "bash.exe",

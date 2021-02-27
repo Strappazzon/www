@@ -5,12 +5,21 @@
 ## Developing
 
 1. Install [node.js](https://nodejs.org)
+    - With [NVM](https://github.com/nvm-sh/nvm): `nvm install node`
+    - Manually
 2. Install [Ruby](https://www.ruby-lang.org)
+    - With [rbenv](https://github.com/rbenv/rbenv): `rbenv install`
+    - With [RVM](https://rvm.io): `rvm install "ruby-$(cat .ruby-version)"`
+    - Manually
 3. Install [Bundler](https://bundler.io)
-4. Run `bundle install` to install the required dependencies
-5. Install netlify-cli with `npm install netlify-cli -g`
-6. Run `netlify dev` to serve the website locally
-7. Navigate to <http://127.0.0.1:8888>
+    - `gem install bundler`
+4. Install the required dependencies
+    - `bundle install`
+5. Install [netlify-cli](https://cli.netlify.com)
+    - `npm install netlify-cli -g`
+6. Serve the website locally
+    - `netlify dev` (**recommended**)
+    - `bundle exec jekyll serve --force_polling --livereload`
 
 ## Credits
 
