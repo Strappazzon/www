@@ -2,7 +2,7 @@
 ---
 
 /*! Alberto Strappazzon's Stylesheet
- * Copyright 2020 Alberto Strappazzon
+ * Copyright 2020 - 2021 Alberto Strappazzon
  * Licensed under MIT https://github.com/Strappazzon/www/blob/master/LICENSE.txt
  *! A portion of this stylesheet uses code from Bootstrap
  * Copyright 2011 - 2020 The Bootstrap Authors
@@ -251,17 +251,27 @@ header {
 	text-decoration: underline;
 }
 
-#ep {
-	& {
-		text-transform: lowercase;
-		user-select: none;
-		-webkit-touch-callout: none;
-	}
+[class*="ep__"] {
+	text-transform: lowercase;
+	user-select: none;
+	-webkit-touch-callout: none;
+}
+
+.ep__cd {
 	&:before {
-		content: "\0073\0074\0072\0061\0070\0070\0061\007A\007A\006F\006E\0040";
+		content: "\0061\0040\0073\0074\0072\0061\0070\0070";
 	}
 	&:after {
-		content: "\0070\0072\006F\0074\006F\006E\006D\0061\0069\006C\002E\0063\006F\006D";
+		content: "\0061\007A\007A\006F\006E\002E\0078\0079\007A";
+	}
+}
+
+.ep__pm {
+	&:before {
+		content: "\0073\0074\0072\0061\0070\0070\0061\007A\007A\006F\006E\0040\0070";
+	}
+	&:after {
+		content: "\0072\006F\0074\006F\006E\006D\0061\0069\006C\002E\0063\006F\006D";
 	}
 }
 
