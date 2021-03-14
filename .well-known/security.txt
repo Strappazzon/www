@@ -1,18 +1,14 @@
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA256
 
-Contact: strappazzon@protonmail.com
-Encryption: https://www.strappazzon.xyz/files/strappazzon.asc
+Contact: a@strappazzon.xyz
+Encryption: https://www.strappazzon.xyz/files/strappazzon_xyz.asc
 Preferred-Languages: en, it
 Canonical: https://www.strappazzon.xyz/.well-known/security.txt
 -----BEGIN PGP SIGNATURE-----
 
-iQEzBAEBCAAdFiEE3lWgp4BvYDA0feEKBol/FzELzCQFAl7NMygACgkQBol/FzEL
-zCQFMQf9EAyQZuPJfmFwl/xZB5xeKxkhAG6bkS2Z8AFmxqPZuzgZSmOsMGUwJGmv
-uVzDY4ZntpADA9AqR0CJmY+UYZ5jrB3TSuCS7lPa6VVvB8AvowSB2kboxAD8fv4D
-4yvR/LgbEnYvw32dc03X+SzZz9/cqV1NTnjkpWnCtYJkrE9un25VpmWWwofI9Hap
-dpkmLXKQ0E7d6qAn9EADoYn6ZAKLWzJQSI6UorUzDxp8kQL+zzhCd4T1nHDFEBcr
-u97qjRhTkTeH2ymTlcVDFnUJd5Ir+O+8sUIp+HjYoCmsCXJ2T/uDhxe4cbejpvHI
-ZP8D1kl4tWDXqW5gmYUoJ9Vb7Oy/sQ==
-=BOGT
+iIgEARYIADAWIQSXUSbjfJupB9lfqlSYsWDUXUim9QUCYE5RzBIcYUBzdHJhcHBh
+enpvbi54eXoACgkQmLFg1F1IpvXkZgEAicWKxBCPeUnd3cD6b9KrCc6qYDZf8PE9
+S65Jdax/p9sBAJlFcBXP5KjOa0/gzSWbjfPMj2xkFs8Xu3ZGRDcffRsL
+=XL1E
 -----END PGP SIGNATURE-----
