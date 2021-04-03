@@ -57,6 +57,13 @@
     """
     Content-Type = "font/woff2"
 
+# Redirect Netlify subdomain to custom domain
+[[redirects]]
+  from = "https://strappazzon.netlify.app/*"
+  to = "https://www.strappazzon.xyz/:splat"
+  status = 301
+  force = true
+
 # Redirect old Keys page
 [[redirects]]
   from = "/keys/*"
