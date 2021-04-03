@@ -9,9 +9,6 @@
 **/vendor/
 /lib/bundler/man/
 
-# Ruby
-/Gemfile.lock
-
 # Junk files (Windows)
 **/Thumbs.db
 **/[Dd]esktop.ini
