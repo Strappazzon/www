@@ -1,8 +1,19 @@
 {
+	"[markdown]": {
+		"editor.quickSuggestions": false,
+		"files.trimTrailingWhitespace": false
+	},
+
 	"files.exclude": {
 		".bundle": true,
 		".jekyll-cache": true,
 		"**/vendor": true
 	},
-	"terminal.integrated.shell.windows": "C:\\Windows\\System32\\wsl.exe"
+	"files.insertFinalNewline": true,
+	"files.trimFinalNewlines": true,
+	"files.trimTrailingWhitespace": true,
+
+	"markdown.preview.scrollEditorWithPreview": false,
+
+	"terminal.integrated.shell.windows": "C:\\Windows\\System32\\wsl.exe",
 }
