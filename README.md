@@ -1,6 +1,4 @@
-### Source code of my personal website
-
-![Deploy Status](https://api.netlify.com/api/v1/badges/00e3aae8-6038-4963-a3da-7a50b5702617/deploy-status)
+[![Deploy Status](https://api.netlify.com/api/v1/badges/00e3aae8-6038-4963-a3da-7a50b5702617/deploy-status)](https://app.netlify.com/sites/strappazzon/deploys)
 
 ## Developing
 
