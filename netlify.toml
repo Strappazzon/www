@@ -22,15 +22,15 @@
         frame-ancestors 'none';
       """
       Permissions-Policy = """
-        accelerometer 'none';
-        autoplay 'self';
-        camera 'none';
-        fullscreen 'self';
-        geolocation 'none';
-        gyroscope 'none';
-        microphone 'none';
-        payment 'none';
-        usb 'none'
+        accelerometer=(),
+        autoplay=(self),
+        camera=(),
+        fullscreen=(self),
+        geolocation=(),
+        gyroscope=(),
+        microphone=(),
+        payment=(),
+        usb=()
       """
       Access-Control-Allow-Origin = "*"
       Referrer-Policy = "no-referrer"
