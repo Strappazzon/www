@@ -11,16 +11,51 @@
       X-Frame-Options = "DENY"
       X-XSS-Protection = "1; mode=block"
       X-Content-Type-Options = "nosniff"
-      Content-Security-Policy = "default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; manifest-src 'self'; frame-ancestors 'none';"
+      X-UA-Compatible = "IE=edge,chrome=1"
+      Content-Security-Policy = """
+        default-src 'none';
+        script-src 'self';
+        style-src 'self';
+        img-src 'self';
+        font-src 'self';
+        manifest-src 'self';
+        frame-ancestors 'none';
+      """
+      Permissions-Policy = """
+        accelerometer 'none';
+        autoplay 'self';
+        camera 'none';
+        fullscreen 'self';
+        geolocation 'none';
+        gyroscope 'none';
+        microphone 'none';
+        payment 'none';
+        usb 'none'
+      """
       Access-Control-Allow-Origin = "*"
       Referrer-Policy = "no-referrer"
-      Feature-Policy = "autoplay 'self';camera 'none';fullscreen 'self';geolocation 'none';microphone 'none';payment 'none'"
       Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
-      Cache-Control = '''
-      max-age=0,
-      no-cache,
-      no-store,
-      must-revalidate'''
+      Cache-Control = "no-cache"
+
+[[headers]]
+  for = "/static/*"
+    [headers.values]
+      # Cache static assets for 1 week
+      Cache-Control = """
+        max-age=604800,
+        public
+    """
+
+[[headers]]
+  for = "*.woff2"
+    [headers.values]
+      # Cache fonts forever
+      Cache-Control = """
+        max-age=365000000,
+        public,
+        immutable
+    """
+    Content-Type = "font/woff2"
 
 # Redirect old Keys page
 [[redirects]]
