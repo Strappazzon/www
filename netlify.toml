@@ -64,6 +64,11 @@
   status = 301
   force = true
 
+[[redirects]]
+  from = "/security.txt"
+  to = "/.well-known/security.txt"
+  status = 301
+
 # Redirect old Keys page
 [[redirects]]
   from = "/keys/*"
