@@ -28,6 +28,7 @@
         fullscreen=(self),
         geolocation=(),
         gyroscope=(),
+        interest-cohort=()
         microphone=(),
         payment=(),
         usb=()
