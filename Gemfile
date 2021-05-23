@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
-# ExecJS
 gem "mini_racer"
+gem "webrick", "~> 1.7"
 
 # Jekyll
 gem "jekyll", "~> 4.2"
