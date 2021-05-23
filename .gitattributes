@@ -1,0 +1,13 @@
+* text=auto
+
+Gemfile* text eol=lf
+*.json   text eol=lf
+*.yml    text eol=lf
+
+*.jpg   binary
+*.png   binary
+*.ico   binary
+*.woff2 binary
+
+# GitHub language statistics, see https://github.com/github/linguist/blob/master/docs/overrides.md
+/pages/*.md linguist-detectable=true
