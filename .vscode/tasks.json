@@ -4,7 +4,7 @@
 		{
 			"label": "Install Dependencies",
 			"type": "shell",
-			"command": "$HOME/gems/bin/bundle install --path vendor/bundle --gemfile \"./Gemfile\"",
+			"command": "eval \"$($HOME/.local/bin/frum/frum init)\" && bundle install",
 			"options": {
 				"shell": {
 					"executable": "bash.exe",
@@ -22,7 +22,7 @@
 		{
 			"label": "Build Website",
 			"type": "shell",
-			"command": "JEKYLL_ENV=production $HOME/gems/bin/bundle exec jekyll build -s \"./\" -d \"./_site/\" --config \"_config.yml\"",
+			"command": "JEKYLL_ENV=production eval \"$($HOME/.local/bin/frum/frum init)\" && bundle exec jekyll build",
 			"options": {
 				"shell": {
 					"executable": "bash.exe",
@@ -43,7 +43,7 @@
 		{
 			"label": "Serve Website (Development)",
 			"type": "shell",
-			"command": "$HOME/gems/bin/bundle exec jekyll serve -s \"./\" -d \"./_site_dev/\" --config \"_config.yml,_config.dev.yml\" --force_polling --livereload",
+			"command": "eval \"$($HOME/.local/bin/frum/frum init)\" && bundle exec jekyll serve -s \"./\" -d \"./_site_dev/\" --config \"_config.yml,_config.dev.yml\" --force_polling --livereload",
 			"options": {
 				"shell": {
 					"executable": "bash.exe",
@@ -61,7 +61,7 @@
 		{
 			"label": "Serve Website (Production)",
 			"type": "shell",
-			"command": "JEKYLL_ENV=production $HOME/gems/bin/bundle exec jekyll serve -s \"./\" -d \"./_site/\" --config \"_config.yml\" --force_polling --livereload",
+			"command": "JEKYLL_ENV=production eval \"$($HOME/.local/bin/frum/frum init)\" && bundle exec jekyll serve -s \"./\" -d \"./_site/\" --config \"_config.yml\" --force_polling --livereload",
 			"options": {
 				"shell": {
 					"executable": "bash.exe",
