@@ -2,7 +2,7 @@
 ---
 
 /*! Alberto Strappazzon's Stylesheet
- * Copyright 2020 Alberto Strappazzon
+ * Copyright 2020 - 2021 Alberto Strappazzon
  * Licensed under MIT https://github.com/Strappazzon/www/blob/master/LICENSE.txt
  *! A portion of this stylesheet uses code from Bootstrap
  * Copyright 2011 - 2020 The Bootstrap Authors
@@ -362,6 +362,20 @@ $terminal-h: 350px;
 			}
 		}
 	}
+}
+
+// Classes used by the terminal script
+
+.ml-0 {
+	margin-left: 0 !important;
+}
+
+.mh-0 {
+	min-height: 0 !important;
+}
+
+.d-n {
+	display: none !important;
 }
 
 // ---------- MEDIA QUERIES ---------- //
