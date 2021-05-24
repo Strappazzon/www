@@ -1,27 +1,21 @@
 let i = 0;
-let text = document.getElementById('typewriter').dataset.text; // stackoverflow.com/a/37880192
-let speed = 125;
+const TYPEWRT = document.getElementById('typewriter')
+const TEXT = TYPEWRT.dataset.text; // stackoverflow.com/a/37880192
+const SPEED = 125;
+const NOJS = document.querySelector('.nojs');
 
 // www.w3schools.com/howto/howto_js_typewriter.asp
 function typeWriter() {
-	if (i < text.length) {
-		document.getElementById('typewriter').innerHTML += text.charAt(i);
+	if (i < TEXT.length) {
+		TYPEWRT.innerHTML += TEXT.charAt(i);
 		i++;
-		setTimeout(typeWriter, speed);
+		setTimeout(typeWriter, SPEED);
 	}
 }
 
-let noJsEl = document.querySelector('.nojs');
-
+// Remove "nojs" class
 // alligator.io/js/classlist
-function removeNoJs() {
-	if (noJsEl.classList.contains('nojs')) {
-		noJsEl.classList.remove('nojs');
-	}
-}
-
-// Remove "nojs" attribute
-removeNoJs();
+NOJS.classList.contains('nojs') && NOJS.classList.remove('nojs');
 
 // Start typewriter animation
 typeWriter();

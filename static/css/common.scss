@@ -312,6 +312,16 @@ header {
 	}
 }
 
+// Styles used by scripts
+
+.d-n {
+	display: none !important;
+}
+
+.d-b {
+	display: block !important;
+}
+
 // ---------- MEDIA QUERIES ---------- //
 
 @media (max-width: 375px) {

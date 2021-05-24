@@ -1,7 +1,4 @@
-function calcAge() {
-	// stackoverflow.com/a/6002276
-	document.getElementById('age').innerHTML = new Date().getFullYear() - 1998 + ' years old ';
-}
+const AGE = document.getElementById('age');
 
-// Calculate my age so I don't have to update the page
-calcAge();
+// stackoverflow.com/a/6002276
+AGE.innerHTML = `${new Date().getFullYear() - 1998} years old `;

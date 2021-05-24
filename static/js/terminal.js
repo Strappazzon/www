@@ -3,7 +3,7 @@ const TERM_MAXMZ_BTN = document.getElementById('term-max');
 const TERM_CLOSE_BTN = document.getElementById('term-close');
 let isMinimized = false;
 
-TERM_MINMZ_BTN.addEventListener('click', e => {
+TERM_MINMZ_BTN.addEventListener('click', () => {
 	var term = document.querySelector('.terminal');
 	var termCnt = document.querySelector('.terminal .content');
 
@@ -14,7 +14,7 @@ TERM_MINMZ_BTN.addEventListener('click', e => {
 	}
 });
 
-TERM_MAXMZ_BTN.addEventListener('click', e => {
+TERM_MAXMZ_BTN.addEventListener('click', () => {
 	var term = document.querySelector('.terminal');
 	var termCnt = document.querySelector('.terminal .content');
 
@@ -25,7 +25,7 @@ TERM_MAXMZ_BTN.addEventListener('click', e => {
 	}
 });
 
-TERM_CLOSE_BTN.addEventListener('click', e => {
+TERM_CLOSE_BTN.addEventListener('click', () => {
 	var term = document.querySelector('.terminal');
 	var dlCnt = document.querySelector('.downloads__container');
 
