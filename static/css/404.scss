@@ -2,9 +2,20 @@
 ---
 
 /*! Alberto Strappazzon's Stylesheet
- * Copyright 2020 Alberto Strappazzon
+ * Copyright 2020 - 2021 Alberto Strappazzon
  * Licensed under MIT https://github.com/Strappazzon/www/blob/master/LICENSE.txt
 */
+
+/*! Magda Clean Mono
+ * https://www.myfonts.com/fonts/fontfont/ff-magda-clean-mono
+*/
+@font-face {
+	font-family: "Magda Clean Mono";
+	font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+	src: url("/static/webfonts/magdacleanmono-regular.woff2") format("woff2");
+}
 
 @keyframes anim-blink {
 	0% { opacity: 1; }
