@@ -16,14 +16,14 @@ permalink: /privacy/
 
 This Privacy Statement applies to <{{ site.url }}> (hereinafter, "This Website"), operated by Alberto Strappazzon (hereinafter, "I", or "Me").
 
-### Netlify
+### Vercel
 
-This Website is hosted on Netlify.
+This Website is hosted on Vercel.
 
-Netlify may collect non-personally-identifying information of the sort that web browsers and servers typically make available, such as the browser type and the date and time of each visitor request.
-Netlify may also collect potentially personally-identifying information like Internet Protocol (IP) addresses.
+Vercel may collect non-personally-identifying information of the sort that web browsers and servers typically make available, such as the browser type and the date and time of each visitor request.
+Vercel may also collect potentially personally-identifying information like Internet Protocol (IP) addresses.
 
-See also: [Netlify Privacy Policy](https://www.netlify.com/privacy/ "Netlify Privacy Policy").
+See also: [Vercel Privacy Policy](https://vercel.com/legal/privacy-policy "Vercel Privacy Policy").
 
 ### Links To External Sites
 
