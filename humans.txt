@@ -10,4 +10,4 @@
 	Language: English
 	Standards: HTML5, SCSS, JAVASCRIPT
 	Software: Visual Studio Code, Jekyll
-	Hosting: GitHub, Netlify
+	Hosting: GitHub, Vercel
