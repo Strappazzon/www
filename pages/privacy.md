@@ -2,14 +2,8 @@
 layout: pages
 title: "Privacy Statement | Alberto Strappazzon"
 description: "This Privacy Statement explains what information this website collects about its visitors."
+short_desc: "Last Update: May 24, 2021"
 permalink: /privacy/
----
-
-<div class="title">
-  <h1 id="">Privacy Statement</h1>
-  <h4 id="">Last Update: May 24, 2021</h4>
-</div>
-
 ---
 
 ### This Privacy Statement explains what information this website collects about its visitors.
@@ -38,5 +32,3 @@ This version of This Website Privacy Statement took effect May 20th, 2020.
 I will post any new versions of this statement at [{{ page.permalink | prepend: site.url }}]({{ page.permalink | prepend: site.url }}).
 
 A full [revision history](https://github.com/Strappazzon/www/commits/master/pages/privacy.md "Revision History") for this page can be found on GitHub.
-
----

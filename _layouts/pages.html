@@ -9,7 +9,17 @@
 	<div id="top"></div>
 	<div class="container" role="main">
 		<main>
+			<div class="title">
+				{% assign pg_title = page.title | split: " | " %}
+				<h1>{{ pg_title[0] }}</h1>
+				<h4>{{ page.short_desc }}</h4>
+			</div>
+
+			<hr>
+
 			{{ content }}
+
+			<hr>
 		</main>
 	</div>
 </body>
