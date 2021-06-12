@@ -18,10 +18,10 @@ description: "I'm a hobbyist developer and server administrator. This website is
 			<div class="text">Location:</div>
 			<div class="label bg-darkgray"><a title="Location" href="https://en.wikipedia.org/wiki/Veneto">Veneto, Italy</a></div>
 		</div>
-		{% for account in site.data.accounts %}
+		{% for a in site.data.accounts %}
 		<div class="row">
-			<div class="text">{{ account.name }}:</div>
-			<div class="label bg-lightgray"><a title="{{ account.name }} Account" href="{{ account.url }}" rel="me">{{ account.username }}</a></div>
+			<div class="text">{{ a.name }}:</div>
+			<div class="label bg-lightgray"><a aria-label="{{ a.name }} Account" href="{{ a.url }}" rel="me">{{ a.username }}</a></div>
 		</div>
 		{% endfor %}
 		<div class="row">
