@@ -19,12 +19,12 @@ title: "Not Found | Alberto Strappazzon"
 	<link rel="stylesheet" href="/static/css/404.css">
 	<link rel="stylesheet" href="/static/css/404_dark.css" media="(prefers-color-scheme: dark)">
 	{%- comment -%} Scripts {%- endcomment -%}
-	<script src="/static/js/typewriter.js" async="true"></script>
+	<script async src="/static/js/typewriter.js"></script>
 </head>
 <body>
-	<a title="Go to the Homepage" id="typewriter" class="nojs" href="{{ site.url }}" data-text="CONTENT NOT FOUND"></a>
+	<a id="typewriter" class="nojs" href="{{ site.url }}" aria-label="Go to the Homepage" data-text="CONTENT NOT FOUND"></a>
 	{%- comment -%} No JS fallback {%- endcomment -%}
-	<noscript><a title="Go to the Homepage" href="{{ site.url }}">CONTENT NOT FOUND</a></noscript>
+	<noscript><a href="{{ site.url }}" aria-label="Go to the Homepage">CONTENT NOT FOUND</a></noscript>
 	<br>
 	<img src="/static/img/triangle.png" alt="" draggable="false">
 </body>
