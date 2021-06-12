@@ -43,7 +43,12 @@
 	<link rel="stylesheet" href="/static/css/highlight.css">
 	{% endif %}
 	<!-- Scripts -->
+	<script defer src="/static/js/scroll.js"></script>
+	{% if page.name == "accounts.html" or page.name == "donate.html" %}
+	<script defer src="/static/js/terminal.js"></script>
+	{% endif %}
 	{% if page.url == "/" %}
+	<script defer src="/static/js/age.js"></script>
 	<script type="application/ld+json">
 	{
 		"@context": "https://schema.org",
@@ -72,5 +77,4 @@
 	}
 	</script>
 	{% endif %}
-	{% include scripts.html %}
 </head>
