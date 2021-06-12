@@ -31,9 +31,9 @@ sitemap:
 exclude:
   - Gemfile
   - LICENSE.txt
-  - netlify.toml
   - package.json
   - README.md
+  - vercel.json
 
 # Included files
 include:
