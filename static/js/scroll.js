@@ -1,4 +1,4 @@
-const BTN_TOP = document.getElementById('scroll-up');
+const BTN_TOP = document.querySelector('#scroll-up');
 
 function scrollUp() {
 	document.body.scrollTop = 0;

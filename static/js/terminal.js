@@ -1,34 +1,34 @@
-const TERM_MINMZ_BTN = document.getElementById('term-min');
-const TERM_MAXMZ_BTN = document.getElementById('term-max');
-const TERM_CLOSE_BTN = document.getElementById('term-close');
+const TERM_MINMZ_BTN = document.querySelector('#term-min');
+const TERM_MAXMZ_BTN = document.querySelector('#term-max');
+const TERM_CLOSE_BTN = document.querySelector('#term-close');
 let isMinimized = false;
 
 TERM_MINMZ_BTN.addEventListener('click', () => {
-	var term = document.querySelector('.terminal');
-	var termCnt = document.querySelector('.terminal .content');
+	const TERM = document.querySelector('.terminal');
+	const TCNT = document.querySelector('.terminal .content');
 
 	if (isMinimized == false) {
-		term.classList.add('mh-0');
-		termCnt.classList.add('d-n');
+		TERM.classList.add('mh-0');
+		TCNT.classList.add('d-n');
 		isMinimized = true;
 	}
 });
 
 TERM_MAXMZ_BTN.addEventListener('click', () => {
-	var term = document.querySelector('.terminal');
-	var termCnt = document.querySelector('.terminal .content');
+	const TERM = document.querySelector('.terminal');
+	const TCNT = document.querySelector('.terminal .content');
 
 	if (isMinimized) {
-		term.classList.remove('mh-0');
-		termCnt.classList.remove('d-n');
+		TERM.classList.remove('mh-0');
+		TCNT.classList.remove('d-n');
 		isMinimized = false;
 	}
 });
 
 TERM_CLOSE_BTN.addEventListener('click', () => {
-	var term = document.querySelector('.terminal');
-	var dlCnt = document.querySelector('.downloads__container');
+	const TERM = document.querySelector('.terminal');
+	const DLCT = document.querySelector('.downloads__container');
 
-	term.parentNode.removeChild(term);
-	dlCnt.classList.add('ml-0');
+	TERM.parentNode.removeChild(TERM);
+	DLCT.classList.add('ml-0');
 });
