@@ -12,11 +12,11 @@
 		{ "source": "/view-source", "destination": "https://github.com/Strappazzon/www", "statusCode": 301 },
 		{ "source": "/security.txt", "destination": "/.well-known/security.txt", "statusCode": 301 },
 		{ "source": "/keys(.+)?", "destination": "/accounts", "statusCode": 301 },
-		{ "source": "/GRW-GHOST-Buster(.+)?", "destination": "https://strappazzon.github.io/GRW-GHOST-Buster/$1", "statusCode": 301 },
-		{ "source": "/newtab(.+)?", "destination": "https://strappazzon.github.io/newtab/$1", "statusCode": 301 },
-		{ "source": "/PD2-SuperBLT-Hasher(.+)?", "destination": "https://strappazzon.github.io/PD2-SuperBLT-Hasher/$1", "statusCode": 301 },
-		{ "source": "/Screendere-Beat(.+)?", "destination": "https://strappazzon.github.io/Screendere-Beat/$1", "statusCode": 301 },
-		{ "source": "/teleme7ry(.+)?", "destination": "https://strappazzon.github.io/teleme7ry/$1", "statusCode": 301 },
+		{ "source": "/GRW-GHOST-Buster(.+)?", "destination": "https://strappazzon.github.io/GRW-GHOST-Buster/", "statusCode": 301 },
+		{ "source": "/newtab(.+)?", "destination": "https://strappazzon.github.io/newtab/", "statusCode": 301 },
+		{ "source": "/PD2-SuperBLT-Hasher(.+)?", "destination": "https://strappazzon.github.io/PD2-SuperBLT-Hasher/", "statusCode": 301 },
+		{ "source": "/Screendere-Beat(.+)?", "destination": "https://strappazzon.github.io/Screendere-Beat/", "statusCode": 301 },
+		{ "source": "/teleme7ry(.+)?", "destination": "https://strappazzon.github.io/teleme7ry/", "statusCode": 301 },
 		{ "source": "/tor-exit-page(.+)?", "destination": "https://strappazzon.github.io/tor-exit-page/$1", "statusCode": 301 }
 	],
 	"headers": [
