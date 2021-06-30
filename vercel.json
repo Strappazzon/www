@@ -11,6 +11,7 @@
 	"redirects": [
 		{ "source": "/view-source", "destination": "https://github.com/Strappazzon/www", "statusCode": 301 },
 		{ "source": "/security.txt", "destination": "/.well-known/security.txt", "statusCode": 301 },
+		{ "source": "/files(.+)?", "destination": "/static/$1", "statusCode": 301 },
 		{ "source": "/keys(.+)?", "destination": "/accounts", "statusCode": 301 },
 		{ "source": "/GRW-GHOST-Buster(.+)?", "destination": "https://strappazzon.github.io/GRW-GHOST-Buster/", "statusCode": 301 },
 		{ "source": "/newtab(.+)?", "destination": "https://strappazzon.github.io/newtab/", "statusCode": 301 },
