@@ -21,7 +21,7 @@ sass:
 autoprefixer:
   browsers:
     - last 2 versions
-  only_production: false
+  only_production: true
 
 # Sitemap
 sitemap:
