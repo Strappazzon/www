@@ -1,13 +1,17 @@
+# VSCode
+.vscode/*
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/settings.json
+
 # Jekyll
 /_site*/
-/.sass-cache/
 /.jekyll-cache/
 /.jekyll-metadata
 
 # Bundler
 /.bundle/
-**/vendor/
-/lib/bundler/man/
+/vendor/
 
 # Junk files (Windows)
 **/Thumbs.db
