@@ -9,6 +9,9 @@ body {
 			border-top: 1px solid #ff0000;
 			box-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
 		}
+		& > h2 {
+			text-transform: uppercase;
+		}
 	}
 	a {
 		&:link,
@@ -42,7 +45,6 @@ body {
 		text-shadow: 1px 1px 2px #ccc;
 	}
 	h1,
-	h2,
 	h3,
 	h4,
 	h5 {
