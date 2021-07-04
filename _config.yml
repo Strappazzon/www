@@ -34,7 +34,6 @@ sitemap:
 exclude:
   - Gemfile
   - LICENSE.txt
-  - package.json
   - README.md
   - vercel.json
 
