@@ -3,12 +3,12 @@
 		"editor.quickSuggestions": false,
 		"files.trimTrailingWhitespace": false
 	},
-
 	"files.exclude": {
 		".bundle": true,
 		".jekyll-cache": true,
 		"_site*": true,
-		"/vendor/**": true
+		"vendor/**": true,
+		"Gemfile.lock": true
 	},
 	"files.insertFinalNewline": true,
 	"files.trimFinalNewlines": true,
