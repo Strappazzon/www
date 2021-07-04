@@ -1,0 +1,12 @@
+<header>
+	<div class="logo">
+		<img src="/static/img/favicons/favicon-32x32.png" width="18px" height="18px" alt="" draggable="false">
+		<span class="separator">&nbsp;&nbsp;///&nbsp;&nbsp;</span>
+		<span>{{ site.title | upcase}}</span>
+	</div>
+	{% if page.url != "/" %}
+		<div class="links">
+			<a href="/">Home</a>
+		</div>
+	{% endif %}
+</header>

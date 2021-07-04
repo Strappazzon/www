@@ -1,0 +1,45 @@
+@import "helpers/mixins";
+@import "helpers/vars";
+@import "_fonts";
+@import "_animations";
+
+::selection {
+	color: #eee;
+	background-color: #181818;
+}
+
+html {
+	margin: 0;
+	height: 100vh;
+	cursor: url("/static/img/cursor.png"), auto;
+}
+
+body {
+	position: absolute;
+	margin: 0;
+	width: 100vw;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	@include font("Magda Clean Mono", true);
+	font-size: 26px;
+	text-align: center;
+	text-transform: uppercase;
+	background-color: #fff;
+	a {
+		padding-bottom: 2px;
+		border-bottom: 2px solid #000;
+		outline: none;
+		text-decoration: none;
+		color: inherit;
+	}
+	img {
+		width: 32px;
+		height: auto;
+		margin-top: 10px;
+		animation: anim-blink normal 1s infinite;
+	}
+	.nojs {
+		display: none;
+	}
+}

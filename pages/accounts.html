@@ -6,71 +6,58 @@ short_desc: "Accounts and public keys I use"
 permalink: /accounts/
 ---
 
-<h3 id="email">Emails</h3>
+<div class="container__contacts">
+	<div class="emails">
+		<h3 id="emails">Emails</h3>
 
-<p>
-	<span class="td-underline ep__cd"></span>
-</p>
-<p>
-	<span class="td-underline ep__pm"></span>
-</p>
+		<ul>
+			<li>
+				<span class="ep__cd"></span>
+			</li>
+			<li>
+				<span class="ep__pm"></span>
+			</li>
+		</ul>
+	</div>
 
-<h3 id="other">Other</h3>
+	<div class="accounts">
+		<h3 id="accounts">Accounts</h3>
 
-<p>
-	Twitter <a title="Twitter Account" href="https://twitter.com/0xStrappazzon">@0xStrappazzon</a> [<a title="Proof" class="fg-green" href="https://keybase.io/strappazzon/sigs/Et5aBByE1qwdGkMjvWYx-_i2e8kqHgGw813f">Signed</a>]
-	<br>
-	GitHub <a title="GitHub Account" href="https://github.com/Strappazzon">Strappazzon</a> [<a title="Proof" class="fg-green" href="https://keybase.io/strappazzon/sigs/pJaEr4Vzxf_nLa-0f2khu6BSJDxq2fG247W4">Signed</a>]
-	<br>
-	GitLab <a title="GitLab Account" href="https://gitlab.com/Strappazzon">Strappazzon</a>
-</p>
+		<ul>
+			{% for a in site.data.accounts.short_list %}
+				<li>
+					{{ a.name}} <a aria-label="{{ a.name }} Account" href="{{ a.url }}">{{ a.username }}</a>
+				</li>
+			{% endfor %}
+			{% for a in site.data.accounts.long_list %}
+				<li>
+					{{ a.name}} <a aria-label="{{ a.name }} Account" href="{{ a.url }}">{{ a.username }}</a>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
+</div>
 
-<h3 id="pgp">PGP Keys</h3>
+<h3 id="pgp-keys">PGP Keys</h3>
+
 <p>You can encrypt files or messages to me using these PGP public keys.</p>
 
-<div class="pgp__container">
-	<div class="terminal">
-		<div class="title">
-			<div>
-				<div class="deviant-icon"></div>
-				<span class="fs">&nbsp;///&nbsp;</span>
-				<span class="session">Task - List PGP Keys</span>
-			</div>
-			<div class="buttons">
-				<span id="term-min" class="btn btn-min" title="Minimize Terminal">&#9679;</span>
-				<span id="term-max" class="btn btn-max" title="Restore Terminal">&#9679;</span>
-				<span id="term-close" class="btn btn-close" title="Close Terminal">&#9679;</span>
-			</div>
-		</div>
-		<div class="content">
-			<div class="row">
-				<div class="text"><span class="h-u">alberto@strappazzon</span>:<span class="h-at">~$</span> gpg --list-keys</div>
-				<div class="text">/home/alberto/.gnupg/pubring.kbx</div>
-				<div class="text">------------------------------------</div>
-				<div class="text">pub ed25519 2020-06-24 [SC]</div>
-				<div class="text">&nbsp;&nbsp;&nbsp;&nbsp;975126E37C9BA907D95FAA5498B160D45D48A6F5</div>
-				<div class="text">uid&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[  unknown] <span class="ep__cd"></span> &lt;<span class="ep__cd"></span>&gt;</div>
-				<div class="text">sub cv25519 2020-06-24 [E]</div>
-				<div class="text">&#8203;</div>
-				<div class="text">pub rsa2048 2018-07-04 [SC]</div>
-				<div class="text">&nbsp;&nbsp;&nbsp;&nbsp;DE55A0A7806F6030347DE10A06897F17310BCC24</div>
-				<div class="text">uid&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[  unknown] <span class="ep__pm"></span> &lt;<span class="ep__pm"></span>&gt;</div>
-				<div class="text">sub rsa2048 2018-07-04 [E]</div>
-				<div class="text">&#8203;</div>
-				<div class="text"><span class="h-u">alberto@strappazzon</span>:<span class="h-at">~$</span><span class="c">&nbsp;</span></div>
-			</div>
-		</div>
-	</div>
-	<div class="downloads__container">
+<div class="container__pgp">
+	{% include terminal.html
+		title="Task - List PGP Keys"
+		username="alberto"
+		hostname="strappazzon"
+	%}
+	<div class="container__pgp__downloads">
 		<p>
 			<span class="ep__cd"></span>
-			<br />
-			<a title="Download PGP Key" class="button" href="/static/strappazzon_xyz.asc">Dowload PGP Key</a>
+			<br>
+			<a role="button" aria-label="Download PGP Key" href="/static/strappazzon_xyz.asc">Dowload PGP Key</a>
 		</p>
 		<p>
 			<span class="ep__pm"></span>
-			<br />
-			<a title="Download PGP Key" class="button" href="/static/strappazzon_pm.asc">Dowload PGP Key</a> or <a title="Encrypt with Keybase" class="fg-blue" href="https://keybase.io/encrypt#strappazzon">Encrypt with Keybase</a>.
+			<br>
+			<a role="button" aria-label="Download PGP Key" href="/static/strappazzon_pm.asc">Dowload PGP Key</a>
 		</p>
 	</div>
 </div>

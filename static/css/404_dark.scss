@@ -1,25 +1,4 @@
 ---
 ---
 
-/*! Alberto Strappazzon's Stylesheet
- * Copyright 2020 Alberto Strappazzon
- * Licensed under MIT https://github.com/Strappazzon/www/blob/master/LICENSE.txt
-*/
-
-body {
-	& {
-		background-color: #181818;
-		color: #eee;
-	}
-	& ::selection {
-		color: #ff0000;
-		background-color: rgba(134, 0, 0, 0.6);
-	}
-	a:link,
-	a:hover,
-	a:active,
-	a:visited {
-		border-bottom: 2px solid #eee;
-		color: inherit;
-	}
-}
+@import "_404_dark";

@@ -73,6 +73,10 @@
 					"value": "no-cache"
 				},
 				{
+					"key": "X-Robots-Tag",
+					"value": "index,follow"
+				},
+				{
 					"key": "X-Source-Code",
 					"value": "https://github.com/Strappazzon/www"
 				}

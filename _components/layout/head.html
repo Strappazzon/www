@@ -5,6 +5,7 @@
 	<meta name="description" content="{{ page.description }}">
 	<meta name="keywords" content="alberto strappazzon,strappazzon alberto,strappazzon">
 	<meta name="author" content="Alberto Strappazzon">
+	<meta name="robots" content="index,follow">
 	<meta name="generator" content="Jekyll v{{ jekyll.version }}">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="theme-color" content="#ba0000">
@@ -44,44 +45,41 @@
 	<link rel="shortcut icon" href="/static/img/favicons/favicon.ico">
 	<meta name="msapplication-config" content="/static/img/favicons/browserconfig.xml">
 	{%- comment -%} Stylesheets {%- endcomment -%}
-	<link rel="stylesheet" href="/static/css/common.css">
+	<link rel="stylesheet" href="/static/css/index.css">
 	<link rel="stylesheet" href="/static/css/{{ page.layout }}.css">
-	{% if page.layout == "pages" %}
-	<link rel="stylesheet" href="/static/css/highlight.css">
-	{% endif %}
 	{%- comment -%} Scripts {%- endcomment -%}
 	<script defer src="/static/js/scroll.js"></script>
 	{% if page.name == "accounts.html" %}
-	<script defer src="/static/js/terminal.js"></script>
+		<script defer src="/static/js/terminal.js"></script>
 	{% endif %}
 	{% if page.url == "/" %}
-	<script defer src="/static/js/age.js"></script>
-	<script type="application/ld+json">
-	{
-		"@context": "https://schema.org",
-		"@type": "WebSite",
-		"author": {
-			"@type": "Person",
-			"name": "Alberto Strappazzon",
+		<script defer src="/static/js/age.js"></script>
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "WebSite",
+			"author": {
+				"@type": "Person",
+				"name": "Alberto Strappazzon",
+				"image": {
+					"@type": "ImageObject",
+					"url": "{{ site.url }}/static/img/avatar.png"
+				}
+			},
+			"url": "{{ site.url }}",
+			"logo": "{{ site.url }}/static/img/avatar.png",
 			"image": {
 				"@type": "ImageObject",
 				"url": "{{ site.url }}/static/img/avatar.png"
-			}
-		},
-		"url": "{{ site.url }}",
-		"logo": "{{ site.url }}/static/img/avatar.png",
-		"image": {
-			"@type": "ImageObject",
-			"url": "{{ site.url }}/static/img/avatar.png"
-		},
-		"keywords": "alberto strappazzon, strappazzon alberto, strappazzon",
-		"description": "{{ page.description }}",
-		"sameAs": [
-			"https://github.com/Strappazzon",
-			"https://twitter.com/0xStrappazzon",
-			"https://keybase.io/strappazzon"
-		]
-	}
-	</script>
+			},
+			"keywords": "alberto strappazzon, strappazzon alberto, strappazzon",
+			"description": "{{ page.description }}",
+			"sameAs": [
+				"https://github.com/Strappazzon",
+				"https://twitter.com/0xStrappazzon",
+				"https://keybase.io/strappazzon"
+			]
+		}
+		</script>
 	{% endif %}
 </head>

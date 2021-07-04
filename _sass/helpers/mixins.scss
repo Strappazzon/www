@@ -1,0 +1,7 @@
+@mixin font($fontFamily, $isMono: false) {
+	@if $isMono {
+		font-family: $fontFamily, $monoStack;
+	} @else {
+		font-family: $fontFamily, $systemStack;
+	}
+}
