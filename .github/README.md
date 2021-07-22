@@ -1,4 +1,4 @@
-<img align="left" src="https://github.com/Strappazzon/www/blob/master/static/img/avatar.png?raw=true" width="64px">
+<img align="left" src="https://raw.githubusercontent.com/Strappazzon/www/master/static/img/avatar.png" width="64px">
 
 <div align="right">
   <a href="https://github.com/Strappazzon/www/commit">
