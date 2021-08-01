@@ -36,6 +36,7 @@ exclude:
   - LICENSE.txt
   - README.md
   - vercel.json
+  - "**/*.psd"
 
 # Included files
 include:
