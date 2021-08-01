@@ -1,3 +1,5 @@
+@import "helpers/functions";
+
 .card {
 	&__machine {
 		position: relative;
@@ -10,7 +12,7 @@
 		border-radius: 5px;
 		p,
 		h2 {
-			padding: 0 12px;
+			padding: 0 rem(12);
 		}
 		h2 {
 			margin-bottom: 1rem;
@@ -87,7 +89,7 @@
 			}
 			&__other {
 				color: #fff;
-				font-size: 18px;
+				font-size: rem(18);
 				vertical-align: middle;
 				text-shadow: 0 0 10px #fff;
 			}
@@ -101,11 +103,11 @@
 					background-color: #000;
 					color: #fff;
 				}
-				padding: 0 6px 0 12px;
+				padding: 0 rem(6) 0 rem(12);
 			}
 			&__active,
 			&__inactive {
-				font-size: 18px;
+				font-size: rem(18);
 				vertical-align: middle;
 			}
 			&__active {

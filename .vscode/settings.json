@@ -14,5 +14,9 @@
 	"files.trimFinalNewlines": true,
 	"files.trimTrailingWhitespace": true,
 
-	"markdown.preview.scrollEditorWithPreview": false
+	"markdown.preview.scrollEditorWithPreview": false,
+
+	"cssrem.autoRemovePrefixZero": false,
+	"cssrem.fixedDigits": 3,
+	"cssrem.rootFontSize": 14
 }

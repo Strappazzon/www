@@ -11,6 +11,7 @@
 html {
 	margin: 0;
 	height: 100vh;
+	font-size: 26px;
 	cursor: url("/static/img/cursor.png"), auto;
 }
 
@@ -22,7 +23,6 @@ body {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	@include font("Magda Clean Mono", true);
-	font-size: 26px;
 	text-align: center;
 	text-transform: uppercase;
 	background-color: #fff;

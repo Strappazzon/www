@@ -1,3 +1,5 @@
+@import "helpers/functions";
+
 body {
 	main {
 		& > hr {
@@ -112,7 +114,7 @@ body {
 			margin-left: 10px;
 			flex: 0 0 calc(35% - 10px);
 			[role="button"] {
-				padding: 6px 12px;
+				padding: rem(6) rem(12);
 				background-color: #3b3b3b;
 				border: 1px solid transparent;
 				text-transform: uppercase;

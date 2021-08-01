@@ -6,11 +6,11 @@ header {
 	z-index: 2;
 	display: flex;
 	@include font("Acens");
-	font-size: 16px;
+	font-size: rem(16);
 	margin-bottom: 3rem;
 	color: inherit;
 	background-color: rgba(0, 0, 0, 0.6);
-	padding: 7px 15px;
+	padding: rem(7) rem(15);
 	border-bottom: 1px solid #fff;
 	.logo {
 		letter-spacing: 1px;
@@ -25,14 +25,14 @@ header {
 		span:last-child {
 			text-transform: uppercase;
 			letter-spacing: 0.1rem;
-			margin-left: 4px;
+			margin-left: rem(4);
 		}
 	}
 	.links {
 		position: absolute;
 		right: 10px;
 		@include font("DejaVu Sans Mono", true);
-		font-size: 14px;
+		font-size: rem(14);
 		line-height: 1.75;
 		a {
 			&:link,
@@ -67,7 +67,7 @@ header {
 @media (max-width: 420px) {
 	header {
 		.links {
-			font-size: 12px;
+			font-size: rem(12);
 			line-height: 2.1;
 		}
 	}

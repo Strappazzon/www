@@ -22,7 +22,7 @@ $terminal-h: 350px;
 		border-bottom: 1px solid rgba(34, 34, 34, 0.8);
 		background-color: rgba(0, 0, 0, 0.9);
 		background-image: linear-gradient(to bottom, rgba(34, 34, 34, 0.8) 25%, rgba(0, 0, 0, 0.5) 75%);
-		font-size: 16px;
+		font-size: rem(16);
 		font-weight: normal;
 		line-height: 1;
 		text-shadow: 1px 1px 2px #ccc;

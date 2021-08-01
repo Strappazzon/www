@@ -1,3 +1,5 @@
+@import "helpers/functions";
+
 .box {
 	&__samaritan {
 		text-transform: uppercase;
@@ -6,7 +8,7 @@
 		}
 		.title {
 			margin-top: 5px;
-			font-size: 1.14rem;
+			font-size: rem(16);
 			text-align: center;
 			background-color: #b60000;
 		}
@@ -19,7 +21,7 @@
 		.subtitle {
 			display: flex;
 			align-items: center;
-			width: 100px;
+			width: rem(100);
 			font-size: 0.85rem;
 			padding: 0 8px;
 			background-color: rgba(35, 35, 35, 0.8);
@@ -44,7 +46,7 @@
 			}
 			.title {
 				display: flex;
-				width: 66px;
+				width: rem(66);
 				padding: 0 12px;
 				background-color: rgba(35, 35, 35, 0.8);
 			}
@@ -85,7 +87,7 @@
 		}
 		.row {
 			margin: 10px;
-			min-height: 24px;
+			min-height: rem(24);
 			font-size: 0.85rem;
 			line-height: 1.52;
 			clear: both;
