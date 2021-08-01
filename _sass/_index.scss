@@ -69,6 +69,7 @@ body {
 		font-size: 0.85rem;
 		cursor: url("/static/img/cursor_hand.png"), auto;
 		outline: none;
+		user-select: none;
 		transition: transform 0.1s ease-in-out;
 		z-index: 2;
 		&:before {
