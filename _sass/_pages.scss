@@ -49,9 +49,14 @@ body {
 	h1,
 	h3,
 	h4,
-	h5 {
+	h5,
+	h6 {
 		text-transform: uppercase;
 	}
+	h6 {
+		font-size: 0.75em;
+	}
+	ol,
 	ul {
 		margin: 0;
 		padding: 0;

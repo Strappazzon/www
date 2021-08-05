@@ -1,6 +1,7 @@
-url: "https://strappazzon.xyz"
-baseurl: "/"
-title: "Alberto Strappazzon"
+# Website
+url: https://strappazzon.xyz
+baseurl: /
+title: Alberto Strappazzon
 
 # Custom directories
 includes_dir: _components
@@ -14,7 +15,13 @@ plugins:
 # Markdown
 markdown: kramdown
 kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false # May be changed
   html_to_native: true
+  #parse_block_html: true
 
 # CSS
 sass:
@@ -28,7 +35,7 @@ autoprefixer:
 
 # Sitemap
 sitemap:
-  file: "/sitemap.xml"
+  file: /sitemap.xml
 
 # Excluded files
 exclude:
@@ -41,3 +48,13 @@ exclude:
 # Included files
 include:
   - .well-known
+
+# Blog
+title_blog: Strappazzon's Blog
+
+collections:
+  blog:
+    output: true
+    permalink: /:collection/:year-:month-:day/:title/
+
+timezone: UTC

@@ -1,37 +1,77 @@
 <head>
 	{%- comment -%} Meta Data {%- endcomment -%}
 	<meta charset="utf-8">
-	<title>{{ page.title }}</title>
+	{% if page.layout == "blog" %}
+		<title>{{ page.title }} | {{ site.title_blog }}</title>
+	{% else %}
+		<title>{{ page.title }}</title>
+	{% endif %}
 	<meta name="description" content="{{ page.description }}">
-	<meta name="keywords" content="alberto strappazzon,strappazzon alberto,strappazzon">
+	{% if page.layout == "blog" %}
+		{% assign k = page.keywords | join: "," %}
+		<meta name="keywords" content="strappazzon,blog{% if k.size >= 1 %},{{ k }}{% endif %}">
+	{% else %}
+		<meta name="keywords" content="alberto strappazzon,strappazzon alberto,strappazzon">
+	{% endif %}
 	<meta name="author" content="Alberto Strappazzon">
 	<meta name="robots" content="index,follow">
 	<meta name="generator" content="Jekyll v{{ jekyll.version }}">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta name="theme-color" content="#ba0000">
 	<meta name="msapplication-TileColor" content="#ba0000">
-	<meta name="application-name" content="{{ site.title }}">
+	{% if page.layout == "blog" %}
+		<meta name="application-name" content="{{ site.title_blog }}">
+	{% else %}
+		<meta name="application-name" content="{{ site.title }}">
+	{% endif %}
 	{%- comment -%} Open Graph Data {%- endcomment -%}
-	<meta property="og:title" content="{{ page.title }}">
-	<meta property="og:description" content="{{ page.description }}">
-	<meta property="og:site_name" content="Alberto Strappazzon">
-	<meta property="og:url" content="{{ page.permalink | prepend: site.url }}">
-	<meta property="og:type" content="website">
-	<meta property="og:locale" content="en_US">
-	<meta property="og:image" content="{{ site.url }}/static/img/ogimage.png">
-	<meta property="og:image:alt" content="{{ site.title }}">
-	<meta property="og:image:width" content="1280">
-	<meta property="og:image:height" content="640">
-	<meta property="og:image:type" content="image/png">
+	{% if page.layout == "blog" %}
+		<meta property="og:title" content="{{ page.title }} | {{ site.title_blog }}">
+		<meta property="og:description" content="{{ page.description }}">
+		<meta property="og:site_name" content="{{ site.title_blog }}">
+		<meta property="og:url" content="{{ site.url }}{{ page.url | replace: 'index.html',''}}">
+		<meta property="og:type" content="article">
+		<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+		<meta property="article:modified_time" content="{% if page.last_modified_at %}{{ page.last_modified_at | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}">
+		<meta property="og:locale" content="en_US">
+		<meta property="og:image" content="{{ site.url }}/static/img/ogimage_blog.png">
+		<meta property="og:image:alt" content="{{ site.title_blog }}">
+		<meta property="og:image:width" content="1280">
+		<meta property="og:image:height" content="640">
+		<meta property="og:image:type" content="image/png">
+	{% else %}
+		<meta property="og:title" content="{{ page.title }}">
+		<meta property="og:description" content="{{ page.description }}">
+		<meta property="og:site_name" content="Alberto Strappazzon">
+		<meta property="og:url" content="{{ page.permalink | prepend: site.url }}">
+		<meta property="og:type" content="website">
+		<meta property="og:locale" content="en_US">
+		<meta property="og:image" content="{{ site.url }}/static/img/ogimage.png">
+		<meta property="og:image:alt" content="{{ site.title }}">
+		<meta property="og:image:width" content="1280">
+		<meta property="og:image:height" content="640">
+		<meta property="og:image:type" content="image/png">
+	{% endif %}
 	{%- comment -%} Twitter Cards Data {%- endcomment -%}
-	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:title" content="{{ page.title }}">
-	<meta name="twitter:description" content="{{ page.description }}">
-	<meta name="twitter:image" content="{{ site.url }}/static/img/ogimage.png">
-	<meta name="twitter:image:alt" content="{{ site.title }}">
-	<meta name="twitter:domain" content="{{ site.url | replace: 'https://', '' }}">
-	<meta name="twitter:creator" content="@0xStrappazzon">
-	<meta name="twitter:site" content="@0xStrappazzon">
+	{% if page.layout == "blog" %}
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="{{ page.title }} | {{ site.title_blog }}">
+		<meta name="twitter:description" content="{{ page.description }}">
+		<meta name="twitter:image" content="{{ site.url }}/static/img/ogimage_blog.png">
+		<meta name="twitter:image:alt" content="{{ site.title_blog }}">
+		<meta name="twitter:domain" content="{{ site.url | replace: 'https://', '' }}">
+		<meta name="twitter:creator" content="@0xStrappazzon">
+		<meta name="twitter:site" content="@0xStrappazzon">
+	{% else %}
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="{{ page.title }}">
+		<meta name="twitter:description" content="{{ page.description }}">
+		<meta name="twitter:image" content="{{ site.url }}/static/img/ogimage.png">
+		<meta name="twitter:image:alt" content="{{ site.title }}">
+		<meta name="twitter:domain" content="{{ site.url | replace: 'https://', '' }}">
+		<meta name="twitter:creator" content="@0xStrappazzon">
+		<meta name="twitter:site" content="@0xStrappazzon">
+	{% endif %}
 	{%- comment -%} Link Relationships {%- endcomment -%}
 	<link rel="canonical" href="{{ site.url }}{{ page.url | replace: 'index.html',''}}">
 	<link rel="manifest" href="/manifest.json">
@@ -49,11 +89,42 @@
 	<link rel="stylesheet" href="/static/css/{{ page.layout }}.css">
 	{%- comment -%} Scripts {%- endcomment -%}
 	<script defer src="/static/js/scroll.js"></script>
+	{% if page.url == "/" %}
+		<script defer src="/static/js/age.js"></script>
+	{% endif %}
 	{% if page.name == "accounts.html" %}
 		<script defer src="/static/js/terminal.js"></script>
 	{% endif %}
-	{% if page.url == "/" %}
-		<script defer src="/static/js/age.js"></script>
+	{% if page.layout == "blog" %}
+		<script type="application/ld+json">
+			{
+				"@context": "https://schema.org/",
+				"@type": "BlogPosting",
+				"mainEntityOfPage": {
+					"@type": "WebPage",
+					"@id": "{{ site.url }}{{ page.url | replace: 'index.html',''}}"
+				},
+				"headline": "{{ page.title }}",
+				"description": "{{ page.description }}",
+				"image": {
+					"@type": "ImageObject",
+					"url": "{{ site.url }}/static/img/ogimage_blog.png",
+					"width": "1280",
+					"height": "640"
+				},
+				"author": {
+					"@type": "Person",
+					"name": "Alberto Strappazzon",
+					"image": {
+						"@type": "ImageObject",
+						"url": "{{ site.url }}/static/img/avatar.png"
+					}
+				},
+				"datePublished": "{{ page.date | date_to_xmlschema }}",
+				"dateModified": "{% if page.last_modified_at %}{{ page.last_modified_at | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}"
+			}
+		</script>
+	{% else %}
 		<script type="application/ld+json">
 		{
 			"@context": "https://schema.org",
