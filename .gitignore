@@ -1,3 +1,5 @@
+**/debug.log
+
 # VSCode
 .vscode/*
 !.vscode/extensions.json

@@ -8,6 +8,7 @@
 		".jekyll-cache": true,
 		"_site*": true,
 		"vendor/**": true,
+		"**/debug.log": true,
 		"Gemfile.lock": true
 	},
 	"files.insertFinalNewline": true,
