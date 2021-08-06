@@ -48,6 +48,15 @@ body {
 		outline: none;
 		cursor: url("/static/img/cursor_hand.png"), auto;
 	}
+	a,
+	button {
+		// https://css-tricks.com/keyboard-only-focus-styles/
+		&:focus-visible {
+			border: 1px solid rgba(255, 0, 0, 0.8);
+			border-radius: 2px;
+			padding: 0 3px;
+		}
+	}
 	#top {
 		margin-bottom: 2rem;
 		padding-bottom: 1rem;

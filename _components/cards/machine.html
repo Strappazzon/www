@@ -3,7 +3,7 @@
 		{% if include.type and include.type != "" %}
 			{% if include.active == true %}
 				<h2>
-					<span class="dot__active"></span>
+					<span class="dot__active" aria-hidden="true"></span>
 					<span class="title__active">{{ include.title }}</span>
 				</h2>
 				<span>
@@ -14,7 +14,7 @@
 				</span>
 			{% else %}
 				<h2>
-					<span class="dot__inactive"></span>
+					<span class="dot__inactive" aria-hidden="true"></span>
 					<span class="title__inactive">{{ include.title }}</span>
 				</h2>
 				<span>
@@ -27,7 +27,7 @@
 		{% else %}
 			{% if include.active == true %}
 				<h2>
-					<span class="dot__active"></span>
+					<span class="dot__active" aria-hidden="true"></span>
 					<span class="title__active">{{ include.title }}</span>
 				</h2>
 				<span>
@@ -35,7 +35,7 @@
 				</span>
 			{% else %}
 				<h2>
-					<span class="dot__inactive"></span>
+					<span class="dot__inactive" aria-hidden="true"></span>
 					<span class="title__inactive">{{ include.title }}</span>
 				</h2>
 				<span>
@@ -43,13 +43,13 @@
 				</span>
 			{% endif %}
 		{% endif %}
-		<hr>
+		<hr aria-hidden="true">
 		<p>
 			<span>Description:</span> {{ include.description }}
 			<br>
 			<span>Language:</span> {{ include.language }}
 		</p>
-		<hr>
+		<hr aria-hidden="true">
 		<p>
 			<a aria-label="Website" href="{{ include.website }}">Website</a> &middot;
 			{% if include.download and include.download != "" %}
