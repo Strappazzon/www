@@ -17,7 +17,7 @@ This Website is hosted on Vercel.
 Vercel may collect non-personally-identifying information of the sort that web browsers and servers typically make available, such as the browser type and the date and time of each visitor request.
 Vercel may also collect potentially personally-identifying information like Internet Protocol (IP) addresses.
 
-See also: [Vercel Privacy Policy](https://vercel.com/legal/privacy-policy "Vercel Privacy Policy").
+See also: [Vercel Privacy Policy](https://vercel.com/legal/privacy-policy).
 
 ### Links To External Sites
 
@@ -31,4 +31,4 @@ This version of This Website Privacy Statement took effect May 20th, 2020.
 
 I will post any new versions of this statement at [{{ page.permalink | prepend: site.url }}]({{ page.permalink | prepend: site.url }}).
 
-A full [revision history](https://github.com/Strappazzon/www/commits/master/pages/privacy.md "Revision History") for this page can be found on GitHub.
+A full [revision history](https://github.com/Strappazzon/www/commits/master/pages/privacy.md) for this page can be found on GitHub.
