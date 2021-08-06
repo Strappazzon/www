@@ -9,7 +9,6 @@ permalink: /accounts/
 <div class="container__contacts">
 	<div class="emails">
 		<h3 id="emails">Emails</h3>
-
 		<ul>
 			<li>
 				<span class="ep__cd"></span>
@@ -19,10 +18,8 @@ permalink: /accounts/
 			</li>
 		</ul>
 	</div>
-
 	<div class="accounts">
 		<h3 id="accounts">Accounts</h3>
-
 		<ul>
 			{% for a in site.data.accounts.short_list %}
 				<li>
@@ -52,12 +49,16 @@ permalink: /accounts/
 		<p>
 			<span class="ep__cd"></span>
 			<br>
-			<a role="button" aria-label="Download PGP Key" href="/static/strappazzon_xyz.asc">Dowload PGP Key</a>
+			<a id="strappazzon_xyz" aria-label="Download PGP Key" href="/static/strappazzon_xyz.asc">
+				<button type="button" aria-labelledby="strappazzon_xyz">Dowload PGP Key</button>
+			</a>
 		</p>
 		<p>
 			<span class="ep__pm"></span>
 			<br>
-			<a role="button" aria-label="Download PGP Key" href="/static/strappazzon_pm.asc">Dowload PGP Key</a>
+			<a id="strappazzon_pm" aria-label="Download PGP Key" href="/static/strappazzon_pm.asc">
+				<button type="button" aria-labelledby="strappazzon_pm">Dowload PGP Key</button>
+			</a>
 		</p>
 	</div>
 </div>

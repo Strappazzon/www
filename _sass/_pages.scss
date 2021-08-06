@@ -1,4 +1,6 @@
 @import "helpers/functions";
+@import "helpers/mixins";
+@import "helpers/vars";
 
 body {
 	main {
@@ -57,6 +59,26 @@ body {
 		padding: 0;
 		list-style-type: none;
 	}
+	button {
+		cursor: url("/static/img/cursor_hand.png"), auto;
+		color: #fff;
+		@include font("DejaVu Sans Mono", true);
+		font-size: 1rem;
+		margin: 0;
+		margin-top: 3px;
+		padding: rem(6) rem(12);
+		background-color: #3b3b3b;
+		border: 1px solid transparent;
+		border-radius: 0;
+		text-transform: uppercase;
+		text-decoration: none;
+		outline: none;
+		&:hover {
+			color: #fff;
+			background-color: rgba(128, 128, 128, 0.4);
+			border: 1px solid rgba(128, 128, 128, 0.5);
+		}
+	}
 }
 
 .container {
@@ -113,20 +135,6 @@ body {
 		&__downloads {
 			margin-left: 10px;
 			flex: 0 0 calc(35% - 10px);
-			[role="button"] {
-				padding: rem(6) rem(12);
-				background-color: #3b3b3b;
-				border: 1px solid transparent;
-				text-transform: uppercase;
-				text-decoration: none;
-				line-height: 3;
-				outline: none;
-				&:hover {
-					color: #fff;
-					background-color: rgba(128, 128, 128, 0.4);
-					border: 1px solid rgba(128, 128, 128, 0.5);
-				}
-			}
 		}
 	}
 }
