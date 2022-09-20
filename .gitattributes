@@ -11,9 +11,6 @@ Gemfile* text eol=lf
 *.woff2 binary
 
 *.psd                  filter=lfs diff=lfs merge=lfs -text
-/static/blog/**/*.jpg  filter=lfs diff=lfs merge=lfs -text
-/static/blog/**/*.jpeg filter=lfs diff=lfs merge=lfs -text
-/static/blog/**/*.png  filter=lfs diff=lfs merge=lfs -text
 
 # GitHub language statistics, see https://github.com/github/linguist/blob/master/docs/overrides.md
 /pages/*.md linguist-detectable=true
