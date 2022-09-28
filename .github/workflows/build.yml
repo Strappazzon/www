@@ -3,11 +3,16 @@ name: Build Website
 on:
   push:
     branches: [ master ]
+    paths-ignore:
+      - ".*/**"
+      - ".*"
+      - "!.ruby-version"
+      - "robots.txt"
   pull_request:
     branches: [ master ]
 
 jobs:
-  build-app:
+  build-www:
     name: "Build Website"
     runs-on: ubuntu-latest
     steps:
