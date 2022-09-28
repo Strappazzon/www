@@ -2,7 +2,9 @@
 	"recommendations": [
 		"cipchk.cssrem",
 		"DavidAnson.vscode-markdownlint",
-		"formulahendry.auto-rename-tag",
+		"eliostruyf.vscode-front-matter",
+		"kamikillerto.vscode-colorize",
+		"pranaygp.vscode-css-peek",
 		"sissel.shopify-liquid",
 		"yzhang.markdown-all-in-one"
 	]
