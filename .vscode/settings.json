@@ -7,6 +7,12 @@
 		},
 		"files.trimTrailingWhitespace": false
 	},
+	"[html]": {
+		"editor.defaultFormatter": null
+	},
+	"[scss]": {
+		"editor.defaultFormatter": null
+	},
 	"files.exclude": {
 		".bundle": true,
 		".jekyll-cache": true,
