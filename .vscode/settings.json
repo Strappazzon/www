@@ -10,8 +10,15 @@
 	"[html]": {
 		"editor.defaultFormatter": null
 	},
+	"[liquid]": {
+		"editor.defaultFormatter": null
+	},
 	"[scss]": {
 		"editor.defaultFormatter": null
+	},
+	"files.associations": {
+		"**/_components/**/*.html": "liquid",
+		"**/_templates/*.html": "liquid"
 	},
 	"files.exclude": {
 		".bundle": true,
