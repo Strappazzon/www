@@ -1,7 +1,7 @@
 <div class="container__col">
 	<div class="card__machine">
 		{% if include.type and include.type != "" %}
-			{% if include.active == true %}
+			{% if include.status == 1 %}
 				<h2>
 					<span class="dot__active" aria-hidden="true"></span>
 					<span class="title__active">{{ include.title }}</span>
@@ -12,7 +12,7 @@
 				<span>
 					<span class="status__text">Status:</span> <span class="status__active">Active</span>
 				</span>
-			{% else %}
+			{% elsif include.status == 0 %}
 				<h2>
 					<span class="dot__inactive" aria-hidden="true"></span>
 					<span class="title__inactive">{{ include.title }}</span>
@@ -22,10 +22,21 @@
 				</span>
 				<span>
 					<span class="status__text">Status:</span> <span class="status__inactive">Discontinued</span>
+				</span>
+			{% elsif include.status == 2 %}
+				<h2>
+					<span class="dot__inactive" aria-hidden="true"></span>
+					<span class="title__inactive">{{ include.title }}</span>
+				</h2>
+				<span>
+					<span class="type__text">Type:</span> <span class="type__other">{{ include.type }}</span>
+				</span>
+				<span>
+					<span class="status__text">Status:</span> <span class="status__inactive">Feature-Complete</span>
 				</span>
 			{% endif %}
 		{% else %}
-			{% if include.active == true %}
+			{% if include.status == 1 %}
 				<h2>
 					<span class="dot__active" aria-hidden="true"></span>
 					<span class="title__active">{{ include.title }}</span>
@@ -33,13 +44,21 @@
 				<span>
 					<span class="status__text">Status:</span> <span class="status__active">Active</span>
 				</span>
-			{% else %}
+			{% elsif include.status == 0 %}
 				<h2>
 					<span class="dot__inactive" aria-hidden="true"></span>
 					<span class="title__inactive">{{ include.title }}</span>
 				</h2>
 				<span>
 					<span class="status__text">Status:</span> <span class="status__inactive">Discontinued</span>
+				</span>
+			{% elsif include.status == 2 %}
+				<h2>
+					<span class="dot__inactive" aria-hidden="true"></span>
+					<span class="title__inactive">{{ include.title }}</span>
+				</h2>
+				<span>
+					<span class="status__text">Status:</span> <span class="status__inactive">Feature-Complete</span>
 				</span>
 			{% endif %}
 		{% endif %}
