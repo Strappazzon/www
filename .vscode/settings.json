@@ -17,6 +17,7 @@
 		"editor.defaultFormatter": null
 	},
 	"files.associations": {
+		"**/.cloudflare/_*": "plaintext",
 		"**/_components/**/*.html": "liquid",
 		"**/_templates/*.html": "liquid"
 	},
