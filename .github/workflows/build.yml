@@ -6,6 +6,7 @@ on:
     paths-ignore:
       - ".*/**"
       - ".*"
+      - "!.well-known/**"
       - "!.ruby-version"
       - "robots.txt"
   pull_request:
