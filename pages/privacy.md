@@ -2,7 +2,7 @@
 layout: pages
 title: "Privacy Statement | Alberto Strappazzon"
 description: "This Privacy Statement explains what information this website collects about its visitors."
-short_desc: "Last Update: May 24, 2021"
+short_desc: "Last Update: Oct 28, 2022"
 permalink: /privacy/
 ---
 
@@ -10,14 +10,14 @@ permalink: /privacy/
 
 This Privacy Statement applies to <{{ site.url }}> (hereinafter, "This Website"), operated by Alberto Strappazzon (hereinafter, "I", or "Me").
 
-### Vercel
+### Cloudflare
 
-This Website is hosted on Vercel.
+This Website is hosted on Cloudflare.
 
-Vercel may collect non-personally-identifying information of the sort that web browsers and servers typically make available, such as the browser type and the date and time of each visitor request.
-Vercel may also collect potentially personally-identifying information like Internet Protocol (IP) addresses.
+Cloudflare may collect non-personally-identifying information of the sort that web browsers and servers typically make available, such as the browser type and the date and time of each visitor request.
+Cloudflare  may also collect potentially personally-identifying information like Internet Protocol (IP) addresses.
 
-See also: [Vercel Privacy Policy](https://vercel.com/legal/privacy-policy).
+See also: [Cloudflare Privacy Policy](https://www.cloudflare.com/privacypolicy/).
 
 ### Links To External Sites
 
