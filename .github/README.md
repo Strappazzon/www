@@ -19,9 +19,6 @@
   <a href="https://actions-badge.atrox.dev/Strappazzon/www/goto?ref=master">
     <img alt="Build Status" src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2FStrappazzon%2Fwww%2Fbadge%3Fref%3Dmaster&style=for-the-badge">
   </a>
-  <a href="https://strappazzon.xyz">
-    <img alt="Vercel deployment" src="https://img.shields.io/github/deployments/Strappazzon/www/Production?label=Vercel&logo=vercel&logoColor=eee&style=for-the-badge">
-  </a>
 </div>
 
 ## Developing

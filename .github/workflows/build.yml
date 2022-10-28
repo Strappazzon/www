@@ -30,3 +30,5 @@ jobs:
         gem install bundler
         bundle install
         bundle exec jekyll build
+        cp .cloudflare/_headers _site/_headers
+        cp .cloudflare/_redirects _site/_redirects
