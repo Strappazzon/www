@@ -1,3 +1,9 @@
+https://strappazzon.pages.dev/*
+  X-Robots-Tag: noindex
+/*.ico
+  Cache-Control: max-age=365000000,public,immutable
+/*.woff2
+  Cache Control: max-age=365000000,public,immutable
 /*
   X-Frame-Options: DENY
   X-XSS-Protection: 1; mode=block
@@ -13,16 +19,3 @@
   Cache-Control: no-cache
   X-Robots-Tag: index,follow
   X-Source-Code: https://github.com/Strappazzon/www
-
-# Static assets
-
-/*.ico
-  Cache-Control: max-age=365000000,public,immutable
-
-/*.woff2
-  Cache Control: max-age=365000000,public,immutable
-
-# Cloudflare Pages URL
-
-https://strappazzon.pages.dev/*
-  X-Robots-Tag: noindex
