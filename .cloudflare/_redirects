@@ -1,11 +1,9 @@
-https://strappazzon.pages.dev/* https://strappazzon.xyz/:splat 301
-
-/view-source         https://github.com/Strappazzon/www                 301
-/security.txt        /.well-known/security.txt                          301
-/files/*             /static/:splat                                     301
-/keys*               /accounts/                                         301
-/GRW-GHOST-Buster    https://strappazzon.github.io/GRW-GHOST-Buster/    301
-/PD2-SuperBLT-Hasher https://strappazzon.github.io/PD2-SuperBLT-Hasher/ 301
-/Screendere-Beat     https://strappazzon.github.io/Screendere-Beat/     301
-/teleme7ry           https://strappazzon.github.io/teleme7ry/           301
-/tor-exit-page*      https://strappazzon.github.io/tor-exit-page/:splat 301
+/view-source          https://github.com/Strappazzon/www                 301
+/security.txt         /.well-known/security.txt                          301
+/files/*              /static/:splat                                     301
+/keys*                /accounts/                                         301
+/GRW-GHOST-Buster*    https://strappazzon.github.io/GRW-GHOST-Buster/    301
+/PD2-SuperBLT-Hasher* https://strappazzon.github.io/PD2-SuperBLT-Hasher/ 301
+/Screendere-Beat*     https://strappazzon.github.io/Screendere-Beat/     301
+/teleme7ry*           https://strappazzon.github.io/teleme7ry/           301
+/tor-exit-page*       https://strappazzon.github.io/tor-exit-page/:splat 301

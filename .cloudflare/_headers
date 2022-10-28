@@ -17,7 +17,7 @@
 # Static assets
 
 /*.ico
-  Cache-Control: public,max-age=365000000,immutable
+  Cache-Control: max-age=365000000,public,immutable
 
 /*.woff2
   Cache Control: max-age=365000000,public,immutable
