@@ -30,3 +30,13 @@ jobs:
         gem install bundler
         bundle install
         bundle exec jekyll build
+
+    - name: Push build to another branch
+      uses: s0/git-publish-subdir-action@2.5.1
+      env:
+        REPO: self
+        BRANCH: build
+        FOLDER: _site
+        SQUASH_HISTORY: true
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        MESSAGE: "Build: ({sha}) {msg}"
