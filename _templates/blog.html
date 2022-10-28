@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	{% include layout/head.html %}
+	<body>
+		<div class="bg-layer__1"></div>
+		<div class="bg-layer__2"></div>
+		<button type="button" id="su">Top</button>
+		{% include layout/header.html %}
+		<div id="top"></div>
+		<div class="container" role="article">
+			<article>
+				<div class="container__title">
+					{% assign pt = page.title | split: " | " %}
+					<h1>{{ pt[0] }}</h1>
+					<h4>{{ page.description }}</h4>
+				</div>
+				<hr aria-hidden="true">
+				{{ content }}
+				<hr aria-hidden="true">
+			</article>
+			<footer>
+				<span>Published: {{ page.date | date: "%-d %B %Y" }}</span>
+				<span><a href="https://github.com/Strappazzon/www/blob/master/{{ site.blog.first.relative_path }}" aria-label="Edit history">History</a></span>
+			</footer>
+		</div>
+	</body>
+</html>

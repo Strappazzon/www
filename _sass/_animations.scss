@@ -16,3 +16,16 @@
 	97%  { color: #000 }
 	100% { color: #fff }
 }
+
+@keyframes anim-details-slide-down {
+	0% {
+		opacity: 0;
+		height: 0;
+		padding: 0;
+	}
+	100% {
+		opacity: 1;
+		//max-height: 33vh;
+		padding: 0.75rem;
+	}
+}
