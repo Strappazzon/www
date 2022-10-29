@@ -6,6 +6,7 @@ on:
     paths-ignore:
       - ".*/**"
       - ".*"
+      - "!.cloudflare/**"
       - "!.well-known/**"
       - "!.ruby-version"
       - "robots.txt"
@@ -14,27 +15,28 @@ on:
   workflow_dispatch:
 
 jobs:
-  build-www:
+  main:
     name: Build Website
     runs-on: ubuntu-latest
     steps:
+
     - name: Checkout repo
       uses: actions/checkout@v2.3.4
 
     - name: Setup Ruby
-      uses: ruby/setup-ruby@v1.75.0
-
-    - name: Run Bundler
       env:
         BUNDLE_SPECIFIC_PLATFORM: 1
+      uses: ruby/setup-ruby@v1.75.0
+      with:
+        bundler-cache: true
+
+    - name: Build
       run: |
-        gem install bundler
-        bundle install
         bundle exec jekyll build
         cp .cloudflare/_headers _site/_headers
         cp .cloudflare/_redirects _site/_redirects
 
-    - name: Push build to another branch
+    - name: Push build output
       uses: s0/git-publish-subdir-action@develop
       env:
         REPO: self
