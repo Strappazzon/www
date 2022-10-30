@@ -18,8 +18,7 @@
 	},
 	"files.associations": {
 		"**/.cloudflare/_*": "plaintext",
-		"**/_components/**/*.html": "liquid",
-		"**/_templates/*.html": "liquid"
+		"*.html": "liquid",
 	},
 	"files.exclude": {
 		".bundle": true,
