@@ -40,15 +40,15 @@ body {
 				display: block;
 			}
 		}
-		figcaption,
-		img + em {
-			margin-top: 0.33rem;
+		figure {
+			display: flow-root;
+			margin: 0;
 			text-align: center;
+		}
+		figcaption {
+			margin-top: 0.33rem;
 			font-style: italic;
 			color: #808080;
-		}
-		figure {
-			margin: 0;
 		}
 		blockquote {
 			border: 8px solid #808080;
