@@ -84,6 +84,67 @@ body {
 			border: 1px solid rgba(128, 128, 128, 0.5);
 		}
 	}
+	input {
+			cursor: url("/static/img/cursor_hand.png"), auto;
+			&[type="checkbox"] {
+				appearance: none;
+				position: relative;
+				width: 1rem;
+				height: 1rem;
+				background-color: #1d1f21;
+				border: 1px solid #808080;
+				margin: 0;
+				margin-right: 0.5rem;
+				&:checked {
+					&::before {
+						content: "\2573";
+						font-weight: bolder;
+						font-size: 0.5rem;
+						position: absolute;
+						top: 0;
+						left: 0.185rem;
+						width: 1rem;
+						height: 1rem;
+						color: #dd0000;
+					}
+				}
+			}
+			&[readonly] {
+				color: #ccc;
+				text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+			}
+			&[disabled],
+			&[readonly],
+			&[type="text"] {
+				background-color: rgba(134, 0, 0, 0.4);
+				cursor: url("/static/img/cursor.png"), auto;
+			}
+		}
+		progress {
+			appearance: none;
+			display: block;
+			border: 1px solid #808080;
+			border-radius: 0;
+			height: 24px;
+			width: 100%;
+			margin: 1rem 0;
+			color: rgba(255, 0, 0, 0.8); // IE10+
+			background-color: #808080; // Firefox, IE10+
+			&::-webkit-progress-bar,
+			&::-webkit-progress-value {
+				border-radius: 0;
+			}
+			&::-webkit-progress-bar {
+				background-color: #808080;
+			}
+			&::-webkit-progress-value {
+				background-color: rgba(255, 0, 0, 0.8);
+			}
+			&::-moz-progress-bar {
+				border-radius: 0;
+				background-color: rgba(255, 0, 0, 0.8);
+			}
+		}
 }
 
 .container {
