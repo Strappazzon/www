@@ -9,6 +9,7 @@ on:
       - "!.cloudflare/**"
       - "!.well-known/**"
       - "!.ruby-version"
+      - "LICENSE.txt"
       - "robots.txt"
   pull_request:
     branches: [ master ]
