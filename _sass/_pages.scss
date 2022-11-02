@@ -162,9 +162,16 @@ body {
 			&[type="tel"],
 			&[type="url"] {
 				border: 1px solid #808080;
+				border-radius: 0;
 				color: #fff;
 				background-color: rgba(0, 0, 0, 0.7);
-				padding: 2px;
+				padding: 0.357rem 0.714rem;
+			}
+			&[type] {
+				font-family: inherit;
+				&:not([type="checkbox"]):not([type="radio"]) {
+					margin: 0.4rem 0;
+				}
 			}
 			&[readonly] {
 				color: #ccc;
