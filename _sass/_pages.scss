@@ -65,7 +65,10 @@ body {
 		list-style-type: none;
 	}
 	button,
-	input[type="button"] {
+	input[type="button"],
+	input[type="reset"],
+	input[type="submit"],
+	::-webkit-file-upload-button {
 		cursor: url("/static/img/cursor_hand.png"), auto;
 		color: #fff;
 		@include font("DejaVu Sans Mono", true);
@@ -83,6 +86,17 @@ body {
 			color: #fff;
 			background-color: rgba(128, 128, 128, 0.4);
 			border: 1px solid rgba(128, 128, 128, 0.5);
+		}
+	}
+	::-webkit-file-upload-button {
+		margin: 0;
+		margin-right: 6px;
+		&:hover {
+			border: 1px solid transparent;
+		}
+		&[disabled],
+		&[readonly] {
+			cursor: not-allowed;
 		}
 	}
 	input {
@@ -154,6 +168,11 @@ body {
 					border: 0;
 				}
 			}
+			&[type="date"],
+			&[type="datetime-local"],
+			&[type="month"],
+			&[type="time"],
+			&[type="week"],
 			&[type="email"],
 			&[type="number"],
 			&[type="password"],
@@ -166,6 +185,67 @@ body {
 				color: #fff;
 				background-color: rgba(0, 0, 0, 0.7);
 				padding: 0.357rem 0.714rem;
+			}
+			&[type="date"],
+			&[type="datetime-local"],
+			&[type="month"],
+			&[type="time"],
+			&[type="week"] {
+				cursor: url("/static/img/cursor_hand.png"), auto;
+				&::-webkit-calendar-picker-indicator {
+					cursor: url("/static/img/cursor_hand.png"), auto;
+					filter: invert(1);
+					margin-left: -0.75rem;
+				}
+				&:hover {
+					background-color: rgba(128, 128, 128, 0.4);
+				}
+			}
+			&[type="time"] {
+				&::-webkit-calendar-picker-indicator {
+					margin: 0;
+				}
+			}
+			&[type="file"] {
+				//cursor: url("/static/img/cursor_hand.png"), auto;
+				border: 1px solid #808080;
+				background-color: rgba(0, 0, 0, 0.7);
+				display: inline-block;
+				&[disabled] {
+					text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+				}
+			}
+			// https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_js_rangeslider_round
+			&[type="range"] {
+				appearance: none;
+				cursor: url("/static/img/cursor_hand.png"), auto;
+				height: 8px;
+				border-radius: 6px;
+				background-color: #808080;
+				outline: none;
+				&:hover,
+				&:active {
+					background: #3b3b3b;
+				}
+			}
+			&::-webkit-slider-thumb {
+				appearance: none;
+				width: 16px;
+				height: 16px;
+				border-radius: 50%;
+				background: #dd0000;
+			}
+			&::-moz-range-thumb {
+				appearance: none;
+				width: 16px;
+				height: 16px;
+				border-radius: 50%;
+				background: #dd0000;
+			}
+			&[type="image"] {
+				cursor: url("/static/img/cursor_hand.png"), auto;
+				//margin: 0;
+				//vertical-align: middle;
 			}
 			&[type] {
 				font-family: inherit;
