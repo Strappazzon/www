@@ -6,6 +6,9 @@
 	</div>
 	{% if page.url != "/" %}
 		<div class="links">
+			{% if page.layout == "blog" %}
+				<a href="/blog/">Blog</a> |
+			{% endif %}
 			<a href="/">Home</a>
 		</div>
 	{% endif %}

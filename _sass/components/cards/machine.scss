@@ -1,13 +1,22 @@
 @import "helpers/functions";
 
 .card {
-	&__machine {
+	&__machine,
+	&__machine-alt {
 		position: relative;
 		display: flex;
 		flex-direction: column;
 		min-width: 0;
 		word-wrap: break-word;
 		background-color: rgba(0, 0, 0, 0.6);
+		a {
+			&:link,
+			&:visited {
+				text-decoration: none;
+			}
+		}
+	}
+	&__machine {
 		border: 2px solid #fff;
 		border-radius: 5px;
 		p,
@@ -31,12 +40,6 @@
 			}
 			span {
 				color: #fff;
-			}
-		}
-		a {
-			&:link,
-			&:visited {
-				text-decoration: none;
 			}
 		}
 		hr {
@@ -121,6 +124,19 @@
 			&__inactive {
 				color: #ccc;
 				text-shadow: 0 0 10px #ccc;
+			}
+		}
+		&-alt {
+			border: 10px solid #808080;
+			border-radius: 0;
+			padding: 5px;
+			& > .title {
+				font-size: 1.15rem;
+				text-transform: uppercase;
+			}
+			& > div,
+			& > small {
+				margin: 0 5px;
 			}
 		}
 	}

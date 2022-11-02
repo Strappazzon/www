@@ -1,0 +1,22 @@
+---
+layout: pages
+title: "Blog Posts | Strappazzon's Blog"
+description: "List of all my blog posts"
+permalink: /blog/
+---
+
+{% for b in site.blog %}
+	{% comment %}
+		https://stackoverflow.com/a/47588008
+		https://cloud.google.com/looker/docs/best-practices/how-to-use-liquid-to-format-dates
+	{% endcomment %}
+	{% assign formatted_date = b.date | date: '%B %e %Y' %}
+	{% assign short_desc = b.description | truncatewords: 20 %}
+
+	{% include cards/machine-alt.html
+		date=formatted_date
+		title=b.title
+		description=short_desc
+		url=b.url
+	%}
+{% endfor %}

@@ -372,6 +372,12 @@ body {
 			flex: 0 0 calc(35% - 10px);
 		}
 	}
+	&__post {
+		display: flex;
+		flex-direction: column;
+		margin: 20px 0;
+		word-wrap: break-word;
+	}
 }
 
 @import "components/cards/machine";
