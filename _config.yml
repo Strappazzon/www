@@ -39,6 +39,7 @@ sitemap:
 
 # Excluded files
 exclude:
+  - frontmatter.json
   - Gemfile
   - LICENSE.txt
   - README.md

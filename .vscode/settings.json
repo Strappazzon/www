@@ -1,4 +1,10 @@
 {
+	"[html]": {
+		"editor.defaultFormatter": null
+	},
+	"[liquid]": {
+		"editor.defaultFormatter": null
+	},
 	"[markdown]": {
 		"editor.quickSuggestions": {
 			"comments": "off",
@@ -7,15 +13,14 @@
 		},
 		"files.trimTrailingWhitespace": false
 	},
-	"[html]": {
-		"editor.defaultFormatter": null
-	},
-	"[liquid]": {
-		"editor.defaultFormatter": null
-	},
 	"[scss]": {
 		"editor.defaultFormatter": null
 	},
+
+	"cssrem.autoRemovePrefixZero": false,
+	"cssrem.fixedDigits": 3,
+	"cssrem.rootFontSize": 14,
+
 	"files.associations": {
 		"**/.cloudflare/_*": "plaintext",
 		"*.html": "liquid",
@@ -32,9 +37,7 @@
 	"files.trimFinalNewlines": true,
 	"files.trimTrailingWhitespace": true,
 
-	"markdown.preview.scrollEditorWithPreview": false,
+	"frontMatter.framework.startCommand": "bundle exec jekyll serve --force_polling --livereload",
 
-	"cssrem.autoRemovePrefixZero": false,
-	"cssrem.fixedDigits": 3,
-	"cssrem.rootFontSize": 14
+	"markdown.preview.scrollEditorWithPreview": false
 }

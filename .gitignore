@@ -15,6 +15,9 @@
 /.bundle/
 /vendor/
 
+# Front Matter
+/.frontmatter
+
 # Junk files (Windows)
 **/Thumbs.db
 **/[Dd]esktop.ini
