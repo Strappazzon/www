@@ -1,6 +1,3 @@
-https://strappazzon.pages.dev/* https://strappazzon.xyz:splat   301
-https://www.strappazzon.xyz/*   https://strappazzon.xyz/:splat  301
-
 /view-source          https://github.com/Strappazzon/www                 301
 /security.txt         /.well-known/security.txt                          301
 /files/*              /static/:splat                                     301
