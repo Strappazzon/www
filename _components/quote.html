@@ -1,0 +1,33 @@
+{%- comment -%}
+  EXAMPLE USAGE
+
+  {% include quote.html
+    quote="Quote goes here"
+    url="https://example.com/#source-url"
+    cite="Source for the information quoted"
+  %}
+  {% include quote.html
+    quote="Quote goes here"
+    url="https://example.com/#source-url"
+  %}
+  {% include quote.html
+    quote="Quote goes here"
+  %}
+{%- endcomment -%}
+
+{%- if include.cite and include.url -%}
+	<figure>
+		<blockquote cite="{{ include.url }}">
+			<p>
+				{{ include.quote }}
+			</p>
+		</blockquote>
+		<figcaption>-<cite>{{ include.cite }}</cite></figcaption>
+	</figure>
+{%- else -%}
+	<blockquote {%- if include.url -%}cite="{{ include.url }}"{%- endif -%}>
+		<p>
+			{{ include.quote }}
+		</p>
+	</blockquote>
+{%- endif -%}
