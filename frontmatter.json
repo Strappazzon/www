@@ -25,9 +25,18 @@
 			"previewPath": "/blog/",
 			"fields": [
 				{
+					"title": "Layout",
+					"name": "layout",
+					"type": "string",
+					"default": "blog",
+					"editable": false,
+					"single": true
+				},
+				{
 					"title": "Title",
 					"name": "title",
-					"type": "string"
+					"type": "string",
+					"single": true
 				},
 				{
 					"title": "Description",
