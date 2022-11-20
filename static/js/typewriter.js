@@ -1,5 +1,5 @@
 let i = 0;
-const TYPE = document.querySelector('#typewriter')
+const TYPE = document.querySelector('#typewriter');
 const TEXT = TYPE.dataset.text; // https://stackoverflow.com/a/37880192
 const SPEED = 125;
 const NOJS = document.querySelector('.nojs');
