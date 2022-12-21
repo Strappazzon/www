@@ -1,0 +1,57 @@
+name: Build Website (Production)
+
+on:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - ".*/**"
+      - ".*"
+      - "!.cloudflare/**"
+      - "!.well-known/**"
+      - "!.ruby-version"
+      - "frontmatter.json"
+      - "LICENSE.txt"
+  pull_request:
+    branches:
+      - master
+    paths-ignore:
+      - ".*/**"
+      - ".*"
+      - "!.cloudflare/**"
+      - "!.well-known/**"
+      - "!.ruby-version"
+      - "frontmatter.json"
+      - "LICENSE.txt"
+  workflow_dispatch:
+
+jobs:
+  main:
+    name: Build Website
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2.3.4
+
+      - name: Setup Ruby
+        env:
+          BUNDLE_SPECIFIC_PLATFORM: 1
+        uses: ruby/setup-ruby@v1.75.0
+        with:
+          bundler-cache: true
+
+      - name: Build
+        run: |
+          bundle exec jekyll build
+          cp .cloudflare/_headers _site/_headers
+          cp .cloudflare/_redirects _site/_redirects
+
+      - name: Production Deploy
+        uses: s0/git-publish-subdir-action@develop
+        env:
+          REPO: self
+          BRANCH: build
+          FOLDER: _site
+          SQUASH_HISTORY: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          MESSAGE: "Build: ({sha}) {msg}"
