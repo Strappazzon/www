@@ -11,8 +11,8 @@
 			<article>
 				<div class="container__title">
 					{% assign pt = page.title | split: " | " %}
-					<h1>{{ pt[0] }}</h1>
-					<h4>{{ page.description }}</h4>
+					<h1 data-tgiv="title">{{ pt[0] }}</h1>
+					<h4 data-tgiv="subtitle">{{ page.description }}</h4>
 				</div>
 				<hr aria-hidden="true">
 				{{ content }}
