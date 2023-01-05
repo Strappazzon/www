@@ -55,3 +55,5 @@ jobs:
           SQUASH_HISTORY: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MESSAGE: "Build: ({sha}) {msg}"
+          COMMIT_NAME: Alberto Strappazzon
+          COMMIT_EMAIL: a@strappazzon.xyz
