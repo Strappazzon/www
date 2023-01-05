@@ -12,7 +12,13 @@
 				<div class="container__title">
 					{% assign pt = page.title | split: " | " %}
 					<h1>{{ pt[0] }}</h1>
-					<h4>{{ page.short_desc }}</h4>
+					<h4>
+						{% if page.short_desc %}
+							{{ page.short_desc }}
+						{% else %}
+							{{ page.description }}
+						{% endif %}
+					</h4>
 				</div>
 				<hr aria-hidden="true">
 				{{ content }}
