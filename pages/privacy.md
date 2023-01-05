@@ -2,22 +2,29 @@
 layout: pages
 title: "Privacy Statement | Alberto Strappazzon"
 description: "This Privacy Statement explains what information this website collects about its visitors."
-short_desc: "Last Update: Oct 28, 2022"
+short_desc: "Last Update: Jan 5, 2023"
 permalink: /privacy/
 ---
 
-### This Privacy Statement explains what information this website collects about its visitors.
+### {{ page.description | remove: "." }}
 
-This Privacy Statement applies to <{{ site.url }}> (hereinafter, "This Website"), operated by Alberto Strappazzon (hereinafter, "I", or "Me").
+This Privacy Statement applies to <{{ site.url }}> (hereinafter, "This Website"), operated by Alberto Strappazzon (hereinafter, "I", "Me" or "My"). This Privacy Statement does not cover third-party mirrors or archived versions of my website.
 
-### Cloudflare
+I do not collect any personal information. I do not track you using cookies, collect your fingerprints, or use any tracking scripts.
 
-This Website is hosted on Cloudflare.
+### Hosting Provider
 
-Cloudflare may collect non-personally-identifying information of the sort that web browsers and servers typically make available, such as the browser type and the date and time of each visitor request.
-Cloudflare  may also collect potentially personally-identifying information like Internet Protocol (IP) addresses.
+I use Cloudflare Registrar and Cloudflare DNS. This Website is hosted on Cloudflare Pages.
+
+Cloudflare may collect non-personally-identifying information of the sort that web browsers and servers typically make available, such as the browser type and the date and time of each visitor request. Cloudflare  may also collect potentially personally-identifying information like Internet Protocol (IP) addresses.
 
 See also: [Cloudflare Privacy Policy](https://www.cloudflare.com/privacypolicy/).
+
+### Email
+
+I use Proton Mail. If you decide to contact me, you agree that Proton AG and I process your personal data (e.g., name, email address).
+
+See also: [Proton Privacy Policy](https://proton.me/legal/privacy).
 
 ### Links To External Sites
 
@@ -27,7 +34,7 @@ I have no control over, and assume no responsibility for the content, privacy po
 
 ### Privacy Statement Changes
 
-This version of This Website Privacy Statement took effect May 20th, 2020.
+This version of This Website Privacy Statement took effect Jan 5th, 2023.
 
 I will post any new versions of this statement at [{{ page.permalink | prepend: site.url }}]({{ page.permalink | prepend: site.url }}).
 
