@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 	{% include layout/head.html %}
-	<body>
+	<body itemscope="" itemtype="http://schema.org/WebPage">
 		<div class="bg-layer__main"></div>
 		<button type="button" id="su" tabindex="-1">Top</button>
 		{% include layout/header.html %}
 		<div id="top"></div>
 		<div class="container" role="main">
-			<main>
+			<main itemscope="" itemprop="mainContentOfPage">
 				{{ content }}
 			</main>
 		</div>

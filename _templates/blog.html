@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 	{% include layout/head.html %}
-	<body>
+	<body itemscope="" itemtype="http://schema.org/WebPage">
 		<div class="bg-layer__1"></div>
 		<div class="bg-layer__2"></div>
 		<button type="button" id="su">Top</button>
 		{% include layout/header.html %}
 		<div id="top"></div>
-		<div class="container" role="article">
-			<article>
+		<div class="container" role="article" itemscope="" itemprop="mainContentOfPage">
+			<article itemscope="" itemtype="http://schema.org/BlogPosting">
 				<div class="container__title">
 					{% assign pt = page.title | split: " | " %}
-					<h1 data-tgiv="title">{{ pt[0] }}</h1>
-					<h4 data-tgiv="subtitle">{{ page.description }}</h4>
+					<h1 itemprop="headline" data-tgiv="title">{{ pt[0] }}</h1>
+					<h4 itemprop="alternativeHeadline" data-tgiv="subtitle">{{ page.description }}</h4>
 				</div>
 				<hr aria-hidden="true">
-				{{ content }}
+				<div itemprop="articleBody">
+					{{ content }}
+				</div>
 				<hr aria-hidden="true">
 			</article>
-			<footer role="contentinfo">
+			<footer role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
 				<span>Published: {{ page.date | date: "%-d %B %Y" }}</span>
 				<span><a href="https://github.com/Strappazzon/www/blob/master/{{ site.blog.first.relative_path }}" aria-label="Edit history">History</a></span>
 			</footer>

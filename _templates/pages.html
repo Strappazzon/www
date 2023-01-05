@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 	{% include layout/head.html %}
-	<body>
+	<body itemscope="" itemtype="http://schema.org/WebPage">
 		<div class="bg-layer__1"></div>
 		<div class="bg-layer__2"></div>
 		<button type="button" id="su" tabindex="-1">Top</button>
 		{% include layout/header.html %}
 		<div id="top"></div>
 		<div class="container" role="main">
-			<main>
+			<main itemscope="" itemprop="mainContentOfPage">
 				<div class="container__title">
 					{% assign pt = page.title | split: " | " %}
 					<h1>{{ pt[0] }}</h1>
