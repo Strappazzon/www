@@ -13,7 +13,7 @@
 	</div>
 	<div class="terminal__content">
 		<div class="row">
-			<div class="text"><span class="h__uh">{{ include.username | downcase }}@{{ include.hostname | downcase }}</span>:<span class="h__at">~$</span> gpg --list-keys</div>
+			<div class="text"><span class="h__uh">{{ include.username | downcase }}@{{ include.hostname | downcase }}</span>:<span class="h__at">~$</span> gpg <span class="h__ca">--list-keys</span></div>
 			<div class="text">/home/{{ include.username | downcase }}/.gnupg/pubring.kbx</div>
 			<div class="text">------------------------------------</div>
 			<div class="text">pub ed25519 2020-06-24 [SC]</div>
