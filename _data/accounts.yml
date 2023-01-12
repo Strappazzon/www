@@ -1,16 +1,19 @@
 # This list will be used in the homepage
 short_list:
-- name: GitHub
-  username: Strappazzon
-  url: https://github.com/Strappazzon
-- name: Twitter
-  username: 0xStrappazzon
-  url: https://www.twitter.com/0xStrappazzon
+  - name: GitHub
+    username: Strappazzon
+    url: https://github.com/Strappazzon
+  - name: Twitter
+    username: 0xStrappazzon
+    url: https://www.twitter.com/0xStrappazzon
 
 # Additional accounts
 # These will be used as short_list + long_list
 # to avoid adding duplicates here
 long_list:
-- name: GitLab
-  username: Strappazzon
-  url: https://gitlab.com/Strappazzon
+  - name: Reddit
+    username: 0xStrappazzon
+    url: https://www.reddit.com/u/0xStrappazzon
+  - name: GitLab
+    username: Strappazzon
+    url: https://gitlab.com/Strappazzon
