@@ -354,9 +354,19 @@ body {
 		}
 		.emails,
 		.accounts {
+			display: flex;
 			flex-direction: column;
 			flex-wrap: wrap;
 			align-items: flex-start;
+			// https://stackoverflow.com/a/19576595
+			ul {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				li {
+					flex: 1 0 50%;
+				}
+			}
 		}
 	}
 	&__pgp {
