@@ -369,7 +369,8 @@ body {
 			}
 		}
 	}
-	&__pgp {
+	&__pgp,
+	&__ssh {
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap-reverse;

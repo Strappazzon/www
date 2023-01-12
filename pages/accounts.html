@@ -42,6 +42,7 @@ permalink: /accounts/
 		title="Task - List PGP Keys"
 		username="alberto"
 		hostname="strappazzon"
+		task="pgp"
 	%}
 	<div class="container__pgp__downloads">
 		<p>
@@ -59,4 +60,17 @@ permalink: /accounts/
 			</a>
 		</p>
 	</div>
+</div>
+
+<h3 id="ssh-keys">SSH Keys</h3>
+
+<p>I also use the following SSH keys:</p>
+
+<div class="container__ssh">
+	{% include terminal.html
+		title="Task - List SSH Keys"
+		username="alberto"
+		hostname="strappazzon"
+		task="ssh"
+	%}
 </div>

@@ -13,20 +13,27 @@
 	</div>
 	<div class="terminal__content">
 		<div class="row">
-			<div class="text"><span class="h__uh">{{ include.username | downcase }}@{{ include.hostname | downcase }}</span>:<span class="h__at">~$</span> gpg <span class="h__ca">--list-keys</span></div>
-			<div class="text">/home/{{ include.username | downcase }}/.gnupg/pubring.kbx</div>
-			<div class="text">------------------------------------</div>
-			<div class="text">pub ed25519 2020-06-24 [SC]</div>
-			<div class="text">&nbsp;&nbsp;&nbsp;&nbsp;975126E37C9BA907D95FAA5498B160D45D48A6F5</div>
-			<div class="text">uid&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[  unknown] <span class="ep__cd"></span> &lt;<span class="ep__cd"></span>&gt;</div>
-			<div class="text">sub cv25519 2020-06-24 [E]</div>
-			<div class="text">&#8203;</div>
-			<div class="text">pub rsa2048 2018-07-04 [SC]</div>
-			<div class="text">&nbsp;&nbsp;&nbsp;&nbsp;DE55A0A7806F6030347DE10A06897F17310BCC24</div>
-			<div class="text">uid&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[  unknown] <span class="ep__pm"></span> &lt;<span class="ep__pm"></span>&gt;</div>
-			<div class="text">sub rsa2048 2018-07-04 [E]</div>
-			<div class="text">&#8203;</div>
-			<div class="text"><span class="h__uh">{{ include.username | downcase }}@{{ include.hostname | downcase }}</span>:<span class="h__at">~$</span><span class="c">&nbsp;</span></div>
+			{% if include.task == "pgp" %}
+				<div class="text"><span class="h__uh">{{ include.username | downcase }}@{{ include.hostname | downcase }}</span>:<span class="h__at">~$</span> gpg <span class="h__ca">--list-keys</span></div>
+				<div class="text">/home/{{ include.username | downcase }}/.gnupg/pubring.kbx</div>
+				<div class="text">------------------------------------</div>
+				<div class="text">pub ed25519 2020-06-24 [SC]</div>
+				<div class="text">&nbsp;&nbsp;&nbsp;&nbsp;975126E37C9BA907D95FAA5498B160D45D48A6F5</div>
+				<div class="text">uid&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[  unknown] <span class="ep__cd"></span> &lt;<span class="ep__cd"></span>&gt;</div>
+				<div class="text">sub cv25519 2020-06-24 [E]</div>
+				<div class="text">&#8203;</div>
+				<div class="text">pub rsa2048 2018-07-04 [SC]</div>
+				<div class="text">&nbsp;&nbsp;&nbsp;&nbsp;DE55A0A7806F6030347DE10A06897F17310BCC24</div>
+				<div class="text">uid&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[  unknown] <span class="ep__pm"></span> &lt;<span class="ep__pm"></span>&gt;</div>
+				<div class="text">sub rsa2048 2018-07-04 [E]</div>
+				<div class="text">&#8203;</div>
+				<div class="text"><span class="h__uh">{{ include.username | downcase }}@{{ include.hostname | downcase }}</span>:<span class="h__at">~$</span><span class="c">&nbsp;</span></div>
+			{% elsif include.task == "ssh" %}
+				<div class="text"><span class="h__uh">{{ include.username | downcase }}@{{ include.hostname | downcase }}</span>:<span class="h__at">~$</span> ssh-add <span class="h__ca">-L</span></div>
+				<div class="text">ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFoe78QsVbl0J8+INuZqGkJma2eyfEF7Jz/xcMNd/0Mo <span class="ep__cd"></span></div>
+				<div class="text">&#8203;</div>
+				<div class="text"><span class="h__uh">{{ include.username | downcase }}@{{ include.hostname | downcase }}</span>:<span class="h__at">~$</span><span class="c">&nbsp;</span></div>
+			{% endif %}
 		</div>
 	</div>
 </div>
