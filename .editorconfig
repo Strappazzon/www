@@ -1,0 +1,30 @@
+root = true
+
+[*]
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+[*.{json,html,scss,js}]
+indent_style = tab
+tab_width = 4
+
+[*.md]
+trim_trailing_whitespace = false
+
+[*.{md,rb,yml}]
+indent_style = space
+indent_size = 2
+
+[*.{rb,yml}]
+end_of_line = lf
+
+[{Gemfile*,.cloudflare/**}]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+
+[*.txt]
+indent_style = space
+indent_size = 2
+insert_final_newline = false
