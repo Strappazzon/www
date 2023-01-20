@@ -57,4 +57,4 @@ collections:
     output: true
     permalink: /:collection/:year-:month-:day/:title/
 
-timezone: UTC
+timezone: "Europe/Rome"
