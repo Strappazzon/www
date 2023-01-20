@@ -62,9 +62,9 @@
 					"required": true
 				},
 				{
-					"title": "Keywords",
-					"name": "keywords",
-					"type": "tags"
+					"title": "Tags",
+					"name": "tags",
+					"type": "categories",
 					"single": false,
 					"required": false
 				}

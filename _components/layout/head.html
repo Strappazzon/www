@@ -8,8 +8,8 @@
 	{% endif %}
 	<meta name="description" content="{{ page.description }}">
 	{% if page.layout == "blog" %}
-		{% assign k = page.keywords | join: "," %}
-		<meta name="keywords" content="strappazzon,blog{% if k.size >= 1 %},{{ k }}{% endif %}">
+		{% assign t = page.tags | join: "," %}
+		<meta name="keywords" content="strappazzon,blog{% if t.size >= 1 %},{{ t }}{% endif %}">
 	{% else %}
 		<meta name="keywords" content="alberto strappazzon,strappazzon alberto,strappazzon">
 	{% endif %}
