@@ -36,30 +36,37 @@
 					"title": "Title",
 					"name": "title",
 					"type": "string",
-					"single": true
+					"single": true,
+					"required": true
 				},
 				{
 					"title": "Description",
 					"name": "description",
-					"type": "string"
+					"type": "string",
+					"single": true,
+					"required": true
 				},
 				{
 					"title": "Publishing date",
 					"name": "date",
 					"type": "datetime",
 					"default": "{{now}}",
-					"isPublishDate": true
+					"isPublishDate": true,
+					"required": true
 				},
 				{
 					"title": "Modified date",
 					"name": "last_modified_at",
 					"type": "datetime",
-					"isModifiedDate": true
+					"isModifiedDate": true,
+					"required": true
 				},
 				{
 					"title": "Keywords",
 					"name": "keywords",
 					"type": "tags"
+					"single": false,
+					"required": false
 				}
 			]
 		}
