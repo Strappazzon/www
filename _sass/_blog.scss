@@ -1,5 +1,18 @@
 body {
 	article {
+		aside {
+			width: 350px;
+			height: 250px;
+			float: right;
+			margin: 0;
+			margin-left: 1rem;
+			margin-bottom: 1rem;
+			// Override components/terminal.scss values
+			& > .terminal {
+				min-height: 150px;
+				height: inherit;
+			}
+		}
 		& > hr {
 			box-sizing: content-box;
 			overflow: visible;
