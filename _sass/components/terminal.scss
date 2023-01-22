@@ -112,10 +112,6 @@ $terminal-h: 350px;
 	&__ca { color: rgba(204, 204, 204, 0.8); } // Command arguments
 }
 
-// Classes used by scripts
-.ml-0 { margin-left: 0; }
-.mh-0 { min-height: 0; }
-
 @media (max-width: 800px) {
 	.terminal {
 		width: 100%;
