@@ -10,6 +10,7 @@ layouts_dir: _templates
 # Ruby gems
 plugins:
   - jekyll-autoprefixer
+  - jekyll-paginate-v2
   - jekyll-sitemap
 
 # Markdown
@@ -56,5 +57,20 @@ collections:
   blog:
     output: true
     permalink: /:collection/:year-:month-:day/:title/
+
+# Blog pagination
+pagination:
+  enabled: true
+  collection: blog
+  per_page: 5
+  sort_reverse: true # Explicitly set because https://github.com/sverrirs/jekyll-paginate-v2/issues/230
+  permalink: /:num/
+  title: :title
+autopages:
+  # Disabled because
+  # https://github.com/sverrirs/jekyll-paginate-v2/issues/176
+  # https://github.com/sverrirs/jekyll-paginate-v2/issues/237
+  enabled: false
+  tags: {}
 
 timezone: "Europe/Rome"

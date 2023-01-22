@@ -9,5 +9,6 @@ gem 'jekyll', '~> 4.2'
 # Plugins
 group :jekyll_plugins do
   gem 'jekyll-autoprefixer'
+  gem 'jekyll-paginate-v2'
   gem 'jekyll-sitemap'
 end
