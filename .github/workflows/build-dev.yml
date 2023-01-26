@@ -22,12 +22,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v2.3.4
+        uses: actions/checkout@v3.3.0
 
       - name: Setup Ruby
         env:
           BUNDLE_SPECIFIC_PLATFORM: 1
-        uses: ruby/setup-ruby@v1.75.0
+        uses: ruby/setup-ruby@v1.134.0
         with:
           bundler-cache: true
 
