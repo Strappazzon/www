@@ -20,6 +20,7 @@ kramdown:
 
 # CSS
 sass:
+  sourcemap: development
   style: compressed
 
 # CSS Autoprefixer
