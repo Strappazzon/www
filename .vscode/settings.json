@@ -39,5 +39,12 @@
 
 	"frontMatter.framework.startCommand": "bundle exec jekyll serve --force_polling --livereload",
 
-	"markdown.preview.scrollEditorWithPreview": false
+	"markdown.preview.scrollEditorWithPreview": false,
+	"markdownlint.config": {
+		"MD013": false,
+		"MD025": false,
+		"MD026": false,
+		"MD033": false,
+		"MD041": false
+	}
 }
