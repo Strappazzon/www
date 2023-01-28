@@ -33,28 +33,6 @@
 				<div class="text">ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFoe78QsVbl0J8+INuZqGkJma2eyfEF7Jz/xcMNd/0Mo <span class="ep__cd"></span></div>
 				<div class="text">&#8203;</div>
 				<div class="text"><span class="h__uh">{{ include.username | downcase }}@{{ include.hostname | downcase }}</span>:<span class="h__at">~$</span><span class="c">&nbsp;</span></div>
-			{% elsif include.task == "blog_meta" %}
-				<div class="text"><span class="h__uh">{{ include.username | downcase }}@{{ include.hostname | downcase }}</span>:<span class="h__at">~$</span> <span class="h__ca"># Post tags</span></div>
-				{% comment %}
-					Help for creating the command
-					https://stackoverflow.com/a/13566954
-					https://www.linuxquestions.org/questions/programming-9/awk-from-field-n-to-end-of-line-4175451096/#post4896627
-					https://stackoverflow.com/a/24331735
-				{% endcomment %}
-				{% assign t = page.tags | join: "," %}
-				<div class="text"><span class="h__uh">{{ include.username | downcase }}@{{ include.hostname | downcase }}</span>:<span class="h__at">~$</span> curl <span class="h__ca">-fsSL</span> <span class="h__ca">{{ site.host }}{{ page.url }}</span> | grep <span class="h__ca">-oP</span> <span class="h__st">'({{ '?<=<meta name="keywords" content=").*?(?=">' | escape }})'</span> | awk <span class="h__ca">-F</span> <span class="h__st">','</span> <span class="h__st">'BEGIN { ORS=", " };{ for (i=4; i<=NF; i++) print $i }'</span></div>
-				<div class="text">{{ t | split: "," | join: ", " }}</div>
-				<div class="text"><span class="h__uh">{{ include.username | downcase }}@{{ include.hostname | downcase }}</span>:<span class="h__at">~$</span> <span class="h__ca"># Reading time</span></div>
-				{% comment %}
-					Help for creating the command
-					https://www.tutorialspoint.com/awk/awk_arithmetic_operators.htm
-				{% endcomment %}
-				<div class="text"><span class="h__uh">{{ include.username | downcase }}@{{ include.hostname | downcase }}</span>:<span class="h__at">~$</span> echo <span class="h__si">$(</span>wc <span class="h__ca">-w</span> <span class="h__ca">~/dev/www/{{ page.path }}</span> | awk <span class="h__st">'{ print int($1/180) }'</span><span class="h__si">)</span> minutes</div>
-				{% comment %} The output is not the same as reading_time.rb {% endcomment %}
-				<div class="text">{{ page.content | reading_time }} minutes</div>
-				<div class="text"><span class="h__uh">{{ include.username | downcase }}@{{ include.hostname | downcase }}</span>:<span class="h__at">~$</span><span class="c">&nbsp;</span></div>
-			{% else %}
-				<div class="text"><span class="h__uh">{{ include.username | downcase }}@{{ include.hostname | downcase }}</span>:<span class="h__at">~$</span><span class="c">&nbsp;</span></div>
 			{% endif %}
 		</div>
 	</div>

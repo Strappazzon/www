@@ -7,7 +7,6 @@ $terminal-h: 350px;
 .terminal {
 	margin: 0;
 	flex: $terminal-w;
-	min-width: 350px;
 	min-height: $terminal-h;
 	border: 1px solid #222;
 	background-color: rgba(0, 0, 0, 0.8);
@@ -110,9 +109,7 @@ $terminal-h: 350px;
 .h {
 	&__uh { color: rgba(247, 202, 3, 0.8); } // User and Hostname
 	&__at { color: rgba(20, 140, 252, 0.8); } // Account type
-	&__ca { color: rgba(204, 204, 204, 0.8); } // Command arguments, Comments
-	&__st { color: rgba(71, 210, 86, 0.8) } // String
-	&__si { color: rgba(170, 75, 170, 0.8) } // String interpolation
+	&__ca { color: rgba(204, 204, 204, 0.8); } // Command arguments
 }
 
 @media (max-width: 800px) {
