@@ -44,11 +44,33 @@ body {
 	strong {
 		font-weight: bold;
 	}
-	a:link {
-		outline: none;
-		cursor: url("/static/img/cursor_hand.png"), auto;
+	a {
+		&:link {
+			outline: none;
+			cursor: url("/static/img/cursor_hand.png"), auto;
+		}
+		&.sr-skip {
+			$width: 250px;
+			position: absolute;
+			display: flex;
+			justify-content: center;
+			left: calc(50% - calc($width / 2));
+			width: $width;
+			transform: translateY(-100%);
+			transition: transform 0.5s;
+			text-decoration: none;
+			text-transform: uppercase;
+			color: #fff;
+			background-color: rgba(0, 0, 0, 0.6);
+			padding: 8px;
+			z-index: 10;
+			&:focus,
+			&:active {
+				transform: translateY(0%);
+			}
+		}
 	}
-	a,
+	a:not(.sr-skip),
 	button {
 		// https://css-tricks.com/keyboard-only-focus-styles/
 		&:focus-visible {
