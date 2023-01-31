@@ -5,6 +5,7 @@ header {
 	right: 0;
 	z-index: 2;
 	display: flex;
+	justify-content: space-between;
 	@include font("Acens");
 	font-size: rem(16);
 	margin-bottom: 3rem;
@@ -30,8 +31,6 @@ header {
 		}
 	}
 	nav {
-		position: absolute;
-		right: 10px;
 		@include font("DejaVu Sans Mono", true);
 		font-size: rem(14);
 		line-height: 1.75;
