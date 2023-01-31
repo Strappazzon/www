@@ -24,7 +24,7 @@ pagination:
 {% endfor %}
 
 {% if paginator.total_pages > 1 %}
-	<nav class="pagination" aria-label="Posts">
+	<nav class="pagination" aria-label="Blog posts navigation">
 		{% if paginator.next_page %}
 			<a aria-label="Older Posts" href="{{ paginator.next_page_path | prepend: site.url }}">Older Posts</a>
 		{% endif %}

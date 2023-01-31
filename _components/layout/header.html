@@ -1,15 +1,15 @@
 <header itemscope itemtype="http://schema.org/WPHeader">
-	<div class="logo">
+	<div class="logo" role="presentation">
 		<img src="/static/img/favicons/favicon-32x32.png" width="18px" height="18px" alt="" draggable="false">
 		<span class="separator" aria-hidden="true">&nbsp;&nbsp;///&nbsp;&nbsp;</span>
 		<span>{{ site.title | upcase}}</span>
 	</div>
 	{% if page.url != "/" %}
-		<div class="links">
+		<nav aria-label="Main navigation">
 			{% if page.layout == "blog" %}
 				<a href="/blog/">Blog</a> |
 			{% endif %}
 			<a href="/">Home</a>
-		</div>
+		</nav>
 	{% endif %}
 </header>
