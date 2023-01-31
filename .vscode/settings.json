@@ -6,6 +6,7 @@
 		"editor.defaultFormatter": null
 	},
 	"[markdown]": {
+		"editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
 		"editor.quickSuggestions": {
 			"comments": "off",
 			"strings": "off",
