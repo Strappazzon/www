@@ -13,5 +13,4 @@ gem 'mini_racer', '~> 0.6.3'
 group :jekyll_plugins do
   gem 'jekyll-autoprefixer'
   gem 'jekyll-paginate-v2'
-  gem 'jekyll-sitemap'
 end
