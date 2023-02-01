@@ -1,0 +1,38 @@
+---
+layout: none
+---
+
+{%- comment -%}
+  https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/sitemap.xml
+  https://raw.githubusercontent.com/jekyll/jekyll-sitemap/master/lib/sitemap.xml
+{%- endcomment -%}
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% comment %} Website pages {% endcomment %}
+  {%- assign pages = site.html_pages | where_exp: 'doc', 'doc.sitemap != false' | where_exp: 'doc', 'doc.url != "/404.html"' -%}
+  {% for p in pages %}
+    {%- assign url = p.url | replace: 'index.html', '' -%}
+    <url>
+      <loc>{{ url | prepend: site.url | xml_escape }}</loc>
+      {%- if url == "/blog/" %}
+      <changefreq>daily</changefreq>
+      {%- else %}
+      <changefreq>monthly</changefreq>
+      {%- endif %}
+      <priority>1.0</priority>
+    </url>
+  {%- endfor -%}
+  {% comment %} Blog posts {% endcomment %}
+  {%- for b in site.blog -%}
+    <url>
+      <loc>{{ b.url | prepend: site.url | xml_escape }}</loc>
+      {%- if b.last_modified_at %}
+      <lastmod>{{ b.last_modified_at | date_to_xmlschema }}</lastmod>
+      {%- else %}
+      <changefreq>monthly</changefreq>
+      {%- endif %}
+      <priority>0.5</priority>
+    </url>
+  {%- endfor %}
+</urlset>

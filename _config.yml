@@ -29,10 +29,6 @@ autoprefixer:
     - last 2 versions
   only_production: true
 
-# Sitemap
-sitemap:
-  file: /sitemap.xml
-
 # Excluded files
 exclude:
   - frontmatter.json

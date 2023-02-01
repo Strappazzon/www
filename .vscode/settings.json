@@ -1,20 +1,55 @@
 {
 	"[html]": {
-		"editor.defaultFormatter": null
+		"editor.defaultFormatter": null,
+		"editor.detectIndentation": false,
+		"editor.insertSpaces": false,
+		"editor.tabSize": 4
 	},
 	"[liquid]": {
-		"editor.defaultFormatter": null
+		"editor.defaultFormatter": null,
+		"editor.detectIndentation": false,
+		"editor.insertSpaces": false,
+		"editor.tabSize": 4
 	},
 	"[markdown]": {
+		"editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
 		"editor.quickSuggestions": {
 			"comments": "off",
 			"strings": "off",
 			"other": "off"
 		},
+		"editor.detectIndentation": false,
+		"editor.tabSize": 2,
+		"editor.insertSpaces": true,
 		"files.trimTrailingWhitespace": false
+	},
+	"[plaintext]": {
+		"files.insertFinalNewline": false,
+		"files.trimTrailingWhitespace": false,
+		"editor.detectIndentation": false,
+		"editor.tabSize": 2,
+		"editor.insertSpaces": true
 	},
 	"[scss]": {
 		"editor.defaultFormatter": null
+	},
+	"[txt]": {
+		"files.insertFinalNewline": false,
+		"files.trimTrailingWhitespace": false,
+		"editor.detectIndentation": false,
+		"editor.tabSize": 2,
+		"editor.insertSpaces": true,
+	},
+	"[xml]": {
+		"editor.defaultFormatter": null,
+		"editor.detectIndentation": false,
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2
+	},
+	"[yaml]": {
+		"editor.detectIndentation": false,
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2
 	},
 
 	"cssrem.autoRemovePrefixZero": false,

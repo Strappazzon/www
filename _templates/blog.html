@@ -4,11 +4,12 @@
 	<body itemscope="" itemtype="http://schema.org/WebPage">
 		<div class="bg-layer__1"></div>
 		<div class="bg-layer__2"></div>
+		<a class="sr-skip" href="#main">Skip to main content</a>
 		<button type="button" id="su">Top</button>
 		{% include layout/header.html %}
 		<div id="top"></div>
 		<div class="container" role="article" itemscope="" itemprop="mainContentOfPage">
-			<article itemscope="" itemtype="http://schema.org/BlogPosting">
+			<article id="main" itemscope="" itemtype="http://schema.org/BlogPosting">
 				<div class="container__title">
 					{% assign pt = page.title | split: " | " %}
 					<h1 itemprop="headline" data-tgiv="title">{{ pt[0] }}</h1>
