@@ -316,3 +316,22 @@ body {
 		}
 	}
 }
+
+.container {
+	&__title {
+		justify-content: space-between;
+		&-desc {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+			h4 {
+				margin: 0;
+			}
+			.read-time {
+				color: #ccc;
+				text-shadow: none;
+				text-transform: unset;
+			}
+		}
+	}
+}
