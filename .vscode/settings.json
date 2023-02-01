@@ -30,8 +30,20 @@
 		"editor.tabSize": 2,
 		"editor.insertSpaces": true
 	},
+	"[ruby]": {
+		"editor.detectIndentation": false,
+		"editor.tabSize": 2,
+		"editor.insertSpaces": true,
+		"files.eol": "\n"
+	},
 	"[scss]": {
 		"editor.defaultFormatter": null
+	},
+	"[shellscript]": {
+		"editor.detectIndentation": false,
+		"editor.tabSize": 2,
+		"editor.insertSpaces": true,
+		"files.eol": "\n"
 	},
 	"[txt]": {
 		"files.insertFinalNewline": false,

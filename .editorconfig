@@ -12,11 +12,11 @@ tab_width = 4
 [*.md]
 trim_trailing_whitespace = false
 
-[*.{md,rb,yml}]
+[*.{md,rb,sh,yml}]
 indent_style = space
 indent_size = 2
 
-[*.{rb,yml}]
+[*.{rb,sh,yml}]
 end_of_line = lf
 
 [{Gemfile*,.cloudflare/**}]

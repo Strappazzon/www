@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "Rubocop $(bundle exec rubocop --version)"
+bundle exec rubocop -D -E -S $@
+
+success=$?
+if ((success != 0)); then
+  echo -e "\nRun \"ruby_fmt -a\" to automatically fix errors."
+fi
+
+exit $success
