@@ -1,0 +1,15 @@
+#!/bin/bash -e
+
+bin/branding
+
+if ! command -v ruby >/dev/null; then
+  echo "Ruby is not installed. Cannot proceed."
+  exit 1
+fi
+
+if ! command -v bundle >/dev/null; then
+  echo "Bundler is not installed. Cannot proceed."
+  exit 1
+else
+  bundle install
+fi

@@ -1,0 +1,23 @@
+#!/bin/bash
+
+# https://www.ascii-art-generator.org
+echo -e ""
+echo -e "\e[31;40m .:;t;;::..::..::..::..::..::..::;;;;:. \e[0m"
+echo -e "\e[31;40m.8@S@%XS8%@X8SXX8S@@SSX@@%X@@S%@@StX@%8:\e[0m"
+echo -e "\e[31;40mtX8@8X8%;;:;;;:;;;@%%@tt;:;;t:;tt@8%X8@%\e[0m"
+echo -e "\e[31;40m;X8@X:.:..........X88S............:8888:\e[0m"
+echo -e "\e[31;40m:8@@;:.         ..;@@;.           .;@88:\e[0m"
+echo -e "\e[31;40m:88S:.           .....             .:@8:\e[0m"
+echo -e "\e[31;40m:XX%.                               X8@;\e[0m"
+echo -e "\e[31;40m:X8S:.                              %88t\e[0m"
+echo -e "\e[31;40m:88@8X                             88@@;\e[0m"
+echo -e "\e[31;40m:@S88X@t:.                      t88XSS@.\e[0m"
+echo -e "\e[31;40m.X8Xt%tt:.                      .;;tSX%:\e[0m"
+echo -e "\e[31;40m:@8S;:                             .X88;\e[0m"
+echo -e "\e[31;40m.tt;.                               :;%;\e[0m"
+echo -e "\e[31;40m:@8S.             .::.              X88;\e[0m"
+echo -e "\e[31;40m;@S@S.            %S@%.            S@SX.\e[0m"
+echo -e "\e[31;40mt888SS;.          S@@S.          ;SX@88;\e[0m"
+echo -e "\e[31;40m;X8%8@@@8%S88%%88S8XS8S88%%88St8XSX8@%t;\e[0m"
+echo -e "\e[31;40m ;88@@X8@tt8@%t@@%t88tS@8%tX@t%XX@@8S8;.\e[0m"
+echo -e ""
