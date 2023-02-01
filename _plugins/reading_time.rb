@@ -11,23 +11,22 @@
 module Jekyll
   module ReadingTimeFilter
     VERSION = '1.0.0'.freeze
+    # Words per minute
+    WPM     = 180
 
     # Outputs reading time in minutes
     def reading_time(input)
       # Load configuration
       config = @context.registers[:site].config['reading_time']
 
-      # Set default values
-      if !config
+      if config
         # Whether to return an integer or float
         # Default: Int
-        return_float = false
-        # Words per minute
-        # Default: 180
-        words_per_minute = 180
-      else
         return_float     = config['precise_result'] || false
-        words_per_minute = config['words_per_minute'] || 180
+        words_per_minute = config['words_per_minute'] || WPM
+      else
+        return_float = false
+        words_per_minute = WPM
       end
 
       words = input.split.size
@@ -36,20 +35,12 @@ module Jekyll
       return time.round(1)
     end
 
+    # Outputs reading time in seconds
     def reading_time_in_s(input)
       # Load configuration
       config = @context.registers[:site].config['reading_time']
 
-      # Set default values
-      # rubocop:disable Style/ConditionalAssignment
-      if !config
-        # Words per minute
-        # Default: 180
-        words_per_minute = 180
-      else
-        words_per_minute = config['words_per_minute'] || 180
-      end
-      # rubocop:enable Style/ConditionalAssignment
+      words_per_minute = config ? config['words_per_minute'] || WPM : WPM
 
       words = input.split.size
       time = (words.to_f / words_per_minute)
