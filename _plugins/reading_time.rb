@@ -59,4 +59,4 @@ end
 
 Liquid::Template.register_filter(Jekyll::ReadingTimeFilter)
 
-$stdout.puts("            Plugin: #{File.basename(__FILE__)} #{Jekyll::ReadingTimeFilter::VERSION} loaded")
+Jekyll.logger.info "            Plugin: #{File.basename(__FILE__)} #{Jekyll::ReadingTimeFilter::VERSION} loaded."
