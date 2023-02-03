@@ -1,0 +1,44 @@
+---
+layout: none
+---
+
+{%- comment -%}
+  https://raw.githubusercontent.com/jhvanderschee/jekyllcodex/gh-pages/feed.xml
+  https://raw.githubusercontent.com/jekyll/jekyll-feed/master/lib/jekyll-feed/feed.xml
+{%- endcomment -%}
+
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <generator uri="https://jekyllrb.com/" version="{{ jekyll.version }}">Jekyll</generator>
+  <link rel="self" href="{{ page.url | absolute_url }}" type="application/atom+xml" />
+  <link rel="alternate" href="{{ '/' | absolute_url }}" type="text/html" hreflang="en" />
+  <updated>{{ site.time | date_to_xmlschema }}</updated>
+  <id>{{ page.url | absolute_url | xml_escape }}</id>
+  <icon>{{ '/static/img/favicons/favicon-32x32.png' | absolute_url }}</icon>
+  <title type="html">{{ site.title_blog | xml_escape }}</title>
+  {%- if site.description_blog -%}
+    <subtitle>{{ site.description_blog | xml_escape }}</subtitle>
+  {% endif %}
+  <author>
+    <name>{{ site.title | xml_escape }}</name>
+    <uri>{{ site.url | xml_escape }}</uri>
+  </author>
+  {% for p in site.blog limit: 10 -%}
+    <entry xml:lang="en">
+      <id>{{ p.id | absolute_url | xml_escape }}</id>
+      <title type="html">{{ p.title | xml_escape }}</title>
+      <link rel="alternate" href="{{ p.url | absolute_url }}" title="{{ p.title }}" type="text/html" />
+      <published>{{ p.date | date_to_xmlschema }}</published>
+      <updated>{{ p.last_modified_at | default: p.date | date_to_xmlschema }}</updated>
+      <content type="html" xml:base="{{ p.url | absolute_url | xml_escape }}"><![CDATA[{{ p.content | strip }}]]></content>
+      <author>
+        <name>{{ site.title | xml_escape }}</name>
+        <uri>{{ site.url | xml_escape }}</uri>
+      </author>
+      {% for t in p.tags -%}
+        <category term="{{ t | xml_escape }}" />
+      {% endfor -%}
+      <summary type="html"><![CDATA[{{ p.description | strip_html }}]]></summary>
+    </entry>
+  {%- endfor %}
+</feed>
