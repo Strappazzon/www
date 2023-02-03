@@ -32,7 +32,9 @@ jobs:
         with:
           bundler-cache: true
 
-      - name: Build
+      - name: Build with Jekyll
+        env:
+          JEKYLL_ENV: development
         run: |
           bundle exec jekyll build
           cp .cloudflare/_headers _site/_headers
