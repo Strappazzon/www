@@ -1,0 +1,31 @@
+blog:
+  - _blog/**
+  - _sass/_blog.scss
+  - static/css/blog.scss
+  - static/blog/**
+
+cicd:
+  - .github/workflows/**
+
+config:
+  - .cloudflare/**
+  - .vscode/**
+  - _config.yml
+  - .editorconfig
+  - .github/*.yml
+  - .editorconfig
+  - .gitattributes
+  - .gitignore
+  - .rubocop.yml
+  - frontmatter.json
+
+dependencies:
+  - .ruby-version
+  - Gemfile
+  - Gemfile.lock
+
+documentation:
+  - .github/README.md
+
+plugin:
+  - _plugins/**
