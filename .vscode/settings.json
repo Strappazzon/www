@@ -86,6 +86,9 @@
 
 	"frontMatter.framework.startCommand": "bundle exec jekyll serve --force_polling --livereload",
 
+	"liquid.engine": "standard",
+	"liquid.settings.target": "workspace",
+
 	"markdown.preview.scrollEditorWithPreview": false,
 	"markdownlint.config": {
 		"MD013": false,
