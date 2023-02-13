@@ -12,7 +12,7 @@
 			<div class="row">
 				<div class="text">Location:</div>
 				<div class="label bg__darkgray">
-					<a aria-label="Location" href="https://www.wikipedia.org/w/index.php?search={{ include.location | escape }}">{{ include.location }}</a>
+					<a aria-label="Location" href="https://www.wikipedia.org/w/index.php?search={{ include.location | url_encode }}">{{ include.location }}</a>
 				</div>
 			</div>
 		{% endif %}
