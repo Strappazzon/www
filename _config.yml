@@ -36,6 +36,7 @@ exclude:
   - frontmatter.json
   - Gemfile
   - LICENSE.txt
+  - SUPPORT.md
 
 # Included files
 include:

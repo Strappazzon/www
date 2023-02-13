@@ -16,6 +16,7 @@ on:
       - "bin/**"
       - "frontmatter.json"
       - "LICENSE.txt"
+      - "SUPPORT.md"
 
 jobs:
   main:
