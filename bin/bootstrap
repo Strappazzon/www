@@ -8,8 +8,8 @@ if ! command -v ruby >/dev/null; then
 fi
 
 if ! command -v bundle >/dev/null; then
-  echo "Bundler is not installed. Cannot proceed."
-  exit 1
-else
-  bundle install
+  echo "Bundler is not installed. Installing..."
+  gem install bundler -v "$(grep 'BUNDLED WITH' -A1 Gemfile.lock | tail -n 1)"
 fi
+
+bundle install
