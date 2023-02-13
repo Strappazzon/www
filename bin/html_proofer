@@ -6,7 +6,6 @@ if ! command -v htmlproofer >/dev/null; then
 fi
 
 JEKYLL_ENV=production
-BUNDLE_WITH=development
 build_dir="_site"
 ignore_urls=$(awk -vORS=, '{ print $1 }' .cloudflare/_redirects | sed 's/\*//g')
 #sed 's/,$//'
