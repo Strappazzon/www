@@ -1,49 +1,35 @@
-<img align="left" src="https://raw.githubusercontent.com/Strappazzon/www/master/static/img/avatar.png" width="64px">
+<div align="center">
 
-<div align="right">
-  <a href="https://github.com/Strappazzon/www/commit">
-    <img alt="Last commit (master branch)" src="https://img.shields.io/github/last-commit/Strappazzon/www/master?color=%2333a0ff&logo=git&logoColor=%23eee&style=for-the-badge">
-  </a>
-  <a href="https://github.com/Strappazzon/www">
-    <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Strappazzon/www?color=%23f7ca03&logo=github&logoColor=%23eee&style=for-the-badge">
-  </a>
-  <a href="https://github.com/Strappazzon/www">
-    <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/Strappazzon/www?color=%23cccccc&logo=github&logoColor=%23eee&style=for-the-badge">
-  </a>
-  <a href="https://strappazzon.xyz">
-    <img alt="Mozilla HTTP Observatory Grade" src="https://img.shields.io/mozilla-observatory/grade-score/strappazzon.xyz?color=1ecc00&logo=mozilla&logoColor=eee&style=for-the-badge">
-  </a>
-  <a href="https://strappazzon.xyz">
-    <img alt="Security Headers" src="https://img.shields.io/security-headers?logo=letsencrypt&logoColor=eee&style=for-the-badge&url=http%3A%2F%2Fstrappazzon.xyz">
-  </a>
-  <a href="https://actions-badge.atrox.dev/Strappazzon/www/goto?ref=master">
-    <img alt="Build Status" src="https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2FStrappazzon%2Fwww%2Fbadge%3Fref%3Dmaster&style=for-the-badge">
-  </a>
+# :small_red_triangle: [strappazzon.xyz](https://strappazzon.xyz)
+
+**This is my personal website built with [Jekyll](https://jekyllrb.com).**
+
+![Last Commit](https://img.shields.io/github/last-commit/Strappazzon/www?label=Last%20Commit&logo=git&logoColor=%23FFFFFF&style=flat-square)
+![Language Count](https://img.shields.io/github/languages/count/Strappazzon/www?color=%23f7ca03&label=Languages&style=flat-square)
+![Top Language](https://img.shields.io/github/languages/top/Strappazzon/www?color=%23F7CA03&style=flat-square)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/Strappazzon/www/build-prod.yml?branch=master&label=GitHub%20Actions&logo=githubactions&logoColor=%23FFFFFF&style=flat-square)](https://github.com/Strappazzon/www/actions/workflows/build-prod.yml)
+[![Security Headers](https://img.shields.io/security-headers?label=Security%20Headers&logo=letsencrypt&logoColor=%23FFFFFF&style=flat-square&url=https%3A%2F%2Fstrappazzon.xyz)](https://securityheaders.com/?q=strappazzon.xyz&hide=on&followRedirects=on)
+[![Mozilla HTTP Observatory Grade](https://img.shields.io/mozilla-observatory/grade/strappazzon.xyz?label=Observatory&logo=mozilla&logoColor=%23FFFFFF&style=flat-square)](https://observatory.mozilla.org/analyze/strappazzon.xyz)
+
 </div>
 
-## Developing
+## Contributing
 
-1. Install [Ruby](https://www.ruby-lang.org)
-    * With [rbenv](https://github.com/rbenv/rbenv): `rbenv install`
-    * With [frum](https://github.com/TaKO8Ki/frum): `frum install "$(cat .ruby-version)"`
-    * Manually
-2. Install [Bundler](https://bundler.io)
-    * `gem install bundler`
-3. Install the required dependencies
-    * `bundle install`
-4. Serve the website locally
-    * `bundle exec jekyll serve --force_polling --livereload`
+If you are interested in contributing directly to this repository, please see:
+
+- [Contribution Guidelines](https://github.com/Strappazzon/www/blob/-/.github/CONTRIBUTING.md)
+- [Code of Conduct](https://github.com/Strappazzon/.github/blob/-/CODE_OF_CONDUCT.md)
 
 ## Credits
 
-### Fonts
-
-* [Acens](https://www.dafont.com/acens.font)
-* [DejaVu Sans Mono](https://www.fontsquirrel.com/fonts/dejavu-sans-mono)
-* [Magda Clean Mono](https://www.myfonts.com/fonts/fontfont/ff-magda-clean-mono)
-* [Ubuntu Monospace](https://design.ubuntu.com/font/)
-
 Part of this website uses code and assets from
 
-* [Bootstrap](https://github.com/twbs/bootstrap)
-* [Person of Interest Web UI](https://github.com/Phreshhh/poi-web-ui)
+- [Bootstrap](https://github.com/twbs/bootstrap)
+- [Person of Interest Web UI](https://github.com/Phreshhh/poi-web-ui)
+
+### Fonts
+
+- [Acens](https://www.dafont.com/acens.font)
+- [DejaVu Sans Mono](https://www.fontsquirrel.com/fonts/dejavu-sans-mono)
+- [Magda Clean Mono](https://www.myfonts.com/fonts/fontfont/ff-magda-clean-mono)
+- [Ubuntu Monospace](https://design.ubuntu.com/font/)

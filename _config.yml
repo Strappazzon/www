@@ -31,12 +31,11 @@ autoprefixer:
 
 # Excluded files
 exclude:
+  - "**/*.psd"
   - bin
   - frontmatter.json
   - Gemfile
   - LICENSE.txt
-  - README.md
-  - "**/*.psd"
 
 # Included files
 include:
