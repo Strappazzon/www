@@ -13,17 +13,6 @@ on:
       - "bin/**"
       - "frontmatter.json"
       - "LICENSE.txt"
-  pull_request:
-    branches:
-      - master
-    paths-ignore:
-      - ".*/**"
-      - ".*"
-      - "!.cloudflare/**"
-      - "!.well-known/**"
-      - "!.ruby-version"
-      - "frontmatter.json"
-      - "LICENSE.txt"
   workflow_dispatch:
 
 jobs:
