@@ -2,7 +2,7 @@
   X-Frame-Options: DENY
   X-XSS-Protection: 0
   X-Content-Type-Options: nosniff
-  X-UA-Compatible: IE=edge,chrome=1
+  X-UA-Compatible: IE=edge
   Content-Security-Policy: default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; font-src 'self'; manifest-src 'self'; frame-ancestors 'none';
   Permissions-Policy: accelerometer=(),autoplay=(self),camera=(),fullscreen=(self),geolocation=(),gyroscope=(),interest-cohort=(),microphone=(),payment=(),usb=()
   Access-Control-Allow-Origin: *
