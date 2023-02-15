@@ -86,7 +86,7 @@
 
 	"frontMatter.framework.startCommand": "bundle exec jekyll serve --force_polling --livereload",
 
-	"liquid.engine": "standard",
+	"liquid.engine": "jekyll",
 	"liquid.settings.target": "workspace",
 
 	"markdown.preview.scrollEditorWithPreview": false,
@@ -96,5 +96,13 @@
 		"MD026": false,
 		"MD033": false,
 		"MD041": false
+	},
+
+	"terminal.integrated.defaultProfile.windows": "WSL",
+	"terminal.integrated.profiles.windows": {
+		"WSL": {
+			"path": "${env:windir}\\system32\\wsl.exe",
+			"icon": "terminal-linux"
+		}
 	}
 }
