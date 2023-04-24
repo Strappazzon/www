@@ -8,7 +8,6 @@
 ![Language Count](https://img.shields.io/github/languages/count/Strappazzon/www?color=%23f7ca03&label=Languages&style=flat-square)
 ![Top Language](https://img.shields.io/github/languages/top/Strappazzon/www?color=%23F7CA03&style=flat-square)
 [![Build Status](https://img.shields.io/github/actions/workflow/status/Strappazzon/www/build-prod.yml?branch=master&label=GitHub%20Actions&logo=githubactions&logoColor=%23FFFFFF&style=flat-square)](https://github.com/Strappazzon/www/actions/workflows/build-prod.yml)
-[![Security Headers](https://img.shields.io/security-headers?label=Security%20Headers&logo=letsencrypt&logoColor=%23FFFFFF&style=flat-square&url=https%3A%2F%2Fstrappazzon.xyz)](https://securityheaders.com/?q=strappazzon.xyz&hide=on&followRedirects=on)
 [![Mozilla HTTP Observatory Grade](https://img.shields.io/mozilla-observatory/grade/strappazzon.xyz?label=Observatory&logo=mozilla&logoColor=%23FFFFFF&style=flat-square)](https://observatory.mozilla.org/analyze/strappazzon.xyz)
 
 </div>
