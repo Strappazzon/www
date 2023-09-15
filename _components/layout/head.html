@@ -86,8 +86,8 @@
 	<link rel="shortcut icon" href="/static/img/favicons/favicon.ico">
 	<meta name="msapplication-config" content="/static/img/favicons/browserconfig.xml">
 	{%- comment -%} Stylesheets {%- endcomment -%}
-	<link rel="stylesheet" href="/static/css/index.css">
-	<link rel="stylesheet" href="/static/css/{{ page.layout }}.css">
+	<link rel="stylesheet" href="/static/css/index.css?{{ site.time | date: '%s%N' }}">
+	<link rel="stylesheet" href="/static/css/{{ page.layout }}.css?{{ site.time | date: '%s%N' }}">
 	{%- comment -%} Scripts {%- endcomment -%}
 	<script defer src="/static/js/scroll.js"></script>
 	{% if page.url == "/" %}
