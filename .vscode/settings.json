@@ -64,10 +64,6 @@
 		"editor.tabSize": 2
 	},
 
-	"cssrem.autoRemovePrefixZero": false,
-	"cssrem.fixedDigits": 3,
-	"cssrem.rootFontSize": 14,
-
 	"files.associations": {
 		"**/.cloudflare/_*": "plaintext",
 		"*.html": "liquid"
@@ -84,7 +80,6 @@
 	"files.insertFinalNewline": true,
 	"files.trimFinalNewlines": true,
 	"files.trimTrailingWhitespace": true,
-
 
 	"liquid.engine": "jekyll",
 	"liquid.settings.target": "workspace",
