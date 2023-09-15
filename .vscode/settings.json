@@ -70,10 +70,11 @@
 
 	"files.associations": {
 		"**/.cloudflare/_*": "plaintext",
-		"*.html": "liquid",
+		"*.html": "liquid"
 	},
 	"files.exclude": {
 		".bundle": true,
+		".frontmatter": true,
 		".jekyll-cache": true,
 		"_site*": true,
 		"vendor/**": true,
@@ -84,19 +85,11 @@
 	"files.trimFinalNewlines": true,
 	"files.trimTrailingWhitespace": true,
 
-	"frontMatter.framework.startCommand": "bundle exec jekyll serve --force_polling --livereload",
 
 	"liquid.engine": "jekyll",
 	"liquid.settings.target": "workspace",
 
 	"markdown.preview.scrollEditorWithPreview": false,
-	"markdownlint.config": {
-		"MD013": false,
-		"MD025": false,
-		"MD026": false,
-		"MD033": false,
-		"MD041": false
-	},
 
 	"terminal.integrated.defaultProfile.windows": "WSL",
 	"terminal.integrated.profiles.windows": {

@@ -4,6 +4,7 @@
 	"frontMatter.preview.host": "http://localhost:4000",
 	"frontMatter.preview.pathName": "/blog/",
 	"frontMatter.framework.id": "jekyll",
+	"frontMatter.framework.startCommand": "bundle exec jekyll serve --force_polling --livereload",
 	"frontMatter.content.pageFolders": [
 		{
 			"title": "Blog",

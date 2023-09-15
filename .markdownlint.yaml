@@ -1,0 +1,4 @@
+# See: https://github.com/DavidAnson/markdownlint#rules--aliases
+
+# Line length
+MD013: false
