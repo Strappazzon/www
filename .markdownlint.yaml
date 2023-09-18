@@ -2,3 +2,8 @@
 
 # Line length
 MD013: false
+
+# HTML elements whitelist
+MD033:
+  allowed_elements:
+    - kbd
