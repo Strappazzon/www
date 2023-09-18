@@ -1,4 +1,4 @@
-const BTN_TOP = document.querySelector('#su');
+const BTN_TOP = document.querySelector('#go-top');
 
 function scrollUp() {
 	document.body.scrollTop = 0;
@@ -7,11 +7,11 @@ function scrollUp() {
 
 window.onscroll = () => {
 	if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-		BTN_TOP.classList.add('d-b');
-		BTN_TOP.classList.remove('d-n');
+		// Show button
+		BTN_TOP.hasAttribute('hidden') && BTN_TOP.removeAttribute('hidden');
 	} else {
-		BTN_TOP.classList.remove('d-b');
-		BTN_TOP.classList.add('d-n');
+		// Hide button
+		BTN_TOP.setAttribute('hidden', true);
 	}
 };
 
