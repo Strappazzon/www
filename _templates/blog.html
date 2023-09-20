@@ -11,19 +11,23 @@
 			<article id="main" itemscope="" itemtype="http://schema.org/BlogPosting">
 				<div class="container__title">
 					{% assign t = page.title | split: " | " %}
-					<h1 itemprop="headline" data-tgiv="title">{{ t[0] }}</h1>
+					<h1 itemprop="headline" data-tgiv="title">{{ t[0] | upcase }}</h1>
 					<div class="container__title-desc">
-						<h4 itemprop="alternativeHeadline" data-tgiv="subtitle">{{ page.description }}</h4>
-						{% assign rt = page.content | reading_time %}
-						<h4 class="read-time">Reading time:
-							{% if rt <= 0 %}
-								Less than a minute
-							{% elsif rt == 1 %}
-								{{ rt }} minute
-							{% else %}
-								{{ rt }} minutes
-							{% endif %}
-						</h4>
+						<h2 itemprop="alternativeHeadline" data-tgiv="subtitle">{{ page.description | upcase }}</h2>
+						{% comment %} reading_time.rb plugin {% endcomment %}
+						<div class="read-time">
+							<span>
+								Reading time:
+								{% assign rt = page.content | reading_time %}
+								{% if rt <= 0 %}
+									Less than a minute.
+								{% elsif rt == 1 %}
+									{{ rt }} minute.
+								{% else %}
+									{{ rt }} minutes.
+								{% endif %}
+							</span>
+						</div>
 					</div>
 				</div>
 				<hr aria-hidden="true">

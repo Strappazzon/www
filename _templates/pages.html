@@ -11,14 +11,14 @@
 			<main id="main" itemscope="" itemprop="mainContentOfPage">
 				<div class="container__title">
 					{% assign pt = page.title | split: " | " %}
-					<h1>{{ pt[0] }}</h1>
-					<h4>
+					<h1>{{ pt[0] | upcase }}</h1>
+					<h2>
 						{% if page.short_desc %}
-							{{ page.short_desc }}
+							{{ page.short_desc | upcase }}
 						{% else %}
-							{{ page.description }}
+							{{ page.description | upcase }}
 						{% endif %}
-					</h4>
+					</h2>
 				</div>
 				<hr aria-hidden="true">
 				{{ content }}
