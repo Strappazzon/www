@@ -2,16 +2,21 @@
   EXAMPLE USAGE
 
   {% include quote.html
-    quote="Quote goes here"
+    quote="Quote goes here."
     url="https://example.com/#source-url"
     cite="Source for the information quoted"
   %}
   {% include quote.html
-    quote="Quote goes here"
+    quote="Quote goes here."
     url="https://example.com/#source-url"
   %}
   {% include quote.html
-    quote="Quote goes here"
+    quote="Quote goes here."
+  %}
+  {% include quote.html
+    quote="Multiline quote\n
+    goes here.
+    "
   %}
 {%- endcomment -%}
 
@@ -19,7 +24,7 @@
 	<figure>
 		<blockquote cite="{{ include.url }}">
 			<p>
-				{{ include.quote }}
+				{{ include.quote | replace: "\n", "<br>" }}
 			</p>
 		</blockquote>
 		<figcaption>-<cite>{{ include.cite }}</cite></figcaption>
@@ -27,7 +32,7 @@
 {%- else -%}
 	<blockquote {%- if include.url -%}cite="{{ include.url }}"{%- endif -%}>
 		<p>
-			{{ include.quote }}
+			{{ include.quote | replace: "\n", "<br>" }}
 		</p>
 	</blockquote>
 {%- endif -%}
