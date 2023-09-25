@@ -15,14 +15,14 @@ If you then still need to ask a question and need clarification you can [open an
 > :warning: If you found a security issue, **DO NOT** report it in the issue tracker or elsewhere in public.  
 > See: [Security Policy](https://github.com/Strappazzon/.github/blob/-/SECURITY.md).
 
-* Take a look at the [issues](https://github.com/Strappazzon/www/issues) first to make sure your issue/feature hasn't been reported/requested before.  
+- Take a look at the [issues](https://github.com/Strappazzon/www/issues) first to make sure your issue/feature hasn't been reported/requested before.  
   If so, engage in the already existing discussion.
-* Check whether your issue/feature is already fixed/implemented.
-* Issues in languages other than English will be closed and ignored.
-* If you are familiar with the languages used in this repo, you are always welcome to fix/implement an issue/feature yourself.
-* Add one issue at a time. Do not put multiple issues into one thread.
-* When reporting a bug please describe the steps which reproduce the problem.
-* All issues must be properly formatted with Markdown.  
+- Check whether your issue/feature is already fixed/implemented.
+- Issues in languages other than English will be closed and ignored.
+- If you are familiar with the languages used in this repo, you are always welcome to fix/implement an issue/feature yourself.
+- Add one issue at a time. Do not put multiple issues into one thread.
+- When reporting a bug please describe the steps which reproduce the problem.
+- All issues must be properly formatted with Markdown.  
   If you don't know what that is, read [Basic writing and formatting syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) before submitting an issue.
 
 ### DO NOT post "+1" comments
@@ -60,18 +60,18 @@ Press <kbd>CTRL</kbd>+<kbd>C</kbd> to stop the web server.
 
 ## Submitting Changes
 
-* Make changes on a separate branch, not on the master branch, then send your changes as a [Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
-* When submitting changes, you confirm that your code is licensed under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-* Please test your code before you submit changes. Untested code will **not** be merged!
-* Make sure your Pull Request is up-to-date with the rest of the codebase.
+- Make changes on a separate branch, not on the master branch, then send your changes as a [Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
+- When submitting changes, you confirm that your code is licensed under the terms of the [MIT License](https://opensource.org/licenses/MIT).
+- Please test your code before you submit changes. Untested code will **not** be merged!
+- Make sure your Pull Request is up-to-date with the rest of the codebase.
 
 ## Git Commit Messages
 
-* Use the present tense ("Add feature" not "Added feature").
-* Use the imperative mood ("Move cursor to..." not "Moves cursor to...").
-* Wrap all lines at 70 columns (except for long URLs).
-* Writing a detailed description is not mandatory.
-* Reference issues and Pull Requests after the description, if any.  
+- Use the present tense ("Add feature" not "Added feature").
+- Use the imperative mood ("Move cursor to..." not "Moves cursor to...").
+- Wrap all lines at 70 columns (except for long URLs).
+- Writing a detailed description is not mandatory.
+- Reference issues and Pull Requests after the description, if any.  
   Use `Closes:` or `Fixes:`.
 
 ### Sample Complete Commit Message
