@@ -1,9 +1,0 @@
-# See: https://github.com/DavidAnson/markdownlint#rules--aliases
-
-# Line length
-MD013: false
-
-# HTML elements whitelist
-MD033:
-  allowed_elements:
-    - kbd
