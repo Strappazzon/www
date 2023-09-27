@@ -35,6 +35,8 @@ The website theme is based on [Person of Interest Web UI](https://github.com/Phr
 
 [Acens](https://www.dafont.com/acens.font) font by Jack Coulthard.
 
+[Barlow Semi Condensed](https://fonts.google.com/specimen/Barlow+Semi+Condensed) font by Jeremy Tribby, [Inconsolata](https://en.wikipedia.org/wiki/Inconsolata) by Raph Levien (both [SIL Open Font License](https://github.com/Strappazzon/www/blob/-/LICENSE-FONTS.txt)).
+
 Background images from [Person of Interest Web UI](https://github.com/Phreshhh/poi-web-ui).
 
 Icons from [Person of Interest wiki](https://personofinterest.fandom.com/wiki/Person_of_Interest_Wiki) then edited.
