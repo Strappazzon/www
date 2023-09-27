@@ -88,10 +88,6 @@
 	{%- comment -%} Stylesheets {%- endcomment -%}
 	<link rel="stylesheet" href="/static/css/index.css?{{ site.time | date: '%s%N' }}">
 	<link rel="stylesheet" href="/static/css/{{ page.layout }}.css?{{ site.time | date: '%s%N' }}">
-	{%- comment -%} Scripts {%- endcomment -%}
-	{% if page.url == "/" %}
-		<script defer src="/static/js/age.js"></script>
-	{% endif %}
 	{% if page.layout == "blog" %}
 		<script type="application/ld+json">
 			{
