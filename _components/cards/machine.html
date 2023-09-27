@@ -1,80 +1,39 @@
 <div class="container__col">
 	<div class="card__machine">
-		{% if include.type and include.type != "" %}
-			{% if include.status == 1 %}
-				<h2>
-					<span class="dot__active" aria-hidden="true"></span>
-					<span class="title__active">{{ include.title }}</span>
-				</h2>
-				<span>
-					<span class="type__text">Type:</span> <span class="type__other">{{ include.type }}</span>
-				</span>
-				<span>
-					<span class="status__text">Status:</span> <span class="status__active">Active</span>
-				</span>
-			{% elsif include.status == 0 %}
-				<h2>
-					<span class="dot__inactive" aria-hidden="true"></span>
-					<span class="title__inactive">{{ include.title }}</span>
-				</h2>
-				<span>
-					<span class="type__text">Type:</span> <span class="type__other">{{ include.type }}</span>
-				</span>
-				<span>
-					<span class="status__text">Status:</span> <span class="status__inactive">Discontinued</span>
-				</span>
-			{% elsif include.status == 2 %}
-				<h2>
-					<span class="dot__inactive" aria-hidden="true"></span>
-					<span class="title__inactive">{{ include.title }}</span>
-				</h2>
-				<span>
-					<span class="type__text">Type:</span> <span class="type__other">{{ include.type }}</span>
-				</span>
-				<span>
-					<span class="status__text">Status:</span> <span class="status__inactive">Feature-Complete</span>
-				</span>
-			{% endif %}
-		{% else %}
-			{% if include.status == 1 %}
-				<h2>
-					<span class="dot__active" aria-hidden="true"></span>
-					<span class="title__active">{{ include.title }}</span>
-				</h2>
-				<span>
-					<span class="status__text">Status:</span> <span class="status__active">Active</span>
-				</span>
-			{% elsif include.status == 0 %}
-				<h2>
-					<span class="dot__inactive" aria-hidden="true"></span>
-					<span class="title__inactive">{{ include.title }}</span>
-				</h2>
-				<span>
-					<span class="status__text">Status:</span> <span class="status__inactive">Discontinued</span>
-				</span>
-			{% elsif include.status == 2 %}
-				<h2>
-					<span class="dot__inactive" aria-hidden="true"></span>
-					<span class="title__inactive">{{ include.title }}</span>
-				</h2>
-				<span>
-					<span class="status__text">Status:</span> <span class="status__inactive">Feature-Complete</span>
-				</span>
-			{% endif %}
-		{% endif %}
+		{% case include.status %}
+			{% when 0, 2 %}
+				<div class="title inactive">
+					<span class="dot inactive" aria-hidden="true"></span>
+					{{ include.title }}
+				</div>
+				<div class="status inactive">
+					<span class="label">Status:</span>
+					{% if include.status == 0 %}
+						<span class="text">Discontinued</span>
+					{% else %}
+						<span class="text">Feature-Complete</span>
+					{% endif %}
+				</div>
+			{% else %}
+				<div class="title active">
+					<span class="dot active" aria-hidden="true"></span>
+					{{ include.title }}
+				</div>
+				<div class="status active">
+					<span class="label">Status:</span>
+					<span class="text">Active</span>
+				</div>
+		{% endcase %}
 		<hr aria-hidden="true">
-		<p>
-			<span>Description:</span> {{ include.description }}
-			<br>
-			<span>Language:</span> {{ include.language }}
-		</p>
+		<div class="summary">
+			<p>Description: <span>{{ include.description }}</span></p>
+			<p>Languages: <span>{{ include.languages }}</span></p>
+		</div>
 		<hr aria-hidden="true">
-		<p>
-			<a aria-label="Website" href="{{ include.website }}">Website</a> &middot;
-			{% if include.download and include.download != "" %}
-				<a aria-label="Download Page" href="{{ include.download }}">Download</a> &middot;
-			{% endif %}
+		<div class="links">
+			<a aria-label="{{ include.title }} Website" href="{{ include.url }}">Website</a>
+			&middot;
 			<a aria-label="Source Code" href="{{ include.source }}">Source Code</a>
-		</p>
+		</div>
 	</div>
 </div>

@@ -2,141 +2,20 @@
 layout: pages
 title: "Projects | Alberto Strappazzon"
 description: "My projects and contributions."
-short_desc: "My projects and contributions"
 permalink: /projects/
 ---
 
-<h2 id="software-scripts">Software, Scripts</h2>
+<div class="row">
 
-<div class="container__row">
+{% for p in site.data.projects %}
 	{% include cards/machine.html
-		type=""
-		title="Teleme7ry"
-		description="Automated batch script for Windows 7 that removes/blocks telemetry-related tasks, services, updates and hostnames/IP addresses. It also removes nagware tasks and updates."
-		language="Batch"
-		website="/teleme7ry"
-		download="https://github.com/Strappazzon/teleme7ry/releases"
-		source="https://github.com/Strappazzon/teleme7ry"
-		status=2
+		title=p.title
+		description=p.description
+		languages=p.languages
+		url=p.url
+		source=p.source
+		status=p.status
 	%}
-	{% include cards/machine.html
-		type=""
-		title="UncensoredDNS4Magisk"
-		description="Magisk module that makes your device use UncensoredDNS DNS servers systemlessly."
-		language="Bash"
-		website="https://github.com/Strappazzon/UncensoredDNS4Magisk/blob/master/.github/README.md"
-		download="https://github.com/Strappazzon/UncensoredDNS4Magisk/releases"
-		source="https://github.com/Strappazzon/UncensoredDNS4Magisk"
-		status=0
-	%}
-</div>
-<div class="container__row">
-	{% include cards/machine.html
-		type=""
-		title="SCAM Lock Tool"
-		description="Replacement for SAM Lock Tool (aka syskey), which is used to encrypt the account credentials stored inside the SAM file. Tech support scammers use syskey to lock their victims out of their computer, but with SCAM Lock Tool they won't be able to do it."
-		language="Visual Basic .NET"
-		website="https://github.com/Strappazzon/SCAM-Lock-Tool/blob/master/.github/README.md"
-		download="https://github.com/Strappazzon/SCAM-Lock-Tool/releases"
-		source="https://github.com/Strappazzon/SCAM-Lock-Tool"
-		status=0
-	%}
-	{% include cards/machine.html
-		type=""
-		title="Fake slui"
-		description="Fake Windows Activation pop-up programmed to waste tech support scammers' time."
-		language="Visual Basic .NET, PowerShell"
-		website="https://github.com/Strappazzon/fake-slui/blob/master/.github/README.md"
-		download="https://github.com/Strappazzon/fake-slui/releases"
-		source="https://github.com/Strappazzon/fake-slui"
-		status=0
-	%}
-</div>
-<div class="container__row">
-	{% include cards/machine.html
-		type=""
-		title="wsb"
-		description="Configuration template and scripts for Windows Sandbox."
-		language="PowerShell"
-		website="https://github.com/Strappazzon/wsb/blob/master/.github/README.md"
-		source="https://github.com/Strappazzon/wsb"
-		status=1
-	%}
-</div>
+{% endfor %}
 
-<h2 id="web">Web</h2>
-
-<div class="container__row">
-	{% include cards/machine.html
-		type=""
-		title="Tor Exit Router Page"
-		description="Alternative design to the default Tor exit router page provided by The Tor Project."
-		language="HTML, CSS"
-		website="/tor-exit-page"
-		download="https://github.com/Strappazzon/tor-exit-page#configuration"
-		source="https://github.com/Strappazzon/tor-exit-page"
-		status=2
-	%}
-	{% include cards/machine.html
-		type=""
-		title="cf-ip"
-		description="Returns the user's IP address in plaintext. Powered by Cloudflare Workers."
-		language="JavaScript"
-		website="https://ip.strappazzon.xyz"
-		download=""
-		source="https://github.com/Strappazzon/cf-ip"
-		status=2
-	%}
-</div>
-
-<h2 id="gaming">Gaming</h2>
-
-<div class="container__row">
-	{% include cards/machine.html
-		type="Software"
-		title="GHOST Buster"
-		description="Ghost Recon&reg; Wildlands backup utility."
-		language="Visual Basic .NET"
-		website="/GRW-GHOST-Buster"
-		download="https://github.com/Strappazzon/GRW-GHOST-Buster/releases"
-		source="https://github.com/Strappazzon/GRW-GHOST-Buster"
-		status=1
-	%}
-	{% include cards/machine.html
-		type="Software"
-		title="SuperBLT Hasher"
-		description="SuperBLT Hasher generates hashes for PAYDAY 2 mods. Hashing of single files and folders is supported."
-		language="Visual Basic .NET, C#"
-		website="/PD2-SuperBLT-Hasher"
-		download="https://github.com/Strappazzon/PD2-SuperBLT-Hasher/releases"
-		source="https://github.com/Strappazzon/PD2-SuperBLT-Hasher"
-		status=2
-	%}
-</div>
-<div class="container__row">
-	{% include cards/machine.html
-		type="Mod, PAYDAY 2"
-		title="Real Weapon Names"
-		description="Rename PAYDAY 2 weapons and attachments to their real life counterparts."
-		language="Lua"
-		website="https://modworkshop.net/mod/19958"
-		download="https://modworkshop.net/mod/19958"
-		source="https://github.com/Strappazzon/PD2-Real-Weapon-Names"
-		status=0
-	%}
-</div>
-
-<h2 id="forks">Forks</h2>
-
-<div class="container__row">
-	{% include cards/machine.html
-	type=""
-	title="NoPaste"
-	description="Client-side pastebin. No database and no back-end code."
-	language="JavaScript"
-	website="https://paste.strappazzon.xyz"
-	download=""
-	source="https://github.com/Strappazzon/nopaste"
-	status=1
-	%}
 </div>
