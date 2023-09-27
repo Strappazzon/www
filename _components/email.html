@@ -1,0 +1,20 @@
+{%- comment -%}
+  EXAMPLE USAGE
+
+  {% include email.html
+    user="name"
+    domain="strappazzon.xyz"
+  %}
+{%- endcomment -%}
+
+{% comment %}
+  SCSS for this component is inside _base rather than inside components/_component
+  Wrap component inside an if tag to avoid outputting whitespaces, which create problems with Terminal component
+{% endcomment %}
+
+{%- if true -%}
+	{% comment %} Reverse string https://shopify.github.io/liquid/filters/reverse/ {% endcomment %}
+	{%- assign domain = include.domain | remove: "https://" | remove: "www." | split: "" | reverse | join: "" -%}
+	{%- assign user = include.user | split: "" | reverse | join: "" -%}
+	<span class="ep" data-user="{{ user }}" data-domain="{{ domain }}"></span>
+{%- endif -%}
