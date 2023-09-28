@@ -1,0 +1,88 @@
+.highlight {
+  max-height: px2rem(350px);
+  margin-bottom: 1rem;
+  color: var(--text-color--secondary);
+  background-color: var(--bg-color--light);
+  // .hll { background-color: var(--bg-color--light); }
+  .err,
+  .kt,
+  .bp,
+  .vi {
+    color: rgba(221, 102, 102, 1);
+  }
+  .l,
+  .ld,
+  .cpf,
+  .s,
+  .sa,
+  .sb,
+  .sc,
+  .dl,
+  .sd,
+  .s2,
+  .se,
+  .sh,
+  .sx,
+  .s1 {
+    color: rgba(181, 189, 104, 1);
+  }
+  .o {
+    color: rgba(138, 190, 183, 1);
+  }
+  .c,
+  .ch,
+  .cm,
+  .cp,
+  .c1,
+  .cs {
+    color: rgba(150, 152, 150, 1);
+  }
+  .k,
+  .kc,
+  .kd,
+  .kn,
+  .kp,
+  .kr,
+  .nt,
+  .ow {
+    color: rgba(178, 148, 187, 1);
+  }
+  .na,
+  .nb,
+  .nc,
+  .nf,
+  .nn,
+  .nv,
+  .fm,
+  .vc,
+  .vg,
+  .vm {
+    color: rgba(129, 162, 190, 1);
+  }
+  .m,
+  .no,
+  .nd,
+  .mb,
+  .mf,
+  .mh,
+  .mi,
+  .mo,
+  .ss,
+  .il {
+    color: rgba(222, 147, 95, 1);
+  }
+  .si {
+    color: rgba(163, 104, 90, 1);
+  }
+  .sr {
+    color: rgba(138, 190, 183, 1);
+  }
+  .w {
+    color: rgba(197, 200, 198, 1);
+  }
+  // stylelint-disable block-no-empty
+  .n,
+  .p {
+  }
+  // stylelint-enable block-no-empty
+}

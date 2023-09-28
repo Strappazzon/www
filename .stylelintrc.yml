@@ -133,6 +133,9 @@ rules:
           - right
           - text-shadow
           - top
+      ignoreFunctions:
+        - px2em
+        - px2rem
 
   # Lowercase keywords, with exceptions
   value-keyword-case:

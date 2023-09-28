@@ -16,8 +16,8 @@ title: "Not Found | Alberto Strappazzon"
 		{%- comment -%} Favicons {%- endcomment -%}
 		<link rel="icon" type="image/png" sizes="24x24" href="/static/img/favicons/404.png">
 		{%- comment -%} Stylesheets {%- endcomment -%}
-		<link rel="stylesheet" href="/static/css/404.css">
-		<link rel="stylesheet" href="/static/css/404_dark.css" media="(prefers-color-scheme: dark)">
+		<link rel="stylesheet" href="/static/css/vendors.css?{{ site.time | date: '%s%N' }}">
+		<link rel="stylesheet" href="/static/css/404.css?{{ site.time | date: '%s%N' }}">
 		{%- comment -%} Scripts {%- endcomment -%}
 		<script async src="/static/js/typewriter.js"></script>
 	</head>

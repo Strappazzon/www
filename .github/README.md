@@ -33,6 +33,10 @@ Content, including PSD files under `/static/psd`, is licensed under the terms of
 
 The website theme is based on [Person of Interest Web UI](https://github.com/Phreshhh/poi-web-ui) by Krisztián Kis ([MIT License](https://github.com/Phreshhh/poi-web-ui/blob/master/LICENSE.md)).
 
+[Bootstrap Grid](https://getbootstrap.com/docs/5.3/layout/grid/) by The Bootstrap Authors ([MIT License](https://github.com/twbs/bootstrap/blob/main/LICENSE)).
+
+[Gardevoir](https://github.com/krshoss/gardevoir) CSS Reset by Krish Gupta ([MIT License](https://github.com/krshoss/gardevoir/blob/main/LICENSE)).
+
 [Acens](https://www.dafont.com/acens.font) font by Jack Coulthard.
 
 [Barlow Semi Condensed](https://fonts.google.com/specimen/Barlow+Semi+Condensed) font by Jeremy Tribby, [Inconsolata](https://en.wikipedia.org/wiki/Inconsolata) by Raph Levien (both [SIL Open Font License](https://github.com/Strappazzon/www/blob/-/LICENSE-FONTS.txt)).

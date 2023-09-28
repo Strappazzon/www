@@ -1,6 +1,6 @@
 blog:
   - _blog/**
-  - _sass/_blog.scss
+  - _sass/pages/_blog.scss
   - static/css/blog.scss
   - static/blog/**
 

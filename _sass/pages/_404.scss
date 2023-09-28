@@ -1,0 +1,24 @@
+html {
+  height: 100vh;
+}
+
+body {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  text-align: center;
+  transform: translate(-50%, -50%);
+  a {
+    padding-bottom: px2rem(2px);
+    font-size: px2rem(26px);
+    text-decoration: none;
+    border-bottom: px2rem(2px) solid currentColor;
+  }
+  img {
+    width: px2rem(32px);
+    height: auto;
+    margin-top: px2rem(10px);
+    animation: blink normal 1s infinite;
+  }
+}

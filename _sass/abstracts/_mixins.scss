@@ -1,0 +1,61 @@
+@use 'sass:list';
+@use 'sass:map';
+
+/// Color scheme media query
+/// @param {String} $scheme - Color scheme, either dark or light
+/// @example scss - Color scheme media query
+///   @include color-scheme(dark) {
+///     color: rgba(211, 211, 211, 1);
+///   }
+@mixin color-scheme($scheme) {
+    @if list.index(dark light, $scheme) {
+      @media screen and (prefers-color-scheme: $scheme) {
+        @content;
+      }
+    } @else {
+      @error 'No color scheme found for #{$scheme}. Available color schemes are: dark, light.';
+    }
+}
+
+/// :hover and :focus events wrapper
+/// @link https://gist.github.com/pepelsbey/a2bb3f6b44c4a4729dcc
+/// @link https://gist.github.com/chriseppstein/0a029e581609321f6012
+/// @example scss - Event wrapper
+///   @include hocus {
+///     color: rgba(255, 0, 0, 1);
+///   }
+@mixin hocus {
+  &:hover,
+  &:focus {
+    @content;
+  }
+}
+
+/// Reduced motion media query
+/// @example scss - Motion preference media query
+///   @include reduced-motion {
+///     animation: none;
+///   }
+@mixin reduced-motion {
+    @media screen and (prefers-reduced-motion: reduce) {
+      @content;
+    }
+}
+
+/// Responsive breakpoints manager
+/// @param {String} $breakpoint - Breakpoint name
+/// @require $breakpoints
+/// @link https://css-tricks.com/snippets/sass/mixin-manage-breakpoints/
+/// @example scss - Breakpoint mixin
+///   @include respond-to('small') {
+///     display: none;
+///   }
+@mixin respond-to($breakpoint) {
+  @if map.has-key($breakpoints, $breakpoint) {
+    @media screen and (max-width: map.get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  } @else {
+    @error 'No value found for #{$breakpoint}. Available breakpoints are: #{map.keys($breakpoints)}.';
+  }
+}
