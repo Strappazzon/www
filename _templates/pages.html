@@ -14,9 +14,9 @@
 					<h1>{{ pt[0] | upcase }}</h1>
 					<h2>
 						{% if page.short_desc %}
-							{{ page.short_desc | upcase }}
+							{{ page.short_desc | remove: "." | upcase }}
 						{% else %}
-							{{ page.description | upcase }}
+							{{ page.description | remove: "." | upcase }}
 						{% endif %}
 					</h2>
 				</div>
