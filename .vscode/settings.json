@@ -37,7 +37,12 @@
 		"files.eol": "\n"
 	},
 	"[scss]": {
-		"editor.defaultFormatter": null
+		"editor.defaultFormatter": "stylelint.vscode-stylelint",
+		"editor.formatOnPaste": true,
+		"editor.formatOnSave": true,
+		"editor.detectIndentation": false,
+		"editor.tabSize": 2,
+		"editor.insertSpaces": true
 	},
 	"[shellscript]": {
 		"editor.detectIndentation": false,
@@ -73,7 +78,9 @@
 		".frontmatter": true,
 		".jekyll-cache": true,
 		"_site*": true,
+		"node_modules": true,
 		"vendor/**": true,
+		"package-lock.json": true,
 		"**/debug.log": true,
 		"Gemfile.lock": true
 	},
@@ -85,6 +92,8 @@
 	"liquid.settings.target": "workspace",
 
 	"markdown.preview.scrollEditorWithPreview": false,
+
+	"scss.validate": false,
 
 	"terminal.integrated.defaultProfile.windows": "WSL",
 	"terminal.integrated.profiles.windows": {

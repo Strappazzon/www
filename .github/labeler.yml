@@ -20,9 +20,14 @@ config:
   - frontmatter.json
 
 dependencies:
+  - .nvmrc
   - .ruby-version
+  - .stylelintignore
+  - .stylelintrc.yml
   - Gemfile
   - Gemfile.lock
+  - package.json
+  - package-lock.json
 
 documentation:
   - .github/README.md

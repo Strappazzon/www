@@ -36,9 +36,11 @@ autoprefixer:
 exclude:
   - "**/*.psd"
   - bin
+  - node_modules
   - frontmatter.json
   - Gemfile
   - LICENSE*
+  - package*.json
   - SUPPORT.md
 
 # Included files, folders

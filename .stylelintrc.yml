@@ -1,0 +1,149 @@
+extends:
+  - stylelint-config-recess-order
+  - stylelint-config-standard-scss
+
+# https://github.com/stylelint/stylelint/issues/6212#issuecomment-1705744761
+# plugins:
+#   - "stylelint-a11y"
+
+# Default rules
+# See: https://stylelint.io/user-guide/rules/
+rules:
+  # Use a number instead of percentage for alpha values
+  alpha-value-notation: number
+
+  # Require empty line before @rule, with exceptions
+  at-rule-empty-line-before:
+    - always
+    - ignore:
+        - after-comment
+        - blockless-after-same-name-blockless
+        - inside-block
+
+  # Required properties
+  at-rule-property-required-list:
+    font-face:
+      - font-display
+      - font-family
+      - font-style
+
+  # Don't use comma-free syntax for color functions
+  color-function-notation: legacy
+
+  # Color keywords are actually bad at describing the color they represent
+  color-named: never
+
+  # Hexadecimal is close to indecipherable for the human mind
+  color-no-hex: true
+
+  # TODO and FIXME warnings act as a reminder to address these
+  comment-word-disallowed-list:
+    - ["/^TODO:/", "/^FIXME:/"]
+    - message: This part of the code should be addressed.
+      severity: warning
+
+  # kebab-case with BEM-like dashes
+  custom-property-pattern:
+    - "^([a-z][a-z0-9]*)(\\-\\-?[a-z0-9]+)*$"
+    - message: Property should be in kebab-case with optional BEM-like dashes.
+
+  # Disallow empty lines before declarations, with exceptions
+  declaration-empty-line-before:
+    - never
+    - ignore:
+        - after-declaration
+
+  # Disallow !important
+  declaration-no-important:
+    - true
+    - message: Avoid !important property.
+      severity: warning
+
+  # Property and value pairs blacklist
+  declaration-property-value-disallowed-list:
+    - # Prefer 0 over none
+      border:
+        - "none"
+      margin:
+        - "none"
+      padding:
+        - "none"
+      # Don't use custom cursors
+      # https://ericwbailey.website/published/dont-use-custom-css-mouse-cursors/
+      cursor:
+        - "/^url/"
+
+  # Require font names to be quoted unless it's a keyword
+  # See: https://stylelint.io/user-guide/rules/font-family-name-quotes/#options
+  font-family-name-quotes: always-unless-keyword
+
+  # Use numbers for font weight instead of names
+  font-weight-notation: numeric
+
+  # Disallow scheme-relative URLs
+  function-url-no-scheme-relative: true
+
+  # URL scheme blacklist
+  function-url-scheme-disallowed-list:
+    - "/^\\./"
+    - "/^\\.\\.\\//"
+    - http
+    - data
+    - ftp
+
+  # [Deprecated] Require leading zero for fractional numbers
+  number-leading-zero: always
+
+  # Limit the number of decimal places allowed in numbers
+  number-max-precision: 3
+
+  # [Deprecated] Disallow trailing zeros in numbers
+  number-no-trailing-zeros: true
+
+  # Require an empty line before every rule
+  # except after comments or nested rules
+  rule-empty-line-before:
+    - always
+    - ignore:
+        - after-comment
+        - inside-block
+
+  # kebab-case with BEM-like underscores
+  selector-class-pattern:
+    - "^([a-z][a-z0-9]*)(((\\_\\_)?|\\-)[a-z0-9]+)*$"
+    - message: Selector should be kebab-case with optional BEM-like underscores.
+
+  # Selector blacklist
+  selector-disallowed-list:
+    - "/h5/"
+    - "/h6/"
+
+  # [Deprecated] Quotes around strings
+  string-quotes: single
+
+  # Units blacklist, with exceptions
+  unit-disallowed-list:
+    - [ms, pt, px]
+    - ignoreProperties:
+        px:
+          - bottom
+          - box-shadow
+          - font-size
+          - left
+          - right
+          - text-shadow
+          - top
+
+  # Lowercase keywords, with exceptions
+  value-keyword-case:
+    - lower
+    - ignoreKeywords:
+        - currentColor
+
+  # Allow multiple spaces after $variable
+  scss/dollar-variable-colon-space-after: at-least-one-space
+
+  # Require empty line before comments, with exceptions
+  scss/double-slash-comment-empty-line-before:
+    - always
+    - ignore: [between-comments, inside-block, stylelint-commands]

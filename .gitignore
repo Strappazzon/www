@@ -18,6 +18,8 @@
 /.bundle/
 /vendor/
 
+# Node
+/node_modules/
 
 # Junk files (Windows)
 **/Thumbs.db
