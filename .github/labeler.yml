@@ -9,18 +9,18 @@ cicd:
 
 config:
   - .cloudflare/**
+  - .github/*.yml
   - .vscode/**
   - _config.yml
   - .editorconfig
-  - .github/*.yml
-  - .editorconfig
   - .gitattributes
   - .gitignore
-  - .rubocop.yml
+  - "**/.markdownlint.yml"
   - frontmatter.json
 
 dependencies:
   - .nvmrc
+  - .rubocop.yml
   - .ruby-version
   - .stylelintignore
   - .stylelintrc.yml
@@ -30,7 +30,8 @@ dependencies:
   - package-lock.json
 
 documentation:
-  - .github/README.md
+  - "**/README.md"
+  - SUPPORT.md
 
 plugin:
   - _plugins/**
