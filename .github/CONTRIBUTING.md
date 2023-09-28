@@ -90,24 +90,28 @@ Fixes: https://github.com/Strappazzon/www/issues/513
 This is a brief description on how the repository files and folders are structured and what each one contains.  
 It only contains the most relevant files and folders as some of them are self-explanatory.
 
+For more information on the SCSS file structure, see [The 7-1 Pattern](https://sass-guidelin.es/#the-7-1-pattern).
+
 ```sh
 .
-├── .cloudflare      # Cloudflare configuration files
+├── .cloudflare          # Cloudflare configuration files
 ├── .github
-│   └── labeler.yml  # actions/labeler configuration
-├── .well-known      # RFC 8615 URIs
-├── _blog            # Blog posts
-├── _components      # Website components such as <header>, cards
-├── _data            # Website data in YAML format
-├── _plugins         # Jekyll plugins written in Ruby
-├── _sass            # SASS Stylesheets...
-│   ├── components   # ... for website components
-│   ├── helpers      # ... with mixins, variables and so on
-│   └── _syntax.scss # ... for Rouge syntax highlighter
-├── _templates       # Templates for web pages like homepage or blog posts
-├── bin              # Scripts
-├── static           # Website static files
-├── _config.yml      # Jekyll configuration
-├── frontmatter.json # VS Code eliostruyf.vscode-front-matter configiguration
-└── manifest.json    # PWA manifest
+│   └── labeler.yml      # "actions/labeler" configuration
+├── .well-known          # RFC 8615 URIs
+├── _blog                # Blog posts
+├── _components          # Website components such as <header>, cards
+├── _data                # Website data in YAML format
+├── _plugins             # Jekyll plugins written in Ruby
+├── _sass                # SASS Stylesheets ...
+│   ├── abstracts        # ... with functions, mixins, variables and so on
+│   ├── base             # ... with global styles
+│   ├── components       # ... for website components
+│   └── themes
+│       └── _syntax.scss # ... for Rouge syntax highlighter
+├── _templates           # Templates for web pages like homepage or blog posts
+├── bin                  # Scripts
+├── static               # Website static files
+├── _config.yml          # Jekyll configuration
+├── frontmatter.json     # VS Code eliostruyf.vscode-front-matter configiguration
+└── manifest.json        # PWA manifest
 ```
