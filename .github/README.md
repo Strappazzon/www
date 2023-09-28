@@ -39,7 +39,7 @@ The website theme is based on [Person of Interest Web UI](https://github.com/Phr
 
 Background images from [Person of Interest Web UI](https://github.com/Phreshhh/poi-web-ui).
 
-Icons from [Person of Interest wiki](https://personofinterest.fandom.com/wiki/Person_of_Interest_Wiki) then edited.
+Icons from [Person of Interest wiki](https://personofinterest.fandom.com/wiki/Person_of_Interest_Wiki) and [SVG Repo](https://www.svgrepo.com/), then edited.
 
 Favicons by [RealFaviconGenerator](https://realfavicongenerator.net/).
 
