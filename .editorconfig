@@ -5,14 +5,14 @@ charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
 
-[*.{json,html,js}]
+[*.{json,html}]
 indent_style = tab
 tab_width = 4
 
 [*.md]
 trim_trailing_whitespace = false
 
-[*.{md,scss,rb,sh,yml}]
+[*.{js,md,scss,rb,sh,yml}]
 indent_style = space
 indent_size = 2
 
