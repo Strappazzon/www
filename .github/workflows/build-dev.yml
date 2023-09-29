@@ -15,7 +15,7 @@ on:
       - "!.ruby-version"
       - "bin/**"
       - "frontmatter.json"
-      - "LICENSE.txt"
+      - "LICENSE*"
       - "SUPPORT.md"
 
 jobs:
