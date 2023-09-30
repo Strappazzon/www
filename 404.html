@@ -9,7 +9,7 @@ title: "Not Found | Alberto Strappazzon"
 		{%- comment -%} Meta Data {%- endcomment -%}
 		<meta charset="utf-8">
 		<title>{{ page.title }}</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<meta name="robots" content="noindex">
 		{%- comment -%} Link Relationships {%- endcomment -%}
 		<link rel="canonical" href="{{ site.url }}{{ page.url | replace:'index.html',''}}">
@@ -23,12 +23,12 @@ title: "Not Found | Alberto Strappazzon"
 	</head>
 	<body>
 		<main>
-			<a id="typewriter" href="/" aria-label="Go to the Homepage" data-text="CONTENT NOT FOUND" hidden="true"></a>
+			<a id="typewriter" href="/" hidden="true" data-text="CONTENT NOT FOUND" aria-label="Go to the Homepage"></a>
 			<noscript>
 				<a href="/" aria-label="Go to the Homepage">CONTENT NOT FOUND</a>
 			</noscript>
 			<br>
-			<img src="/static/img/triangle.png" alt="" draggable="false">
+			<img draggable="false" src="/static/img/triangle.png" alt="">
 		</main>
 	</body>
 </html>

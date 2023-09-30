@@ -16,20 +16,20 @@ pagination:
 	{% assign short_desc = p.description | truncatewords: 20 %}
 
 	{% include cards/machine-alt.html
-		date=formatted_date
-		title=p.title
-		description=short_desc
-		url=p.url
+		date        = formatted_date
+		title       = p.title
+		description = short_desc
+		url         = p.url
 	%}
 {% endfor %}
 
 {% if paginator.total_pages > 1 %}
 	<nav class="pagination" aria-label="Blog posts navigation">
 		{% if paginator.next_page %}
-			<a aria-label="Older Posts" href="{{ paginator.next_page_path | prepend: site.url }}">Older Posts</a>
+			<a href="{{ paginator.next_page_path | prepend: site.url }}" aria-label="Older Posts">Older Posts</a>
 		{% endif %}
 		{% if paginator.previous_page %}
-			<a aria-label="Newer Posts" href="{{ paginator.previous_page_path | prepend: site.url }}">Newer Posts</a>
+			<a href="{{ paginator.previous_page_path | prepend: site.url }}" aria-label="Newer Posts">Newer Posts</a>
 		{% endif %}
 	</nav>
 {% endif %}

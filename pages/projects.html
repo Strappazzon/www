@@ -6,16 +6,14 @@ permalink: /projects/
 ---
 
 <div class="row">
-
-{% for p in site.data.projects %}
-	{% include cards/machine.html
-		title=p.title
-		description=p.description
-		languages=p.languages
-		url=p.url
-		source=p.source
-		status=p.status
-	%}
-{% endfor %}
-
+	{% for p in site.data.projects %}
+		{% include cards/machine.html
+			title       = p.title
+			description = p.description
+			languages   = p.languages
+			url         = p.url
+			source      = p.source
+			status      = p.status
+		%}
+	{% endfor %}
 </div>

@@ -7,7 +7,7 @@
 		<a class="sr-skip" href="#main">SKIP TO MAIN CONTENT</a>
 		{% include layout/header.html %}
 		<div id="top"></div>
-		<div class="container" role="article" itemscope="" itemprop="mainContentOfPage">
+		<div class="container" itemprop="mainContentOfPage" itemscope="" role="article">
 			<article id="main" itemscope="" itemtype="http://schema.org/BlogPosting">
 				<div class="container__title">
 					{% assign t = page.title | split: " | " %}
@@ -36,7 +36,7 @@
 				</div>
 				<hr aria-hidden="true">
 			</article>
-			<footer role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
+			<footer itemscope itemtype="http://schema.org/WPFooter" role="contentinfo">
 				<span>Published: {{ page.date | date: "%-d %B %Y" }}</span>
 				<a href="https://github.com/Strappazzon/www/blob/master/{{ page.path }}" aria-label="View edit history">History</a>
 			</footer>
