@@ -5,6 +5,20 @@
 		"editor.insertSpaces": false,
 		"editor.tabSize": 4
 	},
+	"[json]": {
+		"editor.detectIndentation": false,
+		"editor.formatOnPaste": true,
+		"editor.formatOnSave": true,
+		"editor.insertSpaces": false,
+		"editor.tabSize": 4
+	},
+	"[jsonc]": {
+		"editor.detectIndentation": false,
+		"editor.formatOnPaste": true,
+		"editor.formatOnSave": true,
+		"editor.insertSpaces": false,
+		"editor.tabSize": 4
+	},
 	"[liquid]": {
 		"editor.defaultFormatter": null,
 		"editor.detectIndentation": false,
