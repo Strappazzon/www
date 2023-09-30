@@ -1,75 +1,73 @@
 {
 	"$schema": "https://frontmatter.codes/frontmatter.schema.json",
-
-	"frontMatter.preview.host": "http://localhost:4000",
-	"frontMatter.preview.pathName": "/blog/",
-	"frontMatter.framework.id": "jekyll",
-	"frontMatter.framework.startCommand": "bundle exec jekyll serve --force_polling --livereload",
+	"frontMatter.content.autoUpdateDate": true,
 	"frontMatter.content.pageFolders": [
 		{
-			"title": "Blog",
+			"excludeSubdir": true,
 			"path": "[[workspace]]/_blog",
-			"excludeSubdir": true
+			"title": "Blog"
 		}
 	],
 	"frontMatter.content.publicFolder": "[[workspace]]/static/blog",
 	"frontMatter.content.supportedFileTypes": [
 		"md"
 	],
-	"frontMatter.content.autoUpdateDate": true,
-	"frontMatter.templates.prefix": "",
-
+	"frontMatter.framework.id": "jekyll",
+	"frontMatter.framework.startCommand": "bundle exec jekyll serve --force_polling --livereload",
+	"frontMatter.preview.host": "http://localhost:4000",
+	"frontMatter.preview.pathName": "/blog/",
 	"frontMatter.taxonomy.contentTypes": [
 		{
-			"name": "default",
-			"pageBundle": false,
-			"previewPath": "/blog/",
 			"fields": [
 				{
-					"title": "Layout",
-					"name": "layout",
-					"type": "string",
 					"default": "blog",
 					"editable": false,
-					"single": true
+					"name": "layout",
+					"single": true,
+					"title": "Layout",
+					"type": "string"
 				},
 				{
-					"title": "Title",
 					"name": "title",
-					"type": "string",
+					"required": true,
 					"single": true,
-					"required": true
+					"title": "Title",
+					"type": "string"
 				},
 				{
-					"title": "Description",
 					"name": "description",
-					"type": "string",
+					"required": true,
 					"single": true,
-					"required": true
+					"title": "Description",
+					"type": "string"
 				},
 				{
-					"title": "Publishing date",
-					"name": "date",
-					"type": "datetime",
 					"default": "{{now}}",
 					"isPublishDate": true,
-					"required": true
+					"name": "date",
+					"required": true,
+					"title": "Publishing date",
+					"type": "datetime"
 				},
 				{
-					"title": "Modified date",
-					"name": "last_modified_at",
-					"type": "datetime",
 					"isModifiedDate": true,
-					"required": true
+					"name": "last_modified_at",
+					"required": true,
+					"title": "Modified date",
+					"type": "datetime"
 				},
 				{
-					"title": "Tags",
 					"name": "tags",
-					"type": "categories",
+					"required": false,
 					"single": false,
-					"required": false
+					"title": "Tags",
+					"type": "categories"
 				}
-			]
+			],
+			"name": "default",
+			"pageBundle": false,
+			"previewPath": "/blog/"
 		}
-	]
+	],
+	"frontMatter.templates.prefix": ""
 }

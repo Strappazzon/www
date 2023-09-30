@@ -27,49 +27,50 @@
 	},
 	"[markdown]": {
 		"editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+		"editor.detectIndentation": false,
+		"editor.insertSpaces": true,
 		"editor.quickSuggestions": {
 			"comments": "off",
-			"strings": "off",
-			"other": "off"
+			"other": "off",
+			"strings": "off"
 		},
-		"editor.detectIndentation": false,
 		"editor.tabSize": 2,
-		"editor.insertSpaces": true,
 		"files.trimTrailingWhitespace": false
 	},
 	"[plaintext]": {
-		"files.insertFinalNewline": false,
-		"files.trimTrailingWhitespace": false,
 		"editor.detectIndentation": false,
+		"editor.insertSpaces": true,
 		"editor.tabSize": 2,
-		"editor.insertSpaces": true
+		"files.insertFinalNewline": false,
+		"files.trimTrailingWhitespace": false
 	},
 	"[ruby]": {
+		"editor.defaultFormatter": null,
 		"editor.detectIndentation": false,
-		"editor.tabSize": 2,
 		"editor.insertSpaces": true,
+		"editor.tabSize": 2,
 		"files.eol": "\n"
 	},
 	"[scss]": {
 		"editor.defaultFormatter": "stylelint.vscode-stylelint",
+		"editor.detectIndentation": false,
 		"editor.formatOnPaste": true,
 		"editor.formatOnSave": true,
-		"editor.detectIndentation": false,
-		"editor.tabSize": 2,
-		"editor.insertSpaces": true
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2
 	},
 	"[shellscript]": {
 		"editor.detectIndentation": false,
-		"editor.tabSize": 2,
 		"editor.insertSpaces": true,
+		"editor.tabSize": 2,
 		"files.eol": "\n"
 	},
 	"[txt]": {
-		"files.insertFinalNewline": false,
-		"files.trimTrailingWhitespace": false,
 		"editor.detectIndentation": false,
-		"editor.tabSize": 2,
 		"editor.insertSpaces": true,
+		"editor.tabSize": 2,
+		"files.insertFinalNewline": false,
+		"files.trimTrailingWhitespace": false
 	},
 	"[xml]": {
 		"editor.defaultFormatter": null,
@@ -88,15 +89,15 @@
 		"*.html": "liquid"
 	},
 	"files.exclude": {
+		"**/debug.log": true,
 		".bundle": true,
 		".frontmatter": true,
 		".jekyll-cache": true,
+		"Gemfile.lock": true,
 		"_site*": true,
 		"node_modules": true,
-		"vendor/**": true,
 		"package-lock.json": true,
-		"**/debug.log": true,
-		"Gemfile.lock": true
+		"vendor/**": true
 	},
 	"files.insertFinalNewline": true,
 	"files.trimFinalNewlines": true,
@@ -112,8 +113,8 @@
 	"terminal.integrated.defaultProfile.windows": "WSL",
 	"terminal.integrated.profiles.windows": {
 		"WSL": {
-			"path": "${env:windir}\\system32\\wsl.exe",
-			"icon": "terminal-linux"
+			"icon": "terminal-linux",
+			"path": "${env:windir}\\system32\\wsl.exe"
 		}
 	}
 }
