@@ -36,7 +36,11 @@ Before you can start contributing, you'll need to set up your environment first.
 
 ### Dependencies
 
-This website is built with [Jekyll](https://jekyllrb.com/) so you will need [Ruby](https://www.ruby-lang.org) installed. I recommend you install it using [rbenv](https://github.com/rbenv/rbenv), [asdf](https://github.com/asdf-vm/asdf), [frum](https://github.com/TaKO8Ki/frum) or other packaging system, before attempting to install the dependencies.
+This website is built with [Jekyll](https://jekyllrb.com/) so you will need [Ruby](https://www.ruby-lang.org) installed.  
+I recommend you install it using [rbenv](https://github.com/rbenv/rbenv), [asdf](https://github.com/asdf-vm/asdf), [frum](https://github.com/TaKO8Ki/frum) or other packaging system, before attempting to install the dependencies.
+
+[Node](https://nodejs.org/en) is also required to run [Stylelint](https://stylelint.io/).  
+I recommend you install it using [nvm](https://github.com/nvm-sh/nvm) or [asdf](https://github.com/asdf-vm/asdf).
 
 Clone the repo and run `bin/bootstrap` to install the required dependencies.
 
