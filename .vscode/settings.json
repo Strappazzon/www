@@ -92,6 +92,7 @@
 		"**/debug.log": true,
 		".bundle": true,
 		".frontmatter": true,
+		".stylelintcache": true,
 		".jekyll-cache": true,
 		"Gemfile.lock": true,
 		"_site*": true,

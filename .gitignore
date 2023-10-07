@@ -21,6 +21,9 @@
 # Node
 /node_modules/
 
+# Stylelint
+.stylelintcache
+
 # Junk files (Windows)
 **/Thumbs.db
 **/[Dd]esktop.ini
