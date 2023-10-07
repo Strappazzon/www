@@ -9,7 +9,25 @@ fi
 
 if ! command -v bundle >/dev/null; then
   echo "Bundler is not installed. Installing..."
-  gem install bundler -v "$(grep 'BUNDLED WITH' -A1 Gemfile.lock | tail -n 1)"
+  if [ -f Gemfile.lock ] && grep "BUNDLED WITH" Gemfile.lock >/dev/null; then
+    gem install bundler -v "$(grep 'BUNDLED WITH' -A1 Gemfile.lock | tail -n 1)"
+  fi
 fi
 
-bundle install
+if [ -f Gemfile ]; then
+  bundle install
+fi
+
+if ! command -v node >/dev/null; then
+  echo "Node is not installed. Cannot proceed."
+  exit 1
+fi
+
+if ! command -v npm >/dev/null; then
+  echo "npm command not found. Cannot proceed."
+  exit 1
+fi
+
+if [ -f package.json ]; then
+  npm install
+fi
