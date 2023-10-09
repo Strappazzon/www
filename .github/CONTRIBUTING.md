@@ -89,6 +89,14 @@ Please word-wrap to keep columns to 70 characters or less.
 Fixes: https://github.com/Strappazzon/www/issues/513
 ```
 
+## Branching
+
+`dev` and `test` is where all changes that are not ready for production yet go.
+
+From dev and test, there are multiple branches related to what is being developed inside each branch.
+
+A branch name must be short and descriptive, all lowercase. For branches with multiple words use hyphens.
+
 ## Repository Structure
 
 This is a brief description on how the repository files and folders are structured and what each one contains.  
