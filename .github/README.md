@@ -5,9 +5,9 @@
   </a>
 </div>
 
-<h3 align="center">
-  strappazzon.xyz
-</h3>
+<div align="center">
+  <strong>strappazzon.xyz</strong>
+</div>
 
 <p align="center">
   <em>My Website</em>
