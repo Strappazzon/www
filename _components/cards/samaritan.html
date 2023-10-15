@@ -10,7 +10,9 @@
 			<div class="content__row">
 				<div class="text">Location:</div>
 				<div class="label">
-					<a aria-label="Location" href="https://www.wikipedia.org/w/index.php?search={{ include.location | url_encode }}">{{ include.location }}</a>
+					<a href="https://www.wikipedia.org/w/index.php?search={{ include.location | url_encode }}" aria-label="Location">
+						{{ include.location }}
+					</a>
 				</div>
 			</div>
 		{% endif %}
@@ -18,14 +20,17 @@
 			<div class="content__row">
 				<div class="text">{{ a.name }}:</div>
 				<div class="label">
-					<a aria-label="{{ a.name }} Account" href="{{ a.url }}" rel="me">{{ a.username }}</a>
+					<a rel="me" href="{{ a.url }}" aria-label="{{ a.name }} Account">{{ a.username }}</a>
 				</div>
 			</div>
 		{% endfor %}
 		<div class="content__row">
 			<div class="text">Email:</div>
 			<address class="label">
-				{% include email.html user="a" domain="strappazzon.xyz" %}
+				{% include email.html
+					user="a"
+					domain="strappazzon.xyz"
+				%}
 			</address>
 		</div>
 	</div>

@@ -11,9 +11,13 @@
 			<article id="main" itemscope="" itemtype="http://schema.org/BlogPosting">
 				<div class="container__title">
 					{% assign t = page.title | split: " | " %}
-					<h1 itemprop="headline" data-tgiv="title">{{ t[0] | upcase }}</h1>
+					<h1 itemprop="headline" data-tgiv="title">
+						{{ t[0] | upcase }}
+					</h1>
 					<div class="container__title-desc">
-						<h2 itemprop="alternativeHeadline" data-tgiv="subtitle">{{ page.description | upcase }}</h2>
+						<h2 itemprop="alternativeHeadline" data-tgiv="subtitle">
+							{{ page.description | upcase }}
+						</h2>
 						{% comment %} reading_time.rb plugin {% endcomment %}
 						<div class="read-time">
 							<span>
