@@ -12,7 +12,7 @@ pagination:
 		https://stackoverflow.com/a/47588008
 		https://cloud.google.com/looker/docs/best-practices/how-to-use-liquid-to-format-dates
 	{% endcomment %}
-	{% assign formatted_date = p.date | date: '%B %e %Y' %}
+	{% assign formatted_date = p.date | date: "%B %e %Y" %}
 	{% assign short_desc = p.description | truncatewords: 20 %}
 
 	{% include cards/machine-alt.html
