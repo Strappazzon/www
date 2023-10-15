@@ -1,41 +1,24 @@
 {
-	"[html]": {
+	"[html][liquid]": {
 		"editor.defaultFormatter": null,
-		"editor.detectIndentation": false,
 		"editor.insertSpaces": false,
 		"editor.tabSize": 4
 	},
 	"[javascript]": {
 		"editor.defaultFormatter": "vscode.typescript-language-features",
-		"editor.detectIndentation": false,
 		"editor.formatOnPaste": true,
 		"editor.formatOnSave": true,
 		"editor.insertSpaces": true,
 		"editor.tabSize": 2
 	},
-	"[json]": {
-		"editor.detectIndentation": false,
+	"[json][jsonc]": {
 		"editor.formatOnPaste": true,
 		"editor.formatOnSave": true,
-		"editor.insertSpaces": false,
-		"editor.tabSize": 4
-	},
-	"[jsonc]": {
-		"editor.detectIndentation": false,
-		"editor.formatOnPaste": true,
-		"editor.formatOnSave": true,
-		"editor.insertSpaces": false,
-		"editor.tabSize": 4
-	},
-	"[liquid]": {
-		"editor.defaultFormatter": null,
-		"editor.detectIndentation": false,
 		"editor.insertSpaces": false,
 		"editor.tabSize": 4
 	},
 	"[markdown]": {
 		"editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
-		"editor.detectIndentation": false,
 		"editor.insertSpaces": true,
 		"editor.quickSuggestions": {
 			"comments": "off",
@@ -45,8 +28,7 @@
 		"editor.tabSize": 2,
 		"files.trimTrailingWhitespace": false
 	},
-	"[plaintext]": {
-		"editor.detectIndentation": false,
+	"[plaintext][txt]": {
 		"editor.insertSpaces": true,
 		"editor.tabSize": 2,
 		"files.insertFinalNewline": false,
@@ -54,43 +36,31 @@
 	},
 	"[ruby]": {
 		"editor.defaultFormatter": null,
-		"editor.detectIndentation": false,
 		"editor.insertSpaces": true,
 		"editor.tabSize": 2,
 		"files.eol": "\n"
 	},
 	"[scss]": {
 		"editor.defaultFormatter": "stylelint.vscode-stylelint",
-		"editor.detectIndentation": false,
 		"editor.formatOnPaste": true,
 		"editor.formatOnSave": true,
 		"editor.insertSpaces": true,
 		"editor.tabSize": 2
 	},
 	"[shellscript]": {
-		"editor.detectIndentation": false,
 		"editor.insertSpaces": true,
 		"editor.tabSize": 2,
 		"files.eol": "\n"
 	},
-	"[txt]": {
-		"editor.detectIndentation": false,
+	"[xml][yaml]": {
 		"editor.insertSpaces": true,
-		"editor.tabSize": 2,
-		"files.insertFinalNewline": false,
-		"files.trimTrailingWhitespace": false
+		"editor.tabSize": 2
 	},
 	"[xml]": {
-		"editor.defaultFormatter": null,
-		"editor.detectIndentation": false,
-		"editor.insertSpaces": true,
-		"editor.tabSize": 2
+		"editor.defaultFormatter": null
 	},
-	"[yaml]": {
-		"editor.detectIndentation": false,
-		"editor.insertSpaces": true,
-		"editor.tabSize": 2
-	},
+
+	"editor.detectIndentation": false,
 
 	"files.associations": {
 		"**/.cloudflare/_*": "plaintext",
