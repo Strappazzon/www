@@ -105,7 +105,7 @@
 	"files.trimTrailingWhitespace": true,
 
 	"liquid.engine": "jekyll",
-	"liquid.settings.target": "workspace",
+	"liquid.config.method": "workspace",
 
 	"markdown.preview.scrollEditorWithPreview": false,
 
