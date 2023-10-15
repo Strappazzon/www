@@ -60,7 +60,9 @@ pagination:
   enabled: true
   collection: blog
   per_page: 5
-  sort_reverse: true # Explicitly set because https://github.com/sverrirs/jekyll-paginate-v2/issues/230
+  # Explicitly set because
+  # https://github.com/sverrirs/jekyll-paginate-v2/issues/230
+  sort_reverse: true
   permalink: /:num/
   title: :title
 autopages:
