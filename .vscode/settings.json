@@ -5,6 +5,14 @@
 		"editor.insertSpaces": false,
 		"editor.tabSize": 4
 	},
+	"[javascript]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features",
+		"editor.detectIndentation": false,
+		"editor.formatOnPaste": true,
+		"editor.formatOnSave": true,
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2
+	},
 	"[json]": {
 		"editor.detectIndentation": false,
 		"editor.formatOnPaste": true,
