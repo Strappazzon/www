@@ -5,7 +5,7 @@ description: "I'm a hobbyist developer. This website is mainly about my personal
 ---
 
 {% include cards/samaritan.html
-	location = "Veneto, Italy"
+  location = "Veneto, Italy"
 %}
 
 {% include cards/samaritan-alt.html %}
