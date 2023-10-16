@@ -6,7 +6,9 @@
 #   2: Feature-Complete
 
 - title: Teleme7ry
-  description: Batch script for Windows 7 that removes/blocks telemetry-related tasks, services, updates and hostnames/IP addresses. Also removes nagware tasks and updates.
+  description: >2-
+    Batch script for Windows 7 that removes/blocks telemetry-related tasks, services, updates and hostnames/IP addresses.
+    Also removes nagware tasks and updates.
   languages: Batch
   url: /teleme7ry
   source: https://github.com/Strappazzon/teleme7ry
@@ -20,7 +22,9 @@
   status: !!int 1
 
 - title: SCAM Lock Tool
-  description: Replacement for SAM Lock Tool (aka syskey), which is used to encrypt the account credentials. Tech support scammers use syskey to lock their victims out of their computer, which SCAM Lock Tool aims to prevent.
+  description: >2-
+    Replacement for SAM Lock Tool (aka syskey), which is used to encrypt the account credentials.
+    Tech support scammers use syskey to lock their victims out of their computer, which SCAM Lock Tool aims to prevent.
   languages: Visual Basic .NET
   url: https://github.com/Strappazzon/SCAM-Lock-Tool/blob/-/.github/README.md
   source: https://github.com/Strappazzon/SCAM-Lock-Tool
