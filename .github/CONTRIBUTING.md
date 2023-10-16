@@ -5,10 +5,10 @@ When submitting changes to this repository, you agree that the content you contr
 
 ## I Have a Question
 
-Before you ask a question, search for existing [Issues](https://github.com/Strappazzon/www/issues) that might help you.  
-In case you have found a suitable issue and still need clarification, you can write your question in that issue. It is also advisable to search the internet for answers first.
+Before you ask a question, search for existing [Discussions](https://github.com/Strappazzon/www/discussions/categories/questions) that might help you.  
+In case you have found a suitable discussion and still need clarification, you can write your question in that discussion. It is also advisable to search the internet for answers first.
 
-If you then still need to ask a question and need clarification you can [open an issue](https://github.com/Strappazzon/www/issues/new/choose).
+If you then still need to ask a question and need clarification you can [create a discussion](https://github.com/Strappazzon/www/discussions/new?category=questions).
 
 ## Issue Reporting and Feature Requests
 
