@@ -75,7 +75,7 @@ pagination:
   collection: blog
   per_page: 5
   # Explicitly set because
-  # https://github.com/sverrirs/jekyll-paginate-v2/issues/230
+  #   https://github.com/sverrirs/jekyll-paginate-v2/issues/230
   sort_reverse: true
   permalink: /:num/
   title: :title
