@@ -47,6 +47,20 @@ exclude:
 include:
   - .well-known
 
+# Frontmatter
+defaults:
+  - scope:
+      path: pages
+      type: pages
+    values:
+      layout: pages
+  - scope:
+      path: _blog
+      # Collection name
+      type: blog
+    values:
+      layout: blog
+
 # Blog
 title_blog: Strappazzon's Blog
 

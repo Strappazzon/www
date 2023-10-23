@@ -20,14 +20,6 @@
 		{
 			"fields": [
 				{
-					"default": "blog",
-					"editable": false,
-					"name": "layout",
-					"single": true,
-					"title": "Layout",
-					"type": "string"
-				},
-				{
 					"name": "title",
 					"required": true,
 					"single": true,
