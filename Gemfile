@@ -6,13 +6,13 @@ end
 
 source 'https://rubygems.org'
 
-gem 'html-proofer', '~> 5.0.4', require: false
-gem 'jekyll', '~> 4.3.0'
-gem 'mini_racer', '~> 0.6.3'
-gem 'rubocop', '~> 1.44.0', require: false
+gem 'html-proofer', '~> 5.0', require: false
+gem 'jekyll', '~> 4.3'
+gem 'mini_racer', '~> 0.6'
+gem 'rubocop', '~> 1.57.0', require: false
 
 # Plugins
 group :jekyll_plugins do
-  gem 'jekyll-autoprefixer'
-  gem 'jekyll-paginate-v2'
+  gem 'jekyll-autoprefixer', '~> 1.0'
+  gem 'jekyll-paginate-v2', '~> 3.0'
 end
