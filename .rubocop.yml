@@ -1,5 +1,9 @@
 AllCops:
   NewCops: enable
+  TargetRubyVersion: <%= File.read(File.join(File.dirname(__FILE__), '.ruby-version')).strip %>
+
+Bundler/GemVersion:
+  Enabled: true
 
 Metrics/MethodLength:
   Enabled: false
@@ -8,6 +12,12 @@ Style/Documentation:
   Enabled: false
 
 Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/RedundantCurrentDirectoryInPath:
+  Enabled: true
+
+Style/RedundantRegexpArgument:
   Enabled: false
 
 Style/RedundantReturn:
