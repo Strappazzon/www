@@ -10,6 +10,7 @@
 #   https://facelessuser.github.io/pymdown-extensions/extensions/keys/
 #
 # This plugin contains work from:
+#   https://github.com/maximevaillancourt/digital-garden-jekyll-template/blob/main/_plugins/markdown-highlighter.rb
 #   https://github.com/stephenreid321/stephenreid/blob/master/app/jekyll_blog/_plugins/custom_markdown_processor.rb
 #
 # USAGE
@@ -28,15 +29,15 @@ module Jekyll
     VERSION = '1.0.0'.freeze
 
     def self.ins(input)
-      input.content.gsub!(/\^{2}.*?\^{2}/i) { |m| "<ins>#{m[2..-3]}</ins>" }
+      input.content.gsub!(/(?<!`)\^{2}([^ ](.*?)?[^ \^])\^{2}(?!`)/i) { |m| "<ins>#{m[2..-3]}</ins>" }
     end
 
     def self.mark(input)
-      input.content.gsub!(/={2}.*?={2}/im) { |m| "<mark>#{m[2..-3]}</mark>" }
+      input.content.gsub!(/(?<!`)={2}([^ ](.*?)?[^ =])={2}(?!`)/im) { |m| "<mark>#{m[2..-3]}</mark>" }
     end
 
     def self.kbd(input)
-      input.content.gsub!(/\+{2}.*?\+{2}/i) { |m| "<kbd>#{m[2..-3]}</kbd>" }
+      input.content.gsub!(/(?<!`)\+{2}([^ ](.*?)?[^ \+])\+{2}(?!`)/i) { |m| "<kbd>#{m[2..-3]}</kbd>" }
     end
   end
 end
