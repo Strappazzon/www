@@ -42,14 +42,14 @@ module Jekyll
 end
 
 # Hook: Blog collection
-Jekyll::Hooks.register [:blog], :post_convert do |i|
+Jekyll::Hooks.register [:blog], :pre_render do |i|
   Jekyll::HTMLTags.ins(i)
   Jekyll::HTMLTags.mark(i)
   Jekyll::HTMLTags.kbd(i)
 end
 
 # Hook: All website pages
-Jekyll::Hooks.register [:pages], :post_convert do |i|
+Jekyll::Hooks.register [:pages], :pre_render do |i|
   next unless i.path.start_with?('pages/')
 
   Jekyll::HTMLTags.ins(i)
