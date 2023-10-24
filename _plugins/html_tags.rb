@@ -51,7 +51,10 @@ end
 
 # Hook: All website pages
 Jekyll::Hooks.register [:pages], :pre_render do |i|
-  next unless i.path.start_with?('pages/')
+  # rubocop:disable Style/RegexpLiteral
+  # Match only Markdown documents inside 'pages/'
+  next unless i.path.match?(/^pages\/([\w\d\-]+(\/)?)+\.md$/i)
+  # rubocop:enable Style/RegexpLiteral
 
   Jekyll::HTMLTags.ins(i)
   Jekyll::HTMLTags.mark(i)
