@@ -143,6 +143,9 @@ rules:
     - ignoreKeywords:
         - currentColor
 
+  # SCSS rules
+  # See: https://github.com/stylelint-scss/stylelint-scss/tree/master/src/rules
+
   # Allow multiple spaces after $variable
   scss/dollar-variable-colon-space-after: at-least-one-space
 

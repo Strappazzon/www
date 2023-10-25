@@ -301,6 +301,7 @@ article {
   }
   // details ~ *:not(details) { margin-top: 1rem; }
 
+  /// HIGHLIGHTED TEXT
   mark {
     padding: 0 px2rem(3px);
     color: var(--text-color);
@@ -308,6 +309,7 @@ article {
     background-color: var(--brand-color--dark);
   }
 
+  /// SUB/SUP SCRIPT
   sup,
   sub {
     margin: 0 0.2em;
