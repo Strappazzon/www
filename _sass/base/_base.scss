@@ -128,9 +128,8 @@ hr {
   &__title {
     display: flex;
     flex-flow: row wrap;
-    align-content: center;
+    place-content: center space-between;
     align-items: center;
-    justify-content: space-between;
     @for $i from 1 through 4 {
       h#{$i} {
         margin: 0;

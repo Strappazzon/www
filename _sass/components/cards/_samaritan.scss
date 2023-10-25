@@ -25,9 +25,8 @@
       &__row {
         display: flex;
         flex-flow: row wrap;
-        align-content: center;
+        place-content: center space-between;
         align-items: center;
-        justify-content: space-between;
         // min-height: 2rem;
         .label,
         .text {

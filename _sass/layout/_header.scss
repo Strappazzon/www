@@ -6,9 +6,8 @@ header {
   z-index: z('header');
   display: flex;
   flex-flow: row wrap;
-  align-content: center;
+  place-content: center space-between;
   align-items: center;
-  justify-content: space-between;
   height: 2.5em;
   padding: px2em(7px, $font-size-small) px2em(15px, $font-size-small);
   // margin-bottom: 3rem;
