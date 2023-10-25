@@ -15,9 +15,8 @@ kramdown:
   # Arrow Pointing Downwards Then Curving Leftwards
   footnote_backlink: "&#10550;"
   syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    block:
-      line_numbers: false
+  # See: https://rouge-ruby.github.io/docs/#configuration
+  syntax_highlighter_opts: {}
   html_to_native: true
   #parse_block_html: true
 
