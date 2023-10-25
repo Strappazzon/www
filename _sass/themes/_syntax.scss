@@ -1,88 +1,129 @@
+@use 'sass:map';
+
+/// Syntax highlight themes
+/// @prop {String} key - Theme name
+/// @prop {Map} value - Theme colors
+$hl-themes: (
+  // Tomorrow Night
+  // https://github.com/chriskempson/tomorrow-theme
+  tomorrow: (
+    primary    : rgba(197, 200, 198, 1),
+    secondary  : rgba(129, 162, 190, 1),
+    background : rgba(29, 31, 33, 1),
+    selected   : rgba(55, 59, 65, 1),
+    operator   : rgba(138, 190, 183, 1),
+    keyword    : rgba(178, 148, 187, 1),
+    namespace  : rgba(240, 198, 116, 1),
+    comment    : rgba(150, 152, 150, 1),
+    scoped     : rgba(204, 102, 102, 1),
+    numeric    : rgba(222, 147, 95, 1),
+    string     : rgba(181, 189, 104, 1),
+  )
+) !default;
+
+/// Current theme
+/// @type String
+$hl-theme: 'tomorrow' !default;
+
+/// Highlight tokens
+/// @link https://github.com/rouge-ruby/rouge/wiki/List-of-tokens
+/// @link https://notabug.org/rem/rouge_themes/src/master/src/template.css
 .highlight {
   max-height: px2rem(350px);
   margin-bottom: 1rem;
-  color: var(--text-color--secondary);
-  background-color: var(--bg-color--light);
-  // .hll { background-color: var(--bg-color--light); }
-  .err,
-  .kt,
-  .bp,
-  .vi {
-    color: rgba(221, 102, 102, 1);
-  }
-  .l,
-  .ld,
-  .cpf,
-  .s,
-  .sa,
-  .sb,
-  .sc,
-  .dl,
-  .sd,
-  .s2,
-  .se,
-  .sh,
-  .sx,
-  .s1 {
-    color: rgba(181, 189, 104, 1);
-  }
-  .o {
-    color: rgba(138, 190, 183, 1);
-  }
-  .c,
-  .ch,
-  .cm,
-  .cp,
-  .c1,
-  .cs {
-    color: rgba(150, 152, 150, 1);
-  }
-  .k,
-  .kc,
-  .kd,
-  .kn,
-  .kp,
-  .kr,
-  .nt,
-  .ow {
-    color: rgba(178, 148, 187, 1);
-  }
-  .na,
-  .nb,
-  .nc,
-  .nf,
-  .nn,
-  .nv,
-  .fm,
-  .vc,
-  .vg,
-  .vm {
-    color: rgba(129, 162, 190, 1);
-  }
-  .m,
-  .no,
-  .nd,
-  .mb,
-  .mf,
-  .mh,
-  .mi,
-  .mo,
-  .ss,
-  .il {
-    color: rgba(222, 147, 95, 1);
-  }
-  .si {
-    color: rgba(163, 104, 90, 1);
-  }
-  .sr {
-    color: rgba(138, 190, 183, 1);
-  }
-  .w {
-    color: rgba(197, 200, 198, 1);
-  }
-  // stylelint-disable block-no-empty
-  .n,
-  .p {
-  }
-  // stylelint-enable block-no-empty
+
+  color: map.get($hl-themes, $hl-theme, 'primary');
+  background-color: map.get($hl-themes, $hl-theme, 'background');
+
+  // Highlighted line
+  .hll { background-color: map.get($hl-themes, $hl-theme, 'selected'); }
+
+  // Generics
+  .ge { font-style: italic; } // emphasis
+  .gs { font-weight: 700; } // strong
+
+  // Operators
+  .o { color: map.get($hl-themes, $hl-theme, 'operator'); } // Operator
+  .ow { color: map.get($hl-themes, $hl-theme, 'operator'); } // Word
+
+  // Comments
+  .c { color: map.get($hl-themes, $hl-theme, 'comment'); } // Comment
+  .cm { color: map.get($hl-themes, $hl-theme, 'comment'); } // Multi-line
+  .cp { color: map.get($hl-themes, $hl-theme, 'comment'); } // Preproc
+  .c1 { color: map.get($hl-themes, $hl-theme, 'comment'); } // Single
+  .cs { color: map.get($hl-themes, $hl-theme, 'comment'); } // Special
+
+  // Names
+  .n { color: map.get($hl-themes, $hl-theme, 'primary'); } // Name
+  .py { color: map.get($hl-themes, $hl-theme, 'primary'); } // Property
+  .nl { color: map.get($hl-themes, $hl-theme, 'primary'); } // Label
+  .ni { color: map.get($hl-themes, $hl-theme, 'primary'); } // Entity
+  .nb { color: map.get($hl-themes, $hl-theme, 'primary'); } // Shell commands
+  .bp { color: map.get($hl-themes, $hl-theme, 'primary'); } // Pseudo
+  .nf { color: map.get($hl-themes, $hl-theme, 'secondary'); } // Function
+  .na { color: map.get($hl-themes, $hl-theme, 'secondary'); } // Attribute
+  .nx { color: map.get($hl-themes, $hl-theme, 'secondary'); } // Other
+  .nc { color: map.get($hl-themes, $hl-theme, 'namespace'); } // Class
+  .nn { color: map.get($hl-themes, $hl-theme, 'namespace'); } // Namespace
+  .no { color: map.get($hl-themes, $hl-theme, 'scoped'); } // Constant
+  .ne { color: map.get($hl-themes, $hl-theme, 'scoped'); } // Exception
+  .nd { color: map.get($hl-themes, $hl-theme, 'operator'); } // Decorator
+  .nt { color: map.get($hl-themes, $hl-theme, 'operator'); } // Tag
+
+  // Keywords
+  .kn { color: map.get($hl-themes, $hl-theme, 'operator'); } // Namespace
+  .k { color: map.get($hl-themes, $hl-theme, 'keyword'); } // Keyword
+  .kc { color: map.get($hl-themes, $hl-theme, 'keyword'); } // Constant
+  .kd { color: map.get($hl-themes, $hl-theme, 'keyword'); } // Declaration
+  .kp { color: map.get($hl-themes, $hl-theme, 'keyword'); } // Pseudo
+  .kr { color: map.get($hl-themes, $hl-theme, 'keyword'); } // Reserved
+  .kt { color: map.get($hl-themes, $hl-theme, 'namespace'); } // Type
+
+  // Variables
+  .nv { color: map.get($hl-themes, $hl-theme, 'scoped'); } // Variable
+  .vc { color: map.get($hl-themes, $hl-theme, 'scoped'); } // Class
+  .vg { color: map.get($hl-themes, $hl-theme, 'scoped'); } // Global
+  .vi { color: map.get($hl-themes, $hl-theme, 'scoped'); } // Instance
+
+  // Numerals
+  .m { color: map.get($hl-themes, $hl-theme, 'numeric'); } // Number
+  .il { color: map.get($hl-themes, $hl-theme, 'numeric'); } // Long
+  .mf { color: map.get($hl-themes, $hl-theme, 'numeric'); } // Float
+  .mh { color: map.get($hl-themes, $hl-theme, 'numeric'); } // Hex
+  .mi { color: map.get($hl-themes, $hl-theme, 'numeric'); } // Integer
+  .mo { color: map.get($hl-themes, $hl-theme, 'numeric'); } // Oct
+
+  // Strings
+  .s { color: map.get($hl-themes, $hl-theme, 'string'); } // String
+  .sr { color: map.get($hl-themes, $hl-theme, 'string'); } // Regex
+  .sb { color: map.get($hl-themes, $hl-theme, 'string'); } // Backtick
+  .s2 { color: map.get($hl-themes, $hl-theme, 'string'); } // Double
+  .sh { color: map.get($hl-themes, $hl-theme, 'string'); } // Heredoc
+  .sx { color: map.get($hl-themes, $hl-theme, 'string'); } // Other
+  .s1 { color: map.get($hl-themes, $hl-theme, 'string'); } // Single
+  .ss { color: map.get($hl-themes, $hl-theme, 'string'); } // Symbol
+  .se { color: map.get($hl-themes, $hl-theme, 'numeric'); } // Escape
+  .si { color: map.get($hl-themes, $hl-theme, 'numeric'); } // Interpol
+  .sc { color: map.get($hl-themes, $hl-theme, 'primary'); } // Char
+  .sd { color: map.get($hl-themes, $hl-theme, 'comment'); } // Doc
+
+  // Other Literals
+  .l { color: map.get($hl-themes, $hl-theme, 'numeric'); } // Literal
+  .ld { color: map.get($hl-themes, $hl-theme, 'string'); } // Date
+
+  // Typographic Elements
+  .p { color: map.get($hl-themes, $hl-theme, 'primary'); } // Punctuation
+  .w { background-color: map.get($hl-themes, $hl-theme, 'background'); } // Whitespace
+
+  // Others
+  .err { color: map.get($hl-themes, $hl-theme, 'scoped'); } // Error
+  .gp { color: map.get($hl-themes, $hl-theme, 'namespace'); } // Shell prompt
+
+  // Style
+  .gi { color: map.get($hl-themes, $hl-theme, 'string'); } // inserted
+  .gd { color: map.get($hl-themes, $hl-theme, 'scoped'); } // deleted
+  // stylelint-disable declaration-block-single-line-max-declarations
+  .gh { font-weight: 700; color: map.get($hl-themes, $hl-theme, 'primary'); } // heading
+  .gu { font-weight: 700; color: map.get($hl-themes, $hl-theme, 'operator'); } // subheading
+  // stylelint-enable declaration-block-single-line-max-declarations
 }
