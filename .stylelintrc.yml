@@ -80,6 +80,11 @@ rules:
   # Use numbers for font weight instead of names
   font-weight-notation: numeric
 
+  # Functions blacklist
+  function-disallowed-list:
+    # rgba() only
+    - rgb
+
   # Disallow scheme-relative URLs
   function-url-no-scheme-relative: true
 
