@@ -8,31 +8,7 @@
 		{% include layout/header.html %}
 		<div class="container" itemprop="mainContentOfPage" itemscope="" role="article">
 			<article id="main" itemscope="" itemtype="http://schema.org/BlogPosting">
-				<div class="container__title">
-					{% assign t = page.title | split: " | " %}
-					<h1 itemprop="headline" data-tgiv="title">
-						{{ t[0] | upcase }}
-					</h1>
-					<div class="container__title-desc">
-						<h2 itemprop="alternativeHeadline" data-tgiv="subtitle">
-							{{ page.description | upcase }}
-						</h2>
-						{% comment %} reading_time.rb plugin {% endcomment %}
-						<div class="read-time">
-							<span>
-								Reading time:
-								{% assign rt = page.content | reading_time %}
-								{% if rt <= 0 %}
-									Less than a minute.
-								{% elsif rt == 1 %}
-									{{ rt }} minute.
-								{% else %}
-									{{ rt }} minutes.
-								{% endif %}
-							</span>
-						</div>
-					</div>
-				</div>
+				{% include layout/title.html %}
 				<hr aria-hidden="true">
 				<div itemprop="articleBody">
 					{{ content }}
