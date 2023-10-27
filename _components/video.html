@@ -1,10 +1,10 @@
-{%- comment -%}
-  {% include video.html
-    url="https://example.com/#video-url"
-    format="webm"
-    poster="https://example.com/#placeholder-image"
-  %}
-{%- endcomment -%}
+{% comment %}
+	{% include video.html
+		url    = "https://example.com/#video-url"
+		format = "webm"
+		poster = "https://example.com/#placeholder-image"
+	%}
+{% endcomment %}
 
 <video
 	{% if include.align == "center" %}

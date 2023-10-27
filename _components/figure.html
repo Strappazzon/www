@@ -1,11 +1,12 @@
-{%- comment -%}
-  https://stackoverflow.com/a/51682829
-  {% include figure.html
-    url="https://example.com/#destination-url"
-    src="img.jpg"
-    desc="Image description"
-  %}
-{%- endcomment -%}
+{% comment %}
+	https://stackoverflow.com/a/51682829
+
+	{% include figure.html
+		url  = "https://example.com/#destination-url"
+		src  = "img.jpg"
+		desc = "Image description"
+	%}
+{% endcomment %}
 
 <figure>
 	{%- if include.url -%}
