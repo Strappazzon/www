@@ -2,7 +2,11 @@
 	{% include video.html
 		url    = "https://example.com/#video-url"
 		format = "webm"
-		poster = "https://example.com/#placeholder-image"
+	%}
+	{% include video.html
+		url     = "https://example.com/#video-url"
+		format  = "webm"
+		preview = "https://example.com/#placeholder-image"
 	%}
 {% endcomment %}
 
@@ -12,8 +16,8 @@
 	{% endif %}
 	controls
 	muted
-	{% if include.poster != "" %}
-		poster="{{ include.poster }}"
+	{% if include.preview != "" %}
+		poster="{{ include.preview }}"
 	{% endif %}
 	preload="metadata">
 
