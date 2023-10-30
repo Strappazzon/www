@@ -29,6 +29,11 @@ sass:
 autoprefixer:
   browsers:
     - last 2 versions
+    - not dead
+    - firefox esr
+    - chrome 85
+  exclude:
+    - "**/vendors/*"
   only_production: true
 
 # Excluded files, folders
