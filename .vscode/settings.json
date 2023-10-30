@@ -75,8 +75,7 @@
 		"Gemfile.lock": true,
 		"_site*": true,
 		"node_modules": true,
-		"package-lock.json": true,
-		"vendor/**": true
+		"package-lock.json": true
 	},
 	"files.insertFinalNewline": true,
 	"files.trimFinalNewlines": true,
@@ -84,8 +83,6 @@
 
 	"liquid.engine": "jekyll",
 	"liquid.config.method": "workspace",
-
-	"markdown.preview.scrollEditorWithPreview": false,
 
 	"scss.validate": false,
 
