@@ -64,6 +64,7 @@
 
 	"files.associations": {
 		"**/.cloudflare/_*": "plaintext",
+		"**/.vscode/*.code-snippets": "json",
 		"*.html": "liquid"
 	},
 	"files.exclude": {
