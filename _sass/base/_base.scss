@@ -125,6 +125,7 @@ hr {
 }
 
 .container {
+  // Page title
   &__title {
     display: flex;
     flex-flow: row wrap;
@@ -142,6 +143,35 @@ hr {
       @extend %h4;
     }
   }
+  // anchors.rb plugin
+  // https://amberwilson.co.uk/blog/are-your-anchor-links-accessible/
+  &__heading {
+    &.anchorable {
+      position: relative;
+      @for $i from 1 through 4 {
+        h#{$i} {
+          display: inline;
+          // <header> height + #top margin-bottom
+          scroll-margin-top: calc(px2rem($font-size-small * 2.5) + 1.5rem);
+          & ~ .anchor {
+            font-size: h($i);
+          }
+        }
+      }
+      .anchor {
+        position: absolute;
+        top: 0;
+        left: -1rem;
+        text-decoration: none;
+        opacity: 0;
+        scroll-margin: 2rem;
+        @include hocus {
+          opacity: 1;
+        }
+        // @include respond-to('small') { display: none; }
+      }
+    }
+  }
 }
 
 // Email protection
@@ -156,3 +186,17 @@ hr {
   }
 }
 
+// Visually hide content
+// https://github.com/twbs/bootstrap/blob/-/scss/mixins/_visually-hidden.scss
+// stylelint-disable declaration-no-important, unit-disallowed-list
+.visually-hidden:not(:focus, :active) {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+// stylelint-enable declaration-no-important, unit-disallowed-list

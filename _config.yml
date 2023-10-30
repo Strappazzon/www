@@ -20,6 +20,10 @@ kramdown:
   html_to_native: true
   #parse_block_html: true
 
+# anchors.rb plugin
+anchors:
+  prefix: section
+
 # CSS
 sass:
   sourcemap: development

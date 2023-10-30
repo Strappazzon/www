@@ -8,6 +8,10 @@ Bundler/GemVersion:
 Metrics/MethodLength:
   Enabled: false
 
+Naming/MethodParameterName:
+  AllowedNames:
+    - el
+
 Style/Documentation:
   Enabled: false
 
