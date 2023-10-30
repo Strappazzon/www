@@ -57,4 +57,10 @@ header {
       }
     }
   }
+  // Empty space at the top of the page
+  & ~ #top {
+    // <header> height
+    padding-bottom: px2rem($font-size-small * 2.5);
+    margin-bottom: 1.5rem;
+  }
 }
