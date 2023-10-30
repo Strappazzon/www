@@ -19,9 +19,10 @@
 	</head>
 	<body>
 		<main>
-			<a id="typewriter" href="/" hidden="true" data-text="CONTENT NOT FOUND" aria-label="Go to the Homepage"></a>
+			{% assign error = content | strip_html | rstrip | upcase %}
+			<a id="typewriter" href="/" hidden="true" data-text="{{ error }}" aria-label="Go to the Homepage"></a>
 			<noscript>
-				<a href="/" aria-label="Go to the Homepage">CONTENT NOT FOUND</a>
+				<a href="/" aria-label="Go to the Homepage">{{ error }}</a>
 			</noscript>
 			<br>
 			<img src="/static/img/triangle.png" alt="" draggable="false">
