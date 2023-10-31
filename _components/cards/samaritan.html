@@ -6,7 +6,7 @@
 	<div class="title">{{ site.title | upcase }}</div>
 	<div class="content">
 		<div class="content__desc">{{ page.description }}</div>
-		{% if include.location != "" %}
+		{% if include.location and include.location != "" %}
 			<div class="content__row">
 				<div class="text">Location:</div>
 				<div class="label">
