@@ -7,6 +7,35 @@ title: Alberto Strappazzon
 includes_dir: _components
 layouts_dir: _templates
 
+# Excluded files, folders
+exclude:
+  - "**/*.psd"
+  - bin
+  - node_modules
+  - frontmatter.json
+  - Gemfile
+  - LICENSE*
+  - package*.json
+  - SUPPORT.md
+
+# Included files, folders
+include:
+  - .well-known
+
+# Frontmatter
+defaults:
+  - scope:
+      path: pages
+      type: pages
+    values:
+      layout: pages
+  - scope:
+      path: _blog
+      # Collection name
+      type: blog
+    values:
+      layout: blog
+
 # Markdown
 markdown: kramdown
 kramdown:
@@ -39,35 +68,6 @@ autoprefixer:
   exclude:
     - "**/vendors/*"
   only_production: true
-
-# Excluded files, folders
-exclude:
-  - "**/*.psd"
-  - bin
-  - node_modules
-  - frontmatter.json
-  - Gemfile
-  - LICENSE*
-  - package*.json
-  - SUPPORT.md
-
-# Included files, folders
-include:
-  - .well-known
-
-# Frontmatter
-defaults:
-  - scope:
-      path: pages
-      type: pages
-    values:
-      layout: pages
-  - scope:
-      path: _blog
-      # Collection name
-      type: blog
-    values:
-      layout: blog
 
 # Blog
 title_blog: Strappazzon's Blog
