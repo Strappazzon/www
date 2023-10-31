@@ -1,31 +1,17 @@
 <div class="card__samaritan-alt">
 	<div class="title">LINKS</div>
-	<div class="content">
-		{% comment %}
-		<div class="content__row">
-			<div class="text">Blog:</div>
-			<div class="label">
-				<a href="/blog/" aria-label="Blog">/blog/</a>
-			</div>
-		</div>
-		{% endcomment %}
-		<div class="content__row">
-			<div class="text">Projects and Contributions:</div>
-			<div class="label">
-				<a href="/projects/" aria-label="My Projects and Contributions">/projects/</a>
-			</div>
-		</div>
-		<div class="content__row">
-			<div class="text">Contact Info and Public Keys:</div>
-			<div class="label">
-				<a href="/contact/" aria-label="My Contact Information and Public Keys">/contact/</a>
-			</div>
-		</div>
-		<div class="content__row">
-			<div class="text">Privacy Statement:</div>
-			<div class="label">
-				<a href="/privacy/" aria-label="Privacy Statement">/privacy/</a>
-			</div>
-		</div>
-	</div>
+	<nav class="content" aria-label="Main Navigation">
+		{% for link in site.data.nav %}
+			{% if link.hide == true %}
+				{% continue %}
+			{% else %}
+				<div class="content__row">
+					<div class="text">{{ link.name }}</div>
+					<div class="label">
+						<a href="{{ link.path }}" aria-label="{% if link.description %}{{ link.description }}{% else %}{{ link.name }}{% endif %}">{{ link.path }}</a>
+					</div>
+				</div>
+			{% endif %}
+		{% endfor %}
+	</nav>
 </div>
