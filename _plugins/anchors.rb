@@ -15,8 +15,6 @@
 require 'kramdown'
 require 'nokogiri'
 
-# rubocop:disable Style/ClassAndModuleChildren
-
 module Jekyll
   module Anchors
     VERSION = '1.0.0'.freeze
@@ -25,32 +23,26 @@ module Jekyll
     # https://stackoverflow.com/a/45693637
     class PluginConfig < Jekyll::Generator
       def generate(site)
-        config = site.config['anchors'] unless site.config['anchors'].nil?
+        config = site.config['anchors'] || ''
         Kramdown::Converter::Html.config = config
       end
     end
 
+    # rubocop:disable Style/ClassAndModuleChildren
     class Kramdown::Converter::Html
-      # rubocop:disable Style/ClassVars
-      @@config = nil
-
-      def self.config=(config)
-        @@config = config
-      end
-      # rubocop:enable Style/ClassVars
-
-      def self.config
-        @@config
+      # Make plugin configuration available
+      class << self
+        attr_accessor :config
       end
 
       def convert_header(el, _indent)
-        level   = el.options[:level]
+        config  = Kramdown::Converter::Html.config
         content = el.options[:raw_text]
-        prefix  = "#{@@config['prefix']}-" unless !@@config || !@@config['prefix'] || @@config['prefix'].empty?
+        level   = el.options[:level]
+        prefix  = "#{config['prefix']}-" unless !config['prefix'] || config['prefix'].empty?
         anchor  = Nokogiri::HTML(content).text.gsub(/[^\w\d]/i, '-').downcase
 
         # Styles inside base/_base.scss
-
         return %W[
           <div class="container__heading anchorable">
           <h#{level} id="#{prefix}#{anchor}">#{content}</h#{level}>
@@ -62,9 +54,8 @@ module Jekyll
         ].join(' ')
       end
     end
+    # rubocop:enable Style/ClassAndModuleChildren
   end
 end
-
-# rubocop:enable Style/ClassAndModuleChildren
 
 Jekyll.logger.info 'Plugin:', "#{File.basename(__FILE__)} #{Jekyll::Anchors::VERSION} loaded."
