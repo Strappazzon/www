@@ -3,12 +3,12 @@
 		"DavidAnson.vscode-markdownlint",
 		"EditorConfig.EditorConfig",
 		"eliostruyf.vscode-front-matter",
-		"kamikillerto.vscode-colorize",
-		"pranaygp.vscode-css-peek",
-		"rebornix.ruby",
 		"sissel.shopify-liquid",
 		"stylelint.vscode-stylelint",
-		"yzhang.markdown-all-in-one",
+		"yzhang.markdown-all-in-one"
+	],
+	"unwantedRecommendations": [
+		"rebornix.ruby",
 		"wingrunr21.vscode-ruby"
 	]
 }
