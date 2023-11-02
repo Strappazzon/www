@@ -5,11 +5,14 @@
 			<span class="separator">&nbsp;///&nbsp;</span>
 			<span class="description">
 				Task -
-				{% if include.task == "pgp" %}
-					List PGP Keys
-				{% elsif include.task == "ssh" %}
-					List SSH Keys
-				{% endif %}
+				{% case include.task %}
+					{% when "pgp" %}
+						List PGP Keys
+					{% when "ssh" %}
+						List SSH Keys
+					{% else %}
+						Unknown
+				{% endcase %}
 			</span>
 		</div>
 		<div class="buttons">
@@ -22,86 +25,89 @@
 		{% comment %} Include prompt regardless of task {% endcomment %}
 		<span class="output">
 			<span class="yellow">alberto@strappazzon:</span><span class="blue">~/{{ page.url | remove: '/' }}</span>$
-		{% if include.task == "pgp" %}
-			gpg <span class="black-bright">--list-keys</span>
-			</span>
-			<span class="output">/home/alberto/.gnupg/pubring.kbx</span>
-			<span class="output">------------------------------------</span>
-			<span class="output">pub ed25519 2020-06-24 [SC]</span>
-			<span class="output">&nbsp;&nbsp;&nbsp;&nbsp;975126E37C9BA907D95FAA5498B160D45D48A6F5</span>
-			<span class="output">
-				uid&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;&nbsp;unknown]
-				{% include email.html user="a" domain="strappazzon.xyz" %}
-				&lt;{% include email.html user="a" domain="strappazzon.xyz" %}&gt;
-			</span>
-			<span class="output">sub cv25519 2020-06-24 [E]</span>
-			<span class="output">&#8203;</span>
-			<span class="output">pub rsa2048 2018-07-04 [SC]</span>
-			<span class="output">&nbsp;&nbsp;&nbsp;&nbsp;DE55A0A7806F6030347DE10A06897F17310BCC24</span>
-			<span class="output">
-				uid&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;&nbsp;unknown]
-				{% include email.html user="strappazzon" domain="protonmail.com" %}
-				&lt;{% include email.html user="strappazzon" domain="protonmail.com" %}&gt;
-			</span>
-			<span class="output">sub rsa2048 2018-07-04 [E]</span>
-			<span class="output">&#8203;</span>
-			<span class="output">
-				<span class="yellow">alberto@strappazzon:</span><span class="blue">~/{{ page.url | remove: '/' }}</span>$
-				wget
-				<span class="black-bright">-q</span>
-				<span class="black-bright">--show-progress</span>
-				<span class="green">
-					"<a href="/static/strappazzon_xyz.asc" title="Download PGP Key">{{ "/static/strappazzon_xyz.asc" | prepend: site.url }}</a>"
+		{% case include.task %}
+			{% when "pgp" %}
+				gpg <span class="black-bright">--list-keys</span>
 				</span>
-			</span>
-			<span class="output">
-				<span>strappazzon_xyz.asc</span>
-				<span>100%[==============================>]</span>
-				<span>644</span>
-				<span>--.-KB/s</span>
-				<span>in 0s</span>
-			</span>
-			<span class="output">&#8203;</span>
-			<span class="output">
-				<span class="yellow">alberto@strappazzon:</span><span class="blue">~/{{ page.url | remove: '/' }}</span>$
-				wget
-				<span class="black-bright">-q</span>
-				<span class="black-bright">--show-progress</span>
-				<span class="green">
-					"<a href="/static/strappazzon_pm.asc" title="Download PGP Key">{{ "/static/strappazzon_pm.asc" | prepend: site.url }}</a>"
+				<span class="output">/home/alberto/.gnupg/pubring.kbx</span>
+				<span class="output">------------------------------------</span>
+				<span class="output">pub ed25519 2020-06-24 [SC]</span>
+				<span class="output">&nbsp;&nbsp;&nbsp;&nbsp;975126E37C9BA907D95FAA5498B160D45D48A6F5</span>
+				<span class="output">
+					uid&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;&nbsp;unknown]
+					{% include email.html user="a" domain="strappazzon.xyz" %}
+					&lt;{% include email.html user="a" domain="strappazzon.xyz" %}&gt;
 				</span>
-			</span>
-			<span class="output">
-				<span>strappazzon_pm.asc</span>
-				<span>100%[==============================>]</span>
-				<span>1.73K</span>
-				<span>--.-KB/s</span>
-				<span>in 0s</span>
-			</span>
-		{% elsif include.task == "ssh" %}
-			ssh-add <span class="black-bright">-L</span>
-			</span>
-			<span class="output">
-				ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFoe78QsVbl0J8+INuZqGkJma2eyfEF7Jz/xcMNd/0Mo
-				{% include email.html user="a" domain="strappazzon.xyz" %}
-			</span>
-			<span class="output">
-				<span>&#8203;</span>
-			</span>
-			<span class="output">
-				<span class="yellow">alberto@strappazzon:</span><span class="blue">~/{{ page.url | remove: '/' }}</span>$
-				ssh-add
-				<span class="black-bright">-L</span>
-				| ssh-keygen
-				<span class="black-bright">-E</span>
-				sha256
-				<span class="black-bright">-lf</span>
-				/dev/stdin
-			</span>
-			<span class="output">
-				256 SHA256:OTNv2ZGzpR2fGB0HhX6s91WS/b36fD4K3w9Hh+aYFxs {% include email.html user="a" domain="strappazzon.xyz" %} (ED25519)
-			</span>
-		{% endif %}
+				<span class="output">sub cv25519 2020-06-24 [E]</span>
+				<span class="output">&#8203;</span>
+				<span class="output">pub rsa2048 2018-07-04 [SC]</span>
+				<span class="output">&nbsp;&nbsp;&nbsp;&nbsp;DE55A0A7806F6030347DE10A06897F17310BCC24</span>
+				<span class="output">
+					uid&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[&nbsp;&nbsp;unknown]
+					{% include email.html user="strappazzon" domain="protonmail.com" %}
+					&lt;{% include email.html user="strappazzon" domain="protonmail.com" %}&gt;
+				</span>
+				<span class="output">sub rsa2048 2018-07-04 [E]</span>
+				<span class="output">&#8203;</span>
+				<span class="output">
+					<span class="yellow">alberto@strappazzon:</span><span class="blue">~/{{ page.url | remove: '/' }}</span>$
+					wget
+					<span class="black-bright">-q</span>
+					<span class="black-bright">--show-progress</span>
+					<span class="green">
+						"<a href="/static/strappazzon_xyz.asc" title="Download PGP Key">{{ "/static/strappazzon_xyz.asc" | prepend: site.url }}</a>"
+					</span>
+				</span>
+				<span class="output">
+					<span>strappazzon_xyz.asc</span>
+					<span>100%[==============================>]</span>
+					<span>644</span>
+					<span>--.-KB/s</span>
+					<span>in 0s</span>
+				</span>
+				<span class="output">&#8203;</span>
+				<span class="output">
+					<span class="yellow">alberto@strappazzon:</span><span class="blue">~/{{ page.url | remove: '/' }}</span>$
+					wget
+					<span class="black-bright">-q</span>
+					<span class="black-bright">--show-progress</span>
+					<span class="green">
+						"<a href="/static/strappazzon_pm.asc" title="Download PGP Key">{{ "/static/strappazzon_pm.asc" | prepend: site.url }}</a>"
+					</span>
+				</span>
+				<span class="output">
+					<span>strappazzon_pm.asc</span>
+					<span>100%[==============================>]</span>
+					<span>1.73K</span>
+					<span>--.-KB/s</span>
+					<span>in 0s</span>
+				</span>
+			{% when "ssh" %}
+				ssh-add <span class="black-bright">-L</span>
+				</span>
+				<span class="output">
+					ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFoe78QsVbl0J8+INuZqGkJma2eyfEF7Jz/xcMNd/0Mo
+					{% include email.html user="a" domain="strappazzon.xyz" %}
+				</span>
+				<span class="output">
+					<span>&#8203;</span>
+				</span>
+				<span class="output">
+					<span class="yellow">alberto@strappazzon:</span><span class="blue">~/{{ page.url | remove: '/' }}</span>$
+					ssh-add
+					<span class="black-bright">-L</span>
+					| ssh-keygen
+					<span class="black-bright">-E</span>
+					sha256
+					<span class="black-bright">-lf</span>
+					/dev/stdin
+				</span>
+				<span class="output">
+					256 SHA256:OTNv2ZGzpR2fGB0HhX6s91WS/b36fD4K3w9Hh+aYFxs {% include email.html user="a" domain="strappazzon.xyz" %} (ED25519)
+				</span>
+			{% else %}
+				</span>
+		{% endcase %}
 		{% comment %} Include prompt regardless of task {% endcomment %}
 		<span class="output">
 			<span>&#8203;</span>
