@@ -2,9 +2,10 @@ extends:
   - stylelint-config-recess-order
   - stylelint-config-standard-scss
 
-# https://github.com/stylelint/stylelint/issues/6212#issuecomment-1705744761
-# plugins:
-#   - "stylelint-a11y"
+plugins:
+  # TODO: stylelint-a11y
+  # https://github.com/stylelint/stylelint/issues/6212#issuecomment-1705744761
+  - stylelint-plugin-defensive-css
 
 # Default rules
 # See: https://stylelint.io/user-guide/rules/
@@ -158,3 +159,12 @@ rules:
   scss/double-slash-comment-empty-line-before:
     - always
     - ignore: [between-comments, inside-block, stylelint-commands]
+
+  # Plugin: Defensive CSS
+  # See: https://github.com/yuschick/stylelint-plugin-defensive-css
+  plugin/use-defensive-css:
+    - true
+    - background-repeat: true
+      flex-wrapping: true
+      scroll-chaining: true
+      vendor-prefix-grouping: true
