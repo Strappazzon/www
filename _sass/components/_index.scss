@@ -3,6 +3,7 @@
     width: px2em(18px, $font-size-small);
     height: px2em(18px, $font-size-small);
     background-image: url('#{$base-url}img/icons/deviant.svg');
+    background-repeat: no-repeat;
     background-size: 100% 100%;
     transform: rotate(180deg);
     animation: blink 2s infinite;

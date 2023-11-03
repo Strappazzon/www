@@ -73,6 +73,7 @@ hr {
   left: calc(50% - calc(px2rem(200px) / 2));
   z-index: z('button-sr');
   display: flex;
+  flex-wrap: nowrap;
   justify-content: center;
   width: px2rem(200px);
   padding: px2rem(8px);
@@ -104,6 +105,7 @@ hr {
     &__main {
       background-image: url('#{$base-url}img/bg_poi.jpg');
       background-image: image-set(url('#{$base-url}img/bg_poi.webp') 1x);
+      background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
       opacity: 0.3;
@@ -112,6 +114,7 @@ hr {
     &__1 {
       background-image: url('#{$base-url}img/bg_machine.png');
       background-image: image-set(url('#{$base-url}img/bg_machine.webp') 1x);
+      background-repeat: repeat-y;
       background-position: center;
       background-size: cover;
       opacity: 0.9;
@@ -119,6 +122,7 @@ hr {
     }
     &__2 {
       background-image: url('#{$base-url}img/lensgrid.png');
+      background-repeat: repeat;
       background-size: 100% auto;
     }
   }

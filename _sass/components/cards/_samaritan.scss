@@ -43,6 +43,7 @@
     // Card title
     .subtitle {
       display: flex;
+      flex-wrap: nowrap;
       align-items: center;
       width: max-content;
       padding-right: 1em;

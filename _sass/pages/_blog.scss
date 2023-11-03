@@ -159,6 +159,7 @@ article {
     padding: px2rem(12px);
     margin-top: 0;
     overflow: auto;
+    overscroll-behavior: contain;
     line-height: 1.2;
     border: px2rem(1px) solid var(--border-color--dark);
     border-radius: 0;
@@ -281,6 +282,7 @@ article {
         // max-height: 33vh;
         padding: 0.75rem;
         overflow: auto;
+        overscroll-behavior: contain;
         border-bottom: px2rem(2px) solid var(--border-color--dark);
         p {
           &:last-of-type {
