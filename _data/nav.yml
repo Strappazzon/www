@@ -4,8 +4,8 @@
   path: /blog/
   hide: true
 
-- name: Projects and Contributions
-  description: My Projects and Contributions
+- name: Projects
+  description: My Open-Source Projects
   path: /projects/
 
 - name: Contact Info and Public Keys
