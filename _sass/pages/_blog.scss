@@ -151,9 +151,6 @@ article {
   kbd {
     font-size: 0.825rem;
   }
-  kbd {
-    cursor: pointer;
-  }
   pre {
     display: block;
     padding: px2rem(12px);
@@ -272,7 +269,6 @@ article {
       display: block;
       padding: px2rem(6px);
       text-transform: uppercase;
-      cursor: pointer;
       user-select: none;
       border-bottom: px2rem(2px) solid;
       transition: 0.3s;

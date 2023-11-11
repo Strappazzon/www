@@ -55,6 +55,19 @@ p {
   margin-bottom: 1em;
 }
 
+// Add hand cursor to interactive elements
+[type='button'],
+[type='checkbox'],
+[type='image'],
+[type='radio'],
+[type='reset'],
+[type='submit'],
+button,
+kbd,
+summary {
+  cursor: pointer;
+}
+
 address {
   // display: inline-block;
   font-style: normal;
