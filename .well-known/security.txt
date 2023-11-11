@@ -1,0 +1,14 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Contact: a@strappazzon.xyz
+Encryption: https://strappazzon.xyz/static/strappazzon_xyz.asc
+Preferred-Languages: en, it
+Canonical: https://strappazzon.xyz/.well-known/security.txt
+-----BEGIN PGP SIGNATURE-----
+
+iHUEARYKAB0WIQSXUSbjfJupB9lfqlSYsWDUXUim9QUCY21aHAAKCRCYsWDUXUim
+9a89AP41Ir6iAIbGj1XpBuFFAdcfQkUmZi6mu+y/vy2O8JnwLgEApq2uqGc/nN2W
+ZSvpwauwKXk1V1X+nxjH5zYoloLE6As=
+=UN1S
+-----END PGP SIGNATURE-----
