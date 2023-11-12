@@ -52,16 +52,14 @@
 		"editor.tabSize": 2,
 		"files.eol": "\n"
 	},
+	"[xml]": {
+		"editor.defaultFormatter": null
+	},
 	"[xml][yaml]": {
 		"editor.insertSpaces": true,
 		"editor.tabSize": 2
 	},
-	"[xml]": {
-		"editor.defaultFormatter": null
-	},
-
 	"editor.detectIndentation": false,
-
 	"files.associations": {
 		"**/.cloudflare/_*": "plaintext",
 		"**/.vscode/*.code-snippets": "json",
@@ -81,12 +79,9 @@
 	"files.insertFinalNewline": true,
 	"files.trimFinalNewlines": true,
 	"files.trimTrailingWhitespace": true,
-
-	"liquid.engine": "jekyll",
 	"liquid.config.method": "workspace",
-
+	"liquid.engine": "jekyll",
 	"scss.validate": false,
-
 	"terminal.integrated.defaultProfile.windows": "WSL",
 	"terminal.integrated.profiles.windows": {
 		"WSL": {
