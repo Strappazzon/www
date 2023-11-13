@@ -25,6 +25,9 @@
 # Stylelint
 .stylelintcache
 
+# Junk files (Linux)
+**/*.swp
+
 # Junk files (Windows)
 **/Thumbs.db
 **/[Dd]esktop.ini
