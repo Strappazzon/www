@@ -35,7 +35,7 @@
 		"files.trimTrailingWhitespace": false
 	},
 	"[ruby]": {
-		"editor.defaultFormatter": null,
+		"editor.defaultFormatter": "Shopify.ruby-lsp",
 		"editor.insertSpaces": true,
 		"editor.tabSize": 2,
 		"files.eol": "\n"
@@ -82,6 +82,7 @@
 	"files.trimTrailingWhitespace": true,
 	"liquid.config.method": "workspace",
 	"liquid.engine": "jekyll",
+	"rubyLsp.formatter": "rubocop",
 	"scss.validate": false,
 	"terminal.integrated.defaultProfile.windows": "WSL",
 	"terminal.integrated.profiles.windows": {

@@ -3,6 +3,7 @@
 		"DavidAnson.vscode-markdownlint",
 		"EditorConfig.EditorConfig",
 		"eliostruyf.vscode-front-matter",
+		"shopify.ruby-lsp",
 		"sissel.shopify-liquid",
 		"stylelint.vscode-stylelint",
 		"yzhang.markdown-all-in-one"
