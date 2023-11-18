@@ -29,6 +29,7 @@ defaults:
       type: pages
     values:
       layout: pages
+      permalink: /:basename/
   - scope:
       path: _blog
       # Collection name
