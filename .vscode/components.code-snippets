@@ -1,4 +1,24 @@
 {
+	"Admonition": {
+		"body": [
+			"{% admonition type=\"${1|danger,info,warning|}\" title=\"$2\" %}",
+			"\t$3",
+			"{% endadmonition %}\n"
+		],
+		"description": "Insert an Admonition.",
+		"prefix": "admonition",
+		"scope": "markdown"
+	},
+	"Admonition (Without Title)": {
+		"body": [
+			"{% admonition type=\"${1|danger,info,warning|}\" %}",
+			"\t$2",
+			"{% endadmonition %}\n"
+		],
+		"description": "Insert an Admonition with the default title.",
+		"prefix": "admonition",
+		"scope": "markdown"
+	},
 	"Email Protection (Multi-Line)": {
 		"body": [
 			"{% include email.html",
