@@ -9,6 +9,11 @@ AllCops:
 Bundler/GemVersion:
   Enabled: true
 
+# Max line length
+Layout/LineLength:
+  Enabled: true
+  Max: 160
+
 # Method max lines
 Metrics/MethodLength:
   Enabled: false
