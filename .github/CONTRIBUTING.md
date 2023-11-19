@@ -106,24 +106,28 @@ For more information on the SCSS file structure, see [The 7-1 Pattern](https://s
 
 ```sh
 .
-├── .cloudflare          # Cloudflare configuration files
-├── .github
-│   └── labeler.yml      # "actions/labeler" configuration
-├── .well-known          # RFC 8615 URIs
-├── _blog                # Blog posts
-├── _components          # Website components such as <header>, cards
-├── _data                # Website data in YAML format
-├── _plugins             # Jekyll plugins written in Ruby
-├── _sass                # SASS Stylesheets ...
-│   ├── abstracts        # ... with functions, mixins, variables and so on
-│   ├── base             # ... with global styles
-│   ├── components       # ... for website components
+├── _components            # Website components such like header or cards
+├── _data                  # Website data in YAML format
+├── _plugins               # Jekyll plugins written in Ruby
+├── _sass                  # SCSS Stylesheets ...
+│   ├── abstracts          # ... with functions, mixins, variables and so on
+│   ├── base               # ... with global styles
+│   ├── components         # ... for website components
+│   ├── layout             # ... for layout elements (buttons, header, ...)
+│   ├── pages              # ... for Jekyll templates
 │   └── themes
-│       └── _syntax.scss # ... for Rouge syntax highlighter
-├── _templates           # Templates for web pages like homepage or blog posts
-├── bin                  # Scripts
-├── static               # Website static files
-├── _config.yml          # Jekyll configuration
-├── frontmatter.json     # VS Code eliostruyf.vscode-front-matter configiguration
-└── manifest.json        # PWA manifest
+│       ├── _syntax.scss   # ... for Rouge syntax highlighter
+│       └── _terminal.scss # ... for Terminal component themes
+├── _templates             # Jekyll templates for web pages like homepage or blog posts
+├── .cloudflare            # Cloudflare configuration files
+├── .github
+│   └── labeler.yml        # "actions/labeler" configuration
+├── .well-known            # RFC 8615 URIs
+├── bin                    # Scripts
+├── static                 # Website static files
+├── _config.yml            # Jekyll configuration
+├── .nvmrc                 # Version of Node.js Node Version Manager should use
+├── frontmatter.json       # VS Code eliostruyf.vscode-front-matter configiguration
+├── manifest.json          # PWA manifest
+└── SUPPORT.md             # Support resources
 ```
