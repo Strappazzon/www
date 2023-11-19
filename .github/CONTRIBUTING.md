@@ -64,6 +64,35 @@ Press <kbd>CTRL</kbd>+<kbd>C</kbd> to stop the web server.
 
 ## Code style and Conventions
 
+### Ruby
+
+Website plugins are written in Ruby. [Rubocop](https://docs.rubocop.org/) is used to enforce code style rules for Ruby files.  
+To fix any problems that can be fixed automatically, you can use a Rubocop plugin for your IDE or run `bin/ruby_fmt` from a terminal.
+
+#### Methods
+
+- Don't use `p` or `puts` to print things. Use `Jekyll.logger` instead.
+
+```rb
+# bad
+p 'Example.'
+
+# good
+Jekyll.logger.info 'Example.'
+```
+
+#### Modules
+
+- Define a plugin inside a `Jekyll` module.
+
+```rb
+module Jekyll
+  class CustomPlugin
+    # ...
+  end
+end
+```
+
 ### SCSS
 
 [Stylelint](https://stylelint.io/) is used to enforce code style rules for SCSS files.  
