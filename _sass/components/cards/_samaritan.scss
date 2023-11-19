@@ -96,7 +96,14 @@
       border-top: px2em(2px, $font-size-small) solid var(--bg-color--lightest);
       border-bottom: px2em(2px, $font-size-small) solid var(--bg-color--lightest);
       &__row {
+        flex-flow: row nowrap;
         margin: px2em(5px, $font-size-small) px2em(10px, $font-size-small);
+        .text {
+          overflow: hidden;
+          // https://stackoverflow.com/a/17783233
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
       }
     }
   }
