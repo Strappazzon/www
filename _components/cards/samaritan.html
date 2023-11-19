@@ -11,7 +11,7 @@
 			<div class="content__row">
 				<div class="text">Location:</div>
 				<div class="label">
-					<a href="https://www.wikipedia.org/w/index.php?search={{ include.location | url_encode }}" aria-label="Location">
+					<a href="https://www.wikipedia.org/w/index.php?search={{ include.location | url_encode }}" aria-label="{{ include.location }}">
 						{{ include.location }}
 					</a>
 				</div>
@@ -21,7 +21,7 @@
 			<div class="content__row">
 				<div class="text">{{ a.name }}:</div>
 				<div class="label">
-					<a rel="me" href="{{ a.url }}" aria-label="{{ a.name }} Account">{{ a.username }}</a>
+					<a rel="me" href="{{ a.url }}" aria-label="{{ a.username }}">{{ a.username }}</a>
 				</div>
 			</div>
 		{% endfor %}
