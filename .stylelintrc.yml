@@ -97,6 +97,17 @@ rules:
     - data
     - ftp
 
+  # [Deprecated] Max line length
+  max-line-length:
+    - 160
+    - severity: warning
+      # Ignore lines that may be inevitably long
+      ignorePattern:
+        # Dollar variables (When declaring a list of font families)
+        - "/^\\s*\\$/"
+        # Unicode range for fonts
+        - "/^\\s*unicode-range/"
+
   # [Deprecated] Require leading zero for fractional numbers
   number-leading-zero: always
 

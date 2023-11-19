@@ -45,6 +45,9 @@
 		"editor.formatOnPaste": true,
 		"editor.formatOnSave": true,
 		"editor.insertSpaces": true,
+		"editor.rulers": [
+			160
+		],
 		"editor.tabSize": 2
 	},
 	"[shellscript]": {
@@ -60,6 +63,7 @@
 		"editor.tabSize": 2
 	},
 	"editor.detectIndentation": false,
+	"editor.rulers": [],
 	"files.associations": {
 		"**/.cloudflare/_*": "plaintext",
 		"**/.vscode/*.code-snippets": "json",
