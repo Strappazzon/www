@@ -62,6 +62,31 @@ Then navigate to <http://localhost:4000> in your web browser.
 
 Press <kbd>CTRL</kbd>+<kbd>C</kbd> to stop the web server.
 
+## Code style and Conventions
+
+### SCSS
+
+[Stylelint](https://stylelint.io/) is used to enforce code style rules for SCSS files.  
+To fix any problems that can be fixed automatically, you can use a Stylelint plugin for your IDE or run `bin/scss_fmt` from a terminal.
+
+#### Format
+
+Format rules that are not covered by Stylelint.
+
+- Use one selector per line in multi-selector rulesets.
+- Include a single space before the opening brace of a ruleset.
+- Use one level of indentation for each declaration.
+- Include a single space after the colon of a declaration.
+- Include a semi-colon at the end of the last declaration in a declaration block.
+- Include a space after each comma in comma-separated property or function values.
+- Place `@extend` statements on the first line of a declaration block.
+- Place `@include` statements after any `@extend` statements.
+- Place the closing brace of a ruleset in the same column as the first character of the ruleset.
+
+#### Imports
+
+- Don't include the file extension when importing stylesheets.
+
 ## Submitting Changes
 
 - Make changes on a separate branch, not on the master branch, then send your changes as a [Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
