@@ -1,16 +1,17 @@
 .terminal {
   $border-radius: px2rem(5px);
+  $scrollbar-w: px2rem(10px);
   width: px2rem(650px);
   margin: 0 auto 1rem;
   font-size: 0.875rem;
   border: px2rem(1px) solid var(--border-color);
   border-radius: calc(#{$border-radius} + #{px2rem(1px)});
-  scrollbar-width: px2rem(10px);
+  scrollbar-width: #{$scrollbar-w};
   @include respond-to('large') {
     width: 100%;
   }
   ::-webkit-scrollbar {
-    width: px2rem(10px);
+    width: #{$scrollbar-w};
   }
   &__titlebar {
     display: flex;
