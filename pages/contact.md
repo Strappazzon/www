@@ -2,6 +2,7 @@
 title: "Contact | Alberto Strappazzon"
 description: "This page contains all my contact information and public keys I use."
 short_desc: "Contact information and public keys I use"
+permalink: /contact/
 ---
 
 ### Contact Me

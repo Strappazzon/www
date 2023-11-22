@@ -2,6 +2,7 @@
 title: "Privacy Statement | Alberto Strappazzon"
 description: "This Privacy Statement explains what information this website collects about its visitors."
 short_desc: "Last Update: Jan 5, 2023"
+permalink: /privacy/
 ---
 
 ### {{ page.description | remove: "." }}
