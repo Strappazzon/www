@@ -44,20 +44,6 @@
   source: https://github.com/Strappazzon/tor-exit-page
   status: !!int 2
 
-- title: cf-ip
-  description: Returns the user's IP address in plaintext. Powered by Cloudflare Workers.
-  languages: JavaScript
-  url: https://ip.strappazzon.workers.dev
-  source: https://github.com/Strappazzon/cf-ip
-  status: !!int 2
-
-- title: UncensoredDNS4Magisk
-  description: Magisk module that makes your device use UncensoredDNS DNS servers systemlessly.
-  languages: Bash
-  url: https://github.com/Strappazzon/UncensoredDNS4Magisk/blob/-/.github/README.md
-  source: https://github.com/Strappazzon/UncensoredDNS4Magisk
-  status: !!int 0
-
 - title: GHOST Buster
   description: Ghost Recon&reg; Wildlands backup utility.
   languages: Visual Basic .NET
@@ -71,10 +57,3 @@
   url: /PD2-SuperBLT-Hasher
   source: https://github.com/Strappazzon/PD2-SuperBLT-Hasher
   status: !!int 2
-
-- title: Real Weapon Names
-  description: Rename PAYDAY 2 weapons and attachments to their real life counterparts.
-  languages: Lua
-  url: https://modworkshop.net/mod/19958
-  source: https://github.com/Strappazzon/PD2-Real-Weapon-Names
-  status: !!int 0
