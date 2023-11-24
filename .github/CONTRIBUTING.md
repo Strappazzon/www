@@ -12,7 +12,8 @@ If you then still need to ask a question and need clarification you can [open an
 
 ## Issue Reporting and Feature Requests
 
-> :warning: If you found a security issue, **DO NOT** report it in the issue tracker or elsewhere in public.  
+> [!IMPORTANT]
+> If you found a security issue, **DO NOT** report it in the issue tracker or elsewhere in public.  
 > See: [Security Policy](https://github.com/Strappazzon/.github/blob/-/SECURITY.md).
 
 - Take a look at the [issues](https://github.com/Strappazzon/www/issues) first to make sure your issue/feature hasn't been reported/requested before.  

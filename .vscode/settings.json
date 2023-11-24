@@ -97,6 +97,7 @@
 	],
 	"liquid.config.method": "workspace",
 	"liquid.engine": "jekyll",
+	"markdown.validate.referenceLinks.enabled": "ignore",
 	"rubyLsp.formatter": "rubocop",
 	"scss.validate": false,
 	"terminal.integrated.defaultProfile.windows": "WSL",
