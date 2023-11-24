@@ -87,6 +87,14 @@
 	"files.insertFinalNewline": true,
 	"files.trimFinalNewlines": true,
 	"files.trimTrailingWhitespace": true,
+	"json.schemas": [
+		{
+			"fileMatch": [
+				"frontmatter.json"
+			],
+			"url": "https://frontmatter.codes/frontmatter.schema.json"
+		}
+	],
 	"liquid.config.method": "workspace",
 	"liquid.engine": "jekyll",
 	"rubyLsp.formatter": "rubocop",
