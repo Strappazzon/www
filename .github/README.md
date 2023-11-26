@@ -35,7 +35,7 @@ The website theme is based on [Person of Interest Web UI](https://github.com/Phr
 
 [Bootstrap Grid](https://getbootstrap.com/docs/5.3/layout/grid/) by The Bootstrap Authors ([MIT License](https://github.com/twbs/bootstrap/blob/main/LICENSE)).
 
-[Gardevoir](https://github.com/krshoss/gardevoir) CSS Reset by Krish Gupta ([MIT License](https://github.com/krshoss/gardevoir/blob/main/LICENSE)).
+[Gardevoir](https://github.com/xkrishguptaa/reseter.css) CSS Reset by Krish Gupta ([MIT License](https://github.com/xkrishguptaa/reseter.css/blob/main/LICENSE)).
 
 [Acens](https://www.dafont.com/acens.font) font by Jack Coulthard.
 
