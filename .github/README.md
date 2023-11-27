@@ -45,6 +45,4 @@ Background images from [Person of Interest Web UI](https://github.com/Phreshhh/p
 
 Icons from [Person of Interest wiki](https://personofinterest.fandom.com/wiki/Person_of_Interest_Wiki) and [SVG Repo](https://www.svgrepo.com/), then edited.
 
-Favicons by [RealFaviconGenerator](https://realfavicongenerator.net/).
-
 By contributing to this repository, you agree that the content you contribute may be provided under the terms of the [MIT License](https://github.com/Strappazzon/www/blob/-/LICENSE-CODE.txt).

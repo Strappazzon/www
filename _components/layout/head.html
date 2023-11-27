@@ -18,12 +18,6 @@
 	<meta name="generator" content="Jekyll v{{ jekyll.version }}">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="theme-color" content="#ba0000">
-	<meta name="msapplication-TileColor" content="#ba0000">
-	{% if page.layout == "blog" %}
-		<meta name="application-name" content="{{ site.title_blog }}">
-	{% else %}
-		<meta name="application-name" content="{{ site.title }}">
-	{% endif %}
 	{%- comment -%} Open Graph Data {%- endcomment -%}
 	{% if page.layout == "blog" %}
 		<meta property="og:title" content="{{ page.title }} | {{ site.title_blog }}">
@@ -75,16 +69,12 @@
 	{% endif %}
 	{%- comment -%} Link Relationships {%- endcomment -%}
 	<link rel="canonical" href="{{ site.url }}{{ page.url | replace: 'index.html',''}}">
-	<link rel="manifest" href="/manifest.json">
 	<link rel="alternate" type="application/atom+xml" href="/feed.xml" title="{{ site.title_blog }} Feed">
 	<link rel="me" href="https://twitter.com/0xStrappazzon">
 	{%- comment -%} Favicons {%- endcomment -%}
-	<link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicons/favicon-16x16.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicons/favicon-32x32.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="/static/img/favicons/apple-touch-icon.png">
-	<link rel="mask-icon" color="#cb0000" href="/static/img/favicons/safari-pinned-tab.svg">
-	<link rel="shortcut icon" href="/static/img/favicons/favicon.ico">
-	<meta name="msapplication-config" content="/static/img/favicons/browserconfig.xml">
+	<link rel="icon" href="/favicon.ico" sizes="48x48">
+	<link rel="icon" type="image/svg+xml" href="/static/img/favicons/favicon.svg" sizes="any">
+	<link rel="apple-touch-icon" href="/static/img/favicons/favicon-180.png">
 	{%- comment -%} Stylesheets {%- endcomment -%}
 	<link rel="stylesheet" href="/static/css/vendors.css?{{ site.time | date: '%s%N' }}">
 	<link rel="stylesheet" href="/static/css/common.css?{{ site.time | date: '%s%N' }}">

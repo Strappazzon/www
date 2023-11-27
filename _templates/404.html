@@ -10,7 +10,9 @@
 		{%- comment -%} Link Relationships {%- endcomment -%}
 		<link rel="canonical" href="{{ site.url }}{{ page.url | replace: '.html',''}}">
 		{%- comment -%} Favicons {%- endcomment -%}
-		<link rel="icon" type="image/png" sizes="24x24" href="/static/img/favicons/404.png">
+		<link rel="icon" href="/favicon.ico" sizes="48x48">
+		<link rel="icon" type="image/svg+xml" href="/static/img/favicons/favicon.svg" sizes="any">
+		<link rel="apple-touch-icon" href="/static/img/favicons/favicon-180.png">
 		{%- comment -%} Stylesheets {%- endcomment -%}
 		<link rel="stylesheet" href="/static/css/vendors.css?{{ site.time | date: '%s%N' }}">
 		<link rel="stylesheet" href="/static/css/{{ page.layout }}.css?{{ site.time | date: '%s%N' }}">
