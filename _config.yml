@@ -46,6 +46,8 @@ kramdown:
   footnote_backlink: "&#10550;"
   html_to_native: true
   input: GFM
+  # Disable smart quotes
+  smart_quotes: "apos,apos,quot,quot"
   syntax_highlighter: rouge
   # See: https://rouge-ruby.github.io/docs/#configuration
   syntax_highlighter_opts: {}
