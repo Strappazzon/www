@@ -4,7 +4,7 @@
 #   <mark>
 #   <kbd>
 #
-# Inspired by Mark PyMdown extension:
+# Inspired by PyMdown extension:
 #   https://facelessuser.github.io/pymdown-extensions/extensions/caret/
 #   https://facelessuser.github.io/pymdown-extensions/extensions/mark/
 #   https://facelessuser.github.io/pymdown-extensions/extensions/keys/

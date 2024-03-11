@@ -42,7 +42,7 @@ module Jekyll
         prefix  = "#{config['prefix']}-" unless !config['prefix'] || config['prefix'].empty?
         anchor  = Nokogiri::HTML(content).text.gsub(/[^\w\d]/i, '-').downcase
 
-        # Styles inside base/_base.scss
+        # See: _sass/base/_base.scss
         return %W[
           <div class="container__heading anchorable">
           <h#{level} id="#{prefix}#{anchor}">#{content}</h#{level}>
