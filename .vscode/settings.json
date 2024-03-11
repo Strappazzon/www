@@ -67,24 +67,31 @@
 	},
 	"editor.detectIndentation": false,
 	"editor.rulers": [],
+	"explorer.fileNesting.enabled": true,
+	"explorer.fileNesting.patterns": {
+		".stylelintrc.yml": ".stylelintignore,.stylelintcache",
+		"Gemfile": "Gemfile.lock",
+		"package.json": "package-lock.json"
+	},
 	"files.associations": {
 		"**/.cloudflare/_*": "plaintext",
 		"**/.vscode/*.code-snippets": "json",
 		"*.html": "liquid"
 	},
 	"files.exclude": {
-		"**/debug.log": true,
 		".bundle": true,
 		".frontmatter": true,
 		".jekyll-cache": true,
-		".stylelintcache": true,
 		"*.swp": true,
-		"Gemfile.lock": true,
 		"_site*": true,
-		"node_modules": true,
-		"package-lock.json": true
+		"node_modules": true
 	},
 	"files.insertFinalNewline": true,
+	"files.readonlyInclude": {
+		"**/.stylelintcache": true,
+		"**/Gemfile.lock": true,
+		"**/package-lock.json": true
+	},
 	"files.trimFinalNewlines": true,
 	"files.trimTrailingWhitespace": true,
 	"json.schemas": [
