@@ -43,3 +43,9 @@ Style/RedundantRegexpArgument:
 # Allow redundant return
 Style/RedundantReturn:
   Enabled: false
+
+# Use slashes around regexp strings
+Style/RegexpLiteral:
+  Enabled: true
+  AllowInnerSlashes: true
+  EnforcedStyle: slashes
