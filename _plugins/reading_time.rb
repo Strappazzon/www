@@ -3,6 +3,7 @@
 #
 # This plugin contains work from:
 #   https://gist.github.com/zachleat/5792681
+#   https://gist.github.com/tohuw/cbcc8653321b9a3fb230
 #   https://github.com/risan/jekyll-reading-time/blob/master/reading_time_filter.rb
 #
 # USAGE
@@ -11,48 +12,44 @@
 #
 # CONFIG
 #   reading_time:
-#     return_float: false
 #     words_per_minute: 180
 #
 
+require 'nokogiri'
+
 module Jekyll
   module ReadingTimeFilter
-    VERSION = '1.0.0'.freeze
+    VERSION = '2.0.0'.freeze
     # Words per minute
     WPM     = 180
 
+    def initialize(context)
+      @context = context
+      @config  = @context.registers[:site].config['reading_time'] || {}
+    end
+
     # Outputs reading time in minutes
     def reading_time(input)
-      # Load configuration
-      config = @context.registers[:site].config['reading_time']
+      words_per_minute = (@config['words_per_minute'].to_i unless @config['words_per_minute'].nil? || @config['words_per_minute'].zero?) || WPM
+      words            = Nokogiri::HTML5.fragment(strip_pre_tags(input)).text.split.size
+      rtime            = (words / words_per_minute).floor
 
-      if config
-        # Whether to return an integer or float
-        # Default: Int
-        return_float     = config['precise_result'] || false
-        words_per_minute = config['words_per_minute'] || WPM
-      else
-        return_float = false
-        words_per_minute = WPM
-      end
-
-      words = input.split.size
-      time = return_float ? (words.to_f / words_per_minute) : (words / words_per_minute)
-
-      return time.round(1)
+      return rtime
     end
 
     # Outputs reading time in seconds
     def reading_time_in_s(input)
-      # Load configuration
-      config = @context.registers[:site].config['reading_time']
+      words_per_minute = (@config['words_per_minute'].to_i unless @config['words_per_minute'].nil? || @config['words_per_minute'].zero?) || WPM
+      words            = Nokogiri::HTML5.fragment(strip_pre_tags(input)).text.split.size
+      rtime            = (words / words_per_minute).floor
 
-      words_per_minute = config ? config['words_per_minute'] || WPM : WPM
+      return (rtime * 60)
+    end
 
-      words = input.split.size
-      time = (words.to_f / words_per_minute)
+    private
 
-      return (time * 60).round
+    def strip_pre_tags(input)
+      return input.to_s.gsub(/<pre(?:(?!<\/pre).|\s)*<\/pre>/im, '')
     end
   end
 end
