@@ -65,6 +65,148 @@ Press <kbd>CTRL</kbd>+<kbd>C</kbd> to stop the web server.
 
 ## Code style and Conventions
 
+### Liquid
+
+Website components and some pages are written in the Jekyll [Liquid](https://shopify.github.io/liquid/basics/variations/#jekyll) templating language.
+
+#### Syntax
+
+- Indent using tabs, except when aligning parameters inside tags (see [Tags](#tags)).
+- Use "double quotation marks" except when a filter or expression is inside an HTML attribute.
+
+<!-- markdownlint-disable MD010 -->
+
+```liquid
+{% comment %} bad {% endcomment %}
+<head>
+	<meta property="og:url" content='{{ site.url }}{{ page.url | replace: "index.html",""}}'>
+</head>
+
+{% comment %} good {% endcomment %}
+<head>
+	<meta property="og:url" content="{{ site.url }}{{ page.url | replace: 'index.html',''}}">
+</head>
+```
+
+<!-- markdownlint-enable MD010 -->
+
+#### Comments
+
+Indent multiline comments.
+
+<!-- markdownlint-disable MD010 -->
+
+```liquid
+{% comment %}
+bad
+  this comment block is not indented correctly.
+{% endcomment %}
+
+{% comment %}
+	good
+	this comment block is indented correctly.
+{% endcomment %}
+
+{% comment %} No need to indent brief comments. {% endcomment %}
+```
+
+<!-- markdownlint-enable MD010 -->
+
+#### Filters
+
+- Do not wrap filters.
+- Put a space before the filter value.
+
+<!-- markdownlint-disable MD010 -->
+
+```liquid
+{% comment %} Bad {% endcomment %}
+{{ object.prop
+  | downcase
+  | prepend:"value"
+}}
+
+{% comment %} Good {% endcomment %}
+{{ object.prop | downcase | prepend: "value" }}
+```
+
+<!-- markdownlint-enable MD010 -->
+
+#### Tags
+
+- Indent `{% include %}` tag parameters.
+- Align equal signs using spaces and put a space before the parameter value.
+- Don't separate parameters with commas.
+- Put the last delimiter on a new line.
+
+<!-- markdownlint-disable MD010 -->
+
+```liquid
+{% comment %} bad {% endcomment %}
+{% include component.html
+  title = 'Example',
+  description = 'This is an example.',
+  value = 513 %}
+
+{% comment %} good {% endcomment %}
+{% include component.html
+	title       = "Example"
+	description = "This is an example."
+	value       = 513
+%}
+```
+
+<!-- markdownlint-enable MD010 -->
+
+- When an `{% include %}` tag has only one parameter:
+  - write it in one line.
+  - don't put a space between the equal sign.
+
+<!-- markdownlint-disable MD010 -->
+
+```liquid
+{% comment %} bad {% endcomment %}
+{% include component.html
+	param = "example"
+%}
+
+{% comment %} good {% endcomment %}
+{% include component.html param="example" %}
+```
+
+<!-- markdownlint-enable MD010 -->
+
+- Indent tokens inside `{% case %}` tags.
+
+<!-- markdownlint-disable MD010 -->
+
+```liquid
+{% comment %} bad {% endcomment %}
+{% case object.prop %}
+{% when "2J7202" %}
+	<span>Bad Code.</span>
+{% else %}
+	<span>...</span>
+{% endcase %}
+
+{% comment %} good {% endcomment %}
+{% case object.prop %}
+	{% when "2J6211" %}
+		<span>Super.</span>
+	{% else %}
+		<span>...</span>
+{% endcase %}
+```
+
+<!-- markdownlint-enable MD010 -->
+
+### Markdown
+
+Documentation is written in [GitHub Flavored Markdown](https://docs.github.com/en/get-started/writing-on-github).  
+Some website pages are written in [GitHub Flavored Markdown](https://docs.github.com/en/get-started/writing-on-github) and rendered by [kramdown](https://kramdown.gettalong.org/).
+
+In both cases, [markdownlint](https://github.com/DavidAnson/markdownlint) is used to enforce style rules for Markdown files.
+
 ### Ruby
 
 Website plugins are written in Ruby. [Rubocop](https://docs.rubocop.org/) is used to enforce code style rules for Ruby files.  
