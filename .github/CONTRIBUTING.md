@@ -180,9 +180,10 @@ For more information on the SCSS file structure, see [The 7-1 Pattern](https://s
 ├── .well-known            # RFC 8615 URIs
 ├── bin                    # Scripts
 ├── static                 # Website static files
+│   └── psd                # PSD files of images, these are not published
 ├── _config.yml            # Jekyll configuration
 ├── .nvmrc                 # Version of Node.js Node Version Manager should use
+├── feed.xml               # Atom feed
 ├── frontmatter.json       # VS Code eliostruyf.vscode-front-matter configiguration
-├── manifest.json          # PWA manifest
 └── SUPPORT.md             # Support resources
 ```
