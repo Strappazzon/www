@@ -1,0 +1,9 @@
+.admonition {
+  &.warning {
+    .title {
+      color: var(--text-color--yellow);
+      // NOTE: Hardcoded color
+      text-shadow: 1px 1px 6px rgba(238, 233, 60, 0.8);
+    }
+  }
+}

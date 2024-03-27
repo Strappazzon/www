@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" data-theme="poi">
 	{% include layout/head.html %}
 	<body itemscope="" itemtype="http://schema.org/WebPage">
 		<div class="bg-layer__main"></div>
-		<a class="sr-skip" href="#main">Skip to main content</a>
-		<button type="button" id="su">Top</button>
+		<a class="sr-skip" href="#main">SKIP TO MAIN CONTENT</a>
 		{% include layout/header.html %}
-		<div id="top"></div>
 		<div class="container" role="main">
-			<main id="main" itemscope="" itemprop="mainContentOfPage">
+			<main id="main" tabindex="-1" itemprop="mainContentOfPage" itemscope="">
 				{{ content }}
 			</main>
 		</div>

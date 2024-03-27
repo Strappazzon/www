@@ -1,4 +1,17 @@
 ---
 ---
 
-@import "_pages";
+@import 'abstracts/_variables';
+@import 'abstracts/_functions';
+@import 'abstracts/_mixins';
+@import 'abstracts/_placeholders';
+
+@import 'components/_index';
+@import 'components/cards/_index';
+@import 'components/cards/_machine';
+@import 'components/cards/_samaritan';
+@import 'components/_terminal';
+
+@import 'themes/_terminal';
+
+@import 'pages/_pages';

@@ -1,0 +1,38 @@
+[data-theme='poi'],
+[data-theme='samaritan'] {
+  --scrollbar-bg-color : rgba(141, 141, 141, 1);
+  --scrollbar-color    : rgba(59, 59, 59, 1);
+}
+
+[data-theme='poi'] {
+  --bg-color              : rgba(0, 0, 0, 1);
+  --bg-color--clear       : rgba(0, 0, 0, 0.8);
+  --bg-color--clearer     : rgba(0, 0, 0, 0.6);
+  --bg-color--clearest    : rgba(0, 0, 0, 0.4);
+  --bg-color--light       : rgba(46, 46, 46, 0.8);
+  --bg-color--lighter     : rgba(96, 96, 96, 0.7);
+  --bg-color--lightest    : rgba(211, 211, 211, 1);
+  --border-color--dark    : rgba(128, 128, 128, 1);
+  --brand-color           : rgba(255, 0, 0, 1);
+  --brand-color--clear    : rgba(142, 0, 0, 0.4);
+  --brand-color--dark     : rgba(182, 0, 0, 1);
+  --brand-color--shadow   : rgba(255, 0, 0, 0.8);
+  --table-bg-color--even  : rgba(29, 31, 33, 1);
+  --table-bg-color--odd   : rgba(17, 18, 20, 1);
+  --text-color            : rgba(255, 255, 255, 1);
+  --text-color--link      : rgba(204, 204, 204, 1);
+  --text-color--red       : rgba(235, 28, 36, 1);
+  --text-color--secondary : rgba(221, 221, 221, 1);
+  --text-color--shadow    : rgba(255, 255, 255, 0.8);
+  --text-color--yellow    : rgba(238, 233, 60, 1);
+}
+
+[data-theme='samaritan'] {
+  --bg-color   : rgba(255, 255, 255, 1);
+  --text-color : rgba(0, 0, 0, 1);
+
+  @include color-scheme(dark) {
+    --bg-color   : rgba(24, 24, 24, 1);
+    --text-color : rgba(238, 238, 238, 1);
+  }
+}

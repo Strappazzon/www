@@ -1,0 +1,219 @@
+::-webkit-scrollbar {
+  width: auto;
+  &-corner {
+    background-color: var(--scrollbar-bg-color);
+  }
+  // Bar
+  &-thumb {
+    background-color: var(--scrollbar-color);
+  }
+  // Background
+  &-track {
+    background-color: var(--scrollbar-bg-color);
+  }
+}
+
+html {
+  font-family: $font-stack-text;
+  font-size: $font-size-base;
+  @include respond-to('small') {
+    font-size: $font-size-small;
+  }
+}
+
+body {
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+h1 {
+  @extend %h1;
+}
+
+h2 {
+  @extend %h2;
+}
+
+h3 {
+  @extend %h3;
+}
+
+h4 {
+  @extend %h4;
+}
+
+a {
+  color: inherit;
+  text-decoration: underline;
+  @include hocus {
+    color: var(--text-color--link);
+    text-decoration: none;
+  }
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+// Add hand cursor to interactive elements
+[type='button'],
+[type='checkbox'],
+[type='image'],
+[type='radio'],
+[type='reset'],
+[type='submit'],
+button,
+kbd,
+summary {
+  cursor: pointer;
+}
+
+address {
+  // display: inline-block;
+  font-style: normal;
+}
+
+hr {
+  margin: 1rem 0;
+  border: 0;
+  border-top: px2rem(1px) solid var(--brand-color);
+  box-shadow: 0 0 15px var(--brand-color--shadow);
+}
+
+// Skip to content
+.sr-skip {
+  position: absolute;
+  left: calc(50% - calc(px2rem(200px) / 2));
+  z-index: z('button-sr');
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  width: px2rem(200px);
+  padding: px2rem(8px);
+  color: var(--text-color);
+  background-color: var(--bg-color--clearer);
+  transition: transform 0.5s;
+  transform: translateY(-100%);
+  &:focus,
+  &:active {
+    transform: translateY(0%);
+  }
+}
+
+// Page background
+.bg {
+  &-layer {
+    // Common
+    &__main,
+    &__1,
+    &__2 {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: z('background');
+      width: 100%;
+      height: 100%;
+    }
+    // Homepage
+    &__main {
+      background-image: url('#{$base-url}img/bg_poi.jpg');
+      background-image: image-set(url('#{$base-url}img/bg_poi.webp') 1x);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      opacity: 0.3;
+    }
+    // Pages & Blog
+    &__1 {
+      background-image: url('#{$base-url}img/bg_machine.png');
+      background-image: image-set(url('#{$base-url}img/bg_machine.webp') 1x);
+      background-repeat: repeat-y;
+      background-position: center;
+      background-size: cover;
+      opacity: 0.9;
+      transform: rotateX(180deg);
+    }
+    &__2 {
+      background-image: url('#{$base-url}img/lensgrid.png');
+      background-repeat: repeat;
+      background-size: 100% auto;
+    }
+  }
+}
+
+.container {
+  // Page title
+  &__title {
+    display: flex;
+    flex-flow: row wrap;
+    place-content: center space-between;
+    align-items: center;
+    @for $i from 1 through 4 {
+      h#{$i} {
+        margin: 0;
+      }
+    }
+    h1 {
+      margin-right: 1rem;
+    }
+    h2 {
+      @extend %h4;
+    }
+  }
+  // anchors.rb plugin
+  // https://amberwilson.co.uk/blog/are-your-anchor-links-accessible/
+  &__heading {
+    &.anchorable {
+      position: relative;
+      @for $i from 1 through 4 {
+        h#{$i} {
+          display: inline;
+          // <header> height + #top margin-bottom
+          scroll-margin-top: calc(px2rem($font-size-small * 2.5) + 1.5rem);
+          & ~ .anchor {
+            font-size: h($i);
+          }
+        }
+      }
+      .anchor {
+        position: absolute;
+        top: 0;
+        left: -1rem;
+        text-decoration: none;
+        opacity: 0;
+        scroll-margin: 2rem;
+        @include hocus {
+          opacity: 1;
+        }
+        // @include respond-to('small') { display: none; }
+      }
+    }
+  }
+}
+
+// Email protection
+.ep {
+  // stylelint-disable-next-line declaration-no-important
+  text-transform: lowercase !important;
+  word-break: keep-all;
+  &::before {
+    content: attr(data-domain) '\0040' attr(data-user);
+    unicode-bidi: bidi-override;
+    direction: rtl;
+  }
+}
+
+// Visually hide content
+// https://github.com/twbs/bootstrap/blob/-/scss/mixins/_visually-hidden.scss
+// stylelint-disable declaration-no-important, unit-disallowed-list
+.visually-hidden:not(:focus, :active) {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+// stylelint-enable declaration-no-important, unit-disallowed-list

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="samaritan">
+	<head>
+		{%- comment -%} Meta Data {%- endcomment -%}
+		<meta charset="utf-8">
+		<title>{{ page.title }}</title>
+		<meta name="description" content="{{ page.description }}">
+		<meta name="robots" content="noindex">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		{%- comment -%} Link Relationships {%- endcomment -%}
+		<link rel="canonical" href="{{ site.url }}{{ page.url | replace: '.html',''}}">
+		{%- comment -%} Favicons {%- endcomment -%}
+		<link rel="icon" href="/favicon.ico" sizes="48x48">
+		<link rel="icon" type="image/svg+xml" href="/static/img/favicons/favicon.svg" sizes="any">
+		<link rel="apple-touch-icon" href="/static/img/favicons/favicon-180.png">
+		{%- comment -%} Stylesheets {%- endcomment -%}
+		<link rel="stylesheet" href="/static/css/vendors.css?{{ site.time | date: '%s%N' }}">
+		<link rel="stylesheet" href="/static/css/{{ page.layout }}.css?{{ site.time | date: '%s%N' }}">
+		{%- comment -%} Scripts {%- endcomment -%}
+		<script async src="/static/js/typewriter.js"></script>
+	</head>
+	<body>
+		<main>
+			{% assign error = content | strip_html | rstrip | upcase %}
+			<a id="typewriter" href="/" hidden="true" data-text="{{ error }}" aria-label="Go to the Homepage"></a>
+			<noscript>
+				<a href="/" aria-label="Go to the Homepage">{{ error }}</a>
+			</noscript>
+			<br>
+			<img src="/static/img/triangle.png" alt="" draggable="false">
+		</main>
+	</body>
+</html>

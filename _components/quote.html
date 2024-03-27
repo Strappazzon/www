@@ -1,33 +1,27 @@
-{%- comment -%}
-  EXAMPLE USAGE
-
-  {% include quote.html
-    quote="Quote goes here"
-    url="https://example.com/#source-url"
-    cite="Source for the information quoted"
-  %}
-  {% include quote.html
-    quote="Quote goes here"
-    url="https://example.com/#source-url"
-  %}
-  {% include quote.html
-    quote="Quote goes here"
-  %}
-{%- endcomment -%}
+{% comment %}
+	{% include quote.html
+		quote = "Quote goes here."
+		cite  = "Source for the information quoted."
+		url   = "https://example.com/#source-url"
+	%}
+	{% include quote.html
+		quote = "Quote goes here."
+	%}
+	{% include quote.html
+		quote = "Multiline quote
+		goes here."
+	%}
+{% endcomment %}
 
 {%- if include.cite and include.url -%}
-	<figure>
-		<blockquote cite="{{ include.url }}">
-			<p>
-				{{ include.quote }}
-			</p>
-		</blockquote>
-		<figcaption>-<cite>{{ include.cite }}</cite></figcaption>
-	</figure>
+	<blockquote cite="{{ include.url }}">
+		<p>{{ include.quote | newline_to_br }}</p>
+		<footer>
+			-<cite>{{ include.cite }}</cite>
+		</footer>
+	</blockquote>
 {%- else -%}
-	<blockquote {%- if include.url -%}cite="{{ include.url }}"{%- endif -%}>
-		<p>
-			{{ include.quote }}
-		</p>
+	<blockquote>
+		<p>{{ include.quote | newline_to_br }}</p>
 	</blockquote>
 {%- endif -%}

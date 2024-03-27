@@ -1,4 +1,14 @@
 ---
 ---
 
-@import "_404";
+@import 'abstracts/_variables';
+@import 'abstracts/_functions';
+@import 'abstracts/_mixins';
+@import 'abstracts/_placeholders';
+@import 'abstracts/_colors';
+
+@import 'base/_animations';
+@import 'base/_typography';
+@import 'base/_base';
+
+@import 'pages/_404';

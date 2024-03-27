@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "Stylelint $(npx stylelint -v)"
+npx stylelint "_sass" --cache --cache-strategy "content" --quiet-deprecation-warnings "$@"
+
+success=$?
+if ((success != 0)); then
+  echo -e "\nRun \"scss_fmt --fix\" to automatically fix errors."
+fi
+
+exit $success
