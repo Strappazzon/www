@@ -51,6 +51,7 @@
         text-shadow: 0 0 2px var(--brand-color--shadow);
       }
     }
+    // These elements are in the HTML but are not styled
     // .summary {}
     // .links {}
     div:not(.status) {

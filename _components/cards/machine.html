@@ -1,6 +1,10 @@
 <div class="col-md-6">
 	<div class="card__machine">
 		{% case include.status %}
+		{% comment %}
+			When DISCONTINUED or FEATURE-COMPLETE
+			See: _data/projects.yml
+		{% endcomment %}
 			{% when 0, 2 %}
 				<div class="title inactive">
 					<span class="dot inactive" aria-hidden="true"></span>
