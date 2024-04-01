@@ -9,6 +9,10 @@ pagination:
   enabled: true
 ---
 
+{% if paginator.posts.size >= 2 %}
+	Posts are listed in reverse chronological order.
+{% endif %}
+
 {% for p in paginator.posts %}
 	{% comment %}
 		https://stackoverflow.com/a/47588008
