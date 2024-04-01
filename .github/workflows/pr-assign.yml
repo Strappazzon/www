@@ -14,6 +14,6 @@ jobs:
       pull-requests: write
     runs-on: ubuntu-latest
     steps:
-      - uses: toshimaru/auto-author-assign@v1.6.2
+      - uses: toshimaru/auto-author-assign@v2.1.0
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}

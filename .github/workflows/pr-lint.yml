@@ -16,17 +16,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3.3.0
+        uses: actions/checkout@v4.1.1
 
       - name: Setup Ruby
         env:
           BUNDLE_SPECIFIC_PLATFORM: 1
-        uses: ruby/setup-ruby@v1.134.0
+        uses: ruby/setup-ruby@v1.173.0
         with:
           bundler-cache: true
 
       - name: Run RuboCop
-        uses: reviewdog/action-rubocop@v2.5.0
+        uses: reviewdog/action-rubocop@v2.9.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           use_bundler: true
@@ -43,19 +43,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3.3.0
+        uses: actions/checkout@v4.1.1
 
       - name: Setup NodeJS
-        uses: actions/setup-node@v4.0.0
+        uses: actions/setup-node@v4.0.2
         with:
           cache: npm
           node-version-file: ".nvmrc"
 
       - name: Setup Stylelint
         run: |
-          npm install --save-dev stylelint@15.x
-          npm install --save-dev stylelint-config-recess-order@4.x
-          npm install --save-dev stylelint-config-standard-scss@11.x
+          npm install --save-dev stylelint@16.x
+          npm install --save-dev stylelint-config-recess-order@5.x
+          npm install --save-dev stylelint-config-standard-scss@13.x
+          npm install --save-dev stylelint-plugin-defensive-css@1.x
 
       - name: Run Stylelint
         shell: bash
