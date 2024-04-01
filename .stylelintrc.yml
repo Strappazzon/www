@@ -4,7 +4,7 @@ extends:
 
 plugins:
   # TODO: stylelint-a11y
-  # https://github.com/stylelint/stylelint/issues/6212#issuecomment-1705744761
+  #   https://github.com/stylelint/stylelint/issues/6212#issuecomment-1705744761
   - stylelint-plugin-defensive-css
 
 # Default rules
@@ -37,7 +37,7 @@ rules:
   # Hexadecimal is close to indecipherable for the human mind
   color-no-hex: true
 
-  # TODO and FIXME warnings act as a reminder to address these
+  # "TODO" and "FIXME" warnings act as a reminder to address these
   comment-word-disallowed-list:
     - ["/^TODO:/", "/^FIXME:/"]
     - message: This part of the code should be addressed.
@@ -97,25 +97,8 @@ rules:
     - data
     - ftp
 
-  # [Deprecated] Max line length
-  max-line-length:
-    - 160
-    - severity: warning
-      # Ignore lines that may be inevitably long
-      ignorePattern:
-        # Dollar variables (When declaring a list of font families)
-        - "/^\\s*\\$/"
-        # Unicode range for fonts
-        - "/^\\s*unicode-range/"
-
-  # [Deprecated] Require leading zero for fractional numbers
-  number-leading-zero: always
-
   # Limit the number of decimal places allowed in numbers
   number-max-precision: 3
-
-  # [Deprecated] Disallow trailing zeros in numbers
-  number-no-trailing-zeros: true
 
   # Require an empty line before every rule
   # except after comments or nested rules
@@ -134,9 +117,6 @@ rules:
   selector-disallowed-list:
     - "/h5/"
     - "/h6/"
-
-  # [Deprecated] Quotes around strings
-  string-quotes: single
 
   # Units blacklist, with exceptions
   unit-disallowed-list:
