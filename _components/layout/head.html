@@ -4,7 +4,7 @@
 	{% if page.layout == "blog" %}
 		<title>{{ page.title }} | {{ site.title_blog }}</title>
 	{% else %}
-		<title>{{ page.title }}</title>
+		<title>{{ page.title }} | {{ site.title }}</title>
 	{% endif %}
 	<meta name="description" content="{{ page.description }}">
 	{% if page.layout == "blog" %}
@@ -35,7 +35,7 @@
 		<meta property="og:image:height" content="640">
 		<meta property="og:image:type" content="image/png">
 	{% else %}
-		<meta property="og:title" content="{{ page.title }}">
+		<meta property="og:title" content="{{ page.title }} | {{ site.title }}">
 		<meta property="og:description" content="{{ page.description }}">
 		<meta property="og:site_name" content="{{ site.title }}">
 		<meta property="og:url" content="{{ page.permalink | prepend: site.url }}">
@@ -59,7 +59,7 @@
 		<meta name="twitter:site" content="@0xStrappazzon">
 	{% else %}
 		<meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:title" content="{{ page.title }}">
+		<meta name="twitter:title" content="{{ page.title }} | {{ site.title }}">
 		<meta name="twitter:description" content="{{ page.description }}">
 		<meta name="twitter:image" content="{{ site.url }}/static/img/ogimage.png">
 		<meta name="twitter:image:alt" content="{{ site.title }}">
