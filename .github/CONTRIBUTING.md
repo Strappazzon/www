@@ -243,8 +243,14 @@ To fix any problems that can be fixed automatically, you can use a Stylelint plu
 
 #### Format
 
-Format rules that are not covered by Stylelint.
+Rules that are not covered by Stylelint.
 
+- Put a leading zero for fractional numbers less than 1.
+- Limit the length of a line to 160 characters.
+  - Except dollar variables (*e.g.* list of font families).
+  - Except unicode range in `@font-face` at-rules.
+- Don't use trailing zeroes in numbers.
+- Use single quotes.
 - Use one selector per line in multi-selector rulesets.
 - Include a single space before the opening brace of a ruleset.
 - Use one level of indentation for each declaration.
