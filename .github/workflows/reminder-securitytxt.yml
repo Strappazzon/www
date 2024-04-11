@@ -1,0 +1,27 @@
+name: security.txt Update Reminder
+
+on:
+  schedule:
+    # Yearly, one week before expiry
+    - 0 8 4 4 *
+
+jobs:
+  create_issue:
+    permissions:
+      issues: write
+    name: Create reminder Issue
+    runs-on: ubuntu-latest
+    steps:
+      - name: Create reminder Issue
+        uses: nashmaniac/create-issue-action@v1.2
+        with:
+          title: Update security.txt
+          token: ${{ secrets.GITHUB_TOKEN }}
+          assignees: Strappazzon
+          labels: reminder
+          body: |
+            # Reminder
+
+            Update [security.txt](https://github.com/Strappazzon/www/blob/-/.well-known/security.txt) **before 04/11 @ 06:00 am UTC** to avoid staleness.
+
+            The command to use is `gpg --clear-sign --digest-algo SHA512 security.txt`.
