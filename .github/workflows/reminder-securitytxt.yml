@@ -3,7 +3,7 @@ name: security.txt Update Reminder
 on:
   schedule:
     # Yearly, one week before expiry
-    - 0 8 4 4 *
+    - cron: "0 8 4 4 *"
 
 jobs:
   create_issue:
