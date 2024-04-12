@@ -12,5 +12,8 @@
   description: My Contact Information and Public Keys
   path: /contact/
 
+- name: Donate
+  path: /donate/
+
 - name: Privacy Statement
   path: /privacy/

@@ -1,3 +1,35 @@
+/// LISTS
+/// @link https://www.w3.org/Style/Examples/007/color-bullets.en.html
+ul {
+  list-style-type: none;
+  li {
+    p,
+    &::before {
+      display: inline-block;
+    }
+    &::before {
+      margin-right: 0.5rem;
+      font-weight: 700;
+      color: var(--brand-color--shadow);
+      // Circle
+      content: '\25CF';
+    }
+    p {
+      margin-bottom: 0;
+    }
+    ul {
+      margin-left: 1rem;
+      li {
+        &::before {
+          font-size: 0.625rem;
+          // Right-pointing triangle
+          content: '\25B6';
+        }
+      }
+    }
+  }
+}
+
 // jekyll-paginate-v2 plugin
 .pagination {
   margin: 0;
