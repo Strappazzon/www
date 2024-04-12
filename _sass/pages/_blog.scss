@@ -38,14 +38,21 @@ article {
   ol {
     list-style-type: none;
     li {
+      p,
       input,
       &::before {
         display: inline-block;
+      }
+      input,
+      &::before {
         margin-right: 0.5rem;
       }
       &::before {
         font-weight: 700;
         color: var(--brand-color--shadow);
+      }
+      p {
+        margin-bottom: 0;
       }
     }
   }
@@ -57,10 +64,6 @@ article {
         text-align: right;
         direction: rtl;
         content: counter(li, decimal-leading-zero);
-      }
-      p {
-        display: inline-block;
-        margin-bottom: 0;
       }
     }
   }
