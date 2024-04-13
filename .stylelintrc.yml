@@ -4,7 +4,7 @@ extends:
 
 plugins:
   # TODO: stylelint-a11y
-  #   https://github.com/stylelint/stylelint/issues/6212#issuecomment-1705744761
+  #   https://github.com/developer-stylechain/stylelint-a11y
   - stylelint-plugin-defensive-css
 
 # Default rules
