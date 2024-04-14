@@ -1,108 +1,122 @@
 {
-	"[html]": {
+	"[html][liquid]": {
 		"editor.defaultFormatter": null,
-		"editor.detectIndentation": false,
 		"editor.insertSpaces": false,
 		"editor.tabSize": 4
 	},
-	"[liquid]": {
-		"editor.defaultFormatter": null,
-		"editor.detectIndentation": false,
+	"[javascript]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features",
+		"editor.formatOnPaste": true,
+		"editor.formatOnSave": true,
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2
+	},
+	"[json][jsonc]": {
+		"editor.formatOnPaste": true,
+		"editor.formatOnSave": true,
 		"editor.insertSpaces": false,
 		"editor.tabSize": 4
 	},
 	"[markdown]": {
 		"editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+		"editor.insertSpaces": true,
 		"editor.quickSuggestions": {
 			"comments": "off",
-			"strings": "off",
-			"other": "off"
+			"other": "off",
+			"strings": "off"
 		},
-		"editor.detectIndentation": false,
 		"editor.tabSize": 2,
-		"editor.insertSpaces": true,
 		"files.trimTrailingWhitespace": false
 	},
-	"[plaintext]": {
-		"files.insertFinalNewline": false,
-		"files.trimTrailingWhitespace": false,
-		"editor.detectIndentation": false,
+	"[plaintext][txt]": {
+		"editor.insertSpaces": true,
 		"editor.tabSize": 2,
-		"editor.insertSpaces": true
+		"files.insertFinalNewline": false,
+		"files.trimTrailingWhitespace": false
 	},
 	"[ruby]": {
-		"editor.detectIndentation": false,
-		"editor.tabSize": 2,
+		"editor.defaultFormatter": "Shopify.ruby-lsp",
 		"editor.insertSpaces": true,
+		"editor.rulers": [
+			160
+		],
+		"editor.tabSize": 2,
 		"files.eol": "\n"
 	},
 	"[scss]": {
-		"editor.defaultFormatter": null
+		"editor.codeActionsOnSave": {
+			"source.fixAll": "never",
+			"source.fixAll.stylelint": "always"
+		},
+		"editor.defaultFormatter": "stylelint.vscode-stylelint",
+		"editor.formatOnPaste": true,
+		"editor.formatOnSave": false,
+		"editor.insertSpaces": true,
+		"editor.rulers": [
+			160
+		],
+		"editor.tabSize": 2
 	},
 	"[shellscript]": {
-		"editor.detectIndentation": false,
-		"editor.tabSize": 2,
 		"editor.insertSpaces": true,
+		"editor.tabSize": 2,
 		"files.eol": "\n"
 	},
-	"[txt]": {
-		"files.insertFinalNewline": false,
-		"files.trimTrailingWhitespace": false,
-		"editor.detectIndentation": false,
-		"editor.tabSize": 2,
-		"editor.insertSpaces": true,
-	},
 	"[xml]": {
-		"editor.defaultFormatter": null,
-		"editor.detectIndentation": false,
+		"editor.defaultFormatter": null
+	},
+	"[xml][yaml]": {
 		"editor.insertSpaces": true,
 		"editor.tabSize": 2
 	},
-	"[yaml]": {
-		"editor.detectIndentation": false,
-		"editor.insertSpaces": true,
-		"editor.tabSize": 2
+	"editor.detectIndentation": false,
+	"editor.rulers": [],
+	"explorer.fileNesting.enabled": true,
+	"explorer.fileNesting.patterns": {
+		".stylelintrc.yml": ".stylelintignore,.stylelintcache",
+		"Gemfile": "Gemfile.lock",
+		"package.json": "package-lock.json"
 	},
-
-	"cssrem.autoRemovePrefixZero": false,
-	"cssrem.fixedDigits": 3,
-	"cssrem.rootFontSize": 14,
-
 	"files.associations": {
 		"**/.cloudflare/_*": "plaintext",
-		"*.html": "liquid",
+		"**/.vscode/*.code-snippets": "json",
+		"*.html": "liquid"
 	},
 	"files.exclude": {
 		".bundle": true,
+		".frontmatter": true,
 		".jekyll-cache": true,
+		"*.swp": true,
 		"_site*": true,
-		"vendor/**": true,
-		"**/debug.log": true,
-		"Gemfile.lock": true
+		"node_modules": true
 	},
 	"files.insertFinalNewline": true,
+	"files.readonlyInclude": {
+		"**/.stylelintcache": true,
+		"**/Gemfile.lock": true,
+		"**/package-lock.json": true
+	},
 	"files.trimFinalNewlines": true,
 	"files.trimTrailingWhitespace": true,
-
-	"frontMatter.framework.startCommand": "bundle exec jekyll serve --force_polling --livereload",
-
+	"json.schemas": [
+		{
+			"fileMatch": [
+				"frontmatter.json"
+			],
+			"url": "https://frontmatter.codes/frontmatter.schema.json"
+		}
+	],
+	"liquid.config.method": "workspace",
 	"liquid.engine": "jekyll",
-	"liquid.settings.target": "workspace",
-
-	"markdown.preview.scrollEditorWithPreview": false,
-	"markdownlint.config": {
-		"MD013": false,
-		"MD025": false,
-		"MD026": false,
-		"MD033": false,
-		"MD041": false
-	},
-
+	"markdown.validate.referenceLinks.enabled": "ignore",
+	"rubyLsp.formatter": "rubocop",
+	"scss.validate": false,
+	"svg.preview.background": "transparent",
 	"terminal.integrated.defaultProfile.windows": "WSL",
 	"terminal.integrated.profiles.windows": {
 		"WSL": {
-			"path": "${env:windir}\\system32\\wsl.exe",
-			"icon": "terminal-linux"
+			"icon": "terminal-linux",
+			"path": "${env:windir}\\system32\\wsl.exe"
 		}
 	},
 

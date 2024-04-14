@@ -1,10 +1,14 @@
 **/debug.log
 
-# VSCode
+# VS Code
 .vscode/*
+!.vscode/*.code-snippets
 !.vscode/extensions.json
 !.vscode/launch.json
 !.vscode/settings.json
+
+# VS Code: Front Matter
+/.frontmatter
 
 # Jekyll
 /_site*/
@@ -15,8 +19,14 @@
 /.bundle/
 /vendor/
 
-# Front Matter
-/.frontmatter
+# Node
+/node_modules/
+
+# Stylelint
+.stylelintcache
+
+# Junk files (Linux)
+**/*.swp
 
 # Junk files (Windows)
 **/Thumbs.db

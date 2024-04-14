@@ -2,14 +2,32 @@
 
 bin/branding
 
-if ! command -v ruby >/dev/null; then
-  echo "Ruby is not installed. Cannot proceed."
+if [ -z "$(command -v ruby)" ]; then
+  echo "Ruby is not installed. Cannot proceed." >&2
   exit 1
 fi
 
-if ! command -v bundle >/dev/null; then
+if [ -z "$(command -v bundle)" ]; then
   echo "Bundler is not installed. Installing..."
-  gem install bundler -v "$(grep 'BUNDLED WITH' -A1 Gemfile.lock | tail -n 1)"
+  if [ -f Gemfile.lock ] && grep "BUNDLED WITH" Gemfile.lock >/dev/null; then
+    gem install bundler -v "$(grep 'BUNDLED WITH' -A1 Gemfile.lock | tail -n 1)"
+  fi
 fi
 
-bundle install
+if [ -f Gemfile ]; then
+  bundle install
+fi
+
+if [ -z "$(command -v node)" ]; then
+  echo "Node is not installed. Cannot proceed." >&2
+  exit 1
+fi
+
+if [ -z "$(command -v npm)" ]; then
+  echo "npm command not found. Cannot proceed." >&2
+  exit 1
+fi
+
+if [ -f package.json ]; then
+  npm install
+fi

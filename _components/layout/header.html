@@ -1,8 +1,14 @@
 <header itemscope itemtype="http://schema.org/WPHeader">
 	<div class="logo" role="presentation">
-		<img src="/static/img/favicons/favicon-32x32.png" alt="" draggable="false">
-		<span class="separator" aria-hidden="true">&nbsp;&nbsp;///&nbsp;&nbsp;</span>
-		<span>{{ site.title | upcase}}</span>
+		<img src="/static/img/logo_32.png" alt="" draggable="false">
+		<span class="separator" aria-hidden="true">///</span>
+		<span>
+			{% if page.layout == "blog" %}
+				{{ site.title_blog | upcase }}
+			{% else %}
+				{{ site.title | upcase }}
+			{% endif %}
+		</span>
 	</div>
 	{% if page.url != "/" %}
 		<nav aria-label="Main navigation">
@@ -13,3 +19,4 @@
 		</nav>
 	{% endif %}
 </header>
+<div id="top"></div>

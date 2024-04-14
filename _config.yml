@@ -7,40 +7,70 @@ title: Alberto Strappazzon
 includes_dir: _components
 layouts_dir: _templates
 
+# Excluded files, folders
+exclude:
+  - "**/*.psd"
+  - bin
+  - node_modules
+  - frontmatter.json
+  - Gemfile
+  - LICENSE*
+  - package*.json
+  - SUPPORT.md
+
+# Included files, folders
+include:
+  - .well-known
+
+# Frontmatter
+defaults:
+  - scope:
+      path: pages
+      type: pages
+    values:
+      layout: pages
+  - scope:
+      path: _blog
+      # Collection name
+      type: blog
+    values:
+      layout: blog
+
 # Markdown
 markdown: kramdown
+
+# Kramdown
+# See: https://kramdown.gettalong.org/options.html
 kramdown:
-  input: GFM
-  syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    block:
-      line_numbers: false # May be changed
+  # Arrow Pointing Downwards Then Curving Leftwards
+  footnote_backlink: "&#10550;"
   html_to_native: true
-  #parse_block_html: true
+  input: GFM
+  # Disable smart quotes
+  smart_quotes: "apos,apos,quot,quot"
+  syntax_highlighter: rouge
+  # See: https://rouge-ruby.github.io/docs/#configuration
+  syntax_highlighter_opts: {}
+
+# anchors.rb plugin
+anchors:
+  prefix: section
 
 # CSS
 sass:
   sourcemap: development
   style: compressed
 
-# CSS Autoprefixer
+# jekyll-autoprefixer plugin
 autoprefixer:
   browsers:
     - last 2 versions
+    - not dead
+    - firefox esr
+    - chrome 85
+  exclude:
+    - "**/vendors/*"
   only_production: true
-
-# Excluded files
-exclude:
-  - "**/*.psd"
-  - bin
-  - frontmatter.json
-  - Gemfile
-  - LICENSE.txt
-  - SUPPORT.md
-
-# Included files
-include:
-  - .well-known
 
 # Blog
 title_blog: Strappazzon's Blog
@@ -50,13 +80,15 @@ collections:
     output: true
     permalink: /:collection/:year-:month-:day/:title/
 
-# Blog pagination
+# jekyll-paginate-v2 plugin
 pagination:
-  enabled: true
   collection: blog
-  per_page: 5
-  sort_reverse: true # Explicitly set because https://github.com/sverrirs/jekyll-paginate-v2/issues/230
+  enabled: true
   permalink: /:num/
+  per_page: 5
+  # Explicitly set because
+  # https://github.com/sverrirs/jekyll-paginate-v2/issues/230
+  sort_reverse: true
   title: :title
 autopages:
   # Disabled because

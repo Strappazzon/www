@@ -1,0 +1,99 @@
+.terminal {
+  --border-color           : rgba(34, 34, 34, 1);
+  --button-color--close    : rgba(255, 93, 80, 0.66);
+  --button-color--minimize : rgba(27, 201, 60, 0.66);
+  --button-color--maximize : rgba(254, 190, 0, 0.66);
+  --button-color--shadow   : rgba(134, 134, 134, 0.5);
+  --gradient-color--from   : rgba(34, 34, 34, 0.85);
+  --gradient-color--to     : rgba(0, 0, 0, 0.5);
+
+  /* TERMINAL THEMES
+   ----------------------------------------- */
+
+  // iTerm2 Tango Dark
+  &[data-theme='iterm2-tango-dark'] {
+    --cursor-color    : rgba(255, 255, 255, 1);
+    --bg-color        : rgba(0, 0, 0, 1);
+    --selection-color : rgba(193, 222, 255, 1);
+    --text-color      : rgba(255, 255, 255, 1);
+    --black           : rgba(0, 0, 0, 1);
+    --blue            : rgba(66, 122, 179, 1);
+    --cyan            : rgba(0, 167, 170, 1);
+    --green           : rgba(94, 167, 2, 1);
+    --purple          : rgba(137, 101, 142, 1);
+    --red             : rgba(216, 30, 0, 1);
+    --yellow          : rgba(207, 174, 0, 1);
+    --white           : rgba(219, 222, 216, 1);
+    --black--bright   : rgba(104, 106, 102, 1);
+    --blue--bright    : rgba(132, 176, 216, 1);
+    --cyan--bright    : rgba(55, 230, 232, 1);
+    --green--bright   : rgba(153, 227, 67, 1);
+    --purple--bright  : rgba(188, 148, 183, 1);
+    --red--bright     : rgba(245, 66, 53, 1);
+    --yellow--bright  : rgba(253, 235, 97, 1);
+    --white--bright   : rgba(241, 241, 240, 1);
+  }
+
+  /* TERMINAL THEMES, END OF
+   ----------------------------------------- */
+
+  &__content {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+    ::selection {
+      color: var(--black);
+      background-color: var(--selection-color);
+    }
+    .cursor {
+      color: var(--cursor-color);
+    }
+    .black {
+      color: var(--black);
+      &-bright {
+        color: var(--black--bright);
+      }
+    }
+    .blue {
+      color: var(--blue);
+      &-bright {
+        color: var(--blue--bright);
+      }
+    }
+    .cyan {
+      color: var(--cyan);
+      &-bright {
+        color: var(--cyan--bright);
+      }
+    }
+    .green {
+      color: var(--green);
+      &-bright {
+        color: var(--green--bright);
+      }
+    }
+    .purple {
+      color: var(--purple);
+      &-bright {
+        color: var(--purple--bright);
+      }
+    }
+    .red {
+      color: var(--red);
+      &-bright {
+        color: var(--red--bright);
+      }
+    }
+    .yellow {
+      color: var(--yellow);
+      &-bright {
+        color: var(--yellow--bright);
+      }
+    }
+    .white {
+      color: var(--white);
+      &-bright {
+        color: var(--white--bright);
+      }
+    }
+  }
+}

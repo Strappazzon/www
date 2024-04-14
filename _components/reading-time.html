@@ -1,0 +1,15 @@
+{% comment %} reading_time.rb plugin {% endcomment %}
+
+<div class="read-time">
+	<span>
+		Reading time:
+		{% assign rt = page.content | reading_time %}
+		{% if rt <= 0 %}
+			Less than a minute.
+		{% elsif rt==1 %}
+			{{ rt }} minute.
+		{% else %}
+			{{ rt }} minutes.
+		{% endif %}
+	</span>
+</div>

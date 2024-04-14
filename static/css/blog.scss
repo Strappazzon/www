@@ -1,6 +1,16 @@
 ---
 ---
 
-@import "_pages";
-@import "_blog";
-@import "_syntax";
+@import 'abstracts/_variables';
+@import 'abstracts/_functions';
+@import 'abstracts/_mixins';
+@import 'abstracts/_placeholders';
+
+@import 'components/admonitions/_index';
+@import 'components/admonitions/_danger';
+@import 'components/admonitions/_info';
+@import 'components/admonitions/_warning';
+
+@import 'themes/_syntax';
+
+@import 'pages/_blog';

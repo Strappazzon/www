@@ -1,0 +1,19 @@
+# Navigation data
+
+- name: Blog
+  path: /blog/
+  hide: true
+
+- name: Projects
+  description: My Open-Source Projects
+  path: /projects/
+
+- name: Contact Info and Public Keys
+  description: My Contact Information and Public Keys
+  path: /contact/
+
+- name: Donate
+  path: /donate/
+
+- name: Privacy Statement
+  path: /privacy/

@@ -1,4 +1,6 @@
 ---
+# Layout explicitly set because of paginator
+# https://github.com/sverrirs/jekyll-paginate-v2/blob/-/README-GENERATOR.md#page-configuration
 layout: pages
 title: "Blog Posts | Strappazzon's Blog"
 description: "List of all my blog posts"
@@ -7,29 +9,33 @@ pagination:
   enabled: true
 ---
 
+{% if paginator.posts.size >= 2 %}
+	Posts are listed in reverse chronological order.
+{% endif %}
+
 {% for p in paginator.posts %}
 	{% comment %}
 		https://stackoverflow.com/a/47588008
 		https://cloud.google.com/looker/docs/best-practices/how-to-use-liquid-to-format-dates
 	{% endcomment %}
-	{% assign formatted_date = p.date | date: '%B %e %Y' %}
+	{% assign formatted_date = p.date | date: "%B %e %Y" %}
 	{% assign short_desc = p.description | truncatewords: 20 %}
 
 	{% include cards/machine-alt.html
-		date=formatted_date
-		title=p.title
-		description=short_desc
-		url=p.url
+		date        = formatted_date
+		title       = p.title
+		description = short_desc
+		url         = p.url
 	%}
 {% endfor %}
 
 {% if paginator.total_pages > 1 %}
 	<nav class="pagination" aria-label="Blog posts navigation">
 		{% if paginator.next_page %}
-			<a aria-label="Older Posts" href="{{ paginator.next_page_path | prepend: site.url }}">Older Posts</a>
+			<a href="{{ paginator.next_page_path | prepend: site.url }}" aria-label="Older Posts">Older Posts</a>
 		{% endif %}
 		{% if paginator.previous_page %}
-			<a aria-label="Newer Posts" href="{{ paginator.previous_page_path | prepend: site.url }}">Newer Posts</a>
+			<a href="{{ paginator.previous_page_path | prepend: site.url }}" aria-label="Newer Posts">Newer Posts</a>
 		{% endif %}
 	</nav>
 {% endif %}

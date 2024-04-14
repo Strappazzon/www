@@ -1,15 +1,23 @@
 #!/bin/bash
 
-if ! command -v htmlproofer >/dev/null; then
-  echo "html_proofer gem not installed. Cannot proceed."
+set -euo pipefail
+
+if [ -z "$(command -v htmlproofer)" ]; then
+  echo "html_proofer gem not installed. Cannot proceed." >&2
   exit 1
 fi
 
+# shellcheck disable=SC2034
 JEKYLL_ENV=production
 build_dir="_site"
 ignore_urls=$(awk -vORS=, '{ print $1 }' .cloudflare/_redirects | sed 's/\*//g')
 #sed 's/,$//'
 
 echo "HTMLProofer $(bundle exec htmlproofer --version)"
-bundle exec jekyll build
+
+if ! [ -d _site ]; then
+  echo "Jekyll build directory not found. Building..."
+  bundle exec jekyll build
+fi
+
 htmlproofer --check_sri --disable_external --ignore-urls \""$ignore_urls"\" $build_dir

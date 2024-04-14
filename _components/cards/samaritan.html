@@ -1,34 +1,38 @@
-<div class="box__samaritan">
+<div class="card__samaritan">
 	<div class="subtitle">
 		<div class="icon__deviant" aria-hidden="true"></div>
-		<span> /// {{ include.subtitle | upcase }}</span>
+		<span aria-hidden="true">///</span>
+		<span>ABOUT</span>
 	</div>
-	<div class="title">{{ include.title | upcase }}</div>
+	<div class="title">{{ site.title | upcase }}</div>
 	<div class="content">
-		<div class="row">
-			<div class="desc">{{ include.description }}</div>
-		</div>
+		<div class="content__desc">{{ page.description }}</div>
 		{% if include.location and include.location != "" %}
-			<div class="row">
+			<div class="content__row">
 				<div class="text">Location:</div>
-				<div class="label bg__darkgray">
-					<a aria-label="Location" href="https://www.wikipedia.org/w/index.php?search={{ include.location | url_encode }}">{{ include.location }}</a>
+				<div class="label">
+					<a href="https://www.wikipedia.org/w/index.php?search={{ include.location | url_encode }}" aria-label="{{ include.location }}">
+						{{ include.location }}
+					</a>
 				</div>
 			</div>
 		{% endif %}
-		{% if page.layout == "home" %}
-			{% for a in site.data.accounts.short_list %}
-				<div class="row">
-					<div class="text">{{ a.name }}:</div>
-					<div class="label bg__lightgray">
-						<a aria-label="{{ a.name }} Account" href="{{ a.url }}" rel="me">{{ a.username }}</a>
-					</div>
+		{% for a in site.data.accounts %}
+			<div class="content__row">
+				<div class="text">{{ a.name }}:</div>
+				<div class="label">
+					<a rel="me" href="{{ a.url }}" aria-label="{{ a.username }}">{{ a.username }}</a>
 				</div>
-			{% endfor %}
-			<div class="row">
-				<div class="text">Email:</div>
-				<div class="label bg__darkgray ep__cd"></div>
 			</div>
-		{% endif %}
+		{% endfor %}
+		<div class="content__row">
+			<div class="text">Email:</div>
+			<address class="label">
+				{% include email.html
+					user   = "a"
+					domain = "strappazzon.xyz"
+				%}
+			</address>
+		</div>
 	</div>
 </div>

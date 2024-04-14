@@ -12,7 +12,7 @@ on:
       - "!.ruby-version"
       - "bin/**"
       - "frontmatter.json"
-      - "LICENSE.txt"
+      - "LICENSE*"
       - "SUPPORT.md"
   workflow_dispatch:
 
@@ -22,12 +22,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3.3.0
+        uses: actions/checkout@v4.1.1
 
       - name: Setup Ruby
         env:
           BUNDLE_SPECIFIC_PLATFORM: 1
-        uses: ruby/setup-ruby@v1.134.0
+        uses: ruby/setup-ruby@v1.173.0
         with:
           bundler-cache: true
 

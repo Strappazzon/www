@@ -1,42 +1,21 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" data-theme="poi">
 	{% include layout/head.html %}
 	<body itemscope="" itemtype="http://schema.org/WebPage">
 		<div class="bg-layer__1"></div>
 		<div class="bg-layer__2"></div>
-		<a class="sr-skip" href="#main">Skip to main content</a>
-		<button type="button" id="su">Top</button>
+		<a class="sr-skip" href="#main">SKIP TO MAIN CONTENT</a>
 		{% include layout/header.html %}
-		<div id="top"></div>
-		<div class="container" role="article" itemscope="" itemprop="mainContentOfPage">
-			<article id="main" itemscope="" itemtype="http://schema.org/BlogPosting">
-				<div class="container__title">
-					{% assign t = page.title | split: " | " %}
-					<h1 itemprop="headline" data-tgiv="title">{{ t[0] }}</h1>
-					<div class="container__title-desc">
-						<h4 itemprop="alternativeHeadline" data-tgiv="subtitle">{{ page.description }}</h4>
-						{% assign rt = page.content | reading_time %}
-						<h4 class="read-time">Reading time:
-							{% if rt <= 0 %}
-								Less than a minute
-							{% elsif rt == 1 %}
-								{{ rt }} minute
-							{% else %}
-								{{ rt }} minutes
-							{% endif %}
-						</h4>
-					</div>
-				</div>
+		<div class="container" itemprop="mainContentOfPage" itemscope="" role="article">
+			<article id="main" tabindex="-1" itemscope="" itemtype="http://schema.org/BlogPosting">
+				{% include layout/title.html %}
 				<hr aria-hidden="true">
 				<div itemprop="articleBody">
 					{{ content }}
 				</div>
 				<hr aria-hidden="true">
 			</article>
-			<footer role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
-				<span>Published: {{ page.date | date: "%-d %B %Y" }}</span>
-				<a href="https://github.com/Strappazzon/www/blob/master/{{ page.path }}" aria-label="Edit history">History</a>
-			</footer>
+			{% include layout/blog/footer.html %}
 		</div>
 	</body>
 </html>

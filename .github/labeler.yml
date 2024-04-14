@@ -1,31 +1,38 @@
 blog:
-  - _blog/**
-  - _sass/_blog.scss
-  - static/css/blog.scss
-  - static/blog/**
+  - "_blog/**"
+  - "_sass/pages/_blog.scss"
+  - "static/css/blog.scss"
+  - "static/blog/**"
 
 cicd:
-  - .github/workflows/**
+  - ".github/workflows/**"
 
 config:
-  - .cloudflare/**
-  - .vscode/**
-  - _config.yml
-  - .editorconfig
-  - .github/*.yml
-  - .editorconfig
-  - .gitattributes
-  - .gitignore
-  - .rubocop.yml
-  - frontmatter.json
+  - ".cloudflare/**"
+  - ".github/*.yml"
+  - ".vscode/**"
+  - "_config.yml"
+  - ".editorconfig"
+  - ".gitattributes"
+  - ".gitignore"
+  - "**/.markdownlint.yml"
+  - "frontmatter.json"
 
 dependencies:
-  - .ruby-version
-  - Gemfile
-  - Gemfile.lock
+  - ".nvmrc"
+  - ".rubocop.yml"
+  - ".ruby-version"
+  - ".stylelintignore"
+  - ".stylelintrc.yml"
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "package.json"
+  - "package-lock.json"
 
 documentation:
-  - .github/README.md
+  - ".github/CONTRIBUTING.md"
+  - "**/README.md"
+  - "SUPPORT.md"
 
 plugin:
-  - _plugins/**
+  - "_plugins/**"

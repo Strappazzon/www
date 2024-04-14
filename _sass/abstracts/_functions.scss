@@ -1,0 +1,32 @@
+@use 'sass:map';
+@use 'sass:math';
+
+/// Get heading size
+/// @require $headings
+/// @param {Int} $key
+@function h($key) {
+  @return map.get($headings, $key);
+}
+
+/// Convert px to em
+@function px2em($value, $font) {
+  @return math.div(strip-unit($value), strip-unit($font)) + em;
+}
+
+/// Convert px to rem
+/// @require $font-size-base
+@function px2rem($value) {
+  @return math.div(strip-unit($value), strip-unit($font-size-base)) + rem;
+}
+
+/// Strip the unit off the value
+@function strip-unit($value) {
+  @return math.div($value, ($value * 0 + 1));
+}
+
+/// Get z-index
+/// @require $z-indexes
+/// @param {String} $key
+@function z($key) {
+  @return map.get($z-indexes, $key);
+}

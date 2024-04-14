@@ -1,0 +1,64 @@
+name: Lint Code
+
+on:
+  pull_request:
+    branches:
+      - master
+    paths:
+      - "_plugins/**.rb"
+      - "_sass/**.scss"
+
+jobs:
+  lint-ruby:
+    name: Lint Ruby Code
+    permissions:
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4.1.1
+
+      - name: Setup Ruby
+        env:
+          BUNDLE_SPECIFIC_PLATFORM: 1
+        uses: ruby/setup-ruby@v1.173.0
+        with:
+          bundler-cache: true
+
+      - name: Run RuboCop
+        uses: reviewdog/action-rubocop@v2.9.0
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          use_bundler: true
+          workdir: "./_plugins"
+          rubocop_version: gemfile
+          rubocop_flags: -D -E -S
+          reporter: github-pr-review
+          fail_on_error: true
+
+  lint-scss:
+    name: Lint SCSS Stylesheets
+    permissions:
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4.1.1
+
+      - name: Setup NodeJS
+        uses: actions/setup-node@v4.0.2
+        with:
+          cache: npm
+          node-version-file: ".nvmrc"
+
+      - name: Setup Stylelint
+        run: |
+          npm install --save-dev stylelint@16.x
+          npm install --save-dev stylelint-config-recess-order@5.x
+          npm install --save-dev stylelint-config-standard-scss@13.x
+          npm install --save-dev stylelint-plugin-defensive-css@1.x
+
+      - name: Run Stylelint
+        shell: bash
+        run: |
+          npx stylelint "_sass" --cache --cache-strategy "content" --quiet-deprecation-warnings

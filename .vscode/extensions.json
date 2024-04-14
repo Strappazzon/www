@@ -1,11 +1,15 @@
 {
 	"recommendations": [
-		"cipchk.cssrem",
 		"DavidAnson.vscode-markdownlint",
+		"EditorConfig.EditorConfig",
 		"eliostruyf.vscode-front-matter",
-		"kamikillerto.vscode-colorize",
-		"pranaygp.vscode-css-peek",
+		"shopify.ruby-lsp",
 		"sissel.shopify-liquid",
+		"stylelint.vscode-stylelint",
 		"yzhang.markdown-all-in-one"
+	],
+	"unwantedRecommendations": [
+		"rebornix.ruby",
+		"wingrunr21.vscode-ruby"
 	]
 }

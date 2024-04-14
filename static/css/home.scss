@@ -1,4 +1,10 @@
 ---
 ---
 
-@import "components/cards/samaritan";
+@import 'abstracts/_variables';
+@import 'abstracts/_functions';
+@import 'abstracts/_mixins';
+
+@import 'components/_index';
+@import 'components/cards/_index';
+@import 'components/cards/_samaritan';

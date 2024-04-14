@@ -1,0 +1,110 @@
+.card {
+  &__samaritan,
+  &__samaritan-alt {
+    display: flex;
+    flex-direction: column;
+    padding: px2em(5px, $font-size-small);
+    margin: 0 px2em(15px, $font-size-small) px2em(15px, $font-size-small) px2em(15px, $font-size-small);
+    color: var(--text-color);
+    word-wrap: break-word;
+    a {
+      text-decoration: none;
+    }
+    // Card title
+    .title,
+    .subtitle {
+      text-align: center;
+      background-color: var(--bg-color--light);
+    }
+    .title {
+      text-shadow: 1px 1px 2px var(--text-color--shadow);
+    }
+    .content {
+      padding: px2em(5px, $font-size-small) 0;
+      background-color: var(--bg-color--lighter);
+      &__row {
+        display: flex;
+        flex-flow: row wrap;
+        place-content: center space-between;
+        align-items: center;
+        // min-height: 2rem;
+        .label,
+        .text {
+          padding: px2em(2px, $font-size-small) px2em(5px, $font-size-small) px2em(2px, $font-size-small) px2em(5px, $font-size-small);
+        }
+        .text {
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+  // Info, used in homepage
+  &__samaritan {
+    // Card title
+    .subtitle {
+      display: flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      width: max-content;
+      padding-right: 1em;
+      padding-left: 0.75em;
+      font-size: 0.85rem;
+      span {
+        margin-left: px2em(4px, $font-size-small);
+      }
+    }
+    // Full name
+    .title {
+      margin-top: px2em(5px, $font-size-small);
+      font-size: px2em(20px, $font-size-small);
+      background-color: var(--brand-color--dark);
+    }
+    .content {
+      &__row,
+      &__desc {
+        margin: px2em(10px, $font-size-small);
+        border: px2em(2px, $font-size-small) solid var(--border-color--dark);
+      }
+      // Bio
+      &__desc {
+        min-height: 2rem;
+        padding: px2em(5px, $font-size-small);
+        padding-top: px2em(3px, $font-size-small);
+        text-align: center;
+      }
+      &__row {
+        .label {
+          color: var(--bg-color);
+          text-transform: uppercase;
+          background-color: var(--bg-color--lightest);
+          a {
+            @include hocus {
+              color: var(--brand-color--dark);
+            }
+          }
+        }
+      }
+    }
+  }
+  // Links, used in homepage
+  &__samaritan-alt {
+    // Card title
+    .title {
+      width: px2em(66px, $font-size-small);
+    }
+    .content {
+      border-top: px2em(2px, $font-size-small) solid var(--bg-color--lightest);
+      border-bottom: px2em(2px, $font-size-small) solid var(--bg-color--lightest);
+      &__row {
+        flex-flow: row nowrap;
+        margin: px2em(5px, $font-size-small) px2em(10px, $font-size-small);
+        .text {
+          overflow: hidden;
+          // https://stackoverflow.com/a/17783233
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+      }
+    }
+  }
+}

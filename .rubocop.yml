@@ -1,14 +1,51 @@
+# Default rules
+# See: https://docs.rubocop.org/rubocop/cops.html
+
 AllCops:
   NewCops: enable
+  TargetRubyVersion: <%= File.read(File.join(File.dirname(__FILE__), '.ruby-version')).strip %>
 
+# Enforce specifications from specific Gem version
+Bundler/GemVersion:
+  Enabled: true
+
+# Max line length
+Layout/LineLength:
+  Enabled: true
+  Max: 160
+
+# Method max lines
 Metrics/MethodLength:
   Enabled: false
 
+# Method parameters min length whitelist
+Naming/MethodParameterName:
+  AllowedNames:
+    # Kramdown::Converter::Html convert_header() parameter
+    - el
+
+# Don't require top-level documentation
 Style/Documentation:
   Enabled: false
 
+# Don't add frozen_string_literal magic comment
 Style/FrozenStringLiteralComment:
   Enabled: false
 
+# Allow current directory in paths
+Style/RedundantCurrentDirectoryInPath:
+  Enabled: true
+
+# Don't replace deterministic regexp with string
+Style/RedundantRegexpArgument:
+  Enabled: false
+
+# Allow redundant return
 Style/RedundantReturn:
   Enabled: false
+
+# Use slashes around regexp strings
+Style/RegexpLiteral:
+  Enabled: true
+  AllowInnerSlashes: true
+  EnforcedStyle: slashes

@@ -4,7 +4,7 @@
 	{% if page.layout == "blog" %}
 		<title>{{ page.title }} | {{ site.title_blog }}</title>
 	{% else %}
-		<title>{{ page.title }}</title>
+		<title>{{ page.title }} | {{ site.title }}</title>
 	{% endif %}
 	<meta name="description" content="{{ page.description }}">
 	{% if page.layout == "blog" %}
@@ -16,14 +16,8 @@
 	<meta name="author" content="Alberto Strappazzon">
 	<meta name="robots" content="index,follow">
 	<meta name="generator" content="Jekyll v{{ jekyll.version }}">
-	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="theme-color" content="#ba0000">
-	<meta name="msapplication-TileColor" content="#ba0000">
-	{% if page.layout == "blog" %}
-		<meta name="application-name" content="{{ site.title_blog }}">
-	{% else %}
-		<meta name="application-name" content="{{ site.title }}">
-	{% endif %}
 	{%- comment -%} Open Graph Data {%- endcomment -%}
 	{% if page.layout == "blog" %}
 		<meta property="og:title" content="{{ page.title }} | {{ site.title_blog }}">
@@ -41,7 +35,7 @@
 		<meta property="og:image:height" content="640">
 		<meta property="og:image:type" content="image/png">
 	{% else %}
-		<meta property="og:title" content="{{ page.title }}">
+		<meta property="og:title" content="{{ page.title }} | {{ site.title }}">
 		<meta property="og:description" content="{{ page.description }}">
 		<meta property="og:site_name" content="{{ site.title }}">
 		<meta property="og:url" content="{{ page.permalink | prepend: site.url }}">
@@ -65,7 +59,7 @@
 		<meta name="twitter:site" content="@0xStrappazzon">
 	{% else %}
 		<meta name="twitter:card" content="summary_large_image">
-		<meta name="twitter:title" content="{{ page.title }}">
+		<meta name="twitter:title" content="{{ page.title }} | {{ site.title }}">
 		<meta name="twitter:description" content="{{ page.description }}">
 		<meta name="twitter:image" content="{{ site.url }}/static/img/ogimage.png">
 		<meta name="twitter:image:alt" content="{{ site.title }}">
@@ -75,24 +69,16 @@
 	{% endif %}
 	{%- comment -%} Link Relationships {%- endcomment -%}
 	<link rel="canonical" href="{{ site.url }}{{ page.url | replace: 'index.html',''}}">
-	<link rel="manifest" href="/manifest.json">
-	<link rel="alternate" href="/feed.xml" type="application/atom+xml" title="{{ site.title_blog }} Feed">
+	<link rel="alternate" type="application/atom+xml" href="/feed.xml" title="{{ site.title_blog }} Feed">
 	<link rel="me" href="https://twitter.com/0xStrappazzon">
 	{%- comment -%} Favicons {%- endcomment -%}
-	<link rel="apple-touch-icon" sizes="180x180" href="/static/img/favicons/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/static/img/favicons/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/static/img/favicons/favicon-16x16.png">
-	<link rel="mask-icon" href="/static/img/favicons/safari-pinned-tab.svg" color="#cb0000">
-	<link rel="shortcut icon" href="/static/img/favicons/favicon.ico">
-	<meta name="msapplication-config" content="/static/img/favicons/browserconfig.xml">
+	<link rel="icon" href="/favicon.ico" sizes="48x48">
+	<link rel="icon" type="image/svg+xml" href="/static/img/favicons/favicon.svg" sizes="any">
+	<link rel="apple-touch-icon" href="/static/img/favicons/favicon-180.png">
 	{%- comment -%} Stylesheets {%- endcomment -%}
-	<link rel="stylesheet" href="/static/css/index.css">
-	<link rel="stylesheet" href="/static/css/{{ page.layout }}.css">
-	{%- comment -%} Scripts {%- endcomment -%}
-	<script defer src="/static/js/scroll.js"></script>
-	{% if page.url == "/" %}
-		<script defer src="/static/js/age.js"></script>
-	{% endif %}
+	<link rel="stylesheet" href="/static/css/vendors.css?{{ site.time | date: '%s%N' }}">
+	<link rel="stylesheet" href="/static/css/common.css?{{ site.time | date: '%s%N' }}">
+	<link rel="stylesheet" href="/static/css/{{ page.layout }}.css?{{ site.time | date: '%s%N' }}">
 	{% if page.layout == "blog" %}
 		<script type="application/ld+json">
 			{
