@@ -13,11 +13,6 @@ article {
   video {
     max-width: 100%;
     height: auto;
-    &[align='center'] {
-      display: block;
-      margin-right: auto;
-      margin-left: auto;
-    }
   }
   figure {
     // Liquid tag {% highlight :lang %} puts code blocks inside a <figure> HTML tag
@@ -30,6 +25,11 @@ article {
       font-style: italic;
       color: var(--border-color--dark);
     }
+  }
+  video {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   /// LISTS
