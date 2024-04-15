@@ -6,7 +6,7 @@
 		{% assign rt = page.content | reading_time %}
 		{% if rt <= 0 %}
 			Less than a minute.
-		{% elsif rt==1 %}
+		{% elsif rt == 1 %}
 			{{ rt }} minute.
 		{% else %}
 			{{ rt }} minutes.
