@@ -18,10 +18,11 @@ article {
     // Liquid tag {% highlight :lang %} puts code blocks inside a <figure> HTML tag
     &:not(.highlight) {
       display: flow-root;
+      margin-bottom: 1rem;
       text-align: center;
     }
     figcaption {
-      margin-top: 0.33rem;
+      margin-top: 0.25rem;
       font-style: italic;
       color: var(--border-color--dark);
     }
@@ -29,6 +30,7 @@ article {
   video {
     display: block;
     margin-right: auto;
+    margin-bottom: 1rem;
     margin-left: auto;
   }
 
