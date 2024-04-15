@@ -3,7 +3,6 @@ article {
   /// MEDIA
   img {
     // & + em { display: block; }
-    border: px2rem(1px) solid var(--bg-color--lighter);
   }
   img,
   svg {
@@ -13,6 +12,7 @@ article {
   video {
     max-width: 100%;
     height: auto;
+    border: px2rem(1px) solid var(--bg-color--lighter);
   }
   figure {
     // Liquid tag {% highlight :lang %} puts code blocks inside a <figure> HTML tag
