@@ -1,4 +1,4 @@
-name: security.txt Update Reminder
+name: "Reminder: Update security.txt"
 
 on:
   schedule:
