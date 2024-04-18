@@ -67,7 +67,7 @@ autoprefixer:
     - last 2 versions
     - not dead
     - firefox esr
-    - chrome 85
+    - chrome 109
   exclude:
     - "**/vendors/*"
   only_production: true
