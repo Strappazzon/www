@@ -13,6 +13,6 @@ gem 'rubocop', '~> 1.57.0', require: false
 
 # Plugins
 group :jekyll_plugins do
-  gem 'jekyll-autoprefixer', '~> 1.0'
+  gem 'jekyll-autoprefixer-v2', '~> 2.0'
   gem 'jekyll-paginate-v2', '~> 3.0'
 end
