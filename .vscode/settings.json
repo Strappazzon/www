@@ -1,5 +1,5 @@
 {
-	"[html][liquid]": {
+	"[liquid]": {
 		"editor.defaultFormatter": null,
 		"editor.insertSpaces": false,
 		"editor.tabSize": 4
@@ -21,9 +21,7 @@
 		"editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
 		"editor.insertSpaces": true,
 		"editor.quickSuggestions": {
-			"comments": "off",
-			"other": "off",
-			"strings": "off"
+			"other": "off"
 		},
 		"editor.tabSize": 2,
 		"files.trimTrailingWhitespace": false
@@ -42,6 +40,11 @@
 		],
 		"editor.tabSize": 2,
 		"files.eol": "\n"
+	},
+	"[scminput]": {
+		"editor.rulers": [
+			70
+		]
 	},
 	"[scss]": {
 		"editor.codeActionsOnSave": {
@@ -69,6 +72,7 @@
 		"editor.insertSpaces": true,
 		"editor.tabSize": 2
 	},
+	"editor.defaultFormatter": null,
 	"editor.detectIndentation": false,
 	"editor.rulers": [],
 	"explorer.fileNesting.enabled": true,
@@ -92,12 +96,24 @@
 	},
 	"files.insertFinalNewline": true,
 	"files.readonlyInclude": {
-		"**/.stylelintcache": true,
-		"**/Gemfile.lock": true,
-		"**/package-lock.json": true
+		".ruby-lsp/**/*": true,
+		"_site/**/*.*": true,
+		"node_modules/**/*.*": true,
+		".stylelintcache": true,
+		"Gemfile.lock": true,
+		"**/LICENSE*": true,
+		"package-lock.json": true
 	},
 	"files.trimFinalNewlines": true,
 	"files.trimTrailingWhitespace": true,
+	"git.inputValidation": true,
+	"git.inputValidationLength": 70,
+	"git.inputValidationSubjectLength": 70,
+	"javascript.format.insertSpaceAfterConstructor": true,
+	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
+	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
+	"javascript.format.semicolons": "insert",
+	"javascript.preferences.quoteStyle": "single",
 	"json.schemas": [
 		{
 			"fileMatch": [
@@ -108,9 +124,24 @@
 	],
 	"liquid.config.method": "workspace",
 	"liquid.engine": "jekyll",
-	"markdown.validate.referenceLinks.enabled": "ignore",
+	"markdown.validate.enabled": false,
 	"rubyLsp.formatter": "rubocop",
+	"search.exclude": {
+		"**/.frontmatter": true,
+		"**/.jekyll-cache": true,
+		"**/.ruby-lsp": true,
+		"**/_site": true,
+		"**/node_modules": true
+	},
 	"scss.validate": false,
+	"stylelint.snippet": [
+		"scss",
+		"sass"
+	],
+	"stylelint.validate": [
+		"scss",
+		"sass"
+	],
 	"svg.preview.background": "transparent",
 	"terminal.integrated.defaultProfile.windows": "WSL",
 	"terminal.integrated.profiles.windows": {
