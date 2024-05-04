@@ -12,14 +12,30 @@
   languages: Batch
   url: /teleme7ry
   source: https://github.com/Strappazzon/teleme7ry
-  status: !!int 2
+  status: !!int 0
 
 - title: wsb
-  description: Configuration template and scripts for Windows Sandbox.
+  description: Configuration template and personal logon script for Windows Sandbox.
   languages: PowerShell
   url: https://github.com/Strappazzon/wsb/blob/-/.github/README.md
   source: https://github.com/Strappazzon/wsb
   status: !!int 1
+
+- title: GHOST Buster
+  description: Ghost Recon&reg; Wildlands backup utility.
+  languages: Visual Basic .NET
+  url: /GRW-GHOST-Buster
+  source: https://github.com/Strappazzon/GRW-GHOST-Buster
+  status: !!int 1
+
+- title: SuperBLT Hasher
+  description: >2-
+    Calculates hashes for PAYDAY 2 mods.
+    Hashing of single files and folders is supported.
+  languages: Visual Basic .NET, C#
+  url: /PD2-SuperBLT-Hasher
+  source: https://github.com/Strappazzon/PD2-SuperBLT-Hasher
+  status: !!int 2
 
 - title: SCAM Lock Tool
   description: >2-
@@ -42,18 +58,4 @@
   languages: HTML, CSS
   url: /tor-exit-page
   source: https://github.com/Strappazzon/tor-exit-page
-  status: !!int 2
-
-- title: GHOST Buster
-  description: Ghost Recon&reg; Wildlands backup utility.
-  languages: Visual Basic .NET
-  url: /GRW-GHOST-Buster
-  source: https://github.com/Strappazzon/GRW-GHOST-Buster
-  status: !!int 1
-
-- title: SuperBLT Hasher
-  description: SuperBLT Hasher generates hashes for PAYDAY 2 mods. Hashing of single files and folders is supported.
-  languages: Visual Basic .NET, C#
-  url: /PD2-SuperBLT-Hasher
-  source: https://github.com/Strappazzon/PD2-SuperBLT-Hasher
   status: !!int 2
