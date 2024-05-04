@@ -31,7 +31,15 @@
 		<hr aria-hidden="true">
 		<div class="summary">
 			<p>Description: <span>{{ include.description }}</span></p>
-			<p>Languages: <span>{{ include.languages }}</span></p>
+			<p>
+				Languages:
+				<span>
+					{%- for l in include.languages -%}
+					{%- comment -%} https://stackoverflow.com/a/74124216 {%- endcomment -%}
+						{{ l }}{% unless forloop.last %}, {% endunless -%}
+					{%- endfor -%}
+				</span>
+			</p>
 		</div>
 		<hr aria-hidden="true">
 		<div class="links">
