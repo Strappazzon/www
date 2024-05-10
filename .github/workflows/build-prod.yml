@@ -14,7 +14,7 @@ on:
       - "frontmatter.json"
       - "LICENSE*"
       - "SUPPORT.md"
-  workflow_dispatch:
+  workflow_dispatch: {}
 
 jobs:
   main:
@@ -48,5 +48,5 @@ jobs:
           SQUASH_HISTORY: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MESSAGE: "Build: ({sha}) {msg}"
-          COMMIT_NAME: Alberto Strappazzon
-          COMMIT_EMAIL: a@strappazzon.xyz
+          COMMIT_NAME: github-actions[bot]
+          COMMIT_EMAIL: github-actions[bot]@users.noreply.github.com
