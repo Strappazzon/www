@@ -7,6 +7,7 @@ on:
     paths:
       - "_plugins/**.rb"
       - "_sass/**.scss"
+      - "**/*.md"
 
 jobs:
   lint-ruby:
@@ -79,3 +80,24 @@ jobs:
         shell: bash
         run: |
           npx stylelint "_sass" --cache --cache-strategy "content" --quiet-deprecation-warnings
+
+  lint-mdown:
+    name: Lint Markdown Documents
+    permissions:
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4.1.1
+
+      - name: Detect changes in MD files
+        id: check_changes
+        shell: bash
+        run: |
+          ::set-output name=changed_md::$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '\.md$')
+
+      - name: markdownlint-cli2-action
+        if: steps.check_changes.outputs.changed_md != ''
+        uses: DavidAnson/markdownlint-cli2-action@v16.0.0
+        with:
+          config: ".markdownlint.yml"
