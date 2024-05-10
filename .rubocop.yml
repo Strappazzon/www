@@ -9,6 +9,12 @@ AllCops:
 Bundler/GemVersion:
   Enabled: true
 
+# Align multi-line hash literals
+Layout/HashAlignment:
+  Enabled: true
+  EnforcedColonStyle: table
+  EnforcedHashRocketStyle: table
+
 # Max line length
 Layout/LineLength:
   Enabled: true
