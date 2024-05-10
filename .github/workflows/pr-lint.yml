@@ -18,7 +18,14 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4.1.1
 
+      - name: Detect changes in Ruby files
+        id: check_changes
+        shell: bash
+        run: |
+          ::set-output name=changed_rb::$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '\.rb$')
+
       - name: Setup Ruby
+        if: steps.check_changes.outputs.changed_rb != ''
         env:
           BUNDLE_SPECIFIC_PLATFORM: 1
         uses: ruby/setup-ruby@v1.173.0
@@ -26,6 +33,7 @@ jobs:
           bundler-cache: true
 
       - name: Run RuboCop
+        if: steps.check_changes.outputs.changed_rb != ''
         uses: reviewdog/action-rubocop@v2.9.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
@@ -45,13 +53,21 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4.1.1
 
+      - name: Detect changes in SCSS files
+        id: check_changes
+        shell: bash
+        run: |
+          ::set-output name=changed_scss::$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '\.scss$')
+
       - name: Setup NodeJS
+        if: steps.check_changes.outputs.changed_scss != ''
         uses: actions/setup-node@v4.0.2
         with:
           cache: npm
           node-version-file: ".nvmrc"
 
       - name: Setup Stylelint
+        if: steps.check_changes.outputs.changed_scss != ''
         run: |
           npm install --save-dev stylelint@16.x
           npm install --save-dev stylelint-config-recess-order@5.x
@@ -59,6 +75,7 @@ jobs:
           npm install --save-dev stylelint-plugin-defensive-css@1.x
 
       - name: Run Stylelint
+        if: steps.check_changes.outputs.changed_scss != ''
         shell: bash
         run: |
           npx stylelint "_sass" --cache --cache-strategy "content" --quiet-deprecation-warnings
