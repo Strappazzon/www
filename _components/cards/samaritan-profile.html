@@ -1,0 +1,41 @@
+{% assign top_artist = include.artists | first %}
+
+<div class="col-lg-6">
+	<div class="card__samaritan-profile">
+		<div class="subtitle">
+			<span>YEAR {{ include.year }}</span>
+		</div>
+		<div class="content">
+			<div class="image">
+				{% comment %} ARTIST NAME -> artist-name {% endcomment %}
+				<img src="/static/img/pages/{{ page.url | remove: '/' }}/{{ top_artist[0] | downcase | replace: ' ', '-' }}.jpg" alt="" width="150px" draggable="false">
+			</div>
+			<div class="container__artists">
+				<div class="top-artist">
+					<span>TOP ARTIST:</span>
+					<span class="name">{{ top_artist[0] | upcase }}</span>
+				</div>
+				<div class="container__list">
+					<span class="title">OTHER ARTISTS</span>
+					<hr>
+					<div class="list">
+						{% for a in include.artists %}
+							{% comment %} The first artist is always the most listened this year {% endcomment %}
+							{% unless forloop.first %}
+								{% if a[1]["is_new"] == true %}
+									<span class="text__color-green">
+								{% elsif a[1]["is_returning"] == true %}
+									<span class="text__color-yellow">
+								{% else %}
+									<span>
+								{% endif %}
+								{{ a[0] }}
+								</span>
+							{% endunless %}
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

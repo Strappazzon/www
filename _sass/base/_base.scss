@@ -80,6 +80,13 @@ hr {
   box-shadow: 0 0 15px var(--brand-color--shadow);
 }
 
+footer {
+  display: flex;
+  flex-flow: row wrap;
+  margin-bottom: 1rem;
+  color: var(--text-color--secondary);
+}
+
 // Skip to content
 .sr-skip {
   position: absolute;

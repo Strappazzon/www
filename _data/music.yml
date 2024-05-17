@@ -1,0 +1,52 @@
+# Music data
+#
+# Top artists of each year ordered from most recent to oldest, descending
+# Each artist is ordered from most to least listened
+
+- year: "2023"
+  artists:
+    "Conquer Divide":
+      is_new: true
+    "Ari Abdul":
+      is_new: true
+    "Loveless": {}
+    "Soccer Mommy": {}
+    "STARSET": {}
+    "My Darkest Days":
+      is_returning: true
+    "Daedric":
+      is_new: true
+    "Klangphonics":
+      is_new: true
+
+- year: "2022"
+  artists:
+    "Loveless":
+      is_new: true
+    "STARSET": {}
+    "MNQN": {}
+    "K/DA": {}
+    "Colorblind":
+      is_new: true
+    "ZAND":
+      is_new: true
+    "Noija":
+      is_new: true
+    "Vicetone":
+      is_new: true
+
+- year: "2021"
+  artists:
+    "STARSET": {}
+    "MNQN":
+      is_new: true
+    "Dangerkids":
+      is_new: true
+    "Reol": {}
+    "K/DA":
+      is_new: true
+    "System of A Down": {}
+    "Bring Me The Horizon":
+      is_new: true
+    "Måneskin":
+      is_new: true

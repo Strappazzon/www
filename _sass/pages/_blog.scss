@@ -340,11 +340,7 @@ article {
 }
 
 footer {
-  display: flex;
-  flex-flow: row wrap;
   justify-content: space-between;
-  margin-bottom: 1rem;
-  color: var(--text-color--secondary);
   blockquote & {
     justify-content: flex-start;
     margin-bottom: 0;

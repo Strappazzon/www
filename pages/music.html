@@ -1,0 +1,31 @@
+---
+layout: music
+title: "Top Artists"
+description: "My most listened artists/bands for every year."
+permalink: /music/
+---
+
+<p>
+	The following lists are based on my listening history every year since 2021.
+	The artists of each year are sorted from most to least listened.
+</p>
+
+<p>
+	The lists are not guaranteed to be 100% accurate prior to 2022, as some artists may be missing
+	or the listening order might be wrong.
+</p>
+
+<ul>
+	<li>Top artist of every year is featured with a picture.</li>
+	<li>New artists of every year have a <span class="text__color-green">green</span> background.</li>
+	<li>Artists/bands coming back have a <span class="text__color-yellow">yellow</span> background.</li>
+</ul>
+
+<div class="row">
+	{% for y in site.data.music %}
+		{% include cards/samaritan-profile.html
+			year    = y.year
+			artists = y.artists
+		%}
+	{% endfor %}
+</div>

@@ -1,4 +1,5 @@
 <!-- markdownlint-disable MD033 MD041 -->
+
 <div align="center">
   <a href="https://strappazzon.xyz">
     <img width="96" src="../static/img/avatar.png" alt="Logo">
@@ -12,6 +13,7 @@
 <p align="center">
   <em>My Website</em>
 </p>
+
 <!-- markdownlint-enable MD033 MD041 -->
 
 Powered by [Jekyll](https://jekyllrb.com/), a static site generator (SSG) written in Ruby. Theme inspired by [Person of Interest](https://en.wikipedia.org/wiki/Person_of_Interest_(TV_series)).
@@ -44,5 +46,7 @@ The website theme is based on [Person of Interest Web UI](https://github.com/Phr
 Background images from [Person of Interest Web UI](https://github.com/Phreshhh/poi-web-ui).
 
 Icons from [Person of Interest wiki](https://personofinterest.fandom.com/wiki/Person_of_Interest_Wiki) and [SVG Repo](https://www.svgrepo.com/), then edited.
+
+Images of artists in the `/music/` page are taken from [Last.fm](https://www.last.fm/) and [Spotify](https://open.spotify.com/).
 
 By contributing to this repository, you agree that the content you contribute may be provided under the terms of the [MIT License](https://github.com/Strappazzon/www/blob/-/LICENSE-CODE.txt).

@@ -1,0 +1,20 @@
+<div class="card__samaritan-header">
+	<div class="title">
+		<div class="subtitle">
+			{% unless include.subtitle and include.subtitle != "" %}
+				SAMARITAN
+			{% else %}
+				{{ include.subtitle }}
+			{% endunless %}
+		</div>
+		<div class="version">
+			{% unless include.subtitle and include.subtitle != "" %}
+				v.978.0.06.51
+			{% endunless %}
+		</div>
+	</div>
+	<div class="content">
+		<div class="page-title">{{ page.title | upcase }}</div>
+		<div class="page-desc">{{ page.description | replace: ".", "" | upcase }}</div>
+	</div>
+</div>
