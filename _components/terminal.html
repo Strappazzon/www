@@ -24,12 +24,12 @@
 	<div class="terminal__content">
 		{% comment %} Include prompt regardless of task {% endcomment %}
 		<span class="output">
-			<span class="yellow">alberto@strappazzon:</span><span class="blue">~/{{ page.url | remove: '/' }}</span>$
+			<span class="yellow">{{ site.data.meta.first | downcase }}@{{ site.data.meta.last | downcase }}:</span><span class="blue">~/{{ page.url | remove: "/" }}</span>$
 		{% case include.task %}
 			{% when "pgp" %}
 				gpg <span class="black-bright">--list-keys</span>
 				</span>
-				<span class="output">/home/alberto/.gnupg/pubring.kbx</span>
+				<span class="output">/home/{{ site.data.meta.first | downcase }}/.gnupg/pubring.kbx</span>
 				<span class="output">------------------------------------</span>
 				<span class="output">pub ed25519 2020-06-24 [SC]</span>
 				<span class="output">&nbsp;&nbsp;&nbsp;&nbsp;975126E37C9BA907D95FAA5498B160D45D48A6F5</span>
@@ -50,7 +50,7 @@
 				<span class="output">sub rsa2048 2018-07-04 [E]</span>
 				<span class="output">&#8203;</span>
 				<span class="output">
-					<span class="yellow">alberto@strappazzon:</span><span class="blue">~/{{ page.url | remove: '/' }}</span>$
+					<span class="yellow">{{ site.data.meta.first | downcase }}@{{ site.data.meta.last | downcase }}:</span><span class="blue">~/{{ page.url | remove: "/" }}</span>$
 					wget
 					<span class="black-bright">-q</span>
 					<span class="black-bright">--show-progress</span>
@@ -67,7 +67,7 @@
 				</span>
 				<span class="output">&#8203;</span>
 				<span class="output">
-					<span class="yellow">alberto@strappazzon:</span><span class="blue">~/{{ page.url | remove: '/' }}</span>$
+					<span class="yellow">{{ site.data.meta.first | downcase }}@{{ site.data.meta.last | downcase }}:</span><span class="blue">~/{{ page.url | remove: "/" }}</span>$
 					wget
 					<span class="black-bright">-q</span>
 					<span class="black-bright">--show-progress</span>
@@ -93,7 +93,7 @@
 					<span>&#8203;</span>
 				</span>
 				<span class="output">
-					<span class="yellow">alberto@strappazzon:</span><span class="blue">~/{{ page.url | remove: '/' }}</span>$
+					<span class="yellow">{{ site.data.meta.first | downcase }}@{{ site.data.meta.last | downcase }}:</span><span class="blue">~/{{ page.url | remove: "/" }}</span>$
 					ssh-add
 					<span class="black-bright">-L</span>
 					| ssh-keygen
@@ -113,7 +113,7 @@
 			<span>&#8203;</span>
 		</span>
 		<span class="output">
-			<span class="yellow">alberto@strappazzon:</span><span class="blue">~/{{ page.url | remove: '/' }}</span>$
+			<span class="yellow">{{ site.data.meta.first | downcase }}@{{ site.data.meta.last | downcase }}:</span><span class="blue">~/{{ page.url | remove: "/" }}</span>$
 			<span class="cursor underline"></span>
 		</span>
 	</div>

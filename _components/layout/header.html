@@ -4,9 +4,9 @@
 		<span class="separator" aria-hidden="true">///</span>
 		<span>
 			{% if page.layout == "blog" %}
-				{{ site.title_blog | upcase }}
+				{{ site.data.blog.title | upcase }}
 			{% else %}
-				{{ site.title | upcase }}
+				{{ site.data.meta.title | upcase }}
 			{% endif %}
 		</span>
 	</div>

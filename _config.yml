@@ -1,7 +1,6 @@
 # Website
 url: https://strappazzon.xyz
 baseurl: /
-title: Alberto Strappazzon
 
 # Custom directories
 includes_dir: _components
@@ -73,8 +72,6 @@ autoprefixer:
   only_production: true
 
 # Blog
-title_blog: Strappazzon's Blog
-
 collections:
   blog:
     output: true

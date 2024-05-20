@@ -7,7 +7,8 @@ permalink: /privacy/
 
 ### {{ page.description | remove: "." }}
 
-This Privacy Statement applies to <{{ site.url }}> (hereinafter, "This Website"), operated by Alberto Strappazzon (hereinafter, "I", "Me" or "My"). This Privacy Statement does not cover third-party mirrors or archived versions of my website.
+This Privacy Statement applies to <{{ site.url }}> (hereinafter, "This Website"), operated by {{ site.data.meta.first }} {{ site.data.meta.last }}
+(hereinafter, "I", "Me" or "My"). This Privacy Statement does not cover third-party mirrors or archived versions of my website.
 
 I do not collect any personal information. I do not track you using cookies, collect your fingerprints, or use any tracking scripts.
 
@@ -15,7 +16,9 @@ I do not collect any personal information. I do not track you using cookies, col
 
 I use Cloudflare Registrar and Cloudflare DNS. This Website is hosted on Cloudflare Pages.
 
-Cloudflare may collect non-personally-identifying information of the sort that web browsers and servers typically make available, such as the browser type and the date and time of each visitor request. Cloudflare  may also collect potentially personally-identifying information like Internet Protocol (IP) addresses.
+Cloudflare may collect non-personally-identifying information of the sort that web browsers and servers typically make available,
+such as the browser type and the date and time of each visitor request. Cloudflare  may also collect potentially personally-identifying information
+like Internet Protocol (IP) addresses.
 
 See also: [Cloudflare Privacy Policy](https://www.cloudflare.com/privacypolicy/).
 
