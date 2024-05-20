@@ -42,6 +42,8 @@ jobs:
       - name: Production Deploy
         uses: s0/git-publish-subdir-action@develop
         env:
+          # https://github.com/git-lfs/git-lfs/issues/5749
+          GIT_CLONE_PROTECTION_ACTIVE: false
           REPO: self
           BRANCH: build
           FOLDER: _site
