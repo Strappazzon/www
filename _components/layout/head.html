@@ -25,7 +25,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="theme-color" content="#ba0000">
 	{%- comment -%} Open Graph Data {%- endcomment -%}
-	{% if page.layout == "blog" %}
+	{% if page.url contains "/blog/" or page.layout == "blog" %}
 		<meta property="og:title" content="{{ page.title }} | {{ site.data.blog.title }}">
 		<meta property="og:description" content="{{ page.description }}">
 		<meta property="og:site_name" content="{{ site.data.blog.title }}">

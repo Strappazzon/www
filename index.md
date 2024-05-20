@@ -1,6 +1,6 @@
 ---
 layout: home
-title: "Alberto Strappazzon | Home"
+title: "Home"
 ---
 
 {% include cards/samaritan.html %}
