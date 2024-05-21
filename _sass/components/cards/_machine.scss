@@ -10,8 +10,8 @@
   // Project info
   &__machine {
     font-size: 1rem;
-    border: px2rem(2px) solid var(--text-color);
-    border-radius: px2rem(5px);
+    border: 2px solid var(--text-color);
+    border-radius: 5px;
     .title {
       margin-bottom: 0.5rem;
       font-size: 1.25rem;
@@ -70,14 +70,14 @@
       }
     }
     hr {
-      border-top: px2rem(1px) solid var(--text-color);
+      border-top: 1px solid var(--text-color);
       box-shadow: 0 0 15px var(--text-color--shadow);
     }
   }
   // Blog post
   &__machine-alt {
     padding: px2rem(6px) px2rem(12px);
-    border: px2rem(10px) solid var(--border-color--dark);
+    border: 10px solid var(--border-color--dark);
     .date {
       font-size: 0.825rem;
       color: var(--text-color--secondary);

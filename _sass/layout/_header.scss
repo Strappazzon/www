@@ -13,7 +13,7 @@ header {
   // margin-bottom: 3rem;
   font-size: $font-size-small;
   background-color: var(--bg-color--clearer);
-  border-bottom: px2em(1px, $font-size-small) solid var(--text-color);
+  border-bottom: 1px solid var(--text-color);
   .logo {
     font-family: 'Acens', $font-stack-text-system;
     @include respond-to('small') {

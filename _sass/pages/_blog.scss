@@ -12,7 +12,7 @@ article {
   video {
     max-width: 100%;
     height: auto;
-    border: px2rem(1px) solid var(--bg-color--lighter);
+    border: 1px solid var(--bg-color--lighter);
   }
   figure {
     // Liquid tag {% highlight :lang %} puts code blocks inside a <figure> HTML tag
@@ -121,7 +121,7 @@ article {
         font-size: 1.15em;
         appearance: none;
         background-color: var(--table-bg-color--even);
-        border: px2rem(1px) solid var(--border-color--dark);
+        border: 1px solid var(--border-color--dark);
         &:checked {
           &::before {
             position: absolute;
@@ -163,7 +163,7 @@ article {
     overflow: auto;
     overscroll-behavior: contain;
     line-height: 1.2;
-    border: px2rem(1px) solid var(--border-color--dark);
+    border: 1px solid var(--border-color--dark);
     border-radius: 0;
     code {
       word-break: normal;
@@ -177,7 +177,7 @@ article {
       color: var(--text-color--secondary);
       word-wrap: break-word;
       background-color: var(--bg-color--light);
-      border: px2rem(1px) solid var(--border-color--dark);
+      border: 1px solid var(--border-color--dark);
     }
   }
 
@@ -199,7 +199,7 @@ article {
       text-transform: uppercase;
     }
     thead {
-      border-bottom: px2rem(1px) solid var(--border-color--dark);
+      border-bottom: 1px solid var(--border-color--dark);
     }
     tbody {
       tr {
@@ -212,7 +212,7 @@ article {
       }
     }
     tfoot {
-      border-top: px2rem(1px) solid var(--border-color--dark);
+      border-top: 1px solid var(--border-color--dark);
     }
     thead,
     tfoot {
@@ -233,7 +233,7 @@ article {
     margin: 1rem;
     color: var(--text-color--secondary);
     background-color: var(--bg-color--clear);
-    border: px2rem(8px) solid var(--border-color--dark);
+    border: 8px solid var(--border-color--dark);
     // stylelint-disable-next-line no-descending-specificity
     p {
       margin-bottom: 0;
@@ -245,7 +245,7 @@ article {
     &[title] {
       text-decoration: none;
       cursor: help;
-      border-bottom: px2rem(1px) solid var(--brand-color);
+      border-bottom: 1px solid var(--brand-color);
     }
   }
 
@@ -275,7 +275,7 @@ article {
       padding: px2rem(6px);
       text-transform: uppercase;
       user-select: none;
-      border-bottom: px2rem(2px) solid;
+      border-bottom: 2px solid;
       transition: 0.3s;
       & ~ div {
         display: flex;
@@ -284,7 +284,7 @@ article {
         padding: 0.75rem;
         overflow: auto;
         overscroll-behavior: contain;
-        border-bottom: px2rem(2px) solid var(--border-color--dark);
+        border-bottom: 2px solid var(--border-color--dark);
         p {
           &:last-of-type {
             margin-bottom: 0;
@@ -331,7 +331,7 @@ article {
   }
   .footnotes {
     padding-top: 1rem;
-    border-top: px2rem(1px) solid var(--brand-color);
+    border-top: 1px solid var(--brand-color);
     // stylelint-disable-next-line no-descending-specificity
     ol {
       margin: 0;

@@ -1,11 +1,12 @@
 .admonition {
-  $border-radius: px2rem(6px);
+  // stylelint-disable-next-line unit-disallowed-list
+  $border-radius: 6px;
   $padding: 0.66rem;
   max-width: px2rem(400px);
   margin: 0 auto 1rem;
   background-color: var(--bg-color--clearest);
-  border: px2rem(2px) solid var(--text-color);
-  border-radius: calc(#{$border-radius} + #{px2rem(1px)});
+  border: 2px solid var(--text-color);
+  border-radius: calc(#{$border-radius} + 1px);
   .header,
   .footer {
     background-color: var(--bg-color--light);

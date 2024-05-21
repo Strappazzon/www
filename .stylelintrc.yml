@@ -4,7 +4,7 @@ extends:
 
 plugins:
   # TODO: stylelint-a11y
-  #   https://github.com/developer-stylechain/stylelint-a11y
+  # https://github.com/developer-stylechain/stylelint-a11y
   - stylelint-plugin-defensive-css
 
 # Default rules
@@ -121,8 +121,15 @@ rules:
   # Units blacklist, with exceptions
   unit-disallowed-list:
     - [ms, pt, px]
-    - ignoreProperties:
+    - ignoreFunctions:
+        - px2em
+        - px2rem
+      ignoreProperties:
         px:
+          - border
+          - border-bottom
+          - border-radius
+          - border-top
           - bottom
           - box-shadow
           - font-size
@@ -130,9 +137,6 @@ rules:
           - right
           - text-shadow
           - top
-      ignoreFunctions:
-        - px2em
-        - px2rem
 
   # Lowercase keywords, with exceptions
   value-keyword-case:

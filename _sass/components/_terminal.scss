@@ -1,11 +1,13 @@
 .terminal {
-  $border-radius: px2rem(5px);
-  $scrollbar-w: px2rem(10px);
+  // stylelint-disable unit-disallowed-list
+  $border-radius: 5px;
+  $scrollbar-w: 10px;
+  // stylelint-enable unit-disallowed-list
   width: px2rem(650px);
   margin: 0 auto 1rem;
   font-size: 0.875rem;
-  border: px2rem(1px) solid var(--border-color);
-  border-radius: calc(#{$border-radius} + #{px2rem(1px)});
+  border: 1px solid var(--border-color);
+  border-radius: calc(#{$border-radius} + 1px);
   scrollbar-width: #{$scrollbar-w};
   @include respond-to('large') {
     width: 100%;
@@ -22,7 +24,7 @@
     padding: px2rem(2px) px2rem(6px);
     line-height: 1.2;
     background: linear-gradient(180deg, #{var(--gradient-color--from)} 25%, #{var(--gradient-color--to)} 75%);
-    border-bottom: px2rem(1px) solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
     border-top-left-radius: #{$border-radius};
     border-top-right-radius: #{$border-radius};
     .task {
