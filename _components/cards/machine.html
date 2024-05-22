@@ -8,7 +8,7 @@
 			{% when 0, 2 %}
 				<div class="title inactive">
 					<span class="dot inactive" aria-hidden="true"></span>
-					{{ include.title }}
+					<span translate="no">{{ include.title }}</span>
 				</div>
 				<div class="status inactive">
 					<span class="label">Status:</span>
@@ -21,7 +21,7 @@
 			{% else %}
 				<div class="title active">
 					<span class="dot active" aria-hidden="true"></span>
-					{{ include.title }}
+					<span translate="no">{{ include.title }}</span>
 				</div>
 				<div class="status active">
 					<span class="label">Status:</span>
@@ -33,7 +33,7 @@
 			<p>Description: <span>{{ include.description }}</span></p>
 			<p>
 				Languages:
-				<span>
+				<span translate="no">
 					{%- for l in include.languages -%}
 					{%- comment -%} https://stackoverflow.com/a/74124216 {%- endcomment -%}
 						{{ l }}{% unless forloop.last %}, {% endunless -%}

@@ -13,12 +13,12 @@
 			<div class="container__artists">
 				<div class="top-artist">
 					<span>TOP ARTIST:</span>
-					<span class="name">{{ top_artist[0] | upcase }}</span>
+					<span class="name" translate="no">{{ top_artist[0] | upcase }}</span>
 				</div>
 				<div class="container__list">
 					<span class="title">OTHER ARTISTS</span>
 					<hr>
-					<div class="list">
+					<div class="list" translate="no">
 						{% for a in include.artists %}
 							{% comment %} The first artist is always the most listened this year {% endcomment %}
 							{% unless forloop.first %}
