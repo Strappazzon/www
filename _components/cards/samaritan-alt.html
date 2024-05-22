@@ -8,7 +8,9 @@
 				<div class="content__row">
 					<div class="text">{{ link.name }}</div>
 					<div class="label">
-						<a href="{{ link.path }}" aria-label="{% if link.description %}{{ link.description }}{% else %}{{ link.name }}{% endif %}">{{ link.path }}</a>
+						<a href="{{ link.path }}" aria-label="{% if link.description %}{{ link.description }}{% else %}{{ link.name }}{% endif %}" translate="no">
+							{{ link.path }}
+						</a>
 					</div>
 				</div>
 			{% endif %}
