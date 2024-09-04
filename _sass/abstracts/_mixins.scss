@@ -8,13 +8,13 @@
 ///     color: rgba(211, 211, 211, 1);
 ///   }
 @mixin color-scheme($scheme) {
-    @if list.index(dark light, $scheme) {
-      @media screen and (prefers-color-scheme: $scheme) {
-        @content;
-      }
-    } @else {
-      @error 'No color scheme found for #{$scheme}. Available color schemes are: dark, light.';
+  @if list.index(dark light, $scheme) {
+    @media screen and (prefers-color-scheme: $scheme) {
+      @content;
     }
+  } @else {
+    @error 'No color scheme found for #{$scheme}. Available color schemes are: dark, light.';
+  }
 }
 
 /// :hover and :focus events wrapper
@@ -37,9 +37,9 @@
 ///     animation: none;
 ///   }
 @mixin reduced-motion {
-    @media screen and (prefers-reduced-motion: reduce) {
-      @content;
-    }
+  @media screen and (prefers-reduced-motion: reduce) {
+    @content;
+  }
 }
 
 /// Responsive breakpoints manager
