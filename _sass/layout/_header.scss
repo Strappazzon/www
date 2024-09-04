@@ -16,6 +16,7 @@ header {
   border-bottom: 1px solid var(--text-color);
   .logo {
     font-family: 'Acens', $font-stack-text-system;
+    letter-spacing: px2em(1px, $font-size-small);
     @include respond-to('small') {
       font-size: 0.875em;
     }
@@ -25,7 +26,6 @@ header {
         display: none;
       }
     }
-    letter-spacing: px2em(1px, $font-size-small);
     img {
       height: px2em(18px, $font-size-small);
       margin-top: px2rem(-2px);
