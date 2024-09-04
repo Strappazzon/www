@@ -26,7 +26,7 @@ jobs:
       - name: Setup Ruby
         env:
           BUNDLE_SPECIFIC_PLATFORM: 1
-        uses: ruby/setup-ruby@v1.173.0
+        uses: ruby/setup-ruby@v1.191.0
         with:
           bundler-cache: true
 
