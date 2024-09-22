@@ -21,7 +21,7 @@ config:
 dependencies:
   - ".nvmrc"
   - ".rubocop.yml"
-  - ".ruby-version"
+  - ".tool-versions"
   - ".stylelintignore"
   - ".stylelintrc.yml"
   - "Gemfile"

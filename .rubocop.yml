@@ -3,7 +3,6 @@
 
 AllCops:
   NewCops: enable
-  TargetRubyVersion: <%= File.read(File.join(File.dirname(__FILE__), '.ruby-version')).strip %>
 
 # Enforce specifications from specific Gem version
 Bundler/GemVersion:

@@ -12,7 +12,7 @@ on:
       - ".*"
       - "!.cloudflare/**"
       - "!.well-known/**"
-      - "!.ruby-version"
+      - "!.tool-versions"
       - "bin/**"
       - "frontmatter.json"
       - "LICENSE*"
