@@ -60,13 +60,13 @@ sass:
   sourcemap: development
   style: compressed
 
-# jekyll-autoprefixer plugin
+# jekyll-autoprefixer-v2 plugin
 autoprefixer:
   browsers:
     - last 2 versions
     - not dead
     - firefox esr
-    - chrome 109
+    - chrome 126
   exclude:
     - "**/vendors/*"
   only_production: true
