@@ -3,6 +3,20 @@
 # Top artists of each year ordered from most recent to oldest, descending
 # Each artist is ordered from most to least listened
 
+- year: "2024"
+  artists:
+    "Lindsey Stirling": {}
+    "Loveless": {}
+    "Ari Abdul": {}
+    "Bring Me The Horizon":
+      is_returning: true
+    "Klangphonics": {}
+    "Soccer Mommy": {}
+    "Chappell Roan":
+      is_new: true
+    "Bad Omens":
+      is_new: true
+
 - year: "2023"
   artists:
     "Conquer Divide":
