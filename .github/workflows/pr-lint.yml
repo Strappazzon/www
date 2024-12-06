@@ -29,7 +29,7 @@ jobs:
         if: steps.check_changes.outputs.changed_rb != ''
         env:
           BUNDLE_SPECIFIC_PLATFORM: 1
-        uses: ruby/setup-ruby@v1.191.0
+        uses: ruby/setup-ruby@v1.202.0
         with:
           bundler-cache: true
 
