@@ -187,8 +187,8 @@ footer {
         top: 0;
         left: -1rem;
         text-decoration: none;
-        opacity: 0;
         scroll-margin: 2rem;
+        opacity: 0;
         @include hocus {
           opacity: 1;
         }

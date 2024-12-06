@@ -2,7 +2,7 @@
   &__samaritan,
   &__samaritan-alt,
   &__samaritan-header {
-    margin: 0 px2em(15px, $font-size-small) px2em(15px, $font-size-small) px2em(15px, $font-size-small);
+    margin: 0 px2em(15px, $font-size-small) px2em(15px, $font-size-small);
   }
   &__samaritan,
   &__samaritan-alt {
@@ -34,7 +34,7 @@
         // min-height: 2rem;
         .label,
         .text {
-          padding: px2em(2px, $font-size-small) px2em(5px, $font-size-small) px2em(2px, $font-size-small) px2em(5px, $font-size-small);
+          padding: px2em(2px, $font-size-small) px2em(5px, $font-size-small);
         }
         .text {
           text-transform: uppercase;

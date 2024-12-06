@@ -6,9 +6,9 @@
   width: px2rem(650px);
   margin: 0 auto 1rem;
   font-size: 0.875rem;
+  scrollbar-width: #{$scrollbar-w};
   border: 1px solid var(--border-color);
   border-radius: calc(#{$border-radius} + 1px);
-  scrollbar-width: #{$scrollbar-w};
   @include respond-to('large') {
     width: 100%;
   }
