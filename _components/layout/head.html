@@ -25,37 +25,40 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="theme-color" content="#ba0000">
 	{%- comment -%} Open Graph Data {%- endcomment -%}
+	{% if page.url == "/" %}
+		<meta property="og:description" content="{{ site.data.meta.description }}">
+	{% else %}
+		<meta property="og:description" content="{{ page.description }}">
+	{% endif %}
 	{% if page.url contains "/blog/" or page.layout == "blog" %}
 		<meta property="og:title" content="{{ page.title }} | {{ site.data.blog.title }}">
-		<meta property="og:description" content="{{ page.description }}">
 		<meta property="og:site_name" content="{{ site.data.blog.title }}">
 		<meta property="og:url" content="{{ site.url }}{{ page.url | replace: 'index.html', '' }}">
 		<meta property="og:type" content="article">
 		<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
 		<meta property="article:modified_time" content="{% if page.last_modified_at %}{{ page.last_modified_at | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}">
 		<meta property="article:section" content="blog">
-		<meta property="og:locale" content="en_US">
 		<meta property="og:image" content="{{ site.url }}/static/img/ogimage_blog.png">
 		<meta property="og:image:alt" content="{{ site.data.blog.title }}">
-		<meta property="og:image:width" content="1280">
-		<meta property="og:image:height" content="640">
-		<meta property="og:image:type" content="image/png">
 	{% else %}
 		<meta property="og:title" content="{{ page.title }} | {{ site.data.meta.title }}">
-		<meta property="og:description" content="{{ page.description }}">
 		<meta property="og:site_name" content="{{ site.data.meta.title }}">
 		<meta property="og:url" content="{{ page.permalink | prepend: site.url }}">
 		<meta property="og:type" content="website">
-		<meta property="og:locale" content="en_US">
 		<meta property="og:image" content="{{ site.url }}/static/img/ogimage.png">
 		<meta property="og:image:alt" content="{{ site.data.meta.title }}">
-		<meta property="og:image:width" content="1280">
-		<meta property="og:image:height" content="640">
-		<meta property="og:image:type" content="image/png">
 	{% endif %}
+	<meta property="og:image:width" content="1280">
+	<meta property="og:image:height" content="640">
+	<meta property="og:image:type" content="image/png">
+	<meta property="og:locale" content="en_US">
 	{%- comment -%} Twitter Cards Data {%- endcomment -%}
 	<meta name="twitter:card" content="summary_large_image">
-	<meta name="twitter:description" content="{{ page.description }}">
+	{% if page.url == "/" %}
+		<meta name="twitter:description" content="{{ site.data.meta.description }}">
+	{% else %}
+		<meta name="twitter:description" content="{{ page.description }}">
+	{% endif %}
 	{% if page.layout == "blog" %}
 		<meta name="twitter:title" content="{{ page.title }} | {{ site.data.blog.title }}">
 		<meta name="twitter:image" content="{{ site.url }}/static/img/ogimage_blog.png">
@@ -131,7 +134,11 @@
 				"url": "{{ site.url }}/static/img/avatar.png"
 			},
 			"keywords": "{{ k }}",
-			"description": "{{ page.description }}",
+			{% if page.url == "/" -%}
+				"description": "{{ site.data.meta.description }}",
+			{%- else -%}
+				"description": "{{ page.description }}",
+			{%- endif %}
 			"inLanguage": {
 				"@type": "Language",
 				"name": "English",
