@@ -17,6 +17,7 @@ I currently sign my Git commits with SSH:
 
 ### PGP Keys
 
-I previously signed my Git commits with the following PGP keys:
+My past and present PGP keys:  
+I no longer sign my Git commits with PGP.
 
 {% include terminal.html task="pgp" %}
