@@ -1,17 +1,14 @@
 # Platforms where I accept donations
 # See also: https://github.com/Strappazzon/.github/blob/-/FUNDING.yml
 platforms:
-  - name: GitHub Sponsors
-    url: https://github.com/sponsors/Strappazzon
-    type: Recurring, One-Time
-    currency: USD
   - name: Ko-fi
     url: https://ko-fi.com/strappazzon
     type: One-Time
     currency: EUR
-  - name: Revolut
-    url: https://revolut.me/strappazzon
-    type: One-Time
+  - name: GitHub Sponsors
+    url: https://github.com/sponsors/Strappazzon
+    type: Recurring, One-Time
+    currency: USD
 
 # Donations history
 # ledger:
