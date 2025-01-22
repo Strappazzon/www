@@ -10,6 +10,9 @@ gem 'html-proofer', '~> 5.0', require: false
 gem 'jekyll', '~> 4.3'
 gem 'mini_racer', '~> 0.6'
 gem 'rubocop', '~> 1.57.0', require: false
+# Avoid updating to version >= 1.80.0 due to import deprecation
+# silence_deprecations does not seem to work
+gem 'sass-embedded', '~> 1.79.0'
 
 # Plugins
 group :jekyll_plugins do
