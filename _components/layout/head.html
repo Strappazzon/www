@@ -54,29 +54,21 @@
 		<meta property="og:image:type" content="image/png">
 	{% endif %}
 	{%- comment -%} Twitter Cards Data {%- endcomment -%}
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:description" content="{{ page.description }}">
 	{% if page.layout == "blog" %}
-		<meta name="twitter:card" content="summary_large_image">
 		<meta name="twitter:title" content="{{ page.title }} | {{ site.data.blog.title }}">
-		<meta name="twitter:description" content="{{ page.description }}">
 		<meta name="twitter:image" content="{{ site.url }}/static/img/ogimage_blog.png">
 		<meta name="twitter:image:alt" content="{{ site.data.blog.title }}">
-		<meta name="twitter:domain" content="{{ site.url | replace: 'https://', '' }}">
-		<meta name="twitter:creator" content="@0xStrappazzon">
-		<meta name="twitter:site" content="@0xStrappazzon">
 	{% else %}
-		<meta name="twitter:card" content="summary_large_image">
 		<meta name="twitter:title" content="{{ page.title }} | {{ site.data.meta.title }}">
-		<meta name="twitter:description" content="{{ page.description }}">
 		<meta name="twitter:image" content="{{ site.url }}/static/img/ogimage.png">
 		<meta name="twitter:image:alt" content="{{ site.data.meta.title }}">
-		<meta name="twitter:domain" content="{{ site.url | replace: 'https://', '' }}">
-		<meta name="twitter:creator" content="@0xStrappazzon">
-		<meta name="twitter:site" content="@0xStrappazzon">
 	{% endif %}
 	{%- comment -%} Link Relationships {%- endcomment -%}
 	<link rel="canonical" href="{{ site.url }}{{ page.url | replace: 'index.html', '' }}">
 	<link rel="alternate" type="application/atom+xml" href="/feed.xml" title="{{ site.data.blog.title }} Feed">
-	<link rel="me" href="https://twitter.com/0xStrappazzon">
+	<link rel="me" href="https://bsky.app/profile/strappazzon.xyz">
 	{%- comment -%} Favicons {%- endcomment -%}
 	<link rel="icon" href="/favicon.ico" sizes="48x48">
 	<link rel="icon" type="image/svg+xml" href="/static/img/favicons/favicon.svg" sizes="any">
@@ -147,8 +139,9 @@
 			},
 			"license": "https://raw.githubusercontent.com/Strappazzon/www/master/LICENSE-CODE.txt",
 			"sameAs": [
-				"https://github.com/Strappazzon",
-				"https://twitter.com/0xStrappazzon"
+				{%- for a in site.data.accounts %}
+					"{{ a.url }}"{% unless forloop.last %},{% endunless -%}
+				{% endfor %}
 			]
 		}
 		</script>
