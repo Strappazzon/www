@@ -3,7 +3,7 @@ name: "Reminder: Update security.txt"
 on:
   schedule:
     # Yearly, one week before expiry
-    - cron: "0 8 4 4 *"
+    - cron: "0 8 15 1 *"
 
 jobs:
   create_issue:
@@ -22,6 +22,6 @@ jobs:
           body: |
             # Reminder
 
-            Update [security.txt](https://github.com/Strappazzon/www/blob/-/.well-known/security.txt) **before 04/11 @ 06:00 am UTC** to avoid staleness.
+            Update [security.txt](https://github.com/Strappazzon/www/blob/-/.well-known/security.txt) **before 01/22 @ 06:00 am UTC** to avoid staleness.
 
             The command to use is `gpg --clear-sign --digest-algo SHA512 security.txt`.
