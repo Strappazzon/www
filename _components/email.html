@@ -1,4 +1,5 @@
 {%- comment -%}
+	{% include email.html %}
 	{% include email.html
 		user   = "name"
 		domain = "strappazzon.xyz"
@@ -6,12 +7,17 @@
 {%- endcomment -%}
 
 {%- comment -%}
-	SCSS for this component is inside _base rather than inside components/_component.
 	Wrap component inside a conditional tag to avoid outputting whitespaces, which create layout problems with Terminal component.
 {%- endcomment -%}
 
 {%- if true -%}
-	{%- assign domain = include.domain | remove: "https://" | remove: "www." | split: "" | reverse | join: "" -%}
-	{%- assign user = include.user | split: "" | reverse | join: "" -%}
-	<span class="ep" data-user="{{ user }}" data-domain="{{ domain }}"></span>
+	{% if include.user or include.domain -%}
+	{% comment %} This means the email is being used in the Terminal component {% endcomment %}
+		{%- assign user = include.user | split: "" | reverse | join: "" -%}
+		{%- assign domain = include.domain | split: "" | reverse | join: "" -%}
+		<span class="email" data-user="{{ user }}" data-domain="{{ domain }}"></span>
+	{%- else %}
+		{% assign rnd = "now" | date: "%N" | modulo: 9999 %}
+		<span class="email">{{ site.data.meta.email.user }}<a>{{ rnd }}</a> [AT] strappazzon [DOT] xyz</span>
+	{% endif %}
 {%- endif -%}

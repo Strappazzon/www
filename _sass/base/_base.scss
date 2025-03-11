@@ -198,18 +198,6 @@ footer {
   }
 }
 
-// Email protection
-.ep {
-  // stylelint-disable-next-line declaration-no-important
-  text-transform: lowercase !important;
-  word-break: keep-all;
-  &::before {
-    content: attr(data-domain) '\0040' attr(data-user);
-    unicode-bidi: bidi-override;
-    direction: rtl;
-  }
-}
-
 // Visually hide content
 // https://github.com/twbs/bootstrap/blob/-/scss/mixins/_visually-hidden.scss
 // stylelint-disable declaration-no-important, unit-disallowed-list

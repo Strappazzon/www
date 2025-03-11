@@ -1,0 +1,13 @@
+.email {
+  .terminal & {
+    word-break: keep-all;
+    &::before {
+      content: attr(data-domain) '\0040' attr(data-user);
+      unicode-bidi: bidi-override;
+      direction: rtl;
+    }
+  }
+  a {
+    display: none;
+  }
+}

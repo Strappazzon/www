@@ -85,8 +85,10 @@
       &__row {
         .label {
           color: var(--bg-color);
-          text-transform: uppercase;
           background-color: var(--bg-color--lightest);
+          &:not(address) {
+            text-transform: uppercase;
+          }
           a {
             @include hocus {
               color: var(--brand-color--dark);
