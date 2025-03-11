@@ -31,6 +31,16 @@
   source: https://github.com/Strappazzon/GRW-GHOST-Buster
   status: !!int 1
 
+- title: mint-notag
+  description: >2-
+    Third-party mod integration tool for Deep Rock Galactic.
+    This fork of mint - among other small changes - omits the "[MODDED]" prefix from the public lobby name.
+  languages:
+    - Rust
+  url: https://github.com/Strappazzon/drg-mint-notag/blob/-/.github/README.md
+  source: https://github.com/Strappazzon/drg-mint-notag
+  status: !!int 1
+
 - title: SuperBLT Hasher
   description: >2-
     Calculates hashes for PAYDAY 2 mods.
