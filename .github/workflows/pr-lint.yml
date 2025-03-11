@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4.1.1
+        uses: actions/checkout@v4.2.2
 
       - name: Detect changes in Ruby files
         id: check_changes
@@ -29,13 +29,13 @@ jobs:
         if: steps.check_changes.outputs.changed_rb != ''
         env:
           BUNDLE_SPECIFIC_PLATFORM: 1
-        uses: ruby/setup-ruby@v1.213.0
+        uses: ruby/setup-ruby@v1.224.0
         with:
           bundler-cache: true
 
       - name: Run RuboCop
         if: steps.check_changes.outputs.changed_rb != ''
-        uses: reviewdog/action-rubocop@v2.9.0
+        uses: reviewdog/action-rubocop@v2.21.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           use_bundler: true
@@ -52,7 +52,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4.1.1
+        uses: actions/checkout@v4.2.2
 
       - name: Detect changes in SCSS files
         id: check_changes
@@ -62,7 +62,7 @@ jobs:
 
       - name: Setup NodeJS
         if: steps.check_changes.outputs.changed_scss != ''
-        uses: actions/setup-node@v4.0.3
+        uses: actions/setup-node@v4.2.0
         with:
           cache: npm
           node-version-file: ".tool-versions"
@@ -70,10 +70,10 @@ jobs:
       - name: Setup Stylelint
         if: steps.check_changes.outputs.changed_scss != ''
         run: |
-          npm install --save-dev stylelint@16.x
-          npm install --save-dev stylelint-config-recess-order@5.x
-          npm install --save-dev stylelint-config-standard-scss@13.x
-          npm install --save-dev stylelint-plugin-defensive-css@1.x
+          npm install --save-dev stylelint@16.15.x
+          npm install --save-dev stylelint-config-recess-order@6.0.x
+          npm install --save-dev stylelint-config-standard-scss@14.0.x
+          npm install --save-dev stylelint-plugin-defensive-css@1.0.x
 
       - name: Run Stylelint
         if: steps.check_changes.outputs.changed_scss != ''
@@ -88,7 +88,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4.1.1
+        uses: actions/checkout@v4.2.2
 
       - name: Detect changes in MD files
         id: check_changes
@@ -98,6 +98,6 @@ jobs:
 
       - name: markdownlint-cli2-action
         if: steps.check_changes.outputs.changed_md != ''
-        uses: DavidAnson/markdownlint-cli2-action@v16.0.0
+        uses: DavidAnson/markdownlint-cli2-action@v19.1.0
         with:
           config: ".markdownlint.yml"
