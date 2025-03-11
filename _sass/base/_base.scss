@@ -99,8 +99,8 @@ footer {
   padding: px2rem(8px);
   color: var(--text-color);
   background-color: var(--bg-color--clearer);
-  transition: transform 0.5s;
   transform: translateY(-100%);
+  transition: transform 0.5s;
   &:focus,
   &:active {
     transform: translateY(0%);
@@ -219,8 +219,8 @@ footer {
   height: 1px !important;
   padding: 0 !important;
   overflow: hidden !important;
-  clip: rect(0, 0, 0, 0) !important;
   white-space: nowrap !important;
   border: 0 !important;
+  clip: rect(0, 0, 0, 0) !important;
 }
 // stylelint-enable declaration-no-important, unit-disallowed-list

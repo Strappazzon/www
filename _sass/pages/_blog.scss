@@ -221,9 +221,9 @@ article {
     td,
     th {
       padding: 0.3rem;
+      vertical-align: top;
       text-align: left;
       word-wrap: break-word;
-      vertical-align: top;
     }
   }
 
@@ -360,8 +360,8 @@ footer {
       @extend %h4;
       margin-bottom: 0;
       color: var(--text-color--secondary);
-      text-shadow: none;
       text-transform: unset;
+      text-shadow: none;
     }
   }
 }
