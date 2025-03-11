@@ -2,7 +2,7 @@
 # Kramdown converter that inserts anchors to Markdown headings
 #
 # This plugin contains work from:
-#   https://github.com/tinymce/tinymce-docs/blob/557623ea07ddfd6fdbdeae4942ae5900c55795ad/_plugins/headers_anchors.rb
+#   https://github.com/tinymce/tinymce-docs/blob/557623e/_plugins/headers_anchors.rb
 #
 # CONFIG
 #   anchors:
@@ -10,6 +10,8 @@
 #
 # TODO
 #   Split heading ID if it's too long
+# FIX
+#   HTML markup is stripped
 #
 
 require 'kramdown'
