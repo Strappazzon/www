@@ -71,10 +71,10 @@
   status: !!int 0
 
 - title: Tor Exit Router Page
-  description: Alternative design to the default Tor exit router page provided by The Tor Project.
+  description: Alternative design to the default "This is a Tor Exit Router" page provided by The Tor Project
   languages:
-    - HTML
-    - CSS
+    - Liquid HTML
+    - SCSS
   url: /tor-exit-page
   source: https://github.com/Strappazzon/tor-exit-page
   status: !!int 2
