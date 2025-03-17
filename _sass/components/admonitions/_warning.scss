@@ -1,4 +1,5 @@
 .admonition {
+  &.important,
   &.warning {
     .title {
       color: var(--text-color--yellow);

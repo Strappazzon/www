@@ -1,13 +1,31 @@
 #
-# Liquid block that outputs admonitions.
-# Nested admonitions in Markdown are not supported.
+# Jekyll converter that renders GFM alerts.
+#
+# Inspired by GFM alerts:
+#   https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts
+#
+# This plugin contains work from:
+#   https://github.com/manabu-nakamura/jekyll-gfm-admonitions2/blob/b8adb47/lib/jekyll-gfm-admonitions.rb
 #
 # USAGE
-#   {% admonition type="info" title="Plugin usage" %}
-#     Content goes here.
-#   {% endadmonition %}
+#   > [!WARNING]
+#   > Content goes here.
+#
+#   > [!INFO] PLUGIN USAGE
+#   > Content goes here.
 #
 # OUTPUT
+#   <aside role="note" class="admonition warning">
+#     <div class="header">
+#       <span class="icon" aria-hidden="true">[!]</span>
+#       <span class="title">WARNING</span>
+#     </div>
+#     <div class="content">
+#       <p>Content goes here.</p>
+#     </div>
+#     <div class="footer"></div>
+#   </aside>
+#
 #   <aside role="note" class="admonition info">
 #     <div class="header">
 #       <span class="icon" aria-hidden="true">[!]</span>
@@ -20,60 +38,57 @@
 #   </aside>
 #
 
-require 'kramdown'
-
 module Jekyll
-  class Admonition < Liquid::Block
-    VERSION = '1.0.0'.freeze
+  class Admonition < Jekyll::Converter
+    priority :lowest
 
-    # See: _sass/components/admonitions
-    TYPES = %w[danger info warning].freeze
+    VERSION = '2.0.0'.freeze
 
-    def initialize(tag_name, arguments, _tokens)
-      super
-
-      @args = parse_args(arguments)
-
-      # Use the admonition type as title if none is provided
-      @title = @args['title'].nil? || @args['title'].empty? ? @args['type'].upcase : @args['title'].upcase.gsub(/(\.)+$/, '')
-      @type  = @args['type']
+    # Method required by Jekyll::Converter
+    def matches(ext)
+      ext =~ /^\.(md)$/i
     end
 
-    def render(context)
-      content = Kramdown::Document.new(super).to_html
+    # Method required by Jekyll::Converter
+    def output_ext(_ext)
+      '.html'
+    end
 
-      return %W[
-        <aside role="note" class="admonition #{@type}">
-        <div class="header">
-        <span class="icon" aria-hidden="true">[!]</span>
-        <span class="title">#{@title}</span>
-        </div>
-        <div class="content">
-        #{content.strip}
-        </div>
-        <div class="footer">
-        </div>
-        </aside>
-      ].join(' ')
+    # See: _sass/components/admonitions
+    TYPES = %w[caution danger important info note tip warning].freeze
+
+    def convert(content)
+      content.gsub!(/<blockquote>\s*<p>\s*\[!(#{TYPES.join('|')})\](.*?)\n(.*?)\s*<\/p>\s*<\/blockquote>/im) do
+        type  = Regexp.last_match(1).downcase
+        title = Regexp.last_match(2).strip.empty? ? type.upcase : Regexp.last_match(2).strip.upcase
+        text  = Regexp.last_match(3)
+
+        admonition_html(type, title, text)
+      end
+
+      return content
     end
 
     private
 
-    def parse_args(arguments)
-      args = {}
-
-      # key="value"
-      arguments.scan(/(\w+)\s*=\s*"([^"]*)"/i) { |k, v| args[k] = v }
-
-      raise ArgumentError, "Invalid number of arguments for {% admonition %} block. Expected 1 or 2, got #{args.length}." unless [1, 2].include? args.length
-      raise ArgumentError, 'Invalid argument "type" for {% admonition %} block. Value is required.' if args['type'].nil? || args['type'].empty?
-      raise ArgumentError, "Invalid argument \"type\" for {% admonition %} block. Supported types are #{TYPES.join(', ')}" unless TYPES.include? args['type']
-
-      return args
+    def admonition_html(type, title, text)
+      # rubocop:disable Layout/ArrayAlignment
+      return %W[
+        <aside role="note" class="admonition #{type}">
+          <div class="header">
+            <span class="icon" aria-hidden="true">[!]</span>
+            <span class="title">#{title}</span>
+          </div>
+          <div class="content">
+            #{text}
+          </div>
+          <div class="footer">
+          </div>
+        </aside>
+      ].join("\n")
+      # rubocop:enable Layout/ArrayAlignment
     end
   end
 end
-
-Liquid::Template.register_tag('admonition', Jekyll::Admonition)
 
 Jekyll.logger.info 'Plugin:', "#{File.basename(__FILE__)} #{Jekyll::Admonition::VERSION} loaded."
