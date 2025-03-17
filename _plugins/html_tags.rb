@@ -1,5 +1,5 @@
 #
-# Jekyll plugin that wraps Markdown input inside HTML tags:
+# Jekyll hooks that wrap Markdown input inside HTML tags:
 #   <ins>
 #   <mark>
 #   <kbd>
@@ -10,8 +10,8 @@
 #   https://facelessuser.github.io/pymdown-extensions/extensions/keys/
 #
 # This plugin contains work from:
-#   https://github.com/maximevaillancourt/digital-garden-jekyll-template/blob/main/_plugins/markdown-highlighter.rb
-#   https://github.com/stephenreid321/stephenreid/blob/master/app/jekyll_blog/_plugins/custom_markdown_processor.rb
+#   https://github.com/maximevaillancourt/digital-garden-jekyll-template/blob/5feb308/_plugins/markdown-highlighter.rb
+#   https://github.com/stephenreid321/stephenreid/blob/9ab9f00/app/jekyll_blog/_plugins/custom_markdown_processor.rb
 #
 # USAGE
 #   ==important text==
