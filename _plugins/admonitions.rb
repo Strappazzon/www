@@ -85,7 +85,7 @@ module Jekyll
           <div class="footer">
           </div>
         </aside>
-      ].join("\n")
+      ].join(' ')
       # rubocop:enable Layout/ArrayAlignment
     end
   end
