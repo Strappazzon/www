@@ -12,12 +12,14 @@
 
 {%- if true -%}
 	{% if include.user or include.domain -%}
-	{% comment %} This means the email is being used in the Terminal component {% endcomment %}
+		{% comment %} This means the email is being used in the Terminal component {% endcomment %}
 		{%- assign user = include.user | split: "" | reverse | join: "" -%}
 		{%- assign domain = include.domain | split: "" | reverse | join: "" -%}
+
 		<span class="email" data-user="{{ user }}" data-domain="{{ domain }}"></span>
 	{%- else %}
 		{% assign rnd = "now" | date: "%N" | modulo: 9999 %}
+
 		<span class="email">{{ site.data.meta.email.user }}<a>{{ rnd }}</a> [AT] strappazzon [DOT] xyz</span>
 	{% endif %}
 {%- endif -%}
