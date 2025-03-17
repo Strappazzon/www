@@ -40,7 +40,7 @@
 
 module Jekyll
   class Admonition < Jekyll::Converter
-    priority :lowest
+    priority :low
 
     VERSION = '2.0.0'.freeze
 
