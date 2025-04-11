@@ -1,19 +1,22 @@
 {
-	"[liquid]": {
-		"editor.defaultFormatter": null,
-		"editor.insertSpaces": false,
-		"editor.tabSize": 4
-	},
 	"[javascript]": {
 		"editor.defaultFormatter": "vscode.typescript-language-features",
 		"editor.formatOnPaste": true,
 		"editor.formatOnSave": true,
 		"editor.insertSpaces": true,
+		"editor.rulers": [
+			160
+		],
 		"editor.tabSize": 2
 	},
 	"[json][jsonc]": {
 		"editor.formatOnPaste": true,
 		"editor.formatOnSave": true,
+		"editor.insertSpaces": false,
+		"editor.tabSize": 4
+	},
+	"[liquid]": {
+		"editor.defaultFormatter": null,
 		"editor.insertSpaces": false,
 		"editor.tabSize": 4
 	},
@@ -65,10 +68,20 @@
 		"editor.tabSize": 2,
 		"files.eol": "\n"
 	},
-	"[xml]": {
-		"editor.defaultFormatter": null
+	"[svg]": {
+		"editor.defaultFormatter": "jock.svg",
+		"editor.insertSpaces": false,
+		"editor.tabSize": 4
 	},
-	"[xml][yaml]": {
+	"[xml]": {
+		"editor.defaultFormatter": null,
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2
+	},
+	"[yaml]": {
+		"editor.defaultFormatter": "redhat.vscode-yaml",
+		"editor.formatOnPaste": true,
+		"editor.formatOnSave": true,
 		"editor.insertSpaces": true,
 		"editor.tabSize": 2
 	},
@@ -87,28 +100,29 @@
 		"*.html": "liquid"
 	},
 	"files.exclude": {
-		".bundle": true,
-		".frontmatter": true,
-		".jekyll-cache": true,
-		"*.swp": true,
-		"_site*": true,
-		"node_modules": true
+		"**/.frontmatter": true,
+		"**/.jekyll-cache": true,
+		"**/.ruby-lsp": true,
+		"**/_site*": true,
+		"**/node_modules": true,
+		"*.swp": true
 	},
 	"files.insertFinalNewline": true,
 	"files.readonlyInclude": {
-		".ruby-lsp/**/*": true,
-		"_site/**/*.*": true,
-		"node_modules/**/*.*": true,
-		".stylelintcache": true,
-		"Gemfile.lock": true,
+		"**/.ruby-lsp": true,
+		"**/.stylelintcache": true,
+		"**/_site*": true,
+		"**/node_modules": true,
+		"**/Gemfile.lock": true,
 		"**/LICENSE*": true,
-		"package-lock.json": true
+		"**/package-lock.json": true
 	},
 	"files.trimFinalNewlines": true,
 	"files.trimTrailingWhitespace": true,
 	"git.inputValidation": true,
 	"git.inputValidationLength": 70,
 	"git.inputValidationSubjectLength": 70,
+	"javascript.format.enable": true,
 	"javascript.format.insertSpaceAfterConstructor": true,
 	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
 	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
@@ -126,21 +140,20 @@
 	"liquid.engine": "jekyll",
 	"markdown.validate.enabled": false,
 	"rubyLsp.formatter": "rubocop",
+	"scss.validate": false,
 	"search.exclude": {
 		"**/.frontmatter": true,
 		"**/.jekyll-cache": true,
 		"**/.ruby-lsp": true,
-		"**/_site": true,
-		"**/node_modules": true
+		"**/_site*": true,
+		"**/node_modules": true,
+		"*.swp": true
 	},
-	"scss.validate": false,
 	"stylelint.snippet": [
-		"scss",
-		"sass"
+		"scss"
 	],
 	"stylelint.validate": [
-		"scss",
-		"sass"
+		"scss"
 	],
 	"svg.preview.background": "transparent",
 	"terminal.integrated.defaultProfile.windows": "WSL",
