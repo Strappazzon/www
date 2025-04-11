@@ -8,10 +8,8 @@
 #   anchors:
 #     prefix: section
 #
-# TODO
-#   Split heading ID if it's too long
-# FIX
-#   HTML markup is stripped
+# FIX: HTML markup is stripped
+# TODO: Split heading ID if it's too long
 #
 
 require 'kramdown'
