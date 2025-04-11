@@ -5,6 +5,10 @@ platforms:
     url: https://ko-fi.com/strappazzon
     type: One-Time
     currency: EUR
+  - name: Buy Me A Coffee
+    url: https://buymeacoffee.com/strappazzon
+    type: One-Time, Recurring
+    currency: EUR
   - name: GitHub Sponsors
     url: https://github.com/sponsors/Strappazzon
     type: Recurring, One-Time
