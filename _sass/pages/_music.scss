@@ -1,6 +1,9 @@
 footer {
   place-content: center center;
   align-items: center;
+  p {
+    margin-bottom: 0;
+  }
 }
 
 .text__color-green {
