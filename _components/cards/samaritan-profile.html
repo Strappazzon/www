@@ -8,7 +8,7 @@
 		<div class="content">
 			<div class="image">
 				{% comment %} ARTIST NAME -> artist-name {% endcomment %}
-				<img src="/static/img/pages/{{ page.url | remove: '/' }}/{{ top_artist[0] | downcase | replace: ' ', '-' }}.jpg" alt="" width="150px" draggable="false">
+				<img src="/static/img/pages/{{ page.url | remove: '/' }}/{{ top_artist[0] | downcase | replace: ' ', '-' }}.jpg" alt="{{ top_artist[0] }}" width="150px" draggable="false">
 			</div>
 			<div class="container__artists">
 				<div class="top-artist">
