@@ -7,7 +7,7 @@ permalink: /contact/
 
 ### Contact Me
 
-The best way to get in touch with me is via email at {% include email.html user="im" domain="strappazzon.xyz" %}
+The best way to get in touch with me is via email at {% include email.html %}
 
 ### SSH Keys
 

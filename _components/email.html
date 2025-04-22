@@ -17,9 +17,8 @@
 		{%- assign domain = include.domain | split: "" | reverse | join: "" -%}
 
 		<span class="email" data-user="{{ user }}" data-domain="{{ domain }}"></span>
-	{%- else %}
+	{%- else -%}
 		{% assign rnd = "now" | date: "%N" | modulo: 9999 %}
-
 		<span class="email">{{ site.data.meta.email.user }}<span>{{ rnd }}</span> [AT] strappazzon [DOT] xyz</span>
-	{% endif %}
+	{%- endif %}
 {%- endif -%}
