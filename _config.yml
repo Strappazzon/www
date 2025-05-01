@@ -2,6 +2,19 @@
 url: https://strappazzon.xyz
 baseurl: /
 
+meta:
+  title: Alberto Strappazzon
+  description: |2-
+    I'm a hobbyist developer. This website is mainly about my personal projects.
+  keywords: ["strappazzon", "alberto strappazzon", "strappazzon alberto"]
+  first: Alberto
+  last: Strappazzon
+  location: Veneto, Italy
+  email:
+    user: im
+
+timezone: "Europe/Rome"
+
 # Custom directories
 includes_dir: _components
 layouts_dir: _templates
@@ -77,6 +90,9 @@ collections:
     output: true
     permalink: /:collection/:year-:month-:day/:title/
 
+blog_meta:
+  title: "Strappazzon's Blog"
+
 # jekyll-paginate-v2 plugin
 pagination:
   collection: blog
@@ -93,5 +109,3 @@ autopages:
   # https://github.com/sverrirs/jekyll-paginate-v2/issues/237
   enabled: false
   tags: {}
-
-timezone: "Europe/Rome"

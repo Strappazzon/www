@@ -7,7 +7,7 @@ permalink: /privacy/
 
 ### {{ page.description | remove: "." }}
 
-This Privacy Statement applies to <{{ site.url }}> (hereinafter, "This Website"), operated by {{ site.data.meta.first }} {{ site.data.meta.last }}
+This Privacy Statement applies to <{{ site.url }}> (hereinafter, "This Website"), operated by {{ site.meta.first }} {{ site.meta.last }}
 (hereinafter, "I", "Me" or "My"). This Privacy Statement does not cover third-party mirrors or archived versions of my website.
 
 I do not collect any personal information. I do not track you using cookies, collect your fingerprints, or use any tracking scripts.

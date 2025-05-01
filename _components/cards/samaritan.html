@@ -4,15 +4,15 @@
 		<span aria-hidden="true">///</span>
 		<span>ABOUT</span>
 	</div>
-	<div class="title">{{ site.data.meta.first | upcase }} {{ site.data.meta.last | upcase }}</div>
+	<div class="title">{{ site.meta.first | upcase }} {{ site.meta.last | upcase }}</div>
 	<div class="content">
-		<div class="content__desc">{{ site.data.meta.description }}</div>
-		{% if site.data.meta.location and site.data.meta.location != "" %}
+		<div class="content__desc">{{ site.meta.description }}</div>
+		{% if site.meta.location and site.meta.location != "" %}
 			<div class="content__row">
 				<div class="text">Location:</div>
 				<div class="label">
-					<a href="https://www.wikipedia.org/w/index.php?search={{ site.data.meta.location | url_encode }}" aria-label="{{ site.data.meta.location }}">
-						{{ site.data.meta.location }}
+					<a href="https://www.wikipedia.org/w/index.php?search={{ site.meta.location | url_encode }}" aria-label="{{ site.meta.location }}">
+						{{ site.meta.location }}
 					</a>
 				</div>
 			</div>
