@@ -68,6 +68,27 @@ summary {
   cursor: pointer;
 }
 
+[type='button'],
+[type='reset'],
+[type='submit'],
+button {
+  padding: px2rem(6) px2rem(12);
+  color: var(--text-color);
+  text-transform: uppercase;
+  touch-action: manipulation;
+  background-color: var(--bg-color--light);
+  border: 1px solid var(--border-color--clear);
+  // Don't use hocus mixin because when clicking the button
+  // it will not return to the default state
+  &[disabled] {
+    color: var(--text-color--secondary);
+    background-color: var(--bg-color--lighter);
+  }
+  &:hover {
+    background-color: var(--bg-color--lighter);
+  }
+}
+
 address {
   // display: inline-block;
   font-style: normal;
