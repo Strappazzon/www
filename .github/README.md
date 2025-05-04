@@ -29,9 +29,15 @@ If you are interested in contributing directly to this repository, please see:
 
 ## Licensing
 
-The code is open source under the terms of the [MIT License](https://github.com/Strappazzon/www/blob/-/LICENSE-CODE.txt).
+The content of the website is licensed under the terms of the [CC BY-SA 4.0 License](../LICENSE-CONTENT.txt).  
+Content can be found in the `/_blog`, `/_data`, `/static/blog`, `/static/img` and `/static/psd` folders.
 
-Content, including PSD files under `/static/psd`, is licensed under the terms of [CC BY-SA 4.0](https://github.com/Strappazzon/www/blob/-/LICENSE-CONTENT.txt) license.
+The source code is licensed under the terms of the [MIT License](../LICENSE-CODE.txt).  
+Any source code snippets contained within blog posts are licensed under the MIT license.
+
+Some assets inside `/static/img` may not be original work of myself and therefore cannot be (re)licensed by me.
+The usage of these materials does not negatively affect the original creators' ability to market or profit from their copyrighted material.
+If you believe that copyrighted materials have been used in a way that goes beyond fair use, please [contact me](https://strappazzon.xyz/contact/).
 
 The website theme is based on [Person of Interest Web UI](https://github.com/Phreshhh/poi-web-ui) by Krisztián Kis ([MIT License](https://github.com/Phreshhh/poi-web-ui/blob/master/LICENSE.md)).
 
@@ -45,8 +51,8 @@ The website theme is based on [Person of Interest Web UI](https://github.com/Phr
 
 Background images from [Person of Interest Web UI](https://github.com/Phreshhh/poi-web-ui).
 
-Icons from [Person of Interest wiki](https://personofinterest.fandom.com/wiki/Person_of_Interest_Wiki) and [SVG Repo](https://www.svgrepo.com/), then edited.
+Icons from [Person of Interest wiki](https://personofinterest.fandom.com/wiki/Person_of_Interest_Wiki) and [SVG Repo](https://www.svgrepo.com/).
 
-Images of artists in the `/music/` page are taken from [Last.fm](https://www.last.fm/) and [Spotify](https://open.spotify.com/).
+Images of artists in the [`/music/`](https://strappazzon.xyz/music/) page are taken from [Last.fm](https://www.last.fm/) and [Spotify](https://open.spotify.com/).
 
-By contributing to this repository, you agree that the content you contribute may be provided under the terms of the [MIT License](https://github.com/Strappazzon/www/blob/-/LICENSE-CODE.txt).
+By contributing to this repository, you agree that the content you contribute may be provided under the terms of the abovementioned licenses.
