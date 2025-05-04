@@ -57,10 +57,12 @@
 	},
 	"Video": {
 		"body": [
+			"<!-- markdownlint-disable MD034 -->",
 			"{% include video.html",
 			"\turl    = \"${1:/static/video.mp4}\"",
 			"\tformat = \"${2|mp4,webm|}\"",
-			"%}\n"
+			"%}",
+			"<!-- markdownlint-enable MD034 -->\n"
 		],
 		"description": "Insert Video Liquid component.",
 		"prefix": "video",
@@ -68,11 +70,13 @@
 	},
 	"Video (With preview image)": {
 		"body": [
+			"<!-- markdownlint-disable MD034 -->",
 			"{% include video.html",
 			"\turl     = \"${1:/static/video.mp4}\"",
 			"\tformat  = \"${2|mp4,webm|}\"",
 			"\tpreview = \"${3:/static/video_preview.png}\"",
-			"%}\n"
+			"%}",
+			"<!-- markdownlint-enable MD034 -->\n"
 		],
 		"description": "Insert Video Liquid component with a placeholder image.",
 		"prefix": "video",
