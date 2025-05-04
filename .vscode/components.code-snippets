@@ -20,7 +20,7 @@
 		],
 		"description": "Insert Figure Liquid component with a destination URL. This will render the image enclosed in an <a> HTML tag.",
 		"prefix": "figure",
-		"scope": "markdown"
+		"scope": "html,liquid"
 	},
 	"Figure (Without Destination URL)": {
 		"body": [
@@ -31,7 +31,7 @@
 		],
 		"description": "Insert Figure Liquid component without a destination URL.",
 		"prefix": "figure",
-		"scope": "markdown"
+		"scope": "html,liquid"
 	},
 	"Quote": {
 		"body": [
