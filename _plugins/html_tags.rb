@@ -22,7 +22,11 @@
 #   ++CTRL++ + ++A++
 #
 # OUTPUT
-#   <figure><img src="https://example.com/#image.jpg" alt="Alt"><figcaption>Caption</figcaption></figure>
+#   <figure>
+#     <img src="https://example.com/#image.jpg" alt="Alt">
+#     <figcaption>Caption</figcaption>
+#   </figure>
+#
 #   <mark>important text</mark>
 #   <ins>inserted text</ins>
 #   <kbd>CTRL</kbd> + <kbd>A</kbd>
