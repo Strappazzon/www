@@ -30,9 +30,9 @@
     padding: 0 #{$padding};
     color: var(--text-color--secondary);
     p {
-      margin-bottom: #{$padding};
+      margin: 0 0 #{$padding};
       &:last-of-type {
-        margin-bottom: 0;
+        margin: 0;
       }
     }
     mark {
