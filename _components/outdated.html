@@ -1,0 +1,32 @@
+{% comment %} outdated.rb plugin {% endcomment %}
+
+{% assign m = page.last_modified_at | default: page.date | old_after_m: 12 %}
+{% if m != nil %}
+	<aside role="note" class="admonition outdated">
+		<div class="header">
+			<span class="icon" aria-hidden="true">[!]</span>
+			<span class="title">OUTDATED BLOG POST</span>
+		</div>
+		<div class="content">
+				<p>
+					This post was last updated
+					{% case m %}
+						{% when < 1 %}
+							less than a month
+						{% when == 1 %}
+							1 month
+						{% when == 12 %}
+							1 year
+						{% when >= 24 %}
+							{{ m | divided_by: 12 }} years
+						{% else %}
+							{{ m }} months
+					{% endcase %}
+					ago.
+					<br>
+					The content may no longer be relevant or inaccurate.
+				</p>
+		</div>
+		<div class="footer"></div>
+	</aside>
+{% endif %}
