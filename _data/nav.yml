@@ -11,7 +11,6 @@
 - name: Music
   description: Top artists
   path: /music/
-  hide: true
 
 - name: Contact Info and Public Keys
   description: My Contact Information and Public Keys
