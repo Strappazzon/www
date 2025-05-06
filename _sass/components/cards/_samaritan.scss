@@ -17,10 +17,10 @@
     // Card title
     .title,
     .subtitle {
-      text-align: center;
       background-color: var(--bg-color--light);
     }
     .title {
+      text-align: center;
       text-shadow: 1px 1px 2px var(--text-color--shadow);
     }
     .content {
@@ -104,9 +104,16 @@
     .title {
       width: px2em(66px, $font-size-small);
     }
+    // Card description
+    .subtitle {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-between;
+      padding: 0.15em 1em;
+      font-size: 0.875em;
+    }
     .content {
-      border-top: 2px solid var(--bg-color--lightest);
-      border-bottom: 2px solid var(--bg-color--lightest);
+      margin-top: px2em(5px, $font-size-small);
       &__row {
         flex-flow: row nowrap;
         margin: px2em(5px, $font-size-small) px2em(10px, $font-size-small);
@@ -115,6 +122,10 @@
           // https://stackoverflow.com/a/17783233
           text-overflow: ellipsis;
           white-space: nowrap;
+        }
+        // stylelint-disable-next-line no-descending-specificity
+        .label {
+          background-color: var(--bg-color);
         }
       }
     }

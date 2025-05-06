@@ -1,6 +1,10 @@
 <div class="card__samaritan-alt">
 	<div class="title">LINKS</div>
 	<nav class="content" aria-label="Main Navigation">
+		<div class="subtitle">
+			<span>WEBSITE PAGE</span>
+			<span>PATH</span>
+		</div>
 		{% for link in site.data.nav %}
 			{% if link.hide == true %}
 				{% continue %}
