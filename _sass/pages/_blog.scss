@@ -1,3 +1,5 @@
+@use 'sass:map';
+
 article {
 
   /// MEDIA
@@ -178,6 +180,35 @@ article {
       word-wrap: break-word;
       background-color: var(--bg-color--light);
       border: 1px solid var(--border-color--dark);
+    }
+  }
+  .highlight {
+    max-height: px2rem(350px);
+  }
+  *:not(.highlight) {
+    [class^='language-'][class*='highlighter-'] {
+      margin-bottom: 1rem;
+    }
+  }
+  .machine__code {
+    &-header,
+    &-header + figure pre {
+      border: 6px solid var(--bg-color--lighter);
+    }
+    &-header {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      justify-content: flex-start;
+      margin-bottom: 0;
+      background-color: map.get($hl-themes, $hl-theme, 'background');;
+      border-bottom: 0;
+      & .title {
+        padding: 0 px2rem(12px);
+        font-size: 0.875em;
+        color: var(--text-color--secondary);
+        background-color: var(--bg-color);
+      }
     }
   }
 

@@ -29,9 +29,6 @@ $hl-theme: 'tomorrow' !default;
 /// @link https://github.com/rouge-ruby/rouge/wiki/List-of-tokens
 /// @link https://notabug.org/rem/rouge_themes/src/master/src/template.css
 .highlight {
-  max-height: px2rem(350px);
-  margin-bottom: 1rem;
-
   color: map.get($hl-themes, $hl-theme, 'primary');
   background-color: map.get($hl-themes, $hl-theme, 'background');
 

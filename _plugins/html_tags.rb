@@ -14,14 +14,25 @@
 #   https://github.com/maximevaillancourt/digital-garden-jekyll-template/blob/5feb308/_plugins/markdown-highlighter.rb
 #   https://github.com/stephenreid321/stephenreid/blob/9ab9f00/app/jekyll_blog/_plugins/custom_markdown_processor.rb
 #   https://github.com/jonlpersson/ed-latimore/blob/3e29fef/site/_plugins/img-tag-transform.rb
+#   https://github.com/hoonti06/jekyll-code-block-linenos/blob/dda2d37/lib/jekyll-code-block-linenos.rb
 #
 # USAGE
+#   ```ini "file name.ini"
+#   [example]
+#   key="value"
+#   ````
 #   ![Alt](https://example.com/#image.jpg "Caption")
 #   ==important text==
 #   ^^inserted text^^
 #   ++CTRL++ + ++A++
 #
 # OUTPUT
+#   <div class="machine__code-header"><span class="title">file name.ini</span></div>
+#   {% highlight ini %}
+#   [example]
+#   key="value"
+#   {% endhighlight %}
+#
 #   <figure>
 #     <img src="https://example.com/#image.jpg" alt="Alt">
 #     <figcaption>Caption</figcaption>
@@ -34,7 +45,20 @@
 
 module Jekyll
   module HTMLTags
-    VERSION = '1.1.0'.freeze
+    VERSION = '1.2.0'.freeze
+
+    def self.codeblock(input)
+      input.content.gsub!(/[[:blank:]]*```(.*)[[:blank:]]"(.*)?"([\w\W]*?)[[:blank:]]*```[[:blank:]]*(\n|$)/i) do
+        lang  = Regexp.last_match(1).downcase
+        title = Regexp.last_match(2).strip.empty? ? 'Source Code'.upcase : Regexp.last_match(2).to_s
+        code  = Regexp.last_match(3)
+
+        %W[
+          <div class="machine__code-header"><span class="title">#{title}</span></div>
+          {% highlight #{lang} %}\n#{code}{% endhighlight %}#{Regexp.last_match(4)}
+        ].join("\n")
+      end
+    end
 
     def self.figure(input)
       input.content.gsub!(/(?<!`)!\[(.*)\]\(([^\)]+)?"(.*)"\)(?!`)/i) do
@@ -69,6 +93,7 @@ end
 
 # Hook: Blog collection
 Jekyll::Hooks.register [:blog], :pre_render do |h|
+  Jekyll::HTMLTags.codeblock(h)
   Jekyll::HTMLTags.figure(h)
   Jekyll::HTMLTags.ins(h)
   Jekyll::HTMLTags.mark(h)
@@ -80,6 +105,7 @@ Jekyll::Hooks.register [:pages], :pre_render do |h|
   # Match only Markdown files inside 'pages/'
   next unless h.path.match?(/^pages\/([\w\d\-]+(\/)?)+\.md$/i)
 
+  Jekyll::HTMLTags.codeblock(h)
   Jekyll::HTMLTags.figure(h)
   Jekyll::HTMLTags.ins(h)
   Jekyll::HTMLTags.mark(h)
