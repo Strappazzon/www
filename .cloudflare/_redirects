@@ -7,5 +7,6 @@
 /PD2-SuperBLT-Hasher*       https://strappazzon.github.io/PD2-SuperBLT-Hasher/:splat 301
 /teleme7ry*                 https://strappazzon.github.io/teleme7ry/:splat           301
 /tor-exit-page*             https://strappazzon.github.io/tor-exit-page/:splat       301
+/jekyll-spoiler/demo/       https://strappazzon.github.io/jekyll-spoiler/            301
 /static/strappazzon_pm.asc  /static/pgp/strappazzon_pm.asc                           301
 /static/strappazzon_xyz.asc /static/pgp/strappazzon_a.asc                            301

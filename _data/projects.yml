@@ -52,6 +52,14 @@
   source: https://github.com/Strappazzon/PD2-SuperBLT-Hasher
   status: !!int 2
 
+- title: jekyll-spoiler
+  description: Jekyll plugin that provides spoiler text support with a Liquid filter and tag.
+  languages:
+    - Ruby
+  url: /jekyll-spoiler/demo/
+  source: https://github.com/Strappazzon/jekyll-spoiler
+  status: !!int 1
+
 - title: Tor Exit Router Page
   description: Alternative design to the default "This is a Tor Exit Router" page provided by The Tor Project
   languages:
