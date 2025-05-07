@@ -145,16 +145,24 @@ footer {
     // Homepage
     &__main {
       background-image: url('#{$base-url}img/bg_poi.jpg');
-      background-image: image-set(url('#{$base-url}img/bg_poi.webp') 1x);
+      background-image: image-set(
+        url('#{$base-url}img/bg_poi.avif') type('image/avif') 1x,
+        url('#{$base-url}img/bg_poi.webp') type('image/webp') 1x,
+        url('#{$base-url}img/bg_poi.jpg') type('image/jpg') 1x
+      );
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
-      opacity: 0.25;
+      opacity: 0.2;
     }
     // Pages & Blog
     &__1 {
-      background-image: url('#{$base-url}img/bg_machine.png');
-      background-image: image-set(url('#{$base-url}img/bg_machine.webp') 1x);
+      background-image: url('#{$base-url}img/bg_machine.jpg');
+      background-image: image-set(
+        url('#{$base-url}img/bg_machine.avif') type('image/avif') 1x,
+        url('#{$base-url}img/bg_machine.webp') type('image/webp') 1x,
+        url('#{$base-url}img/bg_machine.jpg') type('image/jpg') 1x
+      );
       background-repeat: repeat-y;
       background-position: center;
       background-size: cover;
