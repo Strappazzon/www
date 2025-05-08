@@ -1,5 +1,3 @@
-{% assign k = site.meta.keywords | uniq | join: "," %}
-
 <head>
 	{%- comment -%} Meta Data {%- endcomment -%}
 	<meta charset="utf-8">
@@ -13,6 +11,7 @@
 	{% else %}
 		<meta name="description" content="{{ page.description }}">
 	{% endif %}
+	{% assign k = site.meta.keywords | uniq | join: "," %}
 	{% if page.layout == "blog" %}
 		{% assign t = page.tags | uniq | join: "," %}
 		<meta name="keywords" content="{{ k }},blog{% if t.size >= 1 %},{{ t }}{% endif %}">
