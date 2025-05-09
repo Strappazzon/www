@@ -10,9 +10,19 @@
 			<article id="main" tabindex="-1" itemscope="" itemtype="http://schema.org/BlogPosting">
 				{% include layout/title.html %}
 				<hr aria-hidden="true">
-				<div itemprop="articleBody">
-					{% include outdated.html %}
-					{{ content }}
+				<div class="row">
+					<div class="col order-1">
+						<div itemprop="articleBody">
+							{% include outdated.html %}
+							{{ content }}
+						</div>
+					</div>
+					<div class="col-3 order-2">
+						<nav aria-label="On This Page">
+							<span class="toc-title">On This Page</span>
+							{% toc %}
+						</nav>
+					</div>
 				</div>
 				<hr aria-hidden="true">
 			</article>

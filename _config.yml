@@ -47,6 +47,7 @@ defaults:
       type: blog
     values:
       layout: blog
+      toc: true
 
 # Markdown
 markdown: kramdown
@@ -83,6 +84,13 @@ autoprefixer:
   exclude:
     - "**/vendors/*"
   only_production: true
+
+# jekyll-toc plugin
+toc:
+  min_level: 2
+  max_level: 3
+  no_toc_section_class: toc-skip
+  list_class: toc-entries
 
 # Blog
 collections:

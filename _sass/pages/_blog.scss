@@ -2,6 +2,25 @@
 
 article {
 
+  /// TOC
+  nav {
+    position: sticky;
+    top: 2rem;
+    display: flex;
+    flex-flow: column nowrap;
+    #toc {
+      margin: 0;
+    }
+    .toc-title {
+      padding-top: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    @include respond-to('large') {
+      display: none;
+    }
+  }
+
   /// MEDIA
   img {
     // & + em { display: block; }
