@@ -7,7 +7,8 @@
 {%- endcomment -%}
 
 {%- comment -%}
-	Wrap component inside a conditional tag to avoid outputting whitespaces, which create layout problems with Terminal component.
+	Wrap component inside a conditional tag to avoid outputting whitespaces,
+	which create layout problems with Terminal component.
 {%- endcomment -%}
 
 {%- if true -%}
@@ -15,10 +16,9 @@
 		{% comment %} This means the email is being used in the Terminal component {% endcomment %}
 		{%- assign user = include.user | split: "" | reverse | join: "" -%}
 		{%- assign domain = include.domain | split: "" | reverse | join: "" -%}
-
 		<span class="email" data-user="{{ user }}" data-domain="{{ domain }}"></span>
 	{%- else -%}
-		{% assign rnd = "now" | date: "%N" | modulo: 9999 %}
+		{%- assign rnd = "now" | date: "%N" | modulo: 9999 -%}
 		<span class="email">{{ site.meta.email.user }}<span>{{ rnd }}</span> [AT] strappazzon [DOT] xyz</span>
 	{%- endif %}
 {%- endif -%}

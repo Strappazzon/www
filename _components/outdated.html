@@ -1,8 +1,8 @@
 {% comment %} outdated.rb plugin {% endcomment %}
 
-{% assign m = page.last_modified_at | default: page.date | old_after_m: 12 %}
+{%- assign m = page.last_modified_at | default: page.date | old_after_m: 12 -%}
 {% if m != nil %}
-	<aside role="note" class="admonition outdated">
+	<aside role="note" class="admonition warning">
 		<div class="header">
 			<span class="icon" aria-hidden="true">[!]</span>
 			<span class="title">OUTDATED BLOG POST</span>

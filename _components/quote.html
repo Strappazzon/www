@@ -4,24 +4,11 @@
 		cite  = "Source for the information quoted."
 		url   = "https://example.com/#source-url"
 	%}
-	{% include quote.html
-		quote = "Quote goes here."
-	%}
-	{% include quote.html
-		quote = "Multiline quote
-		goes here."
-	%}
 {% endcomment %}
 
-{%- if include.cite and include.url -%}
-	<blockquote cite="{{ include.url }}">
-		<p>{{ include.quote | newline_to_br }}</p>
-		<footer>
-			-<cite>{{ include.cite }}</cite>
-		</footer>
-	</blockquote>
-{%- else -%}
-	<blockquote>
-		<p>{{ include.quote | newline_to_br }}</p>
-	</blockquote>
-{%- endif -%}
+<blockquote cite="{{ include.url }}">
+	<p>{{ include.quote | newline_to_br }}</p>
+	<footer>
+		&hyphen;<cite>{{ include.cite }}</cite>
+	</footer>
+</blockquote>

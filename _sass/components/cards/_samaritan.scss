@@ -1,11 +1,11 @@
 .card {
-  &__samaritan,
-  &__samaritan-alt,
+  &__samaritan-about,
+  &__samaritan-nav,
   &__samaritan-header {
     margin: 0 px2em(15px, $font-size-small) px2em(15px, $font-size-small);
   }
-  &__samaritan,
-  &__samaritan-alt {
+  &__samaritan-about,
+  &__samaritan-nav {
     display: flex;
     flex-direction: column;
     padding: px2em(5px, $font-size-small);
@@ -42,16 +42,15 @@
       }
     }
   }
-  &__samaritan,
-  &__samaritan-profile {
+  &__samaritan-about,
+  &__samaritan-artists {
     // Card title
     .subtitle {
       width: max-content;
       font-size: 0.85rem;
     }
   }
-  // Info, used in homepage
-  &__samaritan {
+  &__samaritan-about {
     // Card title
     .subtitle {
       display: flex;
@@ -98,8 +97,7 @@
       }
     }
   }
-  // Links, used in homepage
-  &__samaritan-alt {
+  &__samaritan-nav {
     // Card title
     .title {
       width: px2em(66px, $font-size-small);
@@ -130,7 +128,6 @@
       }
     }
   }
-  // Header, used in top artists page
   &__samaritan-header {
     border: 2px solid var(--text-color);
     .title {
@@ -167,8 +164,7 @@
       }
     }
   }
-  // Profile, used in top artists page
-  &__samaritan-profile {
+  &__samaritan-artists {
     margin: 1rem 0;
     // Border: https://static.wikia.nocookie.net/pediaofinterest/images/6/6a/POI_0501_SPOV_Enlisting_Civilian_Assets_1.png
     &::after {

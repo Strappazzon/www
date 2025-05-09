@@ -3,7 +3,7 @@
 <div class="read-time">
 	<span>
 		Reading time:
-		{% assign rt = page.content | reading_time %}
+		{%- assign rt = page.content | reading_time -%}
 		{% if rt <= 0 %}
 			Less than a minute.
 		{% elsif rt == 1 %}

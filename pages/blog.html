@@ -21,7 +21,7 @@ pagination:
 	{% assign formatted_date = p.date | date: "%B %e %Y" %}
 	{% assign short_desc = p.description | truncatewords: 20 %}
 
-	{% include cards/machine-alt.html
+	{% include cards/machine-post.html
 		date        = formatted_date
 		title       = p.title
 		description = short_desc

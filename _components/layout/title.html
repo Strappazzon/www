@@ -1,6 +1,5 @@
 <div class="container__title">
-	{% assign title = page.title | split: " | " %}
-
+	{%- assign title = page.title | split: " | " -%}
 	{% if page.layout == "blog" %}
 		<h1 itemprop="headline" data-tgiv="title">{{ title[0] | upcase }}</h1>
 		<div class="container__title-desc">

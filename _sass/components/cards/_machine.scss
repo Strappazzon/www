@@ -1,14 +1,13 @@
 .card {
-  &__machine,
-  &__machine-alt {
+  &__machine-project,
+  &__machine-post {
     margin: 1rem 0;
     background-color: var(--bg-color--clearer);
     a {
       text-decoration: none;
     }
   }
-  // Project info
-  &__machine {
+  &__machine-project {
     font-size: 1rem;
     border: 2px solid var(--text-color);
     border-radius: 5px;
@@ -74,8 +73,7 @@
       box-shadow: 0 0 15px var(--text-color--shadow);
     }
   }
-  // Blog post
-  &__machine-alt {
+  &__machine-post {
     padding: px2rem(6px) px2rem(12px);
     border: 10px solid var(--border-color--dark);
     .date {

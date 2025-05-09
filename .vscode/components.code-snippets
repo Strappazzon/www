@@ -10,46 +10,15 @@
 		"prefix": "email",
 		"scope": "html,liquid"
 	},
-	"Figure (With Destination URL)": {
-		"body": [
-			"{% include figure.html",
-			"\turl  = \"${1:https://strappazzon.xyz}\"",
-			"\tsrc  = \"${2:/static/image.png}\"",
-			"\tdesc = \"${3:Image description}\"",
-			"%}\n"
-		],
-		"description": "Insert Figure Liquid component with a destination URL. This will render the image enclosed in an <a> HTML tag.",
-		"prefix": "figure",
-		"scope": "html,liquid"
-	},
-	"Figure (Without Destination URL)": {
-		"body": [
-			"{% include figure.html",
-			"\tsrc  = \"${1:/static/image.png}\"",
-			"\tdesc = \"${2:Image description}\"",
-			"%}\n"
-		],
-		"description": "Insert Figure Liquid component without a destination URL.",
-		"prefix": "figure",
-		"scope": "html,liquid"
-	},
-	"Quote": {
-		"body": [
-			"{% include quote.html",
-			"\tquote = \"$1\"",
-			"%}\n"
-		],
-		"description": "Insert Quote Liquid component.",
-		"prefix": "quote",
-		"scope": "markdown"
-	},
 	"Quote (With citation)": {
 		"body": [
+			"<!-- markdownlint-disable MD034 -->",
 			"{% include quote.html",
 			"\tquote = \"$1\"",
 			"\tcite  = \"$2\"",
 			"\turl   = \"${3:https://strappazzon.xyz}\"",
-			"%}\n"
+			"%}",
+			"<!-- markdownlint-enable MD034 -->\n"
 		],
 		"description": "Insert Quote Liquid component with a source for the quoted text.",
 		"prefix": "quote",
@@ -65,20 +34,6 @@
 			"<!-- markdownlint-enable MD034 -->\n"
 		],
 		"description": "Insert Video Liquid component.",
-		"prefix": "video",
-		"scope": "markdown"
-	},
-	"Video (With preview image)": {
-		"body": [
-			"<!-- markdownlint-disable MD034 -->",
-			"{% include video.html",
-			"\turl     = \"${1:/static/video.mp4}\"",
-			"\tformat  = \"${2|mp4,webm|}\"",
-			"\tpreview = \"${3:/static/video_preview.png}\"",
-			"%}",
-			"<!-- markdownlint-enable MD034 -->\n"
-		],
-		"description": "Insert Video Liquid component with a placeholder image.",
 		"prefix": "video",
 		"scope": "markdown"
 	}

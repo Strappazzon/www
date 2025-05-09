@@ -3,6 +3,6 @@ layout: home
 title: "Home"
 ---
 
-{% include cards/samaritan.html %}
+{% include cards/samaritan-about.html %}
 
-{% include cards/samaritan-alt.html %}
+{% include cards/samaritan-nav.html %}
