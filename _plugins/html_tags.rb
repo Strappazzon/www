@@ -45,7 +45,7 @@
 
 module Jekyll
   module HTMLTags
-    VERSION = '1.2.0'.freeze
+    VERSION = '1.2.1'.freeze
 
     def self.codeblock(input)
       input.content.gsub!(/[[:blank:]]*```(.*)[[:blank:]]"(.*)?"([\w\W]*?)[[:blank:]]*```[[:blank:]]*(\n|$)/i) do
@@ -63,7 +63,7 @@ module Jekyll
     def self.figure(input)
       input.content.gsub!(/(?<!`)!\[(.*)\]\(([^\)]+)?"(.*)"\)(?!`)/i) do
         alt     = Regexp.last_match(1)
-        url     = Regexp.last_match(2)
+        url     = Regexp.last_match(2).strip
         caption = Regexp.last_match(3)
 
         # rubocop:disable Layout/ArrayAlignment
