@@ -10,12 +10,17 @@
 			<article id="main" tabindex="-1" itemscope="" itemtype="http://schema.org/BlogPosting">
 				{% include layout/title.html %}
 				<hr aria-hidden="true">
+				{% if page.hero and page.hero != "" %}
+					<section class="hero">
+						<img alt="" src="{{ page.hero }}">
+					</section>
+				{% endif %}
 				<div class="row">
 					<div class="col order-1">
-						<div itemprop="articleBody">
+						<section itemprop="articleBody">
 							{% include outdated.html %}
 							{{ content }}
-						</div>
+						</section>
 					</div>
 					<div class="col-3 order-2">
 						<nav aria-label="On This Page">

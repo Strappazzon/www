@@ -368,6 +368,39 @@ article {
     margin: 0 0.2em;
   }
 
+  /// HERO
+  .hero {
+    position: relative;
+    margin-bottom: 1rem;
+    border: 1px solid var(--bg-color--lighter);
+    /// @link https://gist.github.com/lmas/6a1bd445bc7a7145245085f4a740d3f5
+    &::before {
+      position: absolute;
+      inset: 0;
+      display: block;
+      pointer-events: none;
+      content: '';
+      background:
+        linear-gradient(
+          rgba(18, 16, 16, 0) 50%,
+          rgba(0, 0, 0, 0.25) 50%
+        ),
+        linear-gradient(
+          90deg,
+          rgba(255, 0, 0, 0.06),
+          rgba(0, 255, 0, 0.02),
+          rgba(0, 0, 255, 0.06)
+        );
+      // stylelint-disable-next-line unit-disallowed-list
+      background-size: 100% 4px, 2px 100%;
+    }
+    img {
+      aspect-ratio: 32 / 6;
+      object-fit: cover;
+      border: 0;
+    }
+  }
+
   /// FOOTNOTES
   .footnote {
     color: var(--text-color--secondary);
