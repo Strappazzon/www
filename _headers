@@ -1,0 +1,24 @@
+/*
+  X-Frame-Options: DENY
+  X-XSS-Protection: 0
+  X-Content-Type-Options: nosniff
+  X-UA-Compatible: IE=edge
+  Content-Security-Policy: default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self'; manifest-src 'self'; frame-ancestors 'none';
+  Permissions-Policy: accelerometer=(),autoplay=(self),camera=(),fullscreen=(self),geolocation=(),gyroscope=(),interest-cohort=(),microphone=(),payment=(),usb=()
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: GET, HEAD
+  Referrer-Policy: no-referrer
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  Accept-Encoding: br
+  Cache-Control: no-cache
+  X-Robots-Tag: index,follow
+  X-Source-Code: https://github.com/Strappazzon/www
+
+/*.ico
+  Cache-Control: max-age=365000000,public,immutable
+
+/*.woff2
+  Cache-Control: max-age=365000000,public,immutable
+
+https://strappazzon.pages.dev/*
+  X-Robots-Tag: noindex
