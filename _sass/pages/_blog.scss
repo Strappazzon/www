@@ -218,15 +218,34 @@ article {
       display: flex;
       flex-flow: row nowrap;
       align-items: center;
-      justify-content: flex-start;
+      justify-content: space-between;
       margin-bottom: 0;
-      background-color: map.get($hl-themes, $hl-theme, 'background');;
+      background-color: map.get($hl-themes, $hl-theme, 'background');
       border-bottom: 0;
-      & .title {
+      & .title,
+      & .clipboard {
         padding: 0 px2rem(12px);
         font-size: 0.875em;
         color: var(--text-color--secondary);
         background-color: var(--bg-color);
+      }
+      // & .title {}
+      & .clipboard {
+        display: none;
+        font-family: $font-stack-text;
+        border: 0;
+        opacity: 0;
+      }
+    }
+    @media screen and (hover: hover) {
+      @include hocus {
+        .clipboard {
+          display: unset;
+          opacity: 1;
+          @include hocus {
+            color: var(--text-color);
+          }
+        }
       }
     }
   }

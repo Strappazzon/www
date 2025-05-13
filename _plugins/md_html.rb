@@ -53,10 +53,21 @@ module Jekyll
         title = Regexp.last_match(2).strip.empty? ? 'Source Code'.upcase : Regexp.last_match(2).to_s
         code  = Regexp.last_match(3)
 
+        # If ever considering changing the button text with JS
+        # announce it to screen readers, below <button>
+        # <span role="alert" class="visually-hidden"></span>
+
+        # rubocop:disable Layout/ArrayAlignment
         %W[
-          <div class="machine__code-header"><span class="title">#{title}</span></div>
-          {% highlight #{lang} %}\n#{code}{% endhighlight %}#{Regexp.last_match(4)}
+          <div class="machine__code">
+            <div class="machine__code-header">
+              <span class="title">#{title}</span>
+              <button class="clipboard">COPY</button>
+            </div>
+            {% highlight #{lang} %}\n#{code}{% endhighlight %}#{Regexp.last_match(4)}
+          </div>
         ].join("\n")
+        # rubocop:enable Layout/ArrayAlignment
       end
     end
 
