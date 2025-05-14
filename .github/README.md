@@ -41,9 +41,11 @@ If you believe that copyrighted materials have been used in a way that goes beyo
 
 The website theme is based on [Person of Interest Web UI](https://github.com/Phreshhh/poi-web-ui) by Krisztián Kis ([MIT License](https://github.com/Phreshhh/poi-web-ui/blob/master/LICENSE.md)).
 
-[Bootstrap Grid](https://getbootstrap.com/docs/5.3/layout/grid/) by The Bootstrap Authors ([MIT License](https://github.com/twbs/bootstrap/blob/main/LICENSE)).
+[Bootstrap](https://getbootstrap.com/docs/5.3/layout/grid/) by The Bootstrap Authors ([MIT License](https://github.com/twbs/bootstrap/blob/main/LICENSE)).
 
 [Gardevoir](https://github.com/xkrishguptaa/reseter.css) CSS Reset by Krish Gupta ([MIT License](https://github.com/xkrishguptaa/reseter.css/blob/main/LICENSE)).
+
+[bs-lightbox](https://github.com/RatMD/bs-lightbox) by rat.md ([MIT License](https://github.com/RatMD/bs-lightbox/blob/master/LICENSE.md)).
 
 [Acens](https://www.dafont.com/acens.font) font by Jack Coulthard.
 

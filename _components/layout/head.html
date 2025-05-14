@@ -82,6 +82,11 @@
 	{%- comment -%} Scripts {%- endcomment -%}
 	{% if page.layout == "blog" %}
 		<script defer src="/static/js/clipboard.js?{{ site.time | date: '%s%N' }}"></script>
+		{% unless page.lightbox == false %}
+			<script defer src="/static/js/vendors/bootstrap.bundle.min.js?{{ site.time | date: '%s%N' }}"></script>
+			<script defer src="/static/js/vendors/rat.lightbox.min.js?{{ site.time | date: '%s%N' }}"></script>
+			<script defer src="/static/js/lightbox.js?{{ site.time | date: '%s%N' }}"></script>
+		{% endunless %}
 	{% endif %}
 	{% if page.layout == "blog" %}
 		<script type="application/ld+json">

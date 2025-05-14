@@ -113,6 +113,7 @@
 		"**/.stylelintcache": true,
 		"**/_site*": true,
 		"**/node_modules": true,
+		"**/*.min.js": true,
 		"**/Gemfile.lock": true,
 		"**/LICENSE*": true,
 		"**/package-lock.json": true

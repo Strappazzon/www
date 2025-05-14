@@ -53,6 +53,14 @@
 					"single": false,
 					"title": "Tags",
 					"type": "categories"
+				},
+				{
+					"default": "false",
+					"name": "lightbox",
+					"required": false,
+					"single": true,
+					"title": "Lightbox",
+					"type": "boolean"
 				}
 			],
 			"name": "default",
