@@ -30,7 +30,7 @@
 }
 
 [data-theme='samaritan'] {
-  --bg-color   : rgba(255, 255, 255, 1);
+  --bg-color   : rgba(245, 245, 245, 1);
   --text-color : rgba(0, 0, 0, 1);
 
   @include color-scheme(dark) {
