@@ -55,6 +55,6 @@ Background images from [Person of Interest Web UI](https://github.com/Phreshhh/p
 
 Icons from [Person of Interest wiki](https://personofinterest.fandom.com/wiki/Person_of_Interest_Wiki) and [SVG Repo](https://www.svgrepo.com/).
 
-Images of artists in the [`/music/`](https://strappazzon.xyz/music/) page are taken from [Last.fm](https://www.last.fm/) and [Spotify](https://open.spotify.com/).
+Images of artists in the [`/music/`](https://strappazzon.xyz/music/) page are taken from [Last.fm](https://www.last.fm/).
 
 By contributing to this repository, you agree that the content you contribute may be provided under the terms of the abovementioned licenses.
