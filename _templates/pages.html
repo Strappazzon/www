@@ -16,6 +16,9 @@
 				{% endif %}
 				{{ content }}
 				<hr aria-hidden="true">
+				{% if page.url == "/music/" %}
+					{% include layout/pages/music/footer.html %}
+				{% endif %}
 			</main>
 		</div>
 	</body>

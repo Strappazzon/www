@@ -30,6 +30,25 @@ ul {
   }
 }
 
+/// FOOTER
+footer {
+  align-items: center;
+  justify-content: center;
+  // stylelint-disable-next-line no-descending-specificity
+  p {
+    margin-bottom: 0;
+  }
+}
+
+/// COLORS
+.text__color-green {
+  color: var(--text-color--green);
+}
+
+.text__color-yellow {
+  color: var(--text-color--yellow);
+}
+
 // jekyll-paginate-v2 plugin
 .pagination {
   margin: 0;
