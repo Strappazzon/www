@@ -226,14 +226,14 @@ article {
       & .title,
       & .clipboard {
         padding: 0 px2rem(12px);
-        font-size: 0.875em;
         color: var(--text-color--secondary);
         background-color: var(--bg-color);
       }
-      // & .title {}
+      & .title {
+        font-size: 0.875rem;
+      }
       & .clipboard {
         display: none;
-        font-family: $font-stack-text;
         border: 0;
         opacity: 0;
       }

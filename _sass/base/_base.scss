@@ -72,6 +72,8 @@ summary {
 [type='reset'],
 [type='submit'],
 button {
+  font-family: $font-stack-text;
+  font-size: 0.875rem;
   text-transform: uppercase;
   touch-action: manipulation;
   &:not([class]) {
