@@ -83,10 +83,11 @@ article {
     & > li {
       counter-increment: li;
       &::before {
-        width: 1rem;
+        width: 1.25em;
+        font-variant-numeric: tabular-nums;
         text-align: right;
-        direction: rtl;
         content: counter(li, decimal-leading-zero);
+        direction: rtl;
       }
     }
   }
