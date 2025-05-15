@@ -151,16 +151,21 @@
       padding: 0.5em;
       color: var(--text-color);
       background-color: var(--bg-color);
-      .page-title {
+      h1 {
         max-width: fit-content;
         padding: 0 0.33em;
         margin-bottom: 0.25em;
         font-size: 2em;
         font-weight: 700;
+        color: var(--text-color);
+        // Reset the default text shadow of <h1> elements
+        text-shadow: unset;
         background-color: var(--brand-color--shadow);
       }
-      .page-desc {
+      h2 {
+        margin-bottom: 0;
         font-size: 1.15em;
+        font-weight: 400;
       }
     }
   }
