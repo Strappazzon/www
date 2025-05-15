@@ -4,17 +4,20 @@
 }
 
 img[data-bs-slide-to] {
-  cursor: pointer;
+  cursor: zoom-in;
 }
 
 .modal-backdrop {
   --bs-backdrop-bg     : var(--bg-color);
   --bs-backdrop-opacity: 0.66;
+  cursor: zoom-out;
 }
 
 .modal {
+  cursor: zoom-out;
   img {
     vertical-align: middle;
+    cursor: auto;
   }
   .w-100 {
      width: 100%;
