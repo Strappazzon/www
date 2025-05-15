@@ -1,11 +1,11 @@
-const codeBlocks = document.querySelectorAll('.machine__code-header + .highlight .highlighter-rouge');
-const clipboardButtons = document.querySelectorAll('.machine__code-header .clipboard');
+const CODE_BLOCKS = document.querySelectorAll('.machine__code-header + .highlight .highlighter-rouge');
+const CLIPBOARD_BTNS = document.querySelectorAll('.machine__code-header .clipboard');
 
 // https://www.aleksandrhovhannisyan.com/blog/jekyll-copy-to-clipboard/
-clipboardButtons.forEach((clipboardButton, index) => {
-  const code = codeBlocks[ index ].innerText;
+CLIPBOARD_BTNS.forEach((clipboardButton, index) => {
+  const CODE = CODE_BLOCKS[ index ].innerText;
 
   clipboardButton.addEventListener('click', () => {
-    window.navigator.clipboard.writeText(code);
+    window.navigator.clipboard.writeText(CODE);
   });
 });

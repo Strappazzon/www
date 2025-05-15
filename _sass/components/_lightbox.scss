@@ -1,0 +1,22 @@
+:root {
+  --bs-body-color: var(--text-color);
+  --bs-body-bg   : var(--bg-color);
+}
+
+img[data-bs-slide-to] {
+  cursor: pointer;
+}
+
+.modal-backdrop {
+  --bs-backdrop-bg     : var(--bg-color);
+  --bs-backdrop-opacity: 0.66;
+}
+
+.modal {
+  img {
+    vertical-align: middle;
+  }
+  .w-100 {
+     width: 100%;
+  }
+}

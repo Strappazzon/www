@@ -434,14 +434,3 @@ footer {
     }
   }
 }
-
-/// LIGHTBOX
-article img[data-bs-slide-to] {
-  cursor: pointer;
-}
-
-.modal {
-  img {
-    vertical-align: middle;
-  }
-}
