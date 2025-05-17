@@ -18,5 +18,6 @@ gem 'sass-embedded', '~> 1.79.0'
 group :jekyll_plugins do
   gem 'jekyll-autoprefixer-v2', '~> 2.0'
   gem 'jekyll-paginate-v2', '~> 3.0'
+  gem 'jekyll-terser', '~> 1.0'
   gem 'jekyll-toc', '~> 0.19'
 end

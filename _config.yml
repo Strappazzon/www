@@ -85,6 +85,10 @@ autoprefixer:
     - "**/vendors/*"
   only_production: true
 
+# jekyll-terser plugin
+jekyll-terser:
+  only_production: true
+
 # jekyll-toc plugin
 toc:
   min_level: 2
