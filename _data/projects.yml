@@ -23,6 +23,31 @@
   source: https://github.com/Strappazzon/wsb
   status: !!int 1
 
+- title: jekyll-spoiler
+  description: Jekyll plugin that provides spoiler text support with a Liquid filter and tag.
+  languages:
+    - Ruby
+  url: /jekyll-spoiler/demo/
+  source: https://github.com/Strappazzon/jekyll-spoiler
+  status: !!int 1
+
+- title: jekyll-terser
+  description: A forked Jekyll plugin that minifies and mangles JS files with Terser.
+  languages:
+    - Ruby
+  url: https://rubygems.org/gems/jekyll-terser
+  source: https://github.com/Strappazzon/jekyll-terser
+  status: !!int 1
+
+- title: Tor Exit Router Page
+  description: Alternative design to the default "This is a Tor Exit Router" page provided by The Tor Project
+  languages:
+    - Liquid HTML
+    - SCSS
+  url: /tor-exit-page
+  source: https://github.com/Strappazzon/tor-exit-page
+  status: !!int 2
+
 - title: GHOST Buster
   description: Ghost Recon&reg; Wildlands backup utility.
   languages:
@@ -50,23 +75,6 @@
     - C#
   url: /PD2-SuperBLT-Hasher
   source: https://github.com/Strappazzon/PD2-SuperBLT-Hasher
-  status: !!int 2
-
-- title: jekyll-spoiler
-  description: Jekyll plugin that provides spoiler text support with a Liquid filter and tag.
-  languages:
-    - Ruby
-  url: /jekyll-spoiler/demo/
-  source: https://github.com/Strappazzon/jekyll-spoiler
-  status: !!int 1
-
-- title: Tor Exit Router Page
-  description: Alternative design to the default "This is a Tor Exit Router" page provided by The Tor Project
-  languages:
-    - Liquid HTML
-    - SCSS
-  url: /tor-exit-page
-  source: https://github.com/Strappazzon/tor-exit-page
   status: !!int 2
 
 - title: SCAM Lock Tool
