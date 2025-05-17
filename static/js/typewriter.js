@@ -1,0 +1,1 @@
+function typeWriter(){i<TEXT.length&&(TYPE.innerHTML+=TEXT.charAt(i),i++,setTimeout(typeWriter,SPEED))}let i=0;const TYPE=document.querySelector("#typewriter"),TEXT=TYPE.dataset.text,SPEED=125;TYPE.hasAttribute("hidden")&&TYPE.removeAttribute("hidden"),typeWriter();
