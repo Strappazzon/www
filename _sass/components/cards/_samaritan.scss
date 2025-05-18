@@ -251,9 +251,11 @@
             color: var(--bg-color);
             background-color: var(--text-color);
           }
-          .list {
-            display: flex;
-            flex-flow: column wrap;
+          ul {
+            margin: 0;
+            li::before {
+              content: unset;
+            }
           }
         }
       }

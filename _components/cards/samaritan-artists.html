@@ -17,22 +17,22 @@
 				<div class="container__list">
 					<span class="title">OTHER ARTISTS</span>
 					<hr>
-					<div class="list" translate="no">
+					<ul translate="no">
 						{% for a in include.artists %}
 							{% comment %} The first artist is always the most listened this year {% endcomment %}
 							{% unless forloop.first %}
 								{% if a[1]["is_new"] == true %}
-									<span class="text__color-green">
+									<li class="text__color-green">
 								{% elsif a[1]["is_returning"] == true %}
-									<span class="text__color-yellow">
+									<li class="text__color-yellow">
 								{% else %}
-									<span>
+									<li>
 								{% endif %}
 								{{ a[0] }}
-								</span>
+								</li>
 							{% endunless %}
 						{% endfor %}
-					</div>
+					</ul>
 				</div>
 			</div>
 		</div>
