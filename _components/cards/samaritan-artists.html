@@ -12,7 +12,7 @@
 			<div class="container__artists">
 				<div class="top-artist">
 					<span>TOP ARTIST:</span>
-					<span class="name" translate="no">{{ top_artist[0] | upcase }}</span>
+					<a href="https://last.fm/music/{{ top_artist[0] | url_encode | replace: '%20', '+' }}" target="_blank" class="name" translate="no">{{ top_artist[0] | upcase }}</a>
 				</div>
 				<div class="container__list">
 					<span class="title">OTHER ARTISTS</span>
@@ -28,7 +28,7 @@
 								{% else %}
 									<li>
 								{% endif %}
-								{{ a[0] }}
+								<a href="https://last.fm/music/{{ a[0] | url_encode | replace: '%20', '+' }}" target="_blank">{{ a[0] }}</a>
 								</li>
 							{% endunless %}
 						{% endfor %}

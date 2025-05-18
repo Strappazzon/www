@@ -226,16 +226,15 @@
           justify-content: space-between;
           margin-bottom: 0.5em;
           span {
-            &:first-of-type {
+            font-size: 1.2em;
+          }
+          .name {
+            padding: 0 0.5em;
+            font-size: 1.5em;
+            text-decoration: none;
+            background-color: var(--bg-color);
+            @include respond-to('large') {
               font-size: 1.2em;
-            }
-            &.name {
-              padding: 0 0.5em;
-              font-size: 1.5em;
-              background-color: var(--bg-color);
-              @include respond-to('large') {
-                font-size: 1.2em;
-              }
             }
           }
         }
@@ -253,8 +252,13 @@
           }
           ul {
             margin: 0;
-            li::before {
-              content: unset;
+            li {
+              &::before {
+                content: unset;
+              }
+              a {
+                text-decoration: none;
+              }
             }
           }
         }
