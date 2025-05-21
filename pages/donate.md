@@ -21,13 +21,3 @@ All donations will go directly to me, not towards any specific project. Please n
 {%- endfor %}
 
 <!-- markdownlint-enable MD007 MD032 -->
-
-<!--
-
-### History
-
-Here I list all donations received.
-
--->
-
-<!-- TODO: Ledger table -->
