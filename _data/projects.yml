@@ -48,6 +48,14 @@
   source: https://github.com/Strappazzon/tor-exit-page
   status: !!int 2
 
+- title: mkdocs-material-midnight
+  description: Material for MkDocs theme inspired by Discord and Reddit color palettes.
+  languages:
+    - CSS
+  url: https://github.com/Strappazzon/mkdocs-material-midnight/blob/-/.github/README.md
+  source: https://github.com/Strappazzon/mkdocs-material-midnight
+  status: !!int 1
+
 - title: GHOST Buster
   description: Ghost Recon&reg; Wildlands backup utility.
   languages:
