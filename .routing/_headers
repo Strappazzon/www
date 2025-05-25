@@ -3,21 +3,16 @@
     Access-Control-Allow-Methods: GET, HEAD
     Access-Control-Allow-Origin: *
     Cache-Control: no-cache
+    Content-Security-Policy: default-src 'none'; script-src 'self'; style-src 'self' https://fonts.bunny.net; img-src 'self'; font-src 'self' https://fonts.bunny.net; frame-ancestors 'none';
+    Permissions-Policy: accelerometer=(),autoplay=(self),camera=(),fullscreen=(self),geolocation=(),gyroscope=(),interest-cohort=(),microphone=(),payment=(),usb=()
     Referrer-Policy: no-referrer
     Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
     X-Content-Type-Options: nosniff
     X-Frame-Options: SAMEORIGIN
     X-Robots-Tag: index,follow
-    X-XSS-Protection: 1; mode=block
-
-/*.html
-    Content-Security-Policy: default-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self'; font-src 'self' https://fonts.bunny.net; manifest-src 'self'; frame-ancestors 'none';
-    Permissions-Policy: accelerometer=(),autoplay=(self),camera=(),fullscreen=(self),geolocation=(),gyroscope=(),interest-cohort=(),microphone=(),payment=(),usb=()
     X-Source-Code: https://github.com/Strappazzon/www
     X-UA-Compatible: IE=edge
+    X-XSS-Protection: 1; mode=block
 
 /*.ico
-    Cache-Control: max-age=365000000,public,immutable
-
-/*.woff2
     Cache-Control: max-age=365000000,public,immutable
