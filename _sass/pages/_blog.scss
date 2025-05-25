@@ -259,9 +259,9 @@ article {
     border-collapse: collapse;
     caption {
       margin-bottom: 0.33em;
-      font-family: 'Acens', $font-stack-text-system;
+      font-family: 'Coda', $font-stack-text-system;
       // text-align: left;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.05em;
       caption-side: top;
     }
     caption,
@@ -322,9 +322,9 @@ article {
   /// DESCRIPTION LIST
   dl {
     dt {
-      font-family: 'Acens', $font-stack-text-system;
+      font-family: 'Coda', $font-stack-text-system;
       text-transform: uppercase;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.05em;
     }
     dd {
       padding-left: 1.5rem;

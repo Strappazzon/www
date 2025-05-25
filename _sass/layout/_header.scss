@@ -15,8 +15,7 @@ header {
   background-color: var(--bg-color--clear);
   border-bottom: 1px solid var(--text-color--secondary);
   .logo {
-    font-family: 'Acens', $font-stack-text-system;
-    letter-spacing: px2em(1px, $font-size-small);
+    font-family: 'Coda', $font-stack-text-system;
     @include respond-to('small') {
       font-size: 0.875em;
     }
@@ -35,11 +34,12 @@ header {
       filter: brightness(2.33) contrast(1);
     }
     .separator {
+      letter-spacing: 0.063em;
       text-shadow: 1px 1px 2px var(--brand-color);
     }
     span:last-child {
       margin-left: px2em(4px, $font-size-small);
-      letter-spacing: px2rem(1.5px);
+      letter-spacing: 0.084em;
       @include respond-to('smaller') {
         margin-left: 0;
       }

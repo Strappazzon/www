@@ -43,8 +43,6 @@ By contributing to this repository, you agree that the content you contribute ma
 - [Gardevoir](https://github.com/xkrishguptaa/reseter.css) CSS Reset by Krish Gupta ([MIT License](https://github.com/xkrishguptaa/reseter.css/blob/main/LICENSE)).
 - [Bootstrap](https://getbootstrap.com/docs/5.3/layout/grid/) by The Bootstrap Authors ([MIT License](https://github.com/twbs/bootstrap/blob/main/LICENSE)).
 - [bs-lightbox](https://github.com/RatMD/bs-lightbox) by rat.md ([MIT License](https://github.com/RatMD/bs-lightbox/blob/master/LICENSE.md)).
-- [Acens](https://www.dafont.com/acens.font) font by Jack Coulthard.
-- [Barlow Semi Condensed](https://fonts.google.com/specimen/Barlow+Semi+Condensed) font by Jeremy Tribby, [Inconsolata](https://en.wikipedia.org/wiki/Inconsolata) by Raph Levien (both [SIL Open Font License](https://github.com/Strappazzon/www/blob/-/LICENSE-FONTS.txt)).
 - Background images from [Person of Interest Web UI](https://github.com/Phreshhh/poi-web-ui) and [Jordan Griffiths's Machine Map](https://www.behance.net/gallery/41851863/Person-of-Interest-Machine-Map).
 - Icons from [Person of Interest wiki](https://personofinterest.fandom.com/wiki/Person_of_Interest_Wiki) and [SVG Repo](https://www.svgrepo.com/).
 
