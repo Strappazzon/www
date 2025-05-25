@@ -7,7 +7,7 @@ on:
     paths-ignore:
       - ".*/**"
       - ".*"
-      - "!.cloudflare/**"
+      - "!.routing/**"
       - "!.well-known/**"
       - "!.tool-versions"
       - "bin/**"
@@ -37,8 +37,8 @@ jobs:
           JEKYLL_ENV: production
         run: |
           bundle exec jekyll build
-          cp .cloudflare/_headers _site/_headers
-          cp .cloudflare/_redirects _site/_redirects
+          cp .routing/_headers _site/_headers
+          cp .routing/_redirects _site/_redirects
 
       - name: Production Deploy
         uses: s0/git-publish-subdir-action@develop

@@ -10,3 +10,9 @@
 /jekyll-spoiler/demo/       https://strappazzon.github.io/jekyll-spoiler/            301
 /static/strappazzon_pm.asc  /static/pgp/strappazzon_pm.asc                           301
 /static/strappazzon_xyz.asc /static/pgp/strappazzon_a.asc                            301
+
+/fwlink              /
+/fwlink/CineTools    https://www.mediafire.com/folder/tnmqo9becu169/CinematicTools
+/fwlink/dontasktoask https://dontasktoask.com/
+/fwlink/nohello      https://nohello.net
+/fwlink/scoop        https://scoop.sh/#/apps?q=%22https%3A%2F%2Fgithub.com%2FStrappazzon%2Fscoop%22&o=false&dm=false&n=true

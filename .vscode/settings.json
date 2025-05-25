@@ -95,7 +95,7 @@
 		"package.json": "package-lock.json"
 	},
 	"files.associations": {
-		"**/.cloudflare/_*": "plaintext",
+		"**/.routing/_*": "plaintext",
 		"**/.vscode/*.code-snippets": "json",
 		"*.html": "liquid"
 	},

@@ -10,7 +10,7 @@ fi
 # shellcheck disable=SC2034
 JEKYLL_ENV=production
 build_dir="_site"
-ignore_urls=$(awk -vORS=, '{ print $1 }' .cloudflare/_redirects | sed 's/\*//g')
+ignore_urls=$(awk -vORS=, '{ print $1 }' .routing/_redirects | sed 's/\*//g')
 #sed 's/,$//'
 
 echo "HTMLProofer $(bundle exec htmlproofer --version)"

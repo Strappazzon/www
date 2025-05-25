@@ -322,9 +322,9 @@ For more information on the SCSS file structure, see [The 7-1 Pattern](https://s
 │       ├── _syntax.scss   # ... for Rouge syntax highlighter
 │       └── _terminal.scss # ... for Terminal component themes
 ├── _templates             # Jekyll templates for web pages like homepage or blog posts
-├── .cloudflare            # Cloudflare configuration files
 ├── .github
 │   └── labeler.yml        # "actions/labeler" configuration
+├── .routing               # Custom server rules
 ├── .well-known            # RFC 8615 URIs
 ├── bin                    # Scripts
 ├── static                 # Website static files

@@ -7,7 +7,7 @@ on:
     paths-ignore:
       - ".*/**"
       - ".*"
-      - "!.cloudflare/**"
+      - "!.routing/**"
       - "!.well-known/**"
       - "!.tool-versions"
       - "bin/**"
