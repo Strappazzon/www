@@ -7,6 +7,15 @@
   background-color: var(--bg-color--clearest);
   border: 2px solid var(--text-color);
   border-radius: calc(#{$border-radius} + 1px);
+  .container-lg & {
+    max-width: px2rem(600px);
+  }
+  .container-xl & {
+    max-width: px2rem(800px);
+  }
+  .container-fluid & {
+    max-width: 100%;
+  }
   .header,
   .footer {
     background-color: var(--bg-color--light);
