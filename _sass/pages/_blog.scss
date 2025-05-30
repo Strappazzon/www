@@ -424,6 +424,9 @@ footer {
       flex-flow: column nowrap;
       align-items: flex-end;
       justify-content: center;
+      @include respond-to('medium') {
+        align-items: flex-start;
+      }
     }
     // reading_time.rb plugin
     .read-time {

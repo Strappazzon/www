@@ -7,13 +7,13 @@ $base-url: '/static/' !default;
 /// @prop {Map} value - Breakpoint expressed in pixels
 // stylelint-disable unit-disallowed-list
 $breakpoints: (
-  // smallest : 320px,
-  smaller : 347px,
-  small   : 576px,
-  medium  : 768px,
-  large   : 992px,
-  larger  : 1200px,
-  largest : 1400px,
+  smallest : 320px,
+  smaller  : 347px,
+  small    : 576px,
+  medium   : 768px,
+  large    : 992px,
+  larger   : 1200px,
+  largest  : 1400px,
 ) !default;
 // stylelint-enable unit-disallowed-list
 
