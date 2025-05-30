@@ -1,8 +1,8 @@
 /view-source                https://github.com/Strappazzon/www                       301
 /security.txt               /.well-known/security.txt                                301
 /files/*                    /static/:splat                                           301
-/accounts*                  /contact/                                                301
-/keys*                      /accounts/                                               301
+/accounts/                  /identities/                                             301
+/keys/                      /identities/                                             301
 /GRW-GHOST-Buster*          https://strappazzon.github.io/GRW-GHOST-Buster/:splat    301
 /PD2-SuperBLT-Hasher*       https://strappazzon.github.io/PD2-SuperBLT-Hasher/:splat 301
 /teleme7ry*                 https://strappazzon.github.io/teleme7ry/:splat           301

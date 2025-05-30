@@ -1,9 +1,15 @@
 # Accounts data
 
-- name: GitHub
-  username: Strappazzon
-  url: https://github.com/Strappazzon
-
 - name: Bluesky
   username: strappazzon.xyz
   url: https://bsky.app/profile/strappazzon.xyz
+  featured: true
+
+- name: GitHub
+  username: Strappazzon
+  url: https://github.com/Strappazzon
+  featured: true
+
+- name: GitLab
+  username: Strappazzon
+  url: https://gitlab.com/Strappazzon

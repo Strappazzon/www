@@ -12,9 +12,13 @@
   description: Top artists
   path: /music/
 
-- name: Contact Info and Public Keys
-  description: My Contact Information and Public Keys
+- name: Contact
+  description: My Contact Information
   path: /contact/
+
+- name: Identities
+  description: Identities and public keys I use
+  path: /identities/
 
 - name: Donate
   path: /donate/

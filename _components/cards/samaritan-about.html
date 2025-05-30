@@ -17,7 +17,14 @@
 				</div>
 			</div>
 		{% endif %}
-		{% for a in site.data.accounts %}
+		<div class="content__row">
+			<div class="text">Email:</div>
+			<address class="label">
+				{% include email.html %}
+			</address>
+		</div>
+		{%- assign accounts = site.data.accounts | where: "featured", true -%}
+		{% for a in accounts %}
 			<div class="content__row">
 				<div class="text">{{ a.name }}:</div>
 				<div class="label">
@@ -25,11 +32,5 @@
 				</div>
 			</div>
 		{% endfor %}
-		<div class="content__row">
-			<div class="text">Email:</div>
-			<address class="label">
-				{% include email.html %}
-			</address>
-		</div>
 	</div>
 </div>

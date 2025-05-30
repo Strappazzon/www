@@ -30,7 +30,7 @@ See also: [Bunny.net Privacy Policy](https://bunny.net/privacy/) and [Bunny Font
 
 ### Email
 
-I use Proton Mail. If you decide to contact me, you agree that Proton AG and I process your personal data (e.g., name, email address).
+I use Proton Mail. If you decide to [contact me](/contact/), you agree that Proton AG and I process your personal data (e.g., name, email address).
 
 See also: [Proton Privacy Policy](https://proton.me/legal/privacy).
 

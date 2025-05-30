@@ -1,23 +1,22 @@
 ---
 title: "Contact"
-description: "This page contains all my contact information and public keys I use."
-short_desc: "Contact information and public keys I use"
+description: "This page contains all my contact information."
+short_desc: "Contact information"
 permalink: /contact/
 ---
 
-### Contact Me
+The best way to get in touch with me is via email at {% include email.html %}.
 
-The best way to get in touch with me is via email at {% include email.html %}
+> [!WARNING] What I MAY NOT respond to
+> I'll try my best to respond to technical questions but I would prefer you try a search engine first.
+>
+> If your message is vague or I don't understand what its purpose is you may not hear back from me.
+>
+> Do not bump emails. By doing so, you are lessening the chance that I will reply.
 
-### SSH Keys
+<!-- markdownlint-disable-next-line MD028 -->
 
-I currently sign my Git commits with SSH:
-
-{% include terminal.html task="ssh" %}
-
-### PGP Keys
-
-My past and present PGP keys:  
-I no longer sign my Git commits with PGP.
-
-{% include terminal.html task="pgp" %}
+> [!CAUTION] What I WILL NOT respond to
+> [No Hello](/fwlink/nohello).
+>
+> [Don't ask to ask, just ask](/fwlink/dontasktoask).
