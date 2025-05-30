@@ -1,7 +1,7 @@
 <div class="container__title">
-	{%- assign title = page.title | split: " | " -%}
+	{%- assign title = page.title | upcase | split: " | " -%}
 	{% if page.layout == "blog" %}
-		<h1 itemprop="headline" data-tgiv="title">{{ title[0] | upcase }}</h1>
+		<h1 itemprop="headline" data-tgiv="title">{{ title[0] }}</h1>
 		<div class="container__title-desc">
 			<h2 itemprop="alternativeHeadline" data-tgiv="subtitle">
 				{{ page.description | upcase }}
@@ -9,12 +9,12 @@
 			{% include reading-time.html %}
 		</div>
 	{% else %}
-		<h1>{{ title[0] | upcase }}</h1>
+		<h1>{{ title[0] }}</h1>
 		<h2>
 			{% if page.short_desc %}
 				{{ page.short_desc | upcase }}
 			{% else %}
-				{{ page.description | remove: "." | upcase }}
+				{{ page.description | upcase | remove: "." }}
 			{% endif %}
 		</h2>
 	{% endif %}

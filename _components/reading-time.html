@@ -5,11 +5,11 @@
 		Reading time:
 		{%- assign rt = page.content | reading_time -%}
 		{% if rt <= 0 %}
-			Less than a minute.
+			Less than a minute
 		{% elsif rt == 1 %}
-			{{ rt }} minute.
+			{{ rt }} minute
 		{% else %}
-			{{ rt }} minutes.
+			{{ rt }} minutes
 		{% endif %}
 	</span>
 </div>
