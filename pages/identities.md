@@ -5,7 +5,7 @@ short_desc: "Identities and public keys I use"
 permalink: /identities/
 ---
 
-### Platforms
+## Platforms
 
 I'm available at the following places:
 
@@ -20,14 +20,14 @@ I'm available at the following places:
 > [!WARNING]
 > I don't have Facebook, Instagram, Threads or a Twitter account.
 
-### Encryption
+## Encryption
 
 My past and present PGP keys:  
 I no longer sign my Git commits with PGP.
 
 {% include terminal.html task="pgp" %}
 
-### SSH Keys
+## SSH Keys
 
 I currently sign my Git commits with SSH:
 

@@ -8,7 +8,7 @@ If you found what I do useful and want to support me, please consider making a d
 
 All donations will go directly to me, not towards any specific project. Please note that there are no guarantees or expectations tied to your donation.
 
-### Platforms
+## Platforms
 
 <!-- markdownlint-disable MD007 MD032 -->
 
