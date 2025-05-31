@@ -20,5 +20,8 @@ body {
     height: auto;
     margin-top: px2rem(10px);
     animation: blink normal 1s infinite;
+    @include reduced-motion {
+      animation: none;
+    }
   }
 }

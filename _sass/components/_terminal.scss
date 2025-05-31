@@ -89,6 +89,9 @@
       }
       .cursor {
         animation: blink 1s infinite;
+        @include reduced-motion {
+          animation: none;
+        }
         &.block {
           font-size: 0.825em;
           &::before {

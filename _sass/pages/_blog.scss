@@ -370,6 +370,9 @@ article {
       }
       & > div {
         animation: details-slide-down 0.3s forwards;
+        @include reduced-motion {
+          animation: none;
+        }
       }
     }
   }

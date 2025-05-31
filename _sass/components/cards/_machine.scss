@@ -28,6 +28,9 @@
         &.active {
           background-color: var(--brand-color);
           animation: glow 2s ease-in-out infinite;
+          @include reduced-motion {
+            animation: none;
+          }
         }
         &.inactive {
           background-color: var(--text-color--link);
