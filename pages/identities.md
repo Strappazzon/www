@@ -17,8 +17,7 @@ I'm available at the following places:
 
 <!-- markdownlint-enable MD007 MD032 -->
 
-> [!WARNING]
-> I don't have Facebook, Instagram, Threads or a Twitter account.
+I don't have a Facebook, Instagram, Threads or Twitter account.
 
 ## Encryption
 
