@@ -24,11 +24,12 @@ layout: none
     </url>
   {%- endfor -%}
   {% comment %} Blog posts {% endcomment %}
-  {%- for b in site.blog -%}
+  {%- assign posts = site.blog | where_exp: 'doc', 'doc.sitemap != false' -%}
+  {%- for p in posts -%}
     <url>
-      <loc>{{ b.url | prepend: site.url | xml_escape }}</loc>
-      {%- if b.last_modified_at %}
-      <lastmod>{{ b.last_modified_at | date_to_xmlschema }}</lastmod>
+      <loc>{{ p.url | prepend: site.url | xml_escape }}</loc>
+      {%- if p.last_modified_at %}
+      <lastmod>{{ p.last_modified_at | date_to_xmlschema }}</lastmod>
       {%- else %}
       <changefreq>monthly</changefreq>
       {%- endif %}
