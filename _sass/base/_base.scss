@@ -184,20 +184,23 @@ footer {
 .container {
   // Page title
   &__title {
-    display: flex;
-    flex-flow: row wrap;
-    place-content: center space-between;
-    align-items: center;
-    @for $i from 1 through 4 {
-      h#{$i} {
-        margin: 0;
+    hgroup {
+      display: flex;
+      flex-flow: row wrap;
+      align-items: center;
+      justify-content: space-between;
+      h1 {
+        margin-right: 1rem;
+        margin-bottom: unset;
+      }
+      p {
+        @extend %h4;
+        margin-bottom: unset;
       }
     }
-    h1 {
-      margin-right: 1rem;
-    }
-    h2 {
-      @extend %h4;
+    // reading_time.rb plugin
+    .read-time {
+      color: var(--text-color--secondary);
     }
   }
   // anchors.rb plugin

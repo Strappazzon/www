@@ -1,21 +1,21 @@
 <div class="container__title">
-	{%- assign title = page.title | upcase | split: " | " -%}
-	{% if page.layout == "blog" %}
-		<h1 itemprop="headline" data-tgiv="title">{{ title[0] }}</h1>
-		<div class="container__title-desc">
-			<h2 itemprop="alternativeHeadline" data-tgiv="subtitle">
-				{{ page.description | upcase }}
-			</h2>
-			{% include reading-time.html %}
-		</div>
-	{% else %}
-		<h1>{{ title[0] }}</h1>
-		<h2>
-			{% if page.short_desc %}
-				{{ page.short_desc | upcase }}
-			{% else %}
-				{{ page.description | upcase | remove: "." }}
-			{% endif %}
-		</h2>
+	<hgroup>
+		{%- assign title = page.title | upcase | split: " | " -%}
+		{% if page.layout == "blog" %}
+			<h1 itemprop="headline" data-tgiv="title">{{ title[0] }}</h1>
+			<p itemprop="alternativeHeadline" data-tgiv="subtitle">{{ page.description | upcase | truncate: 160, "..." }}</p>
+		{% else %}
+			<h1>{{ title[0] }}</h1>
+			<p>
+				{% if page.short_desc %}
+					{{ page.short_desc | upcase }}
+				{% else %}
+					{{ page.description | upcase | remove: "." }}
+				{% endif %}
+			</p>
+		{% endif %}
+	</hgroup>
+	{% if page.read_time == true or page.layout == "blog" %}
+		{% include reading-time.html %}
 	{% endif %}
 </div>

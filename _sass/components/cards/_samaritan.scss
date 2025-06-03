@@ -147,7 +147,7 @@
         color: var(--scrollbar-color);
       }
     }
-    .content {
+    hgroup {
       padding: 0.5em;
       color: var(--text-color);
       background-color: var(--bg-color);
@@ -162,7 +162,7 @@
         text-shadow: unset;
         background-color: var(--brand-color--shadow);
       }
-      h2 {
+      p {
         margin-bottom: 0;
         font-size: 1.15em;
         font-weight: 400;

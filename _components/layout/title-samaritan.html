@@ -4,14 +4,14 @@
 		<span class="subtitle" translate="no">SAMARITAN</span>
 		<span class="version">v.978.0.06.51</span>
 	</div>
-	<div class="content">
+	<hgroup>
 		<h1>{{ title[0] | upcase }}</h1>
-		<h2>
+		<p>
 			{% if page.short_desc %}
 				{{ page.short_desc | upcase }}
 			{% else %}
 				{{ page.description | remove: "." | upcase }}
 			{% endif %}
-		</h2>
-	</div>
+		</p>
+	</hgroup>
 </div>

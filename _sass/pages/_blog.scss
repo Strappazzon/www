@@ -420,25 +420,3 @@ footer {
     margin-bottom: 0;
   }
 }
-
-.container {
-  &__title {
-    &-desc {
-      display: flex;
-      flex-flow: column nowrap;
-      align-items: flex-end;
-      justify-content: center;
-      @include respond-to('medium') {
-        align-items: flex-start;
-      }
-    }
-    // reading_time.rb plugin
-    .read-time {
-      @extend %h4;
-      margin-bottom: 0;
-      color: var(--text-color--secondary);
-      text-transform: unset;
-      text-shadow: none;
-    }
-  }
-}
