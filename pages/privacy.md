@@ -2,6 +2,7 @@
 title: "Privacy Statement"
 description: "This Privacy Statement explains what information this website collects about its visitors."
 short_desc: "Last Update: May 25, 2025"
+read_time: true
 permalink: /privacy/
 ---
 
