@@ -9,7 +9,7 @@ permalink: /privacy/
 {{ page.description }}
 
 This Privacy Statement applies to <{{ site.url }}> (hereinafter, "This Website"), operated by {{ site.meta.first }} {{ site.meta.last }}
-(hereinafter, "I", "Me" or "My"). This Privacy Statement does not cover third-party mirrors or archived versions of my website.
+(hereinafter, "I", "Me" or "My"). This Privacy Statement does not cover third-party mirrors or archived versions of This Website.
 
 ## Data Collection
 
@@ -33,7 +33,7 @@ See also: [Bunny.net Privacy Policy](https://bunny.net/privacy/) and [Bunny Font
 
 ## Email
 
-I use Proton Mail. If you decide to [contact me](/contact/), you agree that Proton AG and I process your personal data (e.g., name, email address).
+I use Proton Mail. If you decide to [contact Me](/contact/), you agree that Proton AG and I process your personal data (e.g., name, email address).
 
 See also: [Proton Privacy Policy](https://proton.me/legal/privacy).
 
@@ -45,8 +45,9 @@ assume no responsibility for the content, privacy policies or practices of any t
 
 ## Privacy Statement Changes
 
-This version of This Website Privacy Statement took effect Jan 5th, 2023.
+This version of This Website Privacy Statement took effect {{ page.short_desc | remove: "Last Update: " }}.
 
 I will post any new version of this statement at [{{ page.permalink | prepend: site.url }}]({{ page.permalink | prepend: site.url }}).
 
-A full [revision history](https://github.com/Strappazzon/www/commits/master/pages/privacy.md) for this page can be found on GitHub.
+<!-- markdownlint-disable-next-line MD059 -->
+A full revision history for this page is available [here](https://github.com/Strappazzon/www/commits/master/pages/privacy.md).
