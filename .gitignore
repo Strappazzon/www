@@ -1,5 +1,3 @@
-**/debug.log
-
 # VS Code
 .vscode/*
 !.vscode/*.code-snippets
@@ -31,3 +29,6 @@
 # Junk files (Windows)
 **/Thumbs.db
 **/[Dd]esktop.ini
+
+# Ignore drafts
+/_blog/DRAFT_*
