@@ -191,11 +191,9 @@ footer {
       justify-content: space-between;
       h1 {
         margin-right: 1rem;
-        margin-bottom: unset;
       }
       p {
         @extend %h4;
-        margin-bottom: unset;
       }
     }
     // reading_time.rb plugin
@@ -208,6 +206,7 @@ footer {
   &__heading {
     &.anchorable {
       position: relative;
+      margin-bottom: 0.5rem;
       @for $i from 1 through 4 {
         h#{$i} {
           display: inline;

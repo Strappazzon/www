@@ -3,7 +3,6 @@
 @for $i from 1 through 4 {
   %h#{$i} {
     margin: 0;
-    margin-bottom: 0.5rem;
     text-transform: uppercase;
   }
 }
