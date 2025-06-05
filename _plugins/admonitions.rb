@@ -42,7 +42,7 @@ module Jekyll
   class Admonition < Jekyll::Converter
     priority :low
 
-    VERSION = '2.0.0'.freeze
+    VERSION = '2.0.1'.freeze
 
     # Method required by Jekyll::Converter
     def matches(ext)
@@ -80,10 +80,9 @@ module Jekyll
             <span class="title">#{title}</span>
           </div>
           <div class="content">
-            #{text}
+            <p>#{text}</p>
           </div>
-          <div class="footer">
-          </div>
+          <div class="footer"></div>
         </aside>
       ].join(' ')
       # rubocop:enable Layout/ArrayAlignment
