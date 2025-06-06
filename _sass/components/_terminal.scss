@@ -21,9 +21,9 @@
     align-items: center;
     justify-content: space-between;
     max-height: 1.75rem;
-    padding: px2rem(2px) px2rem(6px);
+    padding: px2rem(4px) px2rem(8px);
     line-height: 1.2;
-    background: linear-gradient(180deg, #{var(--gradient-color--from)} 25%, #{var(--gradient-color--to)} 75%);
+    background: linear-gradient(180deg, var(--gradient-color--from) 25%, var(--gradient-color--to) 75%);
     border-bottom: 1px solid var(--border-color);
     border-top-left-radius: #{$border-radius};
     border-top-right-radius: #{$border-radius};
@@ -40,20 +40,25 @@
         text-shadow: 1px 1px 2px var(--brand-color--shadow);
       }
     }
-    .buttons {
-      button {
-        font-size: 1rem;
-        text-shadow: 1px 1px 2px var(--button-color--shadow);
-        background-color: transparent;
-        border: 0;
+    .dots {
+      display: flex;
+      flex-flow: row nowrap;
+      gap: 0.75em;
+      .dot {
+        $size: px2rem(8px);
+        display: block;
+        width: #{$size};
+        height: #{$size};
+        border-radius: 50%;
+        box-shadow: 1px 1px 2px var(--button-color--shadow);
         &.minimize {
-          color: var(--button-color--minimize);
+          background-color: var(--button-color--minimize);
         }
         &.maximize {
-          color: var(--button-color--maximize);
+          background-color: var(--button-color--maximize);
         }
         &.close {
-          color: var(--button-color--close);
+          background-color: var(--button-color--close);
         }
       }
     }
