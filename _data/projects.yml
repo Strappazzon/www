@@ -74,6 +74,14 @@
   source: https://github.com/Strappazzon/drg-mint-notag
   status: !!int 1
 
+- title: TD2 Brooklyn Map
+  description: Simple interactive map of The Division 2's Brooklyn DLC, powered by Leaflet.
+  languages:
+    - JavaScript
+  url: /td2-map-brooklyn
+  source: https://github.com/Strappazzon/td2-map-brooklyn
+  status: !!int 1
+
 - title: SuperBLT Hasher
   description: >2-
     Calculates hashes for PAYDAY 2 mods.
