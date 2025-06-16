@@ -75,7 +75,7 @@
   status: !!int 1
 
 - title: TD2 Brooklyn Map
-  description: Simple interactive map of The Division 2's Brooklyn DLC, powered by Leaflet.
+  description: Interactive map of The Division 2's Brooklyn DLC, powered by Leaflet.
   languages:
     - JavaScript
   url: /td2-map-brooklyn
@@ -84,7 +84,7 @@
 
 - title: SuperBLT Hasher
   description: >2-
-    Calculates hashes for PAYDAY 2 mods.
+    Calculates hashes for PAYDAY 2 mods. Powered by ZNix's HashLib.
     Hashing of single files and folders is supported.
   languages:
     - Visual Basic .NET
