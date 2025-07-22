@@ -44,7 +44,7 @@ article {
       text-align: center;
     }
     figcaption {
-      margin-top: 0.25rem;
+      margin-top: px2rem(6px);
       font-style: italic;
       color: var(--border-color--dark);
     }
@@ -141,15 +141,15 @@ article {
         top: 0.125em;
         width: 1rem;
         height: 1rem;
-        font-size: 1.15em;
+        font-size: px2em(20px);
         appearance: none;
         background-color: var(--table-bg-color--even);
         border: 1px solid var(--border-color--dark);
         &:checked {
           &::before {
             position: absolute;
-            top: -0.435em;
-            left: 0.125em;
+            top: px2em(-7.75px);
+            left: px2em(2.33px);
             font-weight: 700;
             color: var(--brand-color);
             // Latin Small Letter X
@@ -177,7 +177,7 @@ article {
   }
   code,
   kbd {
-    font-size: 0.825rem;
+    font-size: px2rem(16px);
   }
   pre {
     display: block;
@@ -259,10 +259,10 @@ article {
     table-layout: fixed;
     border-collapse: collapse;
     caption {
-      margin-bottom: 0.33em;
+      margin-bottom: px2rem(6px);
       font-family: 'Coda', $font-stack-text-system;
       // text-align: left;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.042em;
       caption-side: top;
     }
     caption,
@@ -291,7 +291,7 @@ article {
     }
     td,
     th {
-      padding: 0.3rem;
+      padding: px2em(6px);
       vertical-align: top;
       text-align: left;
       word-wrap: break-word;
@@ -300,7 +300,7 @@ article {
 
   /// QUOTE
   blockquote {
-    padding: 0.8rem 1rem;
+    padding: px2rem(14px) 1rem;
     margin: 1rem;
     color: var(--text-color--secondary);
     background-color: var(--bg-color--clear);
@@ -325,15 +325,18 @@ article {
     dt {
       font-family: 'Coda', $font-stack-text-system;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.042em;
     }
     dd {
-      padding-left: 1.5rem;
+      padding-left: 1rem;
       &::before {
-        font-size: 0.825rem;
+        font-size: px2rem(14px);
         color: var(--brand-color--shadow);
         // Right-pointing triangle
         content: '\25B6\00a0';
+      }
+      &:not(:last-child) {
+        margin-bottom: 1rem;
       }
     }
   }
@@ -341,6 +344,7 @@ article {
   /// DETAILS
   /// @link https://codepen.io/knyttneve/pen/LamBMP
   details {
+    margin-bottom: 1rem;
     summary {
       display: block;
       padding: px2rem(6px);
@@ -389,7 +393,7 @@ article {
   /// SUB/SUP SCRIPT
   sup,
   sub {
-    margin: 0 0.2em;
+    margin: 0 px2em(3px);
   }
 
   /// FOOTNOTES
