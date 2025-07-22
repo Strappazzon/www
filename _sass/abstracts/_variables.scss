@@ -5,27 +5,15 @@ $base-url: '/static/' !default;
 /// Breakpoints
 /// @prop {String} key - Identifier
 /// @prop {Map} value - Breakpoint expressed in pixels
-// stylelint-disable unit-disallowed-list
 $breakpoints: (
-  smallest : 320px,
-  smaller  : 347px,
-  small    : 576px,
-  medium   : 768px,
-  large    : 992px,
-  larger   : 1200px,
-  largest  : 1400px,
+  smallest : 20em,     // 320px
+  smaller  : 21.688em, // 347px
+  small    : 36em,     // 576px
+  medium   : 48em,     // 768px
+  large    : 62em,     // 992px
+  larger   : 75em,     // 1200px
+  largest  : 87.5em,   // 1400px
 ) !default;
-// stylelint-enable unit-disallowed-list
-
-/// Default font sizes
-/// @type Number
-// stylelint-disable unit-disallowed-list
-$font-size-larger: 22px !default;
-$font-size-large: 20px !default;
-$font-size-base: 18px !default;
-$font-size-small: 16px !default;
-$font-size-smaller: 14px !default;
-// stylelint-enable unit-disallowed-list
 
 /// System font stack
 /// @type List

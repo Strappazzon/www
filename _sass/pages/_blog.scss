@@ -231,7 +231,7 @@ article {
         background-color: var(--bg-color);
       }
       & .title {
-        font-size: 0.875rem;
+        font-size: px2rem(16px);
       }
       & .clipboard {
         display: none;

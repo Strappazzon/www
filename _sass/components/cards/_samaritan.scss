@@ -2,13 +2,13 @@
   &__samaritan-about,
   &__samaritan-nav,
   &__samaritan-header {
-    margin: 0 px2em(15px, $font-size-small) px2em(15px, $font-size-small);
+    margin: 0 1em 1em;
   }
   &__samaritan-about,
   &__samaritan-nav {
     display: flex;
     flex-direction: column;
-    padding: px2em(5px, $font-size-small);
+    padding: px2em(6px, 16px);
     color: var(--text-color);
     word-wrap: break-word;
     a {
@@ -24,7 +24,7 @@
       text-shadow: 1px 1px 2px var(--text-color--shadow);
     }
     .content {
-      padding: px2em(5px, $font-size-small) 0;
+      padding: px2em(6px, 16px) 0;
       background-color: var(--bg-color--lighter);
       &__row {
         display: flex;
@@ -34,7 +34,7 @@
         // min-height: 2rem;
         .label,
         .text {
-          padding: px2em(2px, $font-size-small) px2em(5px, $font-size-small);
+          padding: px2em(2px, 16px) px2em(6px, 16px);
         }
         .text {
           text-transform: uppercase;
@@ -47,7 +47,7 @@
     // Card title
     .subtitle {
       width: max-content;
-      font-size: 0.85rem;
+      font-size: px2rem(15px);
     }
   }
   &__samaritan-about {
@@ -56,29 +56,31 @@
       display: flex;
       flex-wrap: nowrap;
       align-items: center;
-      padding-right: 1em;
-      padding-left: 0.75em;
+      padding: 0 1em;
       span {
-        margin-left: px2em(4px, $font-size-small);
+        margin-left: px2em(4px, 16px);
       }
     }
     // Full name
     .title {
-      margin-top: px2em(5px, $font-size-small);
-      font-size: px2em(20px, $font-size-small);
+      margin-top: px2em(4px, 16px);
+      font-size: px2em(20px, 16px);
       background-color: var(--brand-color--dark);
     }
     .content {
       &__row,
       &__desc {
-        margin: px2em(10px, $font-size-small);
-        border: px2em(2px, $font-size-small) solid var(--border-color--dark);
+        margin: px2em(10px, 16px);
+        border: 2px solid var(--border-color--dark);
       }
       // Bio
       &__desc {
+        display: flex;
+        flex-flow: row wrap;
+        place-items: center center;
+        justify-content: center;
         min-height: 2rem;
-        padding: px2em(5px, $font-size-small);
-        padding-top: px2em(3px, $font-size-small);
+        padding: px2em(3px, 16px) 1em;
         text-align: center;
       }
       &__row {
@@ -100,7 +102,7 @@
   &__samaritan-nav {
     // Card title
     .title {
-      width: px2em(66px, $font-size-small);
+      width: px2em(66px, 16px);
     }
     // Card description
     .subtitle {
@@ -108,13 +110,13 @@
       flex-flow: row nowrap;
       justify-content: space-between;
       padding: 0.15em 1em;
-      font-size: 0.875em;
+      font-size: px2em(14px, 16px);
     }
     .content {
-      margin-top: px2em(5px, $font-size-small);
+      margin-top: px2em(4px, 16px);
       &__row {
         flex-flow: row nowrap;
-        margin: px2em(5px, $font-size-small) px2em(10px, $font-size-small);
+        margin: px2em(5px, 16px) px2em(10px, 16px);
         .text {
           overflow: hidden;
           // https://stackoverflow.com/a/17783233
@@ -240,13 +242,13 @@
         }
         .container__list {
           hr {
-            margin: 0.1em 0;
+            margin: px2em(2px, 16px) 0;
             border-top: 1px solid var(--border-color--clear);
             box-shadow: unset;
           }
           .title {
             width: max-content;
-            padding: 0 0.33em;
+            padding: 0 px2em(6px, 16px);
             color: var(--bg-color);
             background-color: var(--text-color);
           }

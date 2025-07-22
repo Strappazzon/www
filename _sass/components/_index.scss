@@ -1,7 +1,7 @@
 .icon {
   &__deviant {
-    width: px2em(18px, $font-size-small);
-    height: px2em(18px, $font-size-small);
+    width: 1rem;
+    height: 1rem;
     background-image: url('#{$base-url}img/icons/deviant.svg');
     background-repeat: no-repeat;
     background-size: 100% 100%;

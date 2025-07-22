@@ -5,7 +5,7 @@
   // stylelint-enable unit-disallowed-list
   width: px2rem(650px);
   margin: 0 auto 1rem;
-  font-size: 0.875rem;
+  font-size: px2rem(16px);
   scrollbar-width: #{$scrollbar-w};
   border: 1px solid var(--border-color);
   border-radius: calc(#{$border-radius} + 1px);
@@ -20,16 +20,15 @@
     flex-flow: row nowrap;
     align-items: center;
     justify-content: space-between;
-    max-height: 1.75rem;
+    max-height: px2em(28px, 16px);
     padding: px2rem(4px) px2rem(8px);
-    line-height: 1.2;
     background: linear-gradient(180deg, var(--gradient-color--from) 25%, var(--gradient-color--to) 75%);
     border-bottom: 1px solid var(--border-color);
     border-top-left-radius: #{$border-radius};
     border-top-right-radius: #{$border-radius};
     .task {
       display: flex;
-      flex-flow: row nowrap;
+      flex-flow: row wrap;
       align-items: center;
       .separator {
         text-shadow: 1px 1px 2px var(--text-color--shadow);

@@ -15,9 +15,10 @@
 
 html {
   font-family: $font-stack-text;
-  font-size: $font-size-base;
+  font-size: 112.5%;
+  // @include respond-to('largest') { font-size: 112.5%; }
   @include respond-to('small') {
-    font-size: $font-size-small;
+    font-size: 100%;
   }
 }
 
@@ -73,11 +74,11 @@ summary {
 [type='submit'],
 button {
   font-family: $font-stack-text;
-  font-size: 0.875rem;
+  font-size: px2rem(16px);
   text-transform: uppercase;
   touch-action: manipulation;
   &:not([class]) {
-    padding: px2rem(6) px2rem(12);
+    padding: px2rem(6px) px2rem(12px);
     color: var(--text-color);
     background-color: var(--bg-color--light);
     border: 1px solid var(--border-color--clear);
@@ -211,7 +212,8 @@ footer {
         h#{$i} {
           display: inline;
           // <header> height + #top margin-bottom
-          scroll-margin-top: calc(px2rem($font-size-small * 2.5) + 1.5rem);
+          // See: ../layout/_header.scss
+          scroll-margin-top: calc(px2rem(40px) + 1rem);
           & ~ .anchor {
             font-size: h($i);
           }

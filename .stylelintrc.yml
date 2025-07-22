@@ -132,7 +132,6 @@ rules:
           - border-top
           - bottom
           - box-shadow
-          - font-size
           - left
           - right
           - text-shadow

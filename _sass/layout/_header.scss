@@ -6,30 +6,24 @@ header {
   z-index: z('header');
   display: flex;
   flex-flow: row wrap;
-  gap: 1rem;
   align-items: baseline;
   justify-content: space-between;
-  height: 2.5em;
-  padding: px2em(7px, $font-size-small) px2em(15px, $font-size-small);
-  font-size: $font-size-small;
+  height: px2rem(40px);
+  padding: 0.5em 1em;
+  font-size: px2rem(16px);
+  line-height: 1.4;
   background-color: var(--bg-color--clear);
   border-bottom: 1px solid var(--text-color--secondary);
   @include respond-to('smallest') {
-    gap: unset;
     justify-content: flex-start;
   }
   .title {
     display: flex;
-    flex-flow: row nowrap;
-    gap: 0.33em;
-    align-items: center;
+    flex-flow: row wrap;
     font-family: 'Coda', $font-stack-text-system;
-    @include respond-to('small') {
-      font-size: 0.875em;
-    }
     .logo {
       img {
-        margin-top: px2em(-3px, $font-size-small);
+        margin-top: px2em(-4px, 16px);
         vertical-align: middle;
         user-select: none;
         filter: brightness(2.33) contrast(1);
@@ -38,8 +32,8 @@ header {
         display: none;
       }
       .separator {
-        margin-left: 0.33em;
-        letter-spacing: 0.063em;
+        margin: 0 px2em(4px, 16px);
+        letter-spacing: px2em(1px, 16px);
         text-shadow: 1px 1px 2px var(--brand-color);
       }
     }
@@ -52,7 +46,7 @@ header {
   }
   nav {
     a {
-      margin: 0 px2em(3px, $font-size-small);
+      margin: 0 px2em(4px, 16px);
       text-decoration: none;
       &:first-child {
         margin-left: 0;
@@ -65,7 +59,7 @@ header {
   // Empty space at the top of the page
   & ~ #top {
     // <header> height
-    padding-bottom: px2rem($font-size-small * 2.5);
-    margin-bottom: 1.5rem;
+    padding-bottom: px2rem(40px);
+    margin-bottom: 1rem;
   }
 }
