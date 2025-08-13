@@ -73,7 +73,7 @@
     }
     hr {
       border-top: 1px solid var(--text-color);
-      box-shadow: 0 0 15px var(--text-color--shadow);
+      box-shadow: none;
     }
   }
   &__machine-post {
