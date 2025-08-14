@@ -45,7 +45,7 @@
 
 module Jekyll
   module HTMLTags
-    VERSION = '1.2.1'.freeze
+    VERSION = '1.2.2'.freeze
 
     def self.codeblock(input)
       input.content.gsub!(/[[:blank:]]*```(.*)[[:blank:]]"(.*)?"([\w\W]*?)[[:blank:]]*```[[:blank:]]*(\n|$)/i) do
@@ -97,7 +97,7 @@ module Jekyll
     end
 
     def self.kbd(input)
-      input.content.gsub!(/(?<!`)\+{2}([^ ](.*?)?[^ \+])\+{2}(?!`)/i) { |m| "<kbd>#{m[2..-3]}</kbd>" }
+      input.content.gsub!(/(?<!`)\+{2}(.+?)\+{2}(?!`)/i) { |m| "<kbd>#{m[2..-3]}</kbd>" }
     end
   end
 end
