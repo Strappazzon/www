@@ -8,8 +8,7 @@
 #   anchors:
 #     prefix: section
 #
-# FIX: HTML markup is stripped
-# TODO: Split heading ID if it's too long
+# TODO: Truncate header ID if it's too long
 #
 
 require 'kramdown'
@@ -17,7 +16,7 @@ require 'nokogiri'
 
 module Jekyll
   module Anchors
-    VERSION = '1.0.0'.freeze
+    VERSION = '1.0.1'.freeze
 
     # Get plugin config
     # https://stackoverflow.com/a/45693637
@@ -35,20 +34,35 @@ module Jekyll
         attr_accessor :config
       end
 
-      def convert_header(el, _indent)
-        config  = Kramdown::Converter::Html.config
-        content = el.options[:raw_text]
-        level   = el.options[:level]
-        prefix  = "#{config['prefix']}-" unless !config['prefix'] || config['prefix'].empty?
-        anchor  = Nokogiri::HTML(content).text.gsub(/[^\w\d]/i, '-').downcase
+      def convert_header(el, indent)
+        config        = Kramdown::Converter::Html.config
+        content       = inner(el, indent)
+        content_raw   = el.options[:raw_text]
+        level         = el.options[:level]
+        anchor_prefix = build_anchor_prefix(config)
+        anchor_text   = build_anchor_text(content_raw)
 
+        build_header_html(level, anchor_prefix, anchor_text, content, content_raw)
+      end
+
+      private
+
+      def build_anchor_prefix(config)
+        return "#{config['prefix']}-" unless !config['prefix'] || config['prefix'].empty?
+      end
+
+      def build_anchor_text(content_raw)
+        Nokogiri::HTML(content_raw).text.gsub(/[^\w\d]/i, '-').downcase
+      end
+
+      def build_header_html(level, anchor_prefix, anchor_text, content, content_raw)
         # See: _sass/base/_base.scss
         return %W[
           <div class="container__heading anchorable">
-          <h#{level} id="#{prefix}#{anchor}">#{content}</h#{level}>
-          <a href="##{prefix}#{anchor}" class="anchor">
+          <h#{level} id="#{anchor_prefix}#{anchor_text}">#{content}</h#{level}>
+          <a href="##{anchor_prefix}#{anchor_text}" class="anchor">
           <span aria-hidden="true">#</span>
-          <span class="visually-hidden">Section titled #{content}</span>
+          <span class="visually-hidden">Section titled #{content_raw}</span>
           </a>
           </div>
         ].join(' ')
