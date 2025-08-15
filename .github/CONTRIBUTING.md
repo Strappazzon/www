@@ -56,7 +56,7 @@ bin/bootstrap
 To view your changes locally use the following command:
 
 ```sh
-bundle exec jekyll serve --force_polling --livereload
+bundle exec jekyll serve --config .jekyll.yml --force_polling --livereload
 ```
 
 Then navigate to <http://localhost:4000> in your web browser.

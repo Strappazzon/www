@@ -36,7 +36,7 @@ jobs:
         env:
           JEKYLL_ENV: production
         run: |
-          bundle exec jekyll build
+          bundle exec jekyll build --config .jekyll.yml
           cp .routing/_headers _site/_headers
           cp .routing/_redirects _site/_redirects
 
