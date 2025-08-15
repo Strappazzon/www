@@ -9,6 +9,7 @@ on:
       - ".*"
       - "!.routing/**"
       - "!.well-known/**"
+      - "!.jekyll.yml"
       - "!.tool-versions"
       - "bin/**"
       - "static/psd/**"
