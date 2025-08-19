@@ -16,13 +16,14 @@ require 'nokogiri'
 
 module Jekyll
   module Anchors
-    VERSION = '1.0.1'.freeze
+    VERSION = '1.0.2'.freeze
 
     # Get plugin config
     # https://stackoverflow.com/a/45693637
     class PluginConfig < Jekyll::Generator
       def generate(site)
         config = site.config['anchors'] || ''
+
         Kramdown::Converter::Html.config = config
       end
     end
@@ -52,20 +53,22 @@ module Jekyll
       end
 
       def build_anchor_text(content_raw)
-        Nokogiri::HTML(content_raw).text.gsub(/[^\w\d]/i, '-').downcase
+        return Nokogiri::HTML(content_raw).text.gsub(/[^\w\d]/i, '-').downcase
       end
 
       def build_header_html(level, anchor_prefix, anchor_text, content, content_raw)
         # See: _sass/base/_base.scss
-        return %W[
+        # rubocop:disable Layout/ArrayAlignment
+        %W[
           <div class="container__heading anchorable">
-          <h#{level} id="#{anchor_prefix}#{anchor_text}">#{content}</h#{level}>
-          <a href="##{anchor_prefix}#{anchor_text}" class="anchor">
-          <span aria-hidden="true">#</span>
-          <span class="visually-hidden">Section titled #{content_raw}</span>
-          </a>
+            <h#{level} id="#{anchor_prefix}#{anchor_text}">#{content}</h#{level}>
+            <a href="##{anchor_prefix}#{anchor_text}" class="anchor">
+              <span aria-hidden="true">#</span>
+              <span class="visually-hidden">Section titled #{content_raw}</span>
+            </a>
           </div>
         ].join(' ')
+        # rubocop:enable Layout/ArrayAlignment
       end
     end
     # rubocop:enable Style/ClassAndModuleChildren
