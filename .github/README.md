@@ -18,8 +18,6 @@
 
 Powered by [Jekyll](https://jekyllrb.com/), a static site generator (SSG) written in Ruby. Theme inspired by [Person of Interest](https://en.wikipedia.org/wiki/Person_of_Interest_(TV_series)).
 
-Currently being served over [Cloudflare Pages](https://pages.cloudflare.com/).
-
 ## Contributing
 
 If you are interested in contributing directly to this repository, please see:

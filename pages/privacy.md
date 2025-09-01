@@ -1,7 +1,7 @@
 ---
 title: "Privacy Statement"
 description: "This Privacy Statement explains what information this website collects about its visitors."
-short_desc: "Last Update: May 25, 2025"
+short_desc: "Last Update: Sep 1, 2025"
 read_time: true
 permalink: /privacy/
 ---
@@ -13,17 +13,27 @@ This Privacy Statement applies to <{{ site.url }}> (hereinafter, "This Website")
 
 ## Data Collection
 
-I do not collect any personal information. I do not track you using cookies, collect your fingerprints, or use any tracking scripts.
+This Website is hosted on a [Hetzner Cloud](https://www.hetzner.com/cloud/) server in [Falkenstein, Germany](https://www.hetzner.com/unternehmen/rechenzentrum/).
 
-## Hosting Provider
+I collect non-personally-identifying information of the sort that web browsers and servers typically make available, such as:
 
-This Website is hosted on [Cloudflare Pages](https://pages.cloudflare.com/).
+- Date and Time of the request
+- User-Agent (Browser type, Browser version, Operating System)
+- Visited URL
 
-Cloudflare may collect non-personally-identifying information of the sort that web browsers and servers typically make available, such as
-the browser type and the date and time of each visitor request. Cloudflare  may also collect potentially personally-identifying information
-like Internet Protocol (IP) addresses.
+I also collect potentially personally-identifying information like Internet Protocol (IP) addresses.
 
-See also: [Cloudflare Privacy Policy](https://www.cloudflare.com/privacypolicy/).
+I use this data to:
+
+- Diagnose and debug technical errors
+- Defend My website from abuse and technical attacks
+- Compile statistics on page popularity
+- Compile statistics on the type of browser and device used
+
+I generally store the above information for a month.  
+In special circumstances, such as during an ongoing technical attack or a subsequent investigation, I may retain log data longer for analysis.
+
+I do not track you using cookies, collect your fingerprints, or use any tracking scripts.
 
 ## CDN
 
