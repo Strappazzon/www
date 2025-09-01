@@ -39,8 +39,6 @@ jobs:
           JEKYLL_ENV: development
         run: |
           bundle exec jekyll build --config .jekyll.yml
-          cp .routing/_headers _site/_headers
-          cp .routing/_redirects _site/_redirects
 
       - name: Deploy
         uses: s0/git-publish-subdir-action@develop
