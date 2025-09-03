@@ -1,7 +1,7 @@
 ---
 title: "Privacy Statement"
 description: "This Privacy Statement explains what information this website collects about its visitors."
-short_desc: "Last Update: Sep 1, 2025"
+short_desc: "Last Update: Sep 3, 2025"
 read_time: true
 permalink: /privacy/
 ---
@@ -20,6 +20,7 @@ I collect non-personally-identifying information of the sort that web browsers a
 - Date and Time of the request
 - User-Agent (Browser type, Browser version, Operating System)
 - Visited URL
+- Referrer (Where you came from)
 
 I also collect potentially personally-identifying information like Internet Protocol (IP) addresses.
 
