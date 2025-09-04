@@ -13,3 +13,11 @@ platforms:
     url: https://github.com/sponsors/Strappazzon
     type: Recurring, One-Time
     currency: USD
+
+# Referral links
+referrals:
+  - name: Hetzner Cloud
+    description: |
+      You get 20€ of credit without spending anything.
+      I get 10€ of credit after you spend 10€.
+    url: https://hetzner.cloud/?ref=RLuZD7OcRXGn

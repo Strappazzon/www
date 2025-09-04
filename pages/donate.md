@@ -6,7 +6,8 @@ permalink: /donate/
 
 If you found what I do useful and want to support me, please consider making a donation.
 
-All donations will go directly to me, not towards any specific project. Please note that there are no guarantees or expectations tied to your donation.
+All donations will go directly to me, not towards any specific project.
+Please note that there are no guarantees or expectations tied to your donation.
 
 ## Platforms
 
@@ -18,6 +19,12 @@ All donations will go directly to me, not towards any specific project. Please n
   {%- if p.currency %}
     - Amounts are in **{{ p.currency }}**
   {%- endif %}
+{%- endfor %}
+
+## Referrals
+
+{%- for r in site.data.donations.referrals %}
+  - [{{ r.name }}]({{ r.url }}){% if r.description %}: {{ r.description }}{% endif %}
 {%- endfor %}
 
 <!-- markdownlint-enable MD007 MD032 -->
