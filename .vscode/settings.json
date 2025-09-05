@@ -165,6 +165,7 @@
 		}
 	},
 	"yaml.schemas": {
-		"https://json.schemastore.org/github-issue-config.json": ".github/ISSUE_TEMPLATE/config.yml"
+		"https://json.schemastore.org/github-issue-config.json": ".github/ISSUE_TEMPLATE/config.yml",
+		"https://json.schemastore.org/jekyll.json": ".jekyll.yml"
 	}
 }
