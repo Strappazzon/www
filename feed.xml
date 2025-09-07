@@ -20,7 +20,7 @@ layout: none
     <subtitle>{{ site.description_blog | xml_escape }}</subtitle>
   {% endif %}
   <author>
-    <name>{{ site.title | xml_escape }}</name>
+    <name>{{ site.meta.title | xml_escape }}</name>
     <uri>{{ site.url | xml_escape }}</uri>
   </author>
   {% for p in site.blog limit: 10 -%}
@@ -32,7 +32,7 @@ layout: none
       <updated>{{ p.last_modified_at | default: p.date | date_to_xmlschema }}</updated>
       <content type="html" xml:base="{{ p.url | absolute_url | xml_escape }}"><![CDATA[{{ p.content | strip }}]]></content>
       <author>
-        <name>{{ site.title | xml_escape }}</name>
+        <name>{{ site.meta.title | xml_escape }}</name>
         <uri>{{ site.url | xml_escape }}</uri>
       </author>
       {% for t in p.tags -%}
