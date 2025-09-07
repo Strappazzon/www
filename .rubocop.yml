@@ -41,8 +41,16 @@ Style/FrozenStringLiteralComment:
 Style/RedundantCurrentDirectoryInPath:
   Enabled: true
 
+# Allow parentheses around method calls
+Style/RedundantParentheses:
+  Enabled: false
+
 # Don't replace deterministic regexp with string
 Style/RedundantRegexpArgument:
+  Enabled: false
+
+# Allow redundant escaping
+Style/RedundantRegexpEscape:
   Enabled: false
 
 # Allow redundant return
