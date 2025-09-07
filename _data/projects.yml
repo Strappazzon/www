@@ -44,7 +44,7 @@
   languages:
     - Liquid HTML
     - SCSS
-  url: /tor-exit-page
+  url: /projects/tor-exit-page/
   source: https://github.com/Strappazzon/tor-exit-page
   status: !!int 2
 
