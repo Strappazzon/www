@@ -29,7 +29,7 @@ If you then still need to ask a question and need clarification you can [create 
 ### DO NOT post "+1" comments
 
 If you don't have any additional info/context to add but would like to indicate that you're affected by the issue, upvote the original issue.  
-See: [Add Reactions](https://github.blog/2016-03-10-add-reactions-to-pull-requests-issues-and-comments/)
+See: [Add Reactions](https://github.blog/news-insights/product-news/add-reactions-to-pull-requests-issues-and-comments/)
 
 ## Getting Started
 
@@ -38,10 +38,10 @@ Before you can start contributing, you'll need to set up your environment first.
 ### Dependencies
 
 This website is built with [Jekyll](https://jekyllrb.com/) so you will need [Ruby](https://www.ruby-lang.org) installed.  
-I recommend you install it using [rbenv](https://github.com/rbenv/rbenv), [asdf](https://github.com/asdf-vm/asdf), [frum](https://github.com/TaKO8Ki/frum) or other packaging system, before attempting to install the dependencies.
+I recommend you install it using [asdf](https://github.com/asdf-vm/asdf) or [rbenv](https://github.com/rbenv/rbenv) before attempting to install the dependencies.
 
 [Node](https://nodejs.org/en) is also required to run [Stylelint](https://stylelint.io/).  
-I recommend you install it using [nvm](https://github.com/nvm-sh/nvm) or [asdf](https://github.com/asdf-vm/asdf).
+I recommend you install it using [asdf](https://github.com/asdf-vm/asdf) or [nvm](https://github.com/nvm-sh/nvm).
 
 Clone the repo and run `bin/bootstrap` to install the required dependencies.
 
@@ -267,7 +267,8 @@ Rules that are not covered by Stylelint.
 
 ## Submitting Changes
 
-- Make changes on a separate branch, not on the master branch, then send your changes as a [Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
+- Make changes on a separate branch, not on the master branch, then send your changes as a
+  [Pull Request](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests).
 - When submitting changes, you confirm that your code is licensed under the terms of the [MIT License](https://opensource.org/licenses/MIT).
 - Please test your code before you submit changes. Untested code will **not** be merged!
 - Make sure your Pull Request is up-to-date with the rest of the codebase.
@@ -324,13 +325,11 @@ For more information on the SCSS file structure, see [The 7-1 Pattern](https://s
 ├── _templates             # Jekyll templates for web pages like homepage or blog posts
 ├── .github
 │   └── labeler.yml        # "actions/labeler" configuration
-├── .routing               # Custom server rules
 ├── .well-known            # RFC 8615 URIs
 ├── bin                    # Scripts
 ├── static                 # Website static files
 │   └── psd                # PSD files of images, these are not published
-├── _config.yml            # Jekyll configuration
-├── .nvmrc                 # Version of Node.js Node Version Manager should use
+├── .tool-versions         # Version of tools asdf should use
 ├── feed.xml               # Atom feed
 ├── frontmatter.json       # VS Code eliostruyf.vscode-front-matter configiguration
 └── SUPPORT.md             # Support resources
