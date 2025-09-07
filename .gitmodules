@@ -1,0 +1,4 @@
+[submodule "projects"]
+	path = projects
+	url = git@github.com:Strappazzon/docs.git
+	branch = dist

@@ -11,7 +11,7 @@
     Also removes nagware tasks and updates.
   languages:
     - Batch
-  url: /teleme7ry
+  url: /projects/teleme7ry/
   source: https://github.com/Strappazzon/teleme7ry
   status: !!int 0
 
@@ -27,7 +27,7 @@
   description: Jekyll plugin that provides spoiler text support with a Liquid filter and tag.
   languages:
     - Ruby
-  url: /jekyll-spoiler/demo/
+  url: /projects/jekyll-spoiler/
   source: https://github.com/Strappazzon/jekyll-spoiler
   status: !!int 1
 
@@ -60,7 +60,7 @@
   description: Ghost Recon&reg; Wildlands backup utility.
   languages:
     - Visual Basic .NET
-  url: /GRW-GHOST-Buster
+  url: /projects/grw-ghost-buster/
   source: https://github.com/Strappazzon/GRW-GHOST-Buster
   status: !!int 2
 
@@ -89,7 +89,7 @@
   languages:
     - Visual Basic .NET
     - C#
-  url: /PD2-SuperBLT-Hasher
+  url: /projects/pd2-superblt-hasher/
   source: https://github.com/Strappazzon/PD2-SuperBLT-Hasher
   status: !!int 2
 
