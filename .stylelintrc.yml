@@ -28,6 +28,9 @@ rules:
       - font-family
       - font-style
 
+  # Use color functions aliases
+  color-function-alias-notation: with-alpha
+
   # Don't use comma-free syntax for color functions
   color-function-notation: legacy
 
