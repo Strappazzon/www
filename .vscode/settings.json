@@ -95,7 +95,6 @@
 		"package.json": "package-lock.json"
 	},
 	"files.associations": {
-		"**/.routing/_*": "plaintext",
 		"**/.vscode/*.code-snippets": "json",
 		"*.html": "liquid"
 	},

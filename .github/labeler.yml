@@ -9,21 +9,19 @@ cicd:
 
 config:
   - ".github/*.yml"
-  - ".routing/**"
   - ".vscode/**"
-  - "_config.yml"
   - ".editorconfig"
   - ".gitattributes"
   - ".gitignore"
+  - ".jekyll.yml"
   - "**/.markdownlint.yml"
   - "frontmatter.json"
 
 dependencies:
-  - ".nvmrc"
   - ".rubocop.yml"
-  - ".tool-versions"
   - ".stylelintignore"
   - ".stylelintrc.yml"
+  - ".tool-versions"
   - "Gemfile"
   - "Gemfile.lock"
   - "package.json"
