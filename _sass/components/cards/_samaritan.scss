@@ -170,6 +170,18 @@
         font-weight: 400;
       }
     }
+    .footer {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: stretch;
+      justify-content: space-between;
+      height: px2em(18px, 14px);
+      border-top: 2px solid var(--text-color--shadow);
+      .separator {
+        width: px2em(24px, 14px);
+        border-right: 2px solid var(--text-color--shadow);
+      }
+    }
   }
   &__samaritan-artists {
     margin: 1rem 0;

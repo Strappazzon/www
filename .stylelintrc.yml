@@ -131,7 +131,9 @@ rules:
         px:
           - border
           - border-bottom
+          - border-left
           - border-radius
+          - border-right
           - border-top
           - bottom
           - box-shadow
