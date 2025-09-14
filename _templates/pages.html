@@ -16,8 +16,10 @@
 				{% endif %}
 				{{ content }}
 				<hr aria-hidden="true">
-				{% if page.url == "/music/" %}
-					{% include layout/pages/music/footer.html %}
+				{% if page.footer and page.footer != "" %}
+					<footer itemscope itemtype="http://schema.org/WPFooter" role="contentinfo">
+						{{ page.footer | markdownify }}
+					</footer>
 				{% endif %}
 			</main>
 		</div>
