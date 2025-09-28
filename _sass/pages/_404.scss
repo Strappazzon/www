@@ -1,3 +1,6 @@
+@use '../abstracts/functions' as *;
+@use '../abstracts/mixins' as *;
+
 html {
   height: 100vh;
 }

@@ -1,13 +1,7 @@
 ---
 ---
 
-@import 'abstracts/_variables';
-@import 'abstracts/_functions';
-@import 'abstracts/_mixins';
-@import 'abstracts/_placeholders';
-@import 'abstracts/_colors';
+@use 'base/animations';
+@use 'base/base';
 
-@import 'base/_animations';
-@import 'base/_base';
-
-@import 'pages/_404';
+@use 'pages/404' as *;

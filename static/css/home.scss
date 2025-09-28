@@ -1,11 +1,7 @@
 ---
 ---
 
-@import 'abstracts/_variables';
-@import 'abstracts/_functions';
-@import 'abstracts/_mixins';
-
-@import 'components/_index';
-@import 'components/_email';
-@import 'components/cards/_index';
-@import 'components/cards/_samaritan';
+@use 'components/index' as *;
+@use 'components/cards/index' as *;
+@use 'components/cards/samaritan';
+@use 'components/email';

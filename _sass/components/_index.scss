@@ -1,3 +1,6 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
 .icon {
   &__deviant {
     width: 1rem;

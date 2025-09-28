@@ -1,3 +1,6 @@
+@use '../../abstracts/functions' as *;
+@use '../../abstracts/mixins' as *;
+
 .card {
   &__samaritan-about,
   &__samaritan-nav,

@@ -1,3 +1,7 @@
+@use '../../abstracts/functions' as *;
+@use '../../abstracts/mixins' as *;
+@use '../../abstracts/placeholders' as *;
+
 .card {
   &__machine-project,
   &__machine-post {

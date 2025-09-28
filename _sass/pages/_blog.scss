@@ -1,5 +1,11 @@
 @use 'sass:map';
 
+@use '../abstracts/functions' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+@use '../themes/syntax' as *;
+
 article {
 
   /// TOC

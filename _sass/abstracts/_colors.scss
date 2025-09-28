@@ -1,3 +1,5 @@
+@use 'mixins' as *;
+
 [data-theme='poi'],
 [data-theme='samaritan'] {
   --scrollbar-bg-color : rgba(141, 141, 141, 1);

@@ -1,3 +1,5 @@
+@use '../../abstracts/functions' as *;
+
 .admonition {
   // stylelint-disable-next-line unit-disallowed-list
   $border-radius: 6px;

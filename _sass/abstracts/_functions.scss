@@ -1,6 +1,8 @@
 @use 'sass:map';
 @use 'sass:math';
 
+@use 'variables' as *;
+
 /// Get heading size
 /// @require $headings
 /// @param {Int} $key

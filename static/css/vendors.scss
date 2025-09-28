@@ -1,7 +1,7 @@
 ---
 ---
 
-@import 'vendors/_bootstrap-carousel';
-@import 'vendors/_bootstrap-grid';
-@import 'vendors/_bootstrap-modal';
-@import 'vendors/_gardevoir';
+@use 'vendors/bootstrap-carousel';
+@use 'vendors/bootstrap-grid';
+@use 'vendors/bootstrap-modal';
+@use 'vendors/gardevoir';

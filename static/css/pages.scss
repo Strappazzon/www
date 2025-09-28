@@ -1,18 +1,13 @@
 ---
 ---
 
-@import 'abstracts/_variables';
-@import 'abstracts/_functions';
-@import 'abstracts/_mixins';
-@import 'abstracts/_placeholders';
+@use 'components/index' as *;
+@use 'components/cards/index' as *;
+@use 'components/cards/machine';
+@use 'components/cards/samaritan';
+@use 'components/email';
+@use 'components/terminal' as *;
 
-@import 'components/_index';
-@import 'components/cards/_index';
-@import 'components/cards/_machine';
-@import 'components/cards/_samaritan';
-@import 'components/_email';
-@import 'components/_terminal';
+@use 'themes/terminal' as *;
 
-@import 'themes/_terminal';
-
-@import 'pages/_pages';
+@use 'pages/pages';

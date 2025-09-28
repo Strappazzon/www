@@ -1,3 +1,5 @@
+@use '../abstracts/functions' as *;
+
 /// Headings
 /// @param {Int} $i - Heading
 @for $i from 1 through 4 {

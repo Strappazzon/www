@@ -1,6 +1,8 @@
 @use 'sass:list';
 @use 'sass:map';
 
+@use 'variables' as *;
+
 /// Color scheme media query
 /// @param {String} $scheme - Color scheme, either dark or light
 /// @example scss - Color scheme media query

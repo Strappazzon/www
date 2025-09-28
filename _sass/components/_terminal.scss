@@ -1,3 +1,7 @@
+@use '../abstracts/functions' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
 .terminal {
   // stylelint-disable unit-disallowed-list
   $border-radius: 5px;
