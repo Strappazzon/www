@@ -3,6 +3,21 @@
 # Top artists of each year ordered from most recent to oldest, descending
 # Each artist is ordered from most to least listened
 
+- year: "2025"
+  artists:
+    "MOTHICA":
+      is_new: true
+    "FKA Rayne":
+      is_new: true
+    "Klangphonics": {}
+    "STARSET":
+      is_returning: true
+    "Isabel LaRosa": {}
+    "Bad Omens": {}
+    "Daedric": {}
+    "Ella Boh":
+      is_new: true
+
 - year: "2024"
   artists:
     "Lindsey Stirling": {}
