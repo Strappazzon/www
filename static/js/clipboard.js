@@ -1,0 +1,1 @@
+const CODE_BLOCKS=document.querySelectorAll(".machine__code-header + .highlight .highlighter-rouge"),CLIPBOARD_BTNS=document.querySelectorAll(".machine__code-header .clipboard");CLIPBOARD_BTNS.forEach((e,c)=>{const r=CODE_BLOCKS[c].innerText;e.addEventListener("click",()=>{window.navigator.clipboard.writeText(r)})});

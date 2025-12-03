@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator>
+  <link rel="self" href="https://strappazzon.xyz/feed.xml" type="application/atom+xml" />
+  <link rel="alternate" href="https://strappazzon.xyz/" type="text/html" hreflang="en" />
+  <updated>2025-12-03T18:10:51+01:00</updated>
+  <id>https://strappazzon.xyz/feed.xml</id>
+  <icon>https://strappazzon.xyz/static/img/logo_32.png</icon>
+  <title type="html"></title>
+  <author>
+    <name>Alberto Strappazzon</name>
+    <uri>https://strappazzon.xyz</uri>
+  </author>
+  
+</feed>
