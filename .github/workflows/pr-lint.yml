@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v6.0.2
 
       - name: Detect changes in Ruby files
         id: check_changes
@@ -29,7 +29,7 @@ jobs:
         if: steps.check_changes.outputs.changed_rb != ''
         env:
           BUNDLE_SPECIFIC_PLATFORM: 1
-        uses: ruby/setup-ruby@v1.224.0
+        uses: ruby/setup-ruby@v1.301.0
         with:
           bundler-cache: true
 
@@ -52,7 +52,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v6.0.2
 
       - name: Detect changes in SCSS files
         id: check_changes
@@ -62,7 +62,7 @@ jobs:
 
       - name: Setup NodeJS
         if: steps.check_changes.outputs.changed_scss != ''
-        uses: actions/setup-node@v4.2.0
+        uses: actions/setup-node@v6.3.0
         with:
           cache: npm
           node-version-file: ".tool-versions"
@@ -70,10 +70,10 @@ jobs:
       - name: Setup Stylelint
         if: steps.check_changes.outputs.changed_scss != ''
         run: |
-          npm install --save-dev stylelint@16.15.x
-          npm install --save-dev stylelint-config-recess-order@6.0.x
-          npm install --save-dev stylelint-config-standard-scss@14.0.x
-          npm install --save-dev stylelint-plugin-defensive-css@1.0.x
+          npm install --save-dev stylelint@17.7.x
+          npm install --save-dev stylelint-config-recess-order@7.7.x
+          npm install --save-dev stylelint-config-standard-scss@17.0.x
+          npm install --save-dev stylelint-plugin-defensive-css@2.9.x
 
       - name: Run Stylelint
         if: steps.check_changes.outputs.changed_scss != ''
@@ -88,7 +88,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4.2.2
+        uses: actions/checkout@v6.0.2
 
       - name: Detect changes in MD files
         id: check_changes
@@ -98,6 +98,6 @@ jobs:
 
       - name: markdownlint-cli2-action
         if: steps.check_changes.outputs.changed_md != ''
-        uses: DavidAnson/markdownlint-cli2-action@v19.1.0
+        uses: DavidAnson/markdownlint-cli2-action@v23.0.0
         with:
           config: ".markdownlint.yml"
