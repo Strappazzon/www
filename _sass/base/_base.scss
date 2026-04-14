@@ -93,6 +93,7 @@ button {
     }
     // Don't use hocus mixin because when clicking the button
     // it will not return to the default state
+    // stylelint-disable-next-line a11y/selector-pseudo-class-focus
     &:hover {
       background-color: var(--bg-color--lighter);
     }

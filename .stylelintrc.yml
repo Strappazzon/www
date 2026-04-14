@@ -3,8 +3,7 @@ extends:
   - stylelint-config-standard-scss
 
 plugins:
-  # TODO: stylelint-a11y
-  # https://github.com/developer-stylechain/stylelint-a11y
+  - "@double-great/stylelint-a11y"
   - stylelint-plugin-defensive-css
 
 # Default rules
@@ -165,3 +164,12 @@ rules:
   defensive-css/require-background-repeat: true
   defensive-css/require-flex-wrap: true
   defensive-css/no-mixed-vendor-prefixes: true
+
+  # Plugin: a11y
+  # See: https://github.com/double-great/stylelint-a11y
+
+  a11y/no-obsolete-attribute: true
+  a11y/no-spread-text: true
+  a11y/no-outline-none: true
+  a11y/no-text-align-justify: true
+  a11y/selector-pseudo-class-focus: true
