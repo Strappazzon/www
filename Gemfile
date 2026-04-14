@@ -6,10 +6,10 @@ end
 
 source 'https://rubygems.org'
 
-gem 'html-proofer', '~> 5.0', require: false
+gem 'html-proofer', '~> 5.2', require: false
 gem 'jekyll', '~> 4.4'
-gem 'mini_racer', '~> 0.18'
-gem 'rubocop', '~> 1.80.0', require: false
+gem 'mini_racer', '~> 0.20'
+gem 'rubocop', '~> 1.86', require: false
 
 # Plugins
 group :jekyll_plugins do
