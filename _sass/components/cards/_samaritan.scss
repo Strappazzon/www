@@ -13,7 +13,7 @@
     flex-direction: column;
     padding: px2em(6px, 16px);
     color: var(--text-color);
-    word-wrap: break-word;
+    overflow-wrap: break-word;
     a {
       text-decoration: none;
     }

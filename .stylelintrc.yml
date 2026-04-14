@@ -161,9 +161,7 @@ rules:
 
   # Plugin: Defensive CSS
   # See: https://github.com/yuschick/stylelint-plugin-defensive-css
-  plugin/use-defensive-css:
-    - true
-    - background-repeat: true
-      flex-wrapping: true
-      scroll-chaining: true
-      vendor-prefix-grouping: true
+
+  defensive-css/require-background-repeat: true
+  defensive-css/require-flex-wrap: true
+  defensive-css/no-mixed-vendor-prefixes: true

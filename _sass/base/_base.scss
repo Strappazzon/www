@@ -251,6 +251,6 @@ footer {
   overflow: hidden !important;
   white-space: nowrap !important;
   border: 0 !important;
-  clip: rect(0, 0, 0, 0) !important;
+  clip-path: rect(0 0 0 0) !important;
 }
 // stylelint-enable declaration-no-important, unit-disallowed-list
