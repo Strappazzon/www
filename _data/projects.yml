@@ -21,7 +21,7 @@
     - PowerShell
   url: https://github.com/Strappazzon/wsb/blob/-/.github/README.md
   source: https://github.com/Strappazzon/wsb
-  status: !!int 1
+  status: !!int 0
 
 - title: jekyll-spoiler
   description: Jekyll plugin that provides spoiler text support with a Liquid filter and tag.
@@ -29,7 +29,7 @@
     - Ruby
   url: /projects/jekyll-spoiler/
   source: https://github.com/Strappazzon/jekyll-spoiler
-  status: !!int 1
+  status: !!int 2
 
 - title: jekyll-terser
   description: A forked Jekyll plugin that minifies and mangles JS files with Terser.
@@ -67,7 +67,7 @@
 - title: mint-notag
   description: >2-
     Third-party mod integration tool for Deep Rock Galactic.
-    This fork of mint - among other small changes - omits the "[MODDED]" prefix from the public lobby name.
+    Fork of mint that - among other changes - omits the "[MODDED]" prefix from the public lobby name.
   languages:
     - Rust
   url: https://github.com/Strappazzon/drg-mint-notag/blob/-/.github/README.md
@@ -80,7 +80,7 @@
     - JavaScript
   url: /td2-map-brooklyn
   source: https://github.com/Strappazzon/td2-map-brooklyn
-  status: !!int 1
+  status: !!int 2
 
 - title: SuperBLT Hasher
   description: >2-
