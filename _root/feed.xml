@@ -15,9 +15,9 @@ layout: none
   <updated>{{ site.time | date_to_xmlschema }}</updated>
   <id>{{ page.url | absolute_url | xml_escape }}</id>
   <icon>{{ '/static/img/logo_32.png' | absolute_url }}</icon>
-  <title type="html">{{ site.title_blog | xml_escape }}</title>
-  {%- if site.description_blog -%}
-    <subtitle>{{ site.description_blog | xml_escape }}</subtitle>
+  <title type="html">{{ site.blog_meta.title | xml_escape }}</title>
+  {%- if site.blog_meta.description -%}
+    <subtitle>{{ site.blog_meta.description | xml_escape }}</subtitle>
   {% endif %}
   <author>
     <name>{{ site.meta.title | xml_escape }}</name>
