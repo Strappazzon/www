@@ -310,9 +310,11 @@ For more information on the SCSS file structure, see [The 7-1 Pattern](https://s
 
 ```sh
 .
+├── _blog                  # Blog posts
 ├── _components            # Website components such like header or cards
-├── _data                  # Website data in YAML format
+├── _data                  # Website data / variables in YAML format
 ├── _plugins               # Jekyll plugins written in Ruby
+├── _root                  # Files that will be in the root directory of the website
 ├── _sass                  # SCSS Stylesheets ...
 │   ├── abstracts          # ... with functions, mixins, variables and so on
 │   ├── base               # ... with global styles
@@ -322,15 +324,15 @@ For more information on the SCSS file structure, see [The 7-1 Pattern](https://s
 │   └── themes
 │       ├── _syntax.scss   # ... for Rouge syntax highlighter
 │       └── _terminal.scss # ... for Terminal component themes
-├── _templates             # Jekyll templates for web pages like homepage or blog posts
+├── _templates             # Jekyll templates for web pages
 ├── .github
 │   └── labeler.yml        # "actions/labeler" configuration
-├── .well-known            # RFC 8615 URIs
 ├── bin                    # Scripts
-├── static                 # Website static files
+├── pages                  # Website pages
+├── projects               # Git submodule of web pages for my projects
+├── static                 # Website assets
 │   └── psd                # PSD files of images, these are not published
 ├── .tool-versions         # Version of tools asdf should use
-├── feed.xml               # Atom feed
 ├── frontmatter.json       # VS Code eliostruyf.vscode-front-matter configiguration
 └── SUPPORT.md             # Support resources
 ```

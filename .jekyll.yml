@@ -96,11 +96,15 @@ toc:
   no_toc_section_class: toc-skip
   list_class: toc-entries
 
-# Blog
 collections:
+  # Blog posts
   blog:
     output: true
     permalink: /:collection/:year-:month-:day/:title/
+  # Files that will be on the root
+  root:
+    output: true
+    permalink: /:path:output_ext
 
 blog_meta:
   title: "Strappazzon's Blog"
