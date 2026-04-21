@@ -7,8 +7,7 @@
 # CONFIG
 #   anchors:
 #     prefix: section
-#
-# TODO: Truncate header ID if it's too long
+#     truncate_after: 5
 #
 
 require 'kramdown'
@@ -16,7 +15,7 @@ require 'nokogiri'
 
 module Jekyll
   module Anchors
-    VERSION = '1.0.2'.freeze
+    VERSION = '1.1.0'.freeze
 
     # Get plugin config
     # https://stackoverflow.com/a/45693637
@@ -41,7 +40,7 @@ module Jekyll
         content_raw   = el.options[:raw_text]
         level         = el.options[:level]
         anchor_prefix = build_anchor_prefix(config)
-        anchor_text   = build_anchor_text(content_raw)
+        anchor_text   = build_anchor_text(content_raw, config)
 
         build_header_html(level, anchor_prefix, anchor_text, content, content_raw)
       end
@@ -52,8 +51,14 @@ module Jekyll
         return "#{config['prefix']}-" unless !config['prefix'] || config['prefix'].empty?
       end
 
-      def build_anchor_text(content_raw)
-        return Nokogiri::HTML(content_raw).text.gsub(/[^\w\d]/i, '-').downcase
+      def build_anchor_text(content_raw, config)
+        anchor_text = Nokogiri::HTML(content_raw).text.gsub(/[^\w\d]/i, '-').downcase
+        anchor_words = anchor_text.split('-')
+        truncate_after = config['truncate_after']
+
+        return anchor_text unless truncate_after && truncate_after.positive?
+
+        return anchor_words.take(truncate_after).join('-')
       end
 
       def build_header_html(level, anchor_prefix, anchor_text, content, content_raw)

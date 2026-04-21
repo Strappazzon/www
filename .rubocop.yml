@@ -62,3 +62,7 @@ Style/RegexpLiteral:
   Enabled: true
   AllowInnerSlashes: true
   EnforcedStyle: slashes
+
+# Don't transform usage of method call safeguarded by non nil check
+Style/SafeNavigation:
+  Enabled: false
