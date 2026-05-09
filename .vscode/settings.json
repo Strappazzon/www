@@ -122,12 +122,12 @@
 	"git.inputValidation": true,
 	"git.inputValidationLength": 70,
 	"git.inputValidationSubjectLength": 70,
-	"javascript.format.enable": true,
-	"javascript.format.insertSpaceAfterConstructor": true,
-	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
-	"javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
-	"javascript.format.semicolons": "insert",
-	"javascript.preferences.quoteStyle": "single",
+	"js/ts.format.enabled": true,
+	"js/ts.format.insertSpaceAfterConstructor": true,
+	"js/ts.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
+	"js/ts.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
+	"js/ts.format.semicolons": "insert",
+	"js/ts.preferences.quoteStyle": "single",
 	"json.schemas": [
 		{
 			"fileMatch": [
