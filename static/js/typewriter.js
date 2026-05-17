@@ -1,17 +1,17 @@
-let i = 0;
-const TYPE = document.querySelector('#typewriter');
-const TEXT = TYPE.dataset.text;
-const SPEED = 125;
+const TYPE_EL = document.querySelector('#typewriter');
+const TEXT    = TYPE_EL.dataset.text;
+const SPEED   = 125;
 
-// https://www.w3schools.com/howto/howto_js_typewriter.asp
-function typeWriter() {
-  if (i < TEXT.length) {
-    TYPE.innerHTML += TEXT.charAt(i);
-    i++;
+let index = 0;
+
+const typeWriter = () => {
+  TYPE_EL.textContent += TEXT[index++];
+
+  if (index < TEXT.length) {
     setTimeout(typeWriter, SPEED);
   }
-}
+};
 
-TYPE.hasAttribute('hidden') && TYPE.removeAttribute('hidden');
+TYPE_EL.hidden = false;
 
 typeWriter();
