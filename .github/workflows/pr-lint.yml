@@ -7,6 +7,7 @@ on:
     paths:
       - "_plugins/**.rb"
       - "_sass/**.scss"
+      - "static/js/**.js"
       - "**/*.md"
 
 jobs:
@@ -81,6 +82,42 @@ jobs:
         shell: bash
         run: |
           npx stylelint "_sass" --cache --cache-strategy "content" --quiet-deprecation-warnings
+
+  lint-js:
+    name: Lint JS Files
+    permissions:
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v6.0.2
+
+      - name: Detect changes in JS files
+        id: check_changes
+        shell: bash
+        run: |
+          ::set-output name=changed_js::$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '\.js$')
+
+      - name: Setup NodeJS
+        if: steps.check_changes.outputs.changed_js != ''
+        uses: actions/setup-node@v6.3.0
+        with:
+          cache: npm
+          node-version-file: ".tool-versions"
+
+      - name: Setup ESLint
+        if: steps.check_changes.outputs.changed_js != ''
+        run: |
+          npm install --save-dev eslint@10.4.x
+          npm install --save-dev globals@17.6.x
+          npm install --save-dev @eslint/js@10.0.x
+          npm install --save-dev @stylistic/eslint-plugin@5.10.x
+
+      - name: Run ESLint
+        if: steps.check_changes.outputs.changed_js != ''
+        shell: bash
+        run: |
+          npx eslint "static/js/**"
 
   lint-mdown:
     name: Lint Markdown Documents
