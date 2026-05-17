@@ -1,0 +1,1 @@
+const TYPE_EL=document.querySelector("#typewriter"),TEXT=TYPE_EL.dataset.text,SPEED=125;let index=0;const typeWriter=()=>{TYPE_EL.textContent+=TEXT[index++],index<TEXT.length&&setTimeout(typeWriter,SPEED)};TYPE_EL.hidden=!1,typeWriter();
