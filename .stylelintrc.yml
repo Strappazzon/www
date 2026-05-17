@@ -102,6 +102,9 @@ rules:
   # Limit the number of decimal places allowed in numbers
   number-max-precision: 3
 
+  # Enforce explicit nesting selector
+  relative-selector-nesting-notation: explicit
+
   # Require an empty line before every rule
   # except after comments or nested rules
   rule-empty-line-before:
@@ -119,6 +122,9 @@ rules:
   selector-disallowed-list:
     - "/h5/"
     - "/h6/"
+
+  # Disallow selectors that have been deprecated or removed from the spec
+  selector-no-deprecated: true
 
   # Units blacklist, with exceptions
   unit-disallowed-list:
