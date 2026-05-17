@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "ESLint $(npx eslint -v)"
+npx eslint "static/js/**" "$@"
+
+success=$?
+if ((success != 0)); then
+  echo -e "\nRun \"js_fmt --fix\" to automatically fix errors."
+fi
+
+exit $success
