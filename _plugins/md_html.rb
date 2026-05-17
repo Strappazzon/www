@@ -45,7 +45,7 @@
 
 module Jekyll
   module HTMLTags
-    VERSION = '1.2.2'.freeze
+    VERSION = '1.3.0'.freeze
 
     def self.codeblock(input)
       input.content.gsub!(/[[:blank:]]*```(.*)[[:blank:]]"(.*)?"([\w\W]*?)[[:blank:]]*```[[:blank:]]*(\n|$)/i) do
@@ -53,16 +53,13 @@ module Jekyll
         title = Regexp.last_match(2).strip.empty? ? 'Source Code'.upcase : Regexp.last_match(2).to_s
         code  = Regexp.last_match(3)
 
-        # If ever considering changing the button text with JS
-        # announce it to screen readers, below <button>
-        # <span role="alert" class="visually-hidden"></span>
-
         # rubocop:disable Layout/ArrayAlignment
         %W[
           <div class="machine__code">
             <div class="machine__code-header">
               <span class="title">#{title}</span>
               <button class="clipboard">COPY</button>
+              <span class="visually-hidden" aria-live="polite"></span>
             </div>
             {% highlight #{lang} %}\n#{code}{% endhighlight %}#{Regexp.last_match(4)}
           </div>
