@@ -63,7 +63,7 @@ Then navigate to <http://localhost:4000> in your web browser.
 
 Press <kbd>CTRL</kbd>+<kbd>C</kbd> to stop the web server.
 
-## Code style and Conventions
+## Code Style and Conventions
 
 ### Liquid
 
@@ -239,7 +239,7 @@ end
 ### SCSS
 
 [Stylelint](https://stylelint.io/) is used to enforce code style rules for SCSS files.  
-To fix any problems that can be fixed automatically, you can use a Stylelint plugin for your IDE or run `bin/scss_fmt` from a terminal.
+To find problems that can be fixed automatically, you can use a Stylelint plugin for your IDE or run `bin/scss_fmt` from a terminal.
 
 #### Format
 
@@ -264,6 +264,11 @@ Rules that are not covered by Stylelint.
 #### Imports
 
 - Don't include the file extension when importing stylesheets.
+
+### JS
+
+[ESLint](https://eslint.org/) is used to enforce code style rules for JS files.  
+To find problems that can be fixed automatically, you can use an ESLint plugin for your IDE or run `bin/js_fmt` from a terminal.
 
 ## Submitting Changes
 
