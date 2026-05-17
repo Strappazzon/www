@@ -1,13 +1,18 @@
 {
 	"private": true,
 	"devDependencies": {
-		"stylelint": "^17.7.0",
+		"@double-great/stylelint-a11y": "^3.4.0",
+		"@eslint/js": "^10.0.0",
+		"@stylistic/eslint-plugin": "^5.10.0",
+		"eslint": "^10.4.0",
+		"globals": "^17.6.0",
+		"stylelint": "^17.11.0",
 		"stylelint-config-recess-order": "^7.7.0",
 		"stylelint-config-standard-scss": "^17.0.0",
-		"stylelint-plugin-defensive-css": "^2.9.0",
-		"@double-great/stylelint-a11y": "^3.4.9"
+		"stylelint-plugin-defensive-css": "^2.9.0"
 	},
 	"scripts": {
-		"lint:scss": "stylelint \"_sass\" --cache --cache-strategy \"content\" --quiet-deprecation-warnings"
+		"lint:scss": "stylelint \"_sass\" --cache --cache-strategy \"content\" --quiet-deprecation-warnings",
+		"lint:js": "eslint \"static/js/**\""
 	}
 }

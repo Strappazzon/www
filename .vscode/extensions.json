@@ -1,6 +1,7 @@
 {
 	"recommendations": [
 		"DavidAnson.vscode-markdownlint",
+		"dbaeumer.vscode-eslint",
 		"EditorConfig.EditorConfig",
 		"eliostruyf.vscode-front-matter",
 		"shopify.ruby-lsp",

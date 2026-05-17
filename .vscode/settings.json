@@ -1,8 +1,12 @@
 {
 	"[javascript]": {
-		"editor.defaultFormatter": "vscode.typescript-language-features",
+		"editor.codeActionsOnSave": {
+			"source.fixAll": "never",
+			"source.fixAll.eslint": "always"
+		},
+		"editor.defaultFormatter": "dbaeumer.vscode-eslint",
 		"editor.formatOnPaste": true,
-		"editor.formatOnSave": true,
+		"editor.formatOnSave": false,
 		"editor.insertSpaces": true,
 		"editor.rulers": [
 			160
@@ -88,6 +92,11 @@
 	"editor.defaultFormatter": null,
 	"editor.detectIndentation": false,
 	"editor.rulers": [],
+	"eslint.enable": true,
+	"eslint.format.enable": true,
+	"eslint.validate": [
+		"javascript"
+	],
 	"explorer.fileNesting.enabled": true,
 	"explorer.fileNesting.patterns": {
 		".stylelintrc.yml": ".stylelintignore,.stylelintcache",
@@ -122,12 +131,8 @@
 	"git.inputValidation": true,
 	"git.inputValidationLength": 70,
 	"git.inputValidationSubjectLength": 70,
-	"js/ts.format.enabled": true,
-	"js/ts.format.insertSpaceAfterConstructor": true,
-	"js/ts.format.insertSpaceAfterOpeningAndBeforeClosingEmptyBraces": false,
-	"js/ts.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
-	"js/ts.format.semicolons": "insert",
-	"js/ts.preferences.quoteStyle": "single",
+	"js/ts.format.enabled": false,
+	"js/ts.validate.enabled": false,
 	"json.schemas": [
 		{
 			"fileMatch": [

@@ -22,4 +22,5 @@ Gemfile* text eol=lf
 **/bin/**             linguist-detectable=false
 /pages/*.md           linguist-detectable=true
 /_blog/*.md           linguist-detectable=true
+eslint.config.*       linguist-detectable=false
 *.html                linguist-language=Liquid
