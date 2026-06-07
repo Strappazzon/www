@@ -1,15 +1,16 @@
 # Lock Bundler version
 # https://stackoverflow.com/a/51788614
-if (version = Gem::Version.new(Bundler::VERSION)) < Gem::Version.new('2.4.5')
-  abort "Bundler version >= 2.4.5 is required. You are running #{version}."
+if (version = Gem::Version.new(Bundler::VERSION)) < Gem::Version.new('4.0.13')
+  abort "Bundler version >= 4.0.13 is required. You are running #{version}."
 end
 
 source 'https://rubygems.org'
 
-gem 'html-proofer', '~> 5.2', require: false
 gem 'jekyll', '~> 4.4'
-gem 'mini_racer', '~> 0.20'
-gem 'rubocop', '~> 1.86', require: false
+gem 'mini_racer', '~> 0.21'
+
+gem 'html-proofer', '~> 5.2', require: false
+gem 'rubocop', '~> 1.87', require: false
 
 # Plugins
 group :jekyll_plugins do

@@ -23,11 +23,9 @@ Layout/LineLength:
 Metrics/MethodLength:
   Enabled: false
 
-# Method parameters min length whitelist
+# Method parameters min length
 Naming/MethodParameterName:
-  AllowedNames:
-    # Kramdown::Converter::Html convert_header() parameter
-    - el
+  MinNameLength: 2
 
 # Don't require top-level documentation
 Style/Documentation:
