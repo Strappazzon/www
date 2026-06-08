@@ -24,6 +24,7 @@ exclude:
   - "**/*.psd"
   - bin
   - node_modules
+  - eslint.config.mjs
   - frontmatter.json
   - Gemfile
   - LICENSE*
