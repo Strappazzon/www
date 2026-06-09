@@ -26,7 +26,7 @@ If you then still need to ask a question and need clarification you can [create 
 - All issues must be properly formatted with Markdown.  
   If you don't know what that is, read [Basic writing and formatting syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) before submitting an issue.
 
-### DO NOT post "+1" comments
+### DO NOT Post "+1" comments
 
 If you don't have any additional info/context to add but would like to indicate that you're affected by the issue, upvote the original issue.  
 See: [Add Reactions](https://github.blog/news-insights/product-news/add-reactions-to-pull-requests-issues-and-comments/)
@@ -265,7 +265,7 @@ Rules that are not covered by Stylelint.
 
 - Don't include the file extension when importing stylesheets.
 
-### JS
+### JavaScript
 
 [ESLint](https://eslint.org/) is used to enforce code style rules for JS files.  
 To find problems that can be fixed automatically, you can use an ESLint plugin for your IDE or run `bin/js_fmt` from a terminal.
