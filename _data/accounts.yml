@@ -13,3 +13,11 @@
 - name: GitLab
   username: Strappazzon
   url: https://gitlab.com/Strappazzon
+
+- name: Mastodon
+  username: strappazzon
+  url: https://tech.lgbt/@strappazzon
+
+- name: Reddit
+  username: 0xStrappazzon
+  url: https://www.reddit.com/user/0xStrappazzon
