@@ -93,75 +93,283 @@
 			<script defer src="/static/js/lightbox.js?{{ site.time | date: '%s%N' }}"></script>
 		{% endunless %}
 	{% endif %}
-	{% if page.layout == "blog" %}
+	{% if page.url == "/index.html" %}
 		<script type="application/ld+json">
-			{
-				"@context": "https://schema.org/",
-				"@type": "BlogPosting",
-				"mainEntityOfPage": {
-					"@type": "WebPage",
-					"@id": "{{ site.url }}{{ page.url | replace: 'index.html', '' }}"
-				},
-				"headline": "{{ page.title }}",
-				"description": "{{ page.description }}",
-				"image": {
-					"@type": "ImageObject",
-					"url": "{{ site.url }}/static/img/ogimage_blog.jpg",
-					"width": "1280",
-					"height": "640"
-				},
-				"author": {
+		{
+			"@context": "https://schema.org/",
+			"@graph": [
+				{
 					"@type": "Person",
+					"@id": "{{ site.url }}{{ site.baseurl }}#person",
+					"url": "{{ site.url }}",
 					"name": "{{ site.meta.first }} {{ site.meta.last }}",
+					"alternateName": "{{ site.meta.first | downcase }}{{ site.meta.last | downcase }}",
+					"givenName": "{{ site.meta.first }}",
+					"familyName": "{{ site.meta.last }}",
+					"knowsLanguage": "en-US",
+					"nationality": {
+						"@type": "Country",
+						"name": "Italy"
+					},
 					"image": {
 						"@type": "ImageObject",
-						"url": "{{ site.url }}/static/img/avatar.png"
+						"@id": "{{ site.url }}{{ site.baseurl }}#person-image",
+						"url": "{{ site.url }}/static/img/avatar.png",
+						"caption": "{{ site.meta.first }} {{ site.meta.last }} Logo",
+						"width": 196,
+						"height": 196
 					},
-					"url": "{{ site.url }}"
+					"sameAs": [
+						{%- for a in site.data.accounts %}
+						"{{ a.url }}"{% unless forloop.last %},{% endunless -%}
+						{% endfor %}
+					]
 				},
-				"datePublished": "{{ page.date | date_to_xmlschema }}",
-				"dateModified": "{% if page.last_modified_at %}{{ page.last_modified_at | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}"
-			}
+				{
+					"@type": "WebSite",
+					"@id": "{{ site.url }}{{ site.baseurl }}#website",
+					"url": "{{ site.url }}",
+					"name": "{{ site.meta.first }} {{ site.meta.last }}",
+					"alternateName": [
+						"{{ site.url | replace: 'https://', '' }}",
+						"{{ site.meta.last }}"
+					],
+					"description": "{{ site.meta.description }}",
+					"inLanguage": "en-US",
+					"publisher": {
+						"@id": "{{ site.url }}{{ site.baseurl }}#person"
+					},
+					"image": {
+						"@type": "ImageObject",
+						"@id": "{{ site.url }}{{ site.baseurl }}#website-image",
+						"url": "{{ site.url }}/static/img/avatar.png",
+						"caption": "{{ site.meta.first }} {{ site.meta.last }} Logo"
+					}
+				},
+				{
+					"@type": "ProfilePage",
+					"@id": "{{ site.url }}{{ site.baseurl }}#webpage",
+					"url": "{{ site.url }}",
+					"isPartOf": {
+						"@id": "{{ site.url }}{{ site.baseurl }}#website"
+					},
+					"name": "About {{ site.meta.first }} {{ site.meta.last }}",
+					"inLanguage": "en-US",
+					"mainEntity": {
+						"@id": "{{ site.url }}{{ site.baseurl }}#person"
+					},
+					"primaryImageOfPage": {
+						"@type": "ImageObject",
+						"url": "{{ site.url }}/static/img/avatar.png",
+						"caption": "{{ site.meta.first }} {{ site.meta.last }} Logo",
+						"width": 196,
+						"height": 196
+					}
+				}
+			]
+		}
 		</script>
-	{% else %}
+	{% endif %}
+	{% if page.layout == "pages" %}
+		<script type="application/ld+json">
+		{
+			"@context": "https://schema.org/",
+			"@graph": [
+				{
+					"@type": "Person",
+					"@id": "{{ site.url }}{{ site.baseurl }}#person",
+					"url": "{{ site.url }}",
+					"name": "{{ site.meta.first }} {{ site.meta.last }}",
+					"alternateName": "{{ site.meta.first | downcase }}{{ site.meta.last | downcase }}",
+					"givenName": "{{ site.meta.first }}",
+					"familyName": "{{ site.meta.last }}",
+					"knowsLanguage": "en-US",
+					"nationality": {
+						"@type": "Country",
+						"name": "Italy"
+					},
+					"image": {
+						"@type": "ImageObject",
+						"@id": "{{ site.url }}{{ site.baseurl }}#person-image",
+						"url": "{{ site.url }}/static/img/avatar.png",
+						"caption": "{{ site.meta.first }} {{ site.meta.last }} Logo",
+						"width": 196,
+						"height": 196
+					},
+					"sameAs": [
+						{%- for a in site.data.accounts %}
+						"{{ a.url }}"{% unless forloop.last %},{% endunless -%}
+						{% endfor %}
+					]
+				},
+				{
+					"@type": "WebSite",
+					"@id": "{{ site.url }}{{ site.baseurl }}#website",
+					"url": "{{ site.url }}",
+					"name": "{{ site.meta.first }} {{ site.meta.last }}"
+				},
+				{
+					"@type": "WebPage",
+					"@id": "{{ site.url }}{{ page.url | replace: 'index.html', '' }}#webpage",
+					"url": "{{ site.url }}{{ page.url | replace: 'index.html', '' }}",
+					"isPartOf": {
+						"@id": "{{ site.url }}{{ site.baseurl }}#website"
+					},
+					"name": "{{ page.title }}",
+					"inLanguage": "en-US",
+					"breadcrumb": {
+						"@id": "{{ site.url }}{{ page.url | replace: 'index.html', '' }}#breadcrumb"
+					},
+					"primaryImageOfPage": {
+						"@type": "ImageObject",
+						"url": "{{ site.url }}/static/img/ogimage.jpg",
+						"caption": "{{ site.meta.first }} {{ site.meta.last }}"
+					}
+				},
+				{
+					"@type": "BreadcrumbList",
+					"@id": "{{ site.url }}{{ page.url | replace: 'index.html', '' }}#breadcrumb",
+					"itemListElement": [
+						{
+							"@type": "ListItem",
+							"item": "{{ site.url }}",
+							"position": 1,
+							"name": "Home"
+						},
+						{
+							"@type": "ListItem",
+							"item": "{{ site.url }}{{ page.url | replace: 'index.html', '' }}",
+							"position": 2,
+							"name": "{{ page.title }}"
+						}
+					]
+				}
+			]
+		}
+		</script>
+	{% endif %}
+	{% if page.layout == "blog" %}
+		{% assign t = page.tags | uniq | join: ", " %}
 		<script type="application/ld+json">
 		{
 			"@context": "https://schema.org",
-			"@type": "WebSite",
-			"author": {
-				"@type": "Person",
-				"name": "{{ site.meta.first }} {{ site.meta.last }}",
-				"image": {
-					"@type": "ImageObject",
-					"url": "{{ site.url }}/static/img/avatar.png"
+			"@graph": [
+				{
+					"@type": "Person",
+					"@id": "{{ site.url }}{{ site.baseurl }}#person",
+					"url": "{{ site.url }}",
+					"name": "{{ site.meta.first }} {{ site.meta.last }}",
+					"alternateName": "{{ site.meta.first | downcase }}{{ site.meta.last | downcase }}",
+					"givenName": "{{ site.meta.first }}",
+					"familyName": "{{ site.meta.last }}",
+					"knowsLanguage": "en-US",
+					"nationality": {
+						"@type": "Country",
+						"name": "Italy"
+					},
+					"image": {
+						"@type": "ImageObject",
+						"@id": "{{ site.url }}{{ site.baseurl }}#person-image",
+						"url": "{{ site.url }}/static/img/avatar.png",
+						"caption": "{{ site.meta.first }} {{ site.meta.last }} Logo",
+						"width": 196,
+						"height": 196
+					},
+					"sameAs": [
+						{%- for a in site.data.accounts %}
+						"{{ a.url }}"{% unless forloop.last %},{% endunless -%}
+						{% endfor %}
+					]
 				},
-				"knowsLanguage": {
-					"@type": "Language",
-					"name": "English",
-					"alternateName": "en"
+				{
+					"@type": "WebSite",
+					"@id": "{{ site.url }}{{ site.baseurl }}#website",
+					"url": "{{ site.url }}",
+					"name": "{{ site.meta.first }} {{ site.meta.last }}"
+				},
+				{
+					"@type": "WebPage",
+					"@id": "{{ site.url }}{{ page.url | replace: 'index.html', '' }}#webpage",
+					"url": "{{ site.url }}{{ page.url | replace: 'index.html', '' }}",
+					"isPartOf": {
+						"@id": "{{ site.url }}{{ site.baseurl }}#website"
+					},
+					"name": "{{ page.title }}",
+					"inLanguage": "en-US",
+					"breadcrumb": {
+						"@id": "{{ site.url }}{{ page.url | replace: 'index.html', '' }}#breadcrumb"
+					},
+					"primaryImageOfPage": {
+						"@type": "ImageObject",
+						"url": "{{ site.url }}/static/img/ogimage_blog.jpg",
+						"caption": "{{ site.blog_meta.title }}"
+					}
+				},
+				{
+					"@type": "Blog",
+					"@id": "{{ site.url }}/blog/#blog",
+					"url": "{{ site.url }}/blog/",
+					"name": "{{ site.blog_meta.title }}",
+					"inLanguage": "en-US",
+					"publisher": {
+						"@id": "{{ site.url }}{{ site.baseurl }}#person"
+					}
+				},
+				{
+					"@type": "BlogPosting",
+					"@id": "{{ site.url }}{{ page.url | replace: 'index.html', '' }}#blogposting",
+					"url": "{{ site.url }}{{ page.url | replace: 'index.html', '' }}",
+					"mainEntityOfPage": {
+						"@id": "{{ site.url }}{{ page.url | replace: 'index.html', '' }}#webpage"
+					},
+					"isPartOf": {
+						"@id": "{{ site.url }}/blog/#blog"
+					},
+					"headline": "{{ page.title }}",
+					"description": "{{ page.description }}",
+					"keywords": "{{ t }}",
+					"inLanguage": "en-US",
+					"datePublished": "{{ page.date | date_to_xmlschema }}",
+					"dateModified": "{% if page.last_modified_at %}{{ page.last_modified_at | date_to_xmlschema }}{% else %}{{ page.date | date_to_xmlschema }}{% endif %}",
+					"author": {
+						"@id": "{{ site.url }}{{ site.baseurl }}#person"
+					},
+					"publisher": {
+						"@id": "{{ site.url }}{{ site.baseurl }}#person"
+					},
+					"image": {
+						"@type": "ImageObject",
+						"@id": "{{ site.url }}{{ page.url | replace: 'index.html', '' }}#blogposting-image",
+						"url": "{{ site.url }}/static/img/ogimage_blog.jpg",
+						"width": 1280,
+						"height": 640
+					},
+					"license": "https://creativecommons.org/licenses/by-sa/4.0/"
+				},
+				{
+					"@type": "BreadcrumbList",
+					"@id": "{{ site.url }}{{ page.url | replace: 'index.html', '' }}#breadcrumb",
+					"itemListElement": [
+						{
+							"@type": "ListItem",
+							"item": "{{ site.url }}",
+							"position": 1,
+							"name": "Home"
+						},
+						{
+							"@type": "ListItem",
+							"item": "{{ site.url }}/blog/",
+							"position": 2,
+							"name": "Blog"
+						},
+						{
+							"@type": "ListItem",
+							"item": "{{ site.url }}{{ page.url | replace: 'index.html', '' }}",
+							"position": 3,
+							"name": "{{ page.title }}"
+						}
+					]
 				}
-			},
-			"url": "{{ site.url }}",
-			"image": {
-				"@type": "ImageObject",
-				"url": "{{ site.url }}/static/img/avatar.png"
-			},
-			"keywords": "{{ k }}",
-			{% if page.url == "/index.html" -%}
-				"description": "{{ site.meta.description }}",
-			{%- else -%}
-				"description": "{{ page.description }}",
-			{%- endif %}
-			"inLanguage": {
-				"@type": "Language",
-				"name": "English",
-				"alternateName": "en"
-			},
-			"license": "https://raw.githubusercontent.com/Strappazzon/www/master/LICENSE-CODE.txt",
-			"sameAs": [
-				{%- for a in site.data.accounts %}
-					"{{ a.url }}"{% unless forloop.last %},{% endunless -%}
-				{% endfor %}
 			]
 		}
 		</script>

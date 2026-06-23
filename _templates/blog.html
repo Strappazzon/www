@@ -6,27 +6,25 @@
 		<div class="bg-layer__2"></div>
 		<a class="sr-skip" href="#main">SKIP TO MAIN CONTENT</a>
 		{% include layout/header.html %}
-		<div class="container" itemprop="mainContentOfPage" itemscope="" role="article">
-			<article id="main" tabindex="-1" itemscope="" itemtype="http://schema.org/BlogPosting">
-				{% include layout/title.html %}
-				<hr aria-hidden="true">
-				<div class="row">
-					<div class="col order-1">
-						<div itemprop="articleBody">
-							{% include outdated.html %}
-							{{ content }}
-						</div>
-					</div>
-					<div class="col-3 order-2">
-						<nav aria-label="On This Page">
-							<span class="toc-title">On This Page</span>
-							{% toc %}
-						</nav>
+		<article class="container" id="main" tabindex="-1" itemscope="" itemprop="mainContentOfPage" itemtype="http://schema.org/BlogPosting">
+			{% include layout/title.html %}
+			<hr aria-hidden="true">
+			<div class="row">
+				<div class="col order-1">
+					<div itemprop="articleBody">
+						{% include outdated.html %}
+						{{ content }}
 					</div>
 				</div>
-				<hr aria-hidden="true">
-			</article>
-			{% include layout/blog/footer.html %}
-		</div>
+				<div class="col-3 order-2">
+					<nav aria-label="On This Page">
+						<span class="toc-title">On This Page</span>
+						{% toc %}
+					</nav>
+				</div>
+			</div>
+			<hr aria-hidden="true">
+		</article>
+		{% include layout/blog/footer.html %}
 	</body>
 </html>
