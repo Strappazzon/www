@@ -107,7 +107,7 @@ GEM
     metrics (0.15.0)
     mini_racer (0.21.2)
       libv8-node (~> 24.12.0.1)
-    nokogiri (1.19.3-x86_64-linux-gnu)
+    nokogiri (1.19.4-x86_64-linux-gnu)
       racc (~> 1.4)
     parallel (2.1.0)
     parser (3.3.11.1)
