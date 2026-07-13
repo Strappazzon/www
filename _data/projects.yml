@@ -82,6 +82,15 @@
   source: https://github.com/Strappazzon/td2-map-brooklyn
   status: !!int 2
 
+- title: TD1 Builder
+  description: Website for creating, sharing and finding The Division builds.
+  languages:
+    - JavaScript
+    - Liquid
+  url: https://td1builder.strappazzon.xyz/
+  source: https://github.com/Strappazzon/td1-builder
+  status: !!int 1
+
 - title: SuperBLT Hasher
   description: >2-
     Calculates hashes for PAYDAY 2 mods. Powered by ZNix's HashLib.
