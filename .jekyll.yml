@@ -4,9 +4,11 @@ baseurl: /
 
 meta:
   title: Alberto Strappazzon
-  description: |2-
-    I'm a hobbyist developer. This website is mainly about my personal projects.
-  keywords: ["strappazzon", "alberto strappazzon", "strappazzon alberto"]
+  description: I'm a hobbyist developer. This website is mainly about my personal projects.
+  keywords:
+    - "strappazzon"
+    - "alberto strappazzon"
+    - "strappazzon alberto"
   first: Alberto
   last: Strappazzon
   location: Veneto, Italy
