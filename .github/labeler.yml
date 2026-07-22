@@ -15,7 +15,6 @@ config:
   - ".gitignore"
   - ".jekyll.yml"
   - "**/.markdownlint.yml"
-  - "frontmatter.json"
 
 dependencies:
   - ".rubocop.yml"

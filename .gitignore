@@ -5,9 +5,6 @@
 !.vscode/launch.json
 !.vscode/settings.json
 
-# VS Code: Front Matter
-/.frontmatter
-
 # Jekyll
 /_site*/
 /.jekyll-cache/

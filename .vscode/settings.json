@@ -108,7 +108,6 @@
 		"*.html": "liquid"
 	},
 	"files.exclude": {
-		"**/.frontmatter": true,
 		"**/.jekyll-cache": true,
 		"**/.ruby-lsp": true,
 		"**/_site*": true,
@@ -133,21 +132,12 @@
 	"git.inputValidationSubjectLength": 70,
 	"js/ts.format.enabled": false,
 	"js/ts.validate.enabled": false,
-	"json.schemas": [
-		{
-			"fileMatch": [
-				"frontmatter.json"
-			],
-			"url": "https://frontmatter.codes/frontmatter.schema.json"
-		}
-	],
 	"liquid.config.method": "workspace",
 	"liquid.engine": "jekyll",
 	"markdown.validate.enabled": false,
 	"rubyLsp.formatter": "rubocop",
 	"scss.validate": false,
 	"search.exclude": {
-		"**/.frontmatter": true,
 		"**/.jekyll-cache": true,
 		"**/.ruby-lsp": true,
 		"**/_site*": true,

@@ -48,8 +48,8 @@ layout: none
   {%- for p in posts -%}
     <url>
       <loc>{{ p.url | prepend: site.url | xml_escape }}</loc>
-      {%- if p.last_modified_at %}
-      <lastmod>{{ p.last_modified_at | date_to_xmlschema }}</lastmod>
+      {%- if p.lastmod %}
+      <lastmod>{{ p.lastmod | date_to_xmlschema }}</lastmod>
       {%- else %}
       <changefreq>monthly</changefreq>
       {%- endif %}

@@ -338,6 +338,5 @@ For more information on the SCSS file structure, see [The 7-1 Pattern](https://s
 ├── static                 # Website assets
 │   └── psd                # PSD files of images, these are not published
 ├── .tool-versions         # Version of tools asdf should use
-├── frontmatter.json       # VS Code eliostruyf.vscode-front-matter configuration
 └── SUPPORT.md             # Support resources
 ```

@@ -12,7 +12,6 @@ on:
       - "!.tool-versions"
       - "bin/**"
       - "static/psd/**"
-      - "frontmatter.json"
       - "LICENSE*"
       - "SUPPORT.md"
   workflow_dispatch: {}
