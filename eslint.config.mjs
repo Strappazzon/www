@@ -1,22 +1,29 @@
 import { defineConfig } from 'eslint/config';
 
 import js from '@eslint/js';
-import globals from 'globals';
 import stylistic from '@stylistic/eslint-plugin';
+import globals from 'globals';
 
 export default defineConfig([
   {
     files: [
       'static/js/**/*.js'
     ],
+
     plugins: {
-      '@stylistic': stylistic,
-      js
+      '@stylistic': stylistic
     },
+
     extends: [
-      'js/recommended',
-      '@stylistic/recommended'
+      js.configs.recommended,
+      stylistic.configs.recommended
     ],
+
+    languageOptions: {
+      sourceType: 'script',
+      globals: globals.browser
+    },
+
     rules: {
       // See: https://eslint.org/docs/v10.x/rules
       'array-callback-return': [
@@ -309,10 +316,6 @@ export default defineConfig([
         'error',
         'before'
       ]
-    },
-    languageOptions: {
-      sourceType: 'script',
-      globals: globals.browser
     }
   }
 ]);
