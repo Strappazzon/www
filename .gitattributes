@@ -6,12 +6,11 @@ Gemfile* text eol=lf
 *.sh     text eol=lf
 *.yml    text eol=lf
 
-*.avif  binary
-*.ico   binary
-*.jpg   binary
-*.jpeg  binary
-*.png   binary
-*.woff2 binary
+*.avif binary
+*.ico  binary
+*.jpg  binary
+*.jpeg binary
+*.png  binary
 
 *.psd filter=lfs diff=lfs merge=lfs -text
 
