@@ -1,4 +1,4 @@
-import { defineConfig, globalIgnores } from 'eslint/config';
+import { defineConfig } from 'eslint/config';
 
 import js from '@eslint/js';
 import globals from 'globals';
@@ -8,9 +8,6 @@ export default defineConfig([
   {
     files: [
       'static/js/**/*.js'
-    ],
-    ignores: [
-      '**/vendor?(s)/**'
     ],
     plugins: {
       '@stylistic': stylistic,

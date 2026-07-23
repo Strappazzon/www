@@ -86,12 +86,13 @@
 	<link rel="stylesheet" href="/static/css/{{ page.layout }}.css?{{ site.time | date: '%s%N' }}">
 	{%- comment -%} Scripts {%- endcomment -%}
 	{% if page.layout == "blog" %}
-		<script defer src="/static/js/clipboard.js?{{ site.time | date: '%s%N' }}"></script>
 		{% unless page.lightbox == false %}
-			<script defer src="/static/js/vendors/bootstrap.bundle.min.js?{{ site.time | date: '%s%N' }}"></script>
-			<script defer src="/static/js/vendors/rat.lightbox.min.js?{{ site.time | date: '%s%N' }}"></script>
+			<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin="anonymous">
+			<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha512-HvOjJrdwNpDbkGJIG2ZNqDlVqMo77qbs4Me4cah0HoDrfhrbA+8SBlZn1KrvAQw7cILLPFJvdwIgphzQmMm+Pw==" crossorigin="anonymous"></script>
+			<script defer src="https://cdn.jsdelivr.net/npm/@rat.md/bs-lightbox@1.1.1/dist/js/rat.lightbox.min.js" integrity="sha512-1AkyJEz5PLh2GQ0H0M247EeXyKKjlvcskWupwziEzvv3u9k68A2Uj5lglS6tRBju3KOzpeBHd4h/1fqrJv5sVg==" crossorigin="anonymous"></script>
 			<script defer src="/static/js/lightbox.js?{{ site.time | date: '%s%N' }}"></script>
 		{% endunless %}
+		<script defer src="/static/js/clipboard.js?{{ site.time | date: '%s%N' }}"></script>
 	{% endif %}
 	{% if page.url == "/index.html" %}
 		<script type="application/ld+json">

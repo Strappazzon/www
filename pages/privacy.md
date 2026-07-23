@@ -1,7 +1,7 @@
 ---
 title: "Privacy Statement"
 description: "This Privacy Statement explains what information this website collects about its visitors."
-short_desc: "Last Update: Sep 3, 2025"
+short_desc: "Last Update: Jul 23, 2026"
 read_time: true
 permalink: /privacy/
 ---
@@ -39,8 +39,10 @@ I do not track you using cookies, collect your fingerprints, or use any tracking
 ## CDN
 
 Fonts are served by Bunny CDN. Bunny.net will not store any personal data or logs.
-
 See also: [Bunny.net Privacy Policy](https://bunny.net/privacy/) and [Bunny Fonts FAQ](https://fonts.bunny.net/faq).
+
+JavaScript dependencies are served by jsDelivr CDN. jsDelivr will collect usage data.
+See also: [jsDelivr Privacy Policy](https://www.jsdelivr.com/terms/privacy-policy)
 
 ## Email
 
@@ -60,5 +62,4 @@ This version of This Website Privacy Statement took effect {{ page.short_desc | 
 
 I will post any new version of this statement at [{{ page.permalink | prepend: site.url }}]({{ page.permalink | prepend: site.url }}).
 
-<!-- markdownlint-disable-next-line MD059 -->
-A full revision history for this page is available [here](https://github.com/Strappazzon/www/commits/master/pages/privacy.md).
+A full revision history for this page is available [on GitHub](https://github.com/Strappazzon/www/commits/master/pages/privacy.md).
