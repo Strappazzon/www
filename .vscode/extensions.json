@@ -5,6 +5,7 @@
 		"EditorConfig.EditorConfig",
 		"shopify.ruby-lsp",
 		"sissel.shopify-liquid",
+		"strappazzon.front-matter-auto-datetime",
 		"stylelint.vscode-stylelint",
 		"yzhang.markdown-all-in-one"
 	],

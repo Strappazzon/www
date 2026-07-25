@@ -127,6 +127,11 @@
 	},
 	"files.trimFinalNewlines": true,
 	"files.trimTrailingWhitespace": true,
+	"front-matter-auto-datetime.includes": [
+		"_blog/*.md",
+		"_drafts/*.md"
+	],
+	"front-matter-auto-datetime.prop.lastmod": "last_modified_at",
 	"git.inputValidation": true,
 	"git.inputValidationLength": 70,
 	"git.inputValidationSubjectLength": 70,
